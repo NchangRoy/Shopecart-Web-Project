@@ -1,0 +1,156 @@
+/*                                                                                           
+   HEADER CSS - En-tête des pages
+                                                                                              */
+
+/*                 CONTENEUR HEADER                 */
+.page-header {
+    background-color: var(--color-bg-white);
+    border-bottom: 1px solid var(--color-border-light);
+    padding: 0 var(--spacing-xl);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-sticky);
+}
+
+/*                 ONGLETS DE NAVIGATION                 */
+.header-tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+    height: 100%;
+}
+
+.header-tab {
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.header-tab:hover {
+    color: var(--color-primary);
+    background-color: var(--color-gray-50);
+}
+
+.header-tab.active {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    border-bottom-color: var(--color-primary);
+}
+
+/*                 ACTIONS HEADER                 */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/*                 PROFIL UTILISATEUR                 */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.user-profile:hover {
+    background-color: var(--color-gray-50);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.user-role {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/*                 ICÔNE DROPDOWN                 */
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--color-text-muted);
+    transition: transform var(--transition-fast);
+}
+
+.user-profile:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/*                 MENU DROPDOWN                 */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: var(--spacing-xl);
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-fast);
+    z-index: var(--z-index-dropdown);
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu-item {
+    padding: var(--spacing-sm) var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    transition: background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.dropdown-menu-item:hover {
+    background-color: var(--color-gray-50);
+    color: var(--color-primary);
+}
+
+.dropdown-menu-divider {
+    height: 1px;
+    background-color: var(--color-border-light);
+    margin: var(--spacing-xs) 0;
+}
