@@ -1,0 +1,55 @@
+    /* Styles spécifiques à la landing page */
+    .hero {
+      background-image: url('assets/images/hero-bg.png');
+      padding: 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 24px;
+      color: #333;
+    }
+    .hero .search-bar {
+      margin: 20px 0;
+      max-width: 300px;
+      display: inline-block;
+    }
+    .hero .search-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: #87ceeb;
+    }
+    .feature-item {
+      text-align: center;
+    }
+    .spotlight {
+      padding: 20px;
+      text-align: center;
+    }
+    .spotlight img {
+      width: 100px;
+      margin: 10px;
+    }
+    .explore {
+      background-color: #87ceeb;
+      padding: 20px;
+      text-align: center;
+    }
+    .explore button {
+      background-color: #32cd32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .payment-methods img {
+      width: 50px;
+      margin: 10px;
+    }
