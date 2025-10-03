@@ -3,6 +3,8 @@
 ## Objectif
 Construire un site vitrine e-commerce statique avec pages : accueil (landing), liste produits, détails produit, panier (statique), commande/paiement (formulaires), login/register, contact, about us. Respecter l'organisation en dossiers (/assets/css, /assets/images, etc.) et une charte graphique cohérente (mise en page, navigation, footer), selon la fiche TP jointe.
 
+**Note** : Le tableau de bord (dashboard) n'est pas requis pour TP1, car il est hors du scope de ce TP statique. Il sera abordé dans les TPs ultérieurs, notamment TP4 avec Laravel.
+
 ## Livrable
 Site statique fonctionnel, testable localement.
 
