@@ -6,7 +6,7 @@
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgb(113, 231, 98);
     transition: box-shadow var(--transition-fast);
 }
 
@@ -157,7 +157,7 @@
 
 .quick-action-btn {
     background-color: var(--color-bg-primary);
-    border: 1px solid var(--color-border);
+    border: 1px solid   rgb(113, 231, 98);;
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     display: flex;
