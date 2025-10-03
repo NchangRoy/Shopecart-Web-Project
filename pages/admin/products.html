@@ -24,7 +24,7 @@
     <!-- Conteneur principal de l'application -->
     <div class="app-container">
         
-        <!--  BARRE LATÉRALE DE NAVIGATION  -->
+        <!--      BARRE LATÉRALE DE NAVIGATION      -->
         <aside class="sidebar">
             
             <!-- En-tête de la sidebar avec logo -->
@@ -85,7 +85,7 @@
             
         </aside>
         
-        <!-- CONTENU PRINCIPAL  -->
+        <!--      CONTENU PRINCIPAL      -->
         <main class="main-content">
             
             <!-- En-tête de la page avec onglets -->
@@ -120,7 +120,7 @@
                         <h1 class="products-title">Gestion des Produits</h1>
                     </div>
                     <div class="products-actions">
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary" id="addProductBtn">
                             <span>➕</span>
                             <span>Ajouter un produit</span>
                         </button>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 
-                <!--  BARRE D'OUTILS DE FILTRAGE  -->
+                <!--      BARRE D'OUTILS DE FILTRAGE      -->
                 <div class="products-toolbar">
                     <div class="toolbar-top">
                         
@@ -169,7 +169,7 @@
                     </div>
                 </div>
                 
-                <!-- ACTIONS EN MASSE (Masqué par défaut) -->
+                <!--      ACTIONS EN MASSE (Masqué par défaut)      -->
                 <div class="bulk-actions hidden" id="bulkActions">
                     <span class="bulk-actions-text">
                         <strong>3</strong> produits sélectionnés
@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 
-                <!-- TABLEAU DES PRODUITS  -->
+                <!--      TABLEAU DES PRODUITS      -->
                 <div class="products-table-container">
                     <table class="products-table">
                         
@@ -315,10 +315,6 @@
                                     </div>
                                 </td>
                             </tr>
-
-
-
-
                             
                             <!-- Ligne produit 4 -->
                             <tr>
@@ -396,9 +392,11 @@
                                 </td>
                             </tr>
                             
-                            <!-- Lignes 6 et 7 identiques -->
+                            <!-- Ligne produit 6 -->
                             <tr>
-                                <td><input type="checkbox" class="product-checkbox"></td>
+                                <td>
+                                    <input type="checkbox" class="product-checkbox">
+                                </td>
                                 <td>
                                     <div class="product-image-cell">
                                         <img src="https://i.pinimg.com/736x/6d/f6/84/6df684f8427dd671088a474ac9d8de93.jpg" alt="Produit" class="product-thumbnail">
@@ -408,24 +406,193 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td><span class="product-name">Np product...</span></td>
-                                <td><span class="product-price">200 000</span></td>
-                                <td><span class="product-category">null</span></td>
-                                <td><span class="product-date">10/02/25</span></td>
+                                <td>
+                                    <span class="product-name">Np product...</span>
+                                </td>
+                                <td>
+                                    <span class="product-price">200 000</span>
+                                </td>
+                                <td>
+                                    <span class="product-category">null</span>
+                                </td>
+                                <td>
+                                    <span class="product-date">10/02/25</span>
+                                </td>
                                 <td>
                                     <div class="product-actions">
-                                        <button class="action-btn action-btn-edit" title="Modifier"><span>✏️</span></button>
-                                        <button class="action-btn action-btn-delete" title="Supprimer"><span>🗑️</span></button>
+                                        <button class="action-btn action-btn-edit" title="Modifier">
+                                            <span>✏️</span>
+                                        </button>
+                                        <button class="action-btn action-btn-delete" title="Supprimer">
+                                            <span>🗑️</span>
+                                        </button>
                                     </div>
                                 </td>
-                         
                             </tr>
+                            
+                            <!-- Ligne produit 7 -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="product-checkbox">
+                                </td>
+                                <td>
+                                    <div class="product-image-cell">
+                                        <img src="https://i.pinimg.com/736x/6d/f6/84/6df684f8427dd671088a474ac9d8de93.jpg" alt="Produit" class="product-thumbnail">
+                                        <div class="product-info">
+                                            <div class="product-name">Np product...</div>
+                                            <div class="product-sku">SKU: PRD007</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="product-name">Np product...</span>
+                                </td>
+                                <td>
+                                    <span class="product-price">200 000</span>
+                                </td>
+                                <td>
+                                    <span class="product-category">null</span>
+                                </td>
+                                <td>
+                                    <span class="product-date">10/02/25</span>
+                                </td>
+                                <td>
+                                    <div class="product-actions">
+                                        <button class="action-btn action-btn-edit" title="Modifier">
+                                            <span>✏️</span>
+                                        </button>
+                                        <button class="action-btn action-btn-delete" title="Supprimer">
+                                            <span>🗑️</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
                         </tbody>
+                        
                     </table>
+                    
+                    <!-- Pied de tableau avec pagination -->
+                    <div class="table-footer">
+                        <div class="table-info">
+                            Affichage de 1 à 7 sur 7 produits
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination-btn" disabled>
+                                <span>‹</span>
+                            </button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">
+                                <span>›</span>
+                            </button>
+                        </div>
+                    </div>
+                    
                 </div>
+                
             </div>
+            
         </main>
+        
     </div>
+    
+    <!-- Bouton toggle sidebar pour mobile -->
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+        <span class="sidebar-toggle-icon"></span>
+    </button>
+    
+    <!--      MODAL AJOUT/ÉDITION PRODUIT      -->
+    <div class="modal-overlay hidden" id="productModal">
+        <div class="modal">
+            
+            <!-- En-tête du modal -->
+            <div class="modal-header">
+                <h2 class="modal-title">Ajouter un produit</h2>
+                <button class="modal-close" aria-label="Fermer">
+                    <span>✕</span>
+                </button>
+            </div>
+            
+            <!-- Corps du modal avec formulaire -->
+            <div class="modal-body">
+                <form class="product-form" id="productForm">
+                    
+                    <!-- Upload d'image -->
+                    <div class="form-group">
+                        <label class="form-label">Image du produit</label>
+                        <div class="image-upload">
+                            <div class="image-upload-icon">📷</div>
+                            <p class="image-upload-text">
+                                Cliquez pour télécharger une image<br>
+                                <small>PNG, JPG jusqu'à 5MB</small>
+                            </p>
+                            <input type="file" id="productImage" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                    
+                    <!-- Nom du produit -->
+                    <div class="form-group">
+                        <label class="form-label" for="productName">Nom du produit *</label>
+                        <input type="text" id="productName" class="form-input" placeholder="Ex: Smartphone Galaxy S21" required>
+                    </div>
+                    
+                    <!-- Ligne avec prix et stock -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="productPrice">Prix (XAF) *</label>
+                            <input type="number" id="productPrice" class="form-input" placeholder="200000" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="productStock">Stock</label>
+                            <input type="number" id="productStock" class="form-input" placeholder="100">
+                        </div>
+                    </div>
+                    
+                    <!-- Catégorie et SKU -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="productCategory">Catégorie</label>
+                            <select id="productCategory" class="form-select">
+                                <option value="">Sélectionner une catégorie</option>
+                                <option value="electronique">Électronique</option>
+                                <option value="vetements">Vêtements</option>
+                                <option value="maison">Maison</option>
+                                <option value="sport">Sport</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="productSKU">SKU</label>
+                            <input type="text" id="productSKU" class="form-input" placeholder="PRD001">
+                        </div>
+                    </div>
+                    
+                    <!-- Description -->
+                    <div class="form-group">
+                        <label class="form-label" for="productDescription">Description</label>
+                        <textarea id="productDescription" class="form-textarea" placeholder="Description détaillée du produit..."></textarea>
+                    </div>
+                    
+                </form>
+            </div>
+            
+            <!-- Pied du modal avec actions -->
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" id="cancelBtn">Annuler</button>
+                <button class="btn btn-primary" type="submit" form="productForm">Enregistrer</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--      SCRIPTS JAVASCRIPT      -->
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/products.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
 </body>
-                            
-                            
+</html>
