@@ -94,7 +94,44 @@
   text-decoration: underline;
 }
 
+/* Page article */
+.article-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.6;
+}
 
+.article-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #07328f;
+}
+
+.article-content .date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.article-content img {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.article-content h2 {
+  margin-top: 25px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.article-content p {
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
  /* --- Hero Section --- */
 .blog-hero {
   position: relative;
