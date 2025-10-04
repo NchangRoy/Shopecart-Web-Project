@@ -71,12 +71,12 @@ body::before {
 }
 
 .auth-head {
-  width: 78%;
-  margin: -24px auto 12px;          
+  width: calc(100% + 60px);
+  margin: -52px -30px 12px -30px;          
   background: #55bdf6;              
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   box-shadow: 0 2px 0 rgba(0,0,0,0.03) inset;
-  padding: 12px 10px;
+  padding: 30px 10px;
   text-align: center;
 }
 
