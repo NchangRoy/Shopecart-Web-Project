@@ -114,6 +114,19 @@ body::before {
   font-size: 15px;
   display: block;
   margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.field-input:hover {
+  border-color: #79c5f8;
+  box-shadow: 0 0 8px rgba(121, 197, 248, 0.3);
+  transform: scale(1.02);
+}
+
+.field-input:focus {
+  border-color: #55bdf6;
+  box-shadow: 0 0 12px rgba(85, 189, 246, 0.4);
+  transform: scale(1.02);
 }
 
 .social-row {
@@ -136,6 +149,13 @@ body::before {
   cursor: pointer;
   font-size: 16px;
   line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(9,30,66,0.15);
+  border-color: rgba(0,0,0,0.15);
 }
 
 .social-icon .fa-google { color: #db4437; }
@@ -156,6 +176,13 @@ body::before {
   cursor: pointer;
   box-shadow: 0 2px 0 rgba(0,0,0,0.06) inset;
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-continue:hover {
+  background: #55bdf6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(85, 189, 246, 0.4), 0 2px 0 rgba(0,0,0,0.06) inset;
 }
 
 .card-separator {
@@ -172,6 +199,13 @@ body::before {
   color: #444;
   text-decoration: none;
   letter-spacing: 0.6px;
+  transition: all 0.3s ease;
+}
+
+.help-link:hover {
+  color: #55bdf6;
+  transform: scale(1.05);
+  letter-spacing: 0.8px;
 }
 
 .signup-area {
@@ -212,6 +246,13 @@ body::before {
   color: #06314a;
   font-weight: 700;
   font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.btn-create:hover {
+  background: #55bdf6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(85, 189, 246, 0.4);
 }
 
 .site-footer {
@@ -237,6 +278,29 @@ body::before {
   text-decoration: none;
   font-size: 11px;
   text-transform: lowercase;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a:hover {
+  color: #55bdf6;
+  transform: translateY(-1px);
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background: #55bdf6;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
 }
 
 .footer-links a:hover { text-decoration: underline; }
