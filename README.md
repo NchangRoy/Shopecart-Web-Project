@@ -57,3 +57,5 @@ Pour plus de détails sur chaque TP, consultez les READMEs dédiés dans les dos
 
 ## Licence
 MIT - Projet éducatif.
+feature/1-e2-products-page-NANA
+feature/1-e2-products-page-NANA
