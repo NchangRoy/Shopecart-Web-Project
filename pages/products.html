@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casques Audio - E-Shop</title>
+    <title>Casques Audio </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="../assets/css/products.css">
 </head>
 <body>
@@ -28,15 +31,15 @@
     </header>
 
     <!-- Page Title -->
-    <section class="page-header">
-        <video autoplay loop muted playsinline class="header-video">
-            <source src="https://cdn.coverr.co/videos/coverr-black-headphones-rotating/1080p.mp4" type="video/mp4">
-        </video>
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <h1>Casques Audio Premium</h1>
-            <p>Découvrez notre collection de casques audio</p>
-        </div>
+    <section class="relative h-[400px] overflow-hidden"> 
+        <video autoplay loop muted playsinline poster="../assets/images/header-preview.jpg" class="absolute inset-0 w-full h-full object-cover"> 
+            <source src="https://cdn.coverr.co/videos/coverr-black-headphones-rotating/1080p.mp4" type="video/mp4"> 
+        </video> 
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div> 
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white"> 
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Casques Audio Premium</h1> 
+            <p class="text-lg">Découvrez notre collection de casques audio haut de gamme</p> 
+        </div> 
     </section>
 
     <!-- Products Grid -->
@@ -93,27 +96,17 @@
         </div>
 
         <div class="products-grid">
-            <!-- Produit 1 -->
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400" alt="Sony WH-1000XM5 Noir">
-                </div>
-                <div class="product-info">
-                    <p class="category">Sony</p>
-                    <h3>WH-1000XM5 Noir</h3>
-                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
-                    <div class="footer">
-                        <span class="price">350.000 FCFA</span>
-                        <button>Add to cart</button>
-                    </div>
-                </div>
-            </div>
+            <!-- Produit 1 --> 
+     
+
 
             <!-- Produit 2 -->
             <div class="product-card">
                 <div class="product-img">
                     <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Bose QuietComfort Blanc">
                 </div>
+                <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">SALE</div>
+                <div class="absolute top-2 right-2 bg-indigo-600 text-white text-xs font-semibold px-2 py-1 rounded-full">NEW</div>
                 <div class="product-info">
                     <p class="category">Bose</p>
                     <h3>QuietComfort 45 Blanc</h3>
