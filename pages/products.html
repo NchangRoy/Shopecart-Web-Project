@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casques Audio - E-Shop</title>
+    <link rel="stylesheet" href="../assets/css/products.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">E-Shop</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <input type="text" placeholder="Search">
+                <span>🔍</span>
+                <span>❤️</span>
+                <span>🛒</span>
+                <span>👤</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <video autoplay loop muted playsinline class="header-video">
+            <source src="https://cdn.coverr.co/videos/coverr-black-headphones-rotating/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Casques Audio Premium</h1>
+            <p>Découvrez notre collection de casques audio</p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="container">
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="filter-group">
+                <label>Marque</label>
+                <select class="filter-select">
+                    <option value="">Toutes les marques</option>
+                    <option value="sony">Sony</option>
+                    <option value="bose">Bose</option>
+                    <option value="beats">Beats</option>
+                    <option value="jbl">JBL</option>
+                    <option value="sennheiser">Sennheiser</option>
+                    <option value="razer">Razer</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Prix</label>
+                <select class="filter-select">
+                    <option value="">Tous les prix</option>
+                    <option value="0-100">0 - 100.000 FCFA</option>
+                    <option value="100-200">100.000 - 200.000 FCFA</option>
+                    <option value="200-300">200.000 - 300.000 FCFA</option>
+                    <option value="300+">300.000+ FCFA</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Type</label>
+                <select class="filter-select">
+                    <option value="">Tous les types</option>
+                    <option value="wireless">Sans fil</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="studio">Studio</option>
+                    <option value="sport">Sport</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Trier par</label>
+                <select class="filter-select">
+                    <option value="">Par défaut</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="rating">Meilleures notes</option>
+                    <option value="popular">Popularité</option>
+                </select>
+            </div>
+
+            <button class="btn-reset">Réinitialiser</button>
+        </div>
+
+        <div class="products-grid">
+            <!-- Produit 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400" alt="Sony WH-1000XM5 Noir">
+                </div>
+                <div class="product-info">
+                    <p class="category">Sony</p>
+                    <h3>WH-1000XM5 Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">350.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Bose QuietComfort Blanc">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bose</p>
+                    <h3>QuietComfort 45 Blanc</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">320.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=400" alt="Razer Gaming RGB">
+                </div>
+                <div class="product-info">
+                    <p class="category">Razer</p>
+                    <h3>Kraken V3 Pro RGB</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">180.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 4 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400" alt="JBL Tune Bleu">
+                </div>
+                <div class="product-info">
+                    <p class="category">JBL</p>
+                    <h3>Tune 760NC Bleu</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                    <div class="footer">
+                        <span class="price">120.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 5 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400" alt="Audio-Technica Studio">
+                </div>
+                <div class="product-info">
+                    <p class="category">Audio-Technica</p>
+                    <h3>ATH-M50x Studio</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">200.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 6 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Beats Studio Rose">
+                </div>
+                <div class="product-info">
+                    <p class="category">Beats</p>
+                    <h3>Studio 3 Rose Gold</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">280.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 7 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Sennheiser Sport">
+                </div>
+                <div class="product-info">
+                    <p class="category">Sennheiser</p>
+                    <h3>Momentum Sport Orange</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.4)</div>
+                    <div class="footer">
+                        <span class="price">150.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 8 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Marshall Vintage">
+                </div>
+                <div class="product-info">
+                    <p class="category">Marshall</p>
+                    <h3>Major IV Marron</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">140.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 9 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Anker Soundcore">
+                </div>
+                <div class="product-info">
+                    <p class="category">Anker</p>
+                    <h3>Soundcore Life Q30 Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">95.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 10 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400" alt="Apple AirPods Max">
+                </div>
+                <div class="product-info">
+                    <p class="category">Apple</p>
+                    <h3>AirPods Max Argent</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">550.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 11 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400" alt="HyperX Gaming">
+                </div>
+                <div class="product-info">
+                    <p class="category">HyperX</p>
+                    <h3>Cloud Alpha RGB</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">130.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 12 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1577174881658-0f30157f25f7?w=400" alt="Skullcandy Crusher">
+                </div>
+                <div class="product-info">
+                    <p class="category">Skullcandy</p>
+                    <h3>Crusher Evo Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                    <div class="footer">
+                        <span class="price">160.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 13 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400" alt="Sony ZX Series">
+                </div>
+                <div class="product-info">
+                    <p class="category">Sony</p>
+                    <h3>MDR-ZX110 Rouge</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.3)</div>
+                    <div class="footer">
+                        <span class="price">45.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 14 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Samsung Galaxy Buds">
+                </div>
+                <div class="product-info">
+                    <p class="category">Samsung</p>
+                    <h3>Galaxy Buds Pro Blanc</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">180.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 15 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=400" alt="Logitech G Pro">
+                </div>
+                <div class="product-info">
+                    <p class="category">Logitech</p>
+                    <h3>G Pro X Gaming Bleu</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">170.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 16 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400" alt="Philips SHP">
+                </div>
+                <div class="product-info">
+                    <p class="category">Philips</p>
+                    <h3>SHP9500 Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">110.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 17 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400" alt="Beyerdynamic DT">
+                </div>
+                <div class="product-info">
+                    <p class="category">Beyerdynamic</p>
+                    <h3>DT 770 Pro Studio</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">220.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 18 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Beats Solo Violet">
+                </div>
+                <div class="product-info">
+                    <p class="category">Beats</p>
+                    <h3>Solo Pro Violet</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                    <div class="footer">
+                        <span class="price">210.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 19 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="JBL Live Sport">
+                </div>
+                <div class="product-info">
+                    <p class="category">JBL</p>
+                    <h3>Live 660NC Vert</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.4)</div>
+                    <div class="footer">
+                        <span class="price">135.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 20 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="AKG K52">
+                </div>
+                <div class="product-info">
+                    <p class="category">AKG</p>
+                    <h3>K52 Studio Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">70.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 21 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="SteelSeries Arctis">
+                </div>
+                <div class="product-info">
+                    <p class="category">SteelSeries</p>
+                    <h3>Arctis 7+ Blanc</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">195.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 22 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400" alt="Jabra Elite">
+                </div>
+                <div class="product-info">
+                    <p class="category">Jabra</p>
+                    <h3>Elite 85h Or</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">240.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 23 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400" alt="Corsair Virtuoso">
+                </div>
+                <div class="product-info">
+                    <p class="category">Corsair</p>
+                    <h3>Virtuoso RGB SE Pearl</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">250.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 24 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1577174881658-0f30157f25f7?w=400" alt="Turtle Beach Stealth">
+                </div>
+                <div class="product-info">
+                    <p class="category">Turtle Beach</p>
+                    <h3>Stealth 700 Gen 2 Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                    <div class="footer">
+                        <span class="price">165.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 25 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400" alt="Sony WH-CH710N">
+                </div>
+                <div class="product-info">
+                    <p class="category">Sony</p>
+                    <h3>WH-CH710N Bleu</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">145.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 26 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Bose 700 Silver">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bose</p>
+                    <h3>Noise Cancelling 700 Silver</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">380.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 27 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=400" alt="Astro A50">
+                </div>
+                <div class="product-info">
+                    <p class="category">Astro</p>
+                    <h3>A50 Wireless Gaming</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">290.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 28 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400" alt="Bang & Olufsen">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bang & Olufsen</p>
+                    <h3>Beoplay H9 Beige</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">450.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 29 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400" alt="Shure SRH440">
+                </div>
+                <div class="product-info">
+                    <p class="category">Shure</p>
+                    <h3>SRH440 Studio Pro</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">185.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 30 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Beats EP Rouge">
+                </div>
+                <div class="product-info">
+                    <p class="category">Beats</p>
+                    <h3>EP On-Ear Rouge</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.4)</div>
+                    <div class="footer">
+                        <span class="price">90.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 31 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Plantronics BackBeat">
+                </div>
+                <div class="product-info">
+                    <p class="category">Plantronics</p>
+                    <h3>BackBeat Pro 2 Gris</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                    <div class="footer">
+                        <span class="price">155.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 32 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="OneOdio Pro">
+                </div>
+                <div class="product-info">
+                    <p class="category">OneOdio</p>
+                    <h3>Pro-10 Studio Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">75.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 33 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Edifier W820BT">
+                </div>
+                <div class="product-info">
+                    <p class="category">Edifier</p>
+                    <h3>W820BT Wireless Blanc</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                    <div class="footer">
+                        <span class="price">85.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 34 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400" alt="Focal Listen">
+                </div>
+                <div class="product-info">
+                    <p class="category">Focal</p>
+                    <h3>Listen Professional</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">260.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 35 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400" alt="ROCCAT Elo">
+                </div>
+                <div class="product-info">
+                    <p class="category">ROCCAT</p>
+                    <h3>Elo 7.1 Air RGB</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">125.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 36 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1577174881658-0f30157f25f7?w=400" alt="Urbanears Plattan">
+                </div>
+                <div class="product-info">
+                    <p class="category">Urbanears</p>
+                    <h3>Plattan 2 BT Indigo</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.4)</div>
+                    <div class="footer">
+                        <span class="price">105.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 37 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400" alt="Sony WF-1000XM4">
+                </div>
+                <div class="product-info">
+                    <p class="category">Sony</p>
+                    <h3>WF-1000XM4 Earbuds Noir</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">280.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 38 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="JBL Quantum">
+                </div>
+                <div class="product-info">
+                    <p class="category">JBL</p>
+                    <h3>Quantum 800 Gaming Blanc</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">215.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 39 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=400" alt="Razer Barracuda">
+                </div>
+                <div class="product-info">
+                    <p class="category">Razer</p>
+                    <h3>Barracuda X Wireless</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">145.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 40 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400" alt="Anker Q20">
+                </div>
+                <div class="product-info">
+                    <p class="category">Anker</p>
+                    <h3>Soundcore Q20 Bleu</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.5)</div>
+                    <div class="footer">
+                        <span class="price">65.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 41 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400" alt="Meze 99 Classics">
+                </div>
+                <div class="product-info">
+                    <p class="category">Meze</p>
+                    <h3>99 Classics Walnut Gold</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">330.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 42 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Mpow H21">
+                </div>
+                <div class="product-info">
+                    <p class="category">Mpow</p>
+                    <h3>H21 Hybrid ANC Rose</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.3)</div>
+                    <div class="footer">
+                        <span class="price">55.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 43 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Tribit XFree">
+                </div>
+                <div class="product-info">
+                    <p class="category">Tribit</p>
+                    <h3>XFree Tune Sport Vert</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.4)</div>
+                    <div class="footer">
+                        <span class="price">60.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 44 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="V-MODA Crossfade">
+                </div>
+                <div class="product-info">
+                    <p class="category">V-MODA</p>
+                    <h3>Crossfade M-100 Master</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">270.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 45 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Cleer Flow II">
+                </div>
+                <div class="product-info">
+                    <p class="category">Cleer</p>
+                    <h3>Flow II Hybrid ANC Gris</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <div class="footer">
+                        <span class="price">175.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 46 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400" alt="Drop x Sennheiser">
+                </div>
+                <div class="product-info">
+                    <p class="category">Drop</p>
+                    <h3>x Sennheiser HD 6XX</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">235.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 47 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400" alt="ASUS ROG">
+                </div>
+                <div class="product-info">
+                    <p class="category">ASUS</p>
+                    <h3>ROG Delta S Wireless</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <div class="footer">
+                        <span class="price">190.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 48 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1577174881658-0f30157f25f7?w=400" alt="Grado SR325x">
+                </div>
+                <div class="product-info">
+                    <p class="category">Grado</p>
+                    <h3>SR325x Open-Back</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">310.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 49 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400" alt="Denon AH-D7200">
+                </div>
+                <div class="product-info">
+                    <p class="category">Denon</p>
+                    <h3>AH-D7200 Premium</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <div class="footer">
+                        <span class="price">420.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 50 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Master & Dynamic MW75">
+                </div>
+                <div class="product-info">
+                    <p class="category">Master & Dynamic</p>
+                    <h3>MW75 ANC Silver/Brown</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <div class="footer">
+                        <span class="price">590.000 FCFA</span>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
