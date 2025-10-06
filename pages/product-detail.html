@@ -3,115 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Headphones Max - Détails</title>
-    <link rel="stylesheet" href="../assets/css/product-detail.css">
+    <title>Headphones Max - Détails | SonicWave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .color-option {
+            transition: all 0.2s ease;
+        }
+        
+        .color-option.active {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 2px white, 0 0 0 4px #3b82f6;
+        }
+        
+        .quantity-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .quantity-btn:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .thumbnail {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .thumbnail.active {
+            border-color: #3b82f6;
+            transform: scale(1.05);
+        }
+        
+        .thumbnail:hover:not(.active) {
+            border-color: #9ca3af;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .product-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .delivery-card {
+            transition: all 0.3s ease;
+        }
+        
+        .delivery-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50">
     <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">🛒 Shopcart</div>
-            <ul class="nav-links">
-                <li><a href="#">Categories ▼</a></li>
-                <li><a href="#">Deals</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-            <div class="nav-right">
-                <input type="text" placeholder="Search Product">
-                <span>❤️</span>
-                <span>🛒</span>
-                <button class="btn-account">👤 Account</button>
-                <button class="btn-cart">🛒 Cart</button>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">SonicWave</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Accueil</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Boutique</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">À propos</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Rechercher" class="pl-10 pr-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
+                    </div>
+                    <button class="p-2 text-gray-600 hover:text-blue-600">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="p-2 text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button class="p-2 text-gray-600 hover:text-blue-600">
+                        <i class="far fa-user"></i>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- Product Detail Section -->
-    <div class="product-wrapper">
-        <!-- Left: Image Gallery -->
-        <div class="image-gallery">
-            <div class="main-product-image">
-                <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500" alt="Headphones Max">
-            </div>
-            <div class="thumbnail-row">
-                <div class="thumb active">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="Vue 1">
-                </div>
-                <div class="thumb">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100" alt="Vue 2">
-                </div>
-                <div class="thumb">
-                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=100" alt="Vue 3">
-                </div>
-                <div class="thumb">
-                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=100" alt="Vue 4">
-                </div>
-            </div>
-        </div>
-
-        <!-- Right: Product Info -->
-        <div class="product-info-box">
-            <h1>Headphones Max</h1>
-            <p class="description">2-in-1 Elegance of Smart and Audio. Multi-Connectivity Redefined.</p>
-            
-            <div class="rating-row">
-                <span class="stars">★★★★★</span>
-                <span class="review-text">(738 reviews)</span>
-            </div>
-
-            <div class="price-box">
-                <span class="price">$550.</span>
-                <span class="cents">99</span>
-            </div>
-
-            <!-- Color Selection -->
-            <div class="option-section">
-                <label>Choose a Color</label>
-                <div class="color-circles">
-                    <div class="color-circle" style="background: #E91E63;"></div>
-                    <div class="color-circle" style="background: #4FC3F7;"></div>
-                    <div class="color-circle active" style="background: #4CAF50;"></div>
-                    <div class="color-circle" style="background: #8BC34A;"></div>
-                </div>
-            </div>
-
-            <!-- Quantity & Cart -->
-            <div class="cart-row">
-                <div class="qty-box">
-                    <button class="qty-minus">-</button>
-                    <span class="qty-num">1</span>
-                    <button class="qty-plus">+</button>
-                </div>
-                <span class="stock-text">Only 12 Items Left! Don't miss it</span>
-            </div>
-
-            <div class="action-row">
-                <button class="btn-buy">Buy Now</button>
-                <button class="btn-add">Add to Cart</button>
-            </div>
-
-            <!-- Delivery Info -->
-            <div class="delivery-info">
-                <div class="delivery-item">
-                    <span class="icon">🚚</span>
-                    <div>
-                        <strong>Free Delivery</strong>
-                        <p>1-2 day</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Left: Image Gallery -->
+            <div class="md:w-1/2">
+                <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+                    <div class="main-product-image h-80 md:h-96 overflow-hidden rounded-lg mb-4">
+                        <img id="main-image" src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500" alt="Headphones Max" class="w-full h-full object-cover">
+                    </div>
+                    <div class="thumbnail-row flex gap-2 justify-center">
+                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden active">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="Vue 1" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+                        </div>
+                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100" alt="Vue 2" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500">
+                        </div>
+                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=100" alt="Vue 3" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500">
+                        </div>
+                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=100" alt="Vue 4" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500">
+                        </div>
                     </div>
                 </div>
-                <div class="delivery-item">
-                    <span class="icon">📦</span>
-                    <div>
-                        <strong>In Stock</strong>
-                        <p>Today</p>
+                
+                <!-- Product Features -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4">Points clés</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span>Réduction de bruit active</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span>Bluetooth 5.2 multipoint</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span>30h autonomie</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span>Design pliable</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right: Product Info -->
+            <div class="md:w-1/2">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div class="mb-2">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Nouveau</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Headphones Max</h1>
+                    <p class="text-gray-600 mb-4">2-en-1 Élégance du Smart et de l'Audio. Multi-Connectivité Redéfinie.</p>
+                    
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-sm text-gray-500 ml-2">4.7 (738 avis)</span>
+                    </div>
+
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-gray-900">$550.99</span>
+                        <span class="text-sm text-gray-500 ml-1">TTC</span>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="mb-6">
+                        <h3 class="text-sm font-medium text-gray-900 mb-3">Choisir une couleur</h3>
+                        <div class="flex space-x-3">
+                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300 active" style="background-color: #E91E63;" data-color="Rose"></div>
+                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #4FC3F7;" data-color="Bleu"></div>
+                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #4CAF50;" data-color="Vert"></div>
+                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #8BC34A;" data-color="Vert clair"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Couleur sélectionnée: <span id="selected-color" class="font-medium">Rose</span></p>
+                    </div>
+
+                    <!-- Quantity & Cart -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
+                        <div class="flex items-center mb-4 sm:mb-0">
+                            <span class="text-sm font-medium text-gray-900 mr-3">Quantité:</span>
+                            <div class="flex items-center border border-gray-300 rounded-md">
+                                <button class="quantity-btn w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-l-md">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span id="quantity-display" class="w-10 text-center font-medium">1</span>
+                                <button class="quantity-btn w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-r-md">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-sm text-red-600 font-medium">
+                            <i class="fas fa-exclamation-circle mr-1"></i>
+                            Seulement 12 articles restants !
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
+                            <i class="fas fa-bolt mr-2"></i>
+                            Acheter maintenant
+                        </button>
+                        <button class="bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Ajouter au panier
+                        </button>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="delivery-card bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-truck text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Livraison gratuite</p>
+                                    <p class="text-xs text-gray-500">1-2 jours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-card bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-box text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">En stock</p>
+                                    <p class="text-xs text-gray-500">Expédié aujourd'hui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-card bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-shield-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Garantie</p>
+                                    <p class="text-xs text-gray-500">2 ans</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="delivery-item">
-                    <span class="icon">✓</span>
-                    <div>
-                        <strong>Guaranteed</strong>
-                        <p>1 year</p>
+                
+                <!-- Product Tabs -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <div class="border-b border-gray-200">
+                        <nav class="flex -mb-px">
+                            <button class="tab-button py-4 px-6 text-center border-b-2 border-blue-500 font-medium text-blue-600 flex-1" data-tab="description">
+                                Description
+                            </button>
+                            <button class="tab-button py-4 px-6 text-center border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 flex-1" data-tab="specifications">
+                                Spécifications
+                            </button>
+                            <button class="tab-button py-4 px-6 text-center border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 flex-1" data-tab="reviews">
+                                Avis (738)
+                            </button>
+                        </nav>
+                    </div>
+                    <div class="p-6">
+                        <div id="description" class="tab-content active">
+                            <p class="text-gray-600 mb-4">
+                                Les Headphones Max redéfinissent l'expérience audio avec une qualité sonore exceptionnelle et un design élégant. 
+                                Idéals pour les mélomanes exigeants et les professionnels du son.
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                                <li>Réduction de bruit active avancée</li>
+                                <li>Technologie audio haute résolution</li>
+                                <li>Confort optimal pour un port prolongé</li>
+                                <li>Contrôle tactile intuitif</li>
+                                <li>Assistant vocal intégré</li>
+                            </ul>
+                        </div>
+                        <div id="specifications" class="tab-content">
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-2">Connectivité</h4>
+                                    <ul class="text-gray-600 text-sm space-y-1">
+                                        <li>Bluetooth 5.2 avec multipoint</li>
+                                        <li>Port de charge USB-C</li>
+                                        <li>Prise audio 3.5mm</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-2">Batterie</h4>
+                                    <ul class="text-gray-600 text-sm space-y-1">
+                                        <li>Autonomie: 30 heures</li>
+                                        <li>Charge rapide: 15 min = 5 heures</li>
+                                        <li>Temps de charge complet: 2 heures</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="reviews" class="tab-content">
+                            <div class="space-y-6">
+                                <div class="border-b border-gray-200 pb-4">
+                                    <div class="flex justify-between mb-2">
+                                        <h4 class="font-medium text-gray-900">Jean D.</h4>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm">Qualité sonore exceptionnelle et très confortable. Je recommande !</p>
+                                </div>
+                                <div class="border-b border-gray-200 pb-4">
+                                    <div class="flex justify-between mb-2">
+                                        <h4 class="font-medium text-gray-900">Marie L.</h4>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm">Autonomie incroyable et réduction de bruit très efficace.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,38 +360,267 @@
     </div>
 
     <!-- Related Products -->
-    <div class="related-products">
-        <h2>Related Product</h2>
-        <div class="related-grid">
-            <div class="related-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Product">
-                <h3>Simple Mobile 4G LTE...</h3>
-                <div class="card-rating">★★★★★ (423)</div>
-                <div class="card-price">$1,500</div>
-                <button class="card-btn">Add to Cart</button>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Produits similaires</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Produit 1 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sony WH-1000XM4</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$299.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="related-card">
-                <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Product">
-                <h3>Simple Mobile 5G LTE...</h3>
-                <div class="card-rating">★★★★★ (536)</div>
-                <div class="card-price">$1,500</div>
-                <button class="card-btn">Add to Cart</button>
+
+            <!-- Produit 2 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Bose QuietComfort 35</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$279.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="related-card">
-                <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=300" alt="Product">
-                <h3>Simple Mobile 4G LTE...</h3>
-                <div class="card-rating">★★★★★ (423)</div>
-                <div class="card-price">$1,500</div>
-                <button class="card-btn">Add to Cart</button>
+
+            <!-- Produit 3 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Audio-Technica ATH-M50x</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.8)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$149.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="related-card">
-                <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Product">
-                <h3>Simple Mobile 5G LTE...</h3>
-                <div class="card-rating">★★★★★ (536)</div>
-                <div class="card-price">$1,500</div>
-                <button class="card-btn">Add to Cart</button>
+
+            <!-- Produit 4 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sennheiser HD 660 S</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$499.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-blue-50 py-12 mt-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Abonnez-vous à notre newsletter</h2>
+            <p class="text-gray-600 mb-6">Recevez les dernières nouveautés et offres spéciales</p>
+            <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                <input type="email" placeholder="Votre adresse email" class="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-300">S'abonner</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">SonicWave</h3>
+                    <p class="text-gray-400 text-sm">Produits audio premium pour les amateurs de musique et les professionnels.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Boutique</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Tous les produits</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Nouveautés</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Meilleures ventes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Articles en promo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Aide</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Livraison</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Retours</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            123 Rue de l'Audio, Ville Musique
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            contact@sonicwave.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +123 456 7890
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 SonicWave. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Thumbnail selection
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const mainImage = document.getElementById('main-image');
+                mainImage.src = this.querySelector('img').getAttribute('data-image');
+            });
+        });
+        
+        // Color selection
+        document.querySelectorAll('.color-option').forEach(color => {
+            color.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                
+                const selectedColor = document.getElementById('selected-color');
+                selectedColor.textContent = this.getAttribute('data-color');
+            });
+        });
+        
+        // Quantity controls
+        let quantity = 1;
+        const quantityDisplay = document.getElementById('quantity-display');
+        
+        document.querySelectorAll('.quantity-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.querySelector('.fa-minus')) {
+                    if (quantity > 1) {
+                        quantity--;
+                    }
+                } else {
+                    if (quantity < 12) {
+                        quantity++;
+                    }
+                }
+                quantityDisplay.textContent = quantity;
+            });
+        });
+        
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update tab buttons
+                document.querySelectorAll('.tab-button').forEach(t => {
+                    t.classList.remove('border-blue-500', 'text-blue-600');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                
+                this.classList.remove('border-transparent', 'text-gray-500');
+                this.classList.add('border-blue-500', 'text-blue-600');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Add to cart functionality
+        document.querySelector('.btn-add').addEventListener('click', function() {
+            const productName = document.querySelector('h1').textContent;
+            const selectedColor = document.getElementById('selected-color').textContent;
+            
+            alert(`Ajouté au panier: ${productName} (${selectedColor}) - Quantité: ${quantity}`);
+        });
+        
+        // Buy now functionality
+        document.querySelector('.btn-buy').addEventListener('click', function() {
+            alert('Redirection vers la page de paiement...');
+        });
+    </script>
 </body>
 </html>
