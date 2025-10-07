@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body class="bg-gray-50">
-    <!-- Header (unchanged from original) -->
+    <!-- Header -->
     <header>
         <nav class="navbar">
         <div class="logo">
@@ -129,10 +129,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="text-sm text-red-600 font-medium">
-                            <i class="fas fa-exclamation-circle mr-1"></i>
-                            Seulement 12 articles restants !
-                        </div>
+                    
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-3 mb-6">
@@ -154,7 +151,7 @@
                                     <i class="fas fa-truck text-blue-600"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium text-gray-900">Livraison gratuite</p>
+                                    <p class="text-sm font-medium text-gray-900">Livraison rapide</p>
                                     <p class="text-xs text-gray-500">1-2 jours</p>
                                 </div>
                             </div>
@@ -191,9 +188,7 @@
                             <button class="tab-button py-4 px-6 text-center border-b-2 border-blue-500 font-medium text-blue-600 flex-1" data-tab="description">
                                 Description
                             </button>
-                            <button class="tab-button py-4 px-6 text-center border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 flex-1" data-tab="specifications">
-                                Spécifications
-                            </button>
+                            
                             <button class="tab-button py-4 px-6 text-center border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 flex-1" data-tab="reviews">
                                 Avis (738)
                             </button>
@@ -311,6 +306,148 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+            <nav class="flex items-center space-x-2">
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
+                    <i class="fas fa-chevron-left w-4 h-4"></i>
+                </button>
+                <button class="px-3 py-1 rounded bg-blue-600 text-white font-medium">1</button>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">2</button>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">3</button>
+                <span class="px-2 text-gray-500">...</span>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">8</button>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
+                    <i class="fas fa-chevron-right w-4 h-4"></i>
+                </button>
+            </nav>
+        </div>
+    </section>
+     
+    <!-- Related Products -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Autres produits</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Produit 1 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sony WH-1000XM4</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$299.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Bose QuietComfort 35</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$279.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Audio-Technica ATH-M50x</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.8)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$149.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 4 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sennheiser HD 660 S</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">$499.99</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+            <nav class="flex items-center space-x-2">
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
+                    <i class="fas fa-chevron-left w-4 h-4"></i>
+                </button>
+                <button class="px-3 py-1 rounded bg-blue-600 text-white font-medium">1</button>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">2</button>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">3</button>
+                <span class="px-2 text-gray-500">...</span>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">8</button>
+                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
+                    <i class="fas fa-chevron-right w-4 h-4"></i>
+                </button>
+            </nav>
         </div>
     </section>
 
