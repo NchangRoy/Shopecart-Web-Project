@@ -6,118 +6,35 @@
     <title>Headphones Max - Détails | SonicWave</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .product-card {
-            transition: all 0.3s ease;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .color-option {
-            transition: all 0.2s ease;
-        }
-        
-        .color-option.active {
-            transform: scale(1.1);
-            box-shadow: 0 0 0 2px white, 0 0 0 4px #3b82f6;
-        }
-        
-        .quantity-btn {
-            transition: all 0.2s ease;
-        }
-        
-        .quantity-btn:hover {
-            background-color: #e5e7eb;
-        }
-        
-        .thumbnail {
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        
-        .thumbnail.active {
-            border-color: #3b82f6;
-            transform: scale(1.05);
-        }
-        
-        .thumbnail:hover:not(.active) {
-            border-color: #9ca3af;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .product-card {
-            animation: fadeIn 0.5s ease-out;
-        }
-        
-        .delivery-card {
-            transition: all 0.3s ease;
-        }
-        
-        .delivery-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-bold text-blue-600">SonicWave</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Accueil</a>
-                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Boutique</a>
-                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">À propos</a>
-                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <div class="relative">
-                        <input type="text" placeholder="Rechercher" class="pl-10 pr-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                        <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
-                    </div>
-                    <button class="p-2 text-gray-600 hover:text-blue-600">
-                        <i class="far fa-heart"></i>
-                    </button>
-                    <button class="p-2 text-gray-600 hover:text-blue-600">
-                        <i class="fas fa-shopping-cart"></i>
-                    </button>
-                    <button class="p-2 text-gray-600 hover:text-blue-600">
-                        <i class="far fa-user"></i>
-                    </button>
-                </div>
-            </div>
+    <!-- Header (unchanged from original) -->
+    <header>
+        <nav class="navbar">
+        <div class="logo">
+            <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+            <span class="logo-text">Shopcart</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Categories <span class="dropdown-arrow">▼</span></a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Search Product" class="search-input">
+        </div>
+        <div class="user-actions">
+            <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> Account</a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
         </nav>
     </header>
+
 
     <!-- Product Detail Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -156,14 +73,7 @@
                             <i class="fas fa-check-circle text-blue-500 mr-3"></i>
                             <span>Bluetooth 5.2 multipoint</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            <span>30h autonomie</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            <span>Design pliable</span>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -189,7 +99,7 @@
                     </div>
 
                     <div class="mb-6">
-                        <span class="text-3xl font-bold text-gray-900">$550.99</span>
+                        <span class="text-3xl font-bold text-gray-900">15.999FCFA</span>
                         <span class="text-sm text-gray-500 ml-1">TTC</span>
                     </div>
 
@@ -226,11 +136,11 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-3 mb-6">
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
+                        <button class="btn-buy bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
                             <i class="fas fa-bolt mr-2"></i>
                             Acheter maintenant
                         </button>
-                        <button class="bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
+                        <button class="btn-add bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
                             <i class="fas fa-shopping-cart mr-2"></i>
                             Ajouter au panier
                         </button>
@@ -288,71 +198,6 @@
                                 Avis (738)
                             </button>
                         </nav>
-                    </div>
-                    <div class="p-6">
-                        <div id="description" class="tab-content active">
-                            <p class="text-gray-600 mb-4">
-                                Les Headphones Max redéfinissent l'expérience audio avec une qualité sonore exceptionnelle et un design élégant. 
-                                Idéals pour les mélomanes exigeants et les professionnels du son.
-                            </p>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                                <li>Réduction de bruit active avancée</li>
-                                <li>Technologie audio haute résolution</li>
-                                <li>Confort optimal pour un port prolongé</li>
-                                <li>Contrôle tactile intuitif</li>
-                                <li>Assistant vocal intégré</li>
-                            </ul>
-                        </div>
-                        <div id="specifications" class="tab-content">
-                            <div class="space-y-4">
-                                <div>
-                                    <h4 class="font-medium text-gray-900 mb-2">Connectivité</h4>
-                                    <ul class="text-gray-600 text-sm space-y-1">
-                                        <li>Bluetooth 5.2 avec multipoint</li>
-                                        <li>Port de charge USB-C</li>
-                                        <li>Prise audio 3.5mm</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-900 mb-2">Batterie</h4>
-                                    <ul class="text-gray-600 text-sm space-y-1">
-                                        <li>Autonomie: 30 heures</li>
-                                        <li>Charge rapide: 15 min = 5 heures</li>
-                                        <li>Temps de charge complet: 2 heures</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="reviews" class="tab-content">
-                            <div class="space-y-6">
-                                <div class="border-b border-gray-200 pb-4">
-                                    <div class="flex justify-between mb-2">
-                                        <h4 class="font-medium text-gray-900">Jean D.</h4>
-                                        <div class="flex text-yellow-400 text-sm">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">Qualité sonore exceptionnelle et très confortable. Je recommande !</p>
-                                </div>
-                                <div class="border-b border-gray-200 pb-4">
-                                    <div class="flex justify-between mb-2">
-                                        <h4 class="font-medium text-gray-900">Marie L.</h4>
-                                        <div class="flex text-yellow-400 text-sm">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">Autonomie incroyable et réduction de bruit très efficace.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -469,158 +314,46 @@
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="bg-blue-50 py-12 mt-10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">Abonnez-vous à notre newsletter</h2>
-            <p class="text-gray-600 mb-6">Recevez les dernières nouveautés et offres spéciales</p>
-            <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-                <input type="email" placeholder="Votre adresse email" class="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-300">S'abonner</button>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-12 pb-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">SonicWave</h3>
-                    <p class="text-gray-400 text-sm">Produits audio premium pour les amateurs de musique et les professionnels.</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Boutique</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Tous les produits</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Nouveautés</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Meilleures ventes</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Articles en promo</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Aide</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">FAQ</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Livraison</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Retours</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Contactez-nous</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            123 Rue de l'Audio, Ville Musique
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
-                            contact@sonicwave.com
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-2"></i>
-                            +123 456 7890
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">&copy; 2023 SonicWave. Tous droits réservés.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Politique de confidentialité</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Conditions d'utilisation</a>
-                </div>
-            </div>
+    <footer>
+        <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <ul>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Partners</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Our Shop</h3>
+            <ul>
+            <li><a href="#">Partners</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">business@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Customer Care</h3>
+            <ul>
+            <li><a href="#">Promotion Policy</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <p>© Copyright 2025 Shopcart</p>
+        <div class="footer-links">
+            <a href="#">Privacy</a> | <a href="#">Terms & Conditions</a>
+        </div>
         </div>
     </footer>
-
-    <script>
-        // Thumbnail selection
-        document.querySelectorAll('.thumbnail').forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                
-                const mainImage = document.getElementById('main-image');
-                mainImage.src = this.querySelector('img').getAttribute('data-image');
-            });
-        });
-        
-        // Color selection
-        document.querySelectorAll('.color-option').forEach(color => {
-            color.addEventListener('click', function() {
-                document.querySelectorAll('.color-option').forEach(c => c.classList.remove('active'));
-                this.classList.add('active');
-                
-                const selectedColor = document.getElementById('selected-color');
-                selectedColor.textContent = this.getAttribute('data-color');
-            });
-        });
-        
-        // Quantity controls
-        let quantity = 1;
-        const quantityDisplay = document.getElementById('quantity-display');
-        
-        document.querySelectorAll('.quantity-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (this.querySelector('.fa-minus')) {
-                    if (quantity > 1) {
-                        quantity--;
-                    }
-                } else {
-                    if (quantity < 12) {
-                        quantity++;
-                    }
-                }
-                quantityDisplay.textContent = quantity;
-            });
-        });
-        
-        // Tab functionality
-        document.querySelectorAll('.tab-button').forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Update tab buttons
-                document.querySelectorAll('.tab-button').forEach(t => {
-                    t.classList.remove('border-blue-500', 'text-blue-600');
-                    t.classList.add('border-transparent', 'text-gray-500');
-                });
-                
-                this.classList.remove('border-transparent', 'text-gray-500');
-                this.classList.add('border-blue-500', 'text-blue-600');
-                
-                // Show corresponding content
-                const tabId = this.getAttribute('data-tab');
-                document.querySelectorAll('.tab-content').forEach(content => {
-                    content.classList.remove('active');
-                });
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-        
-        // Add to cart functionality
-        document.querySelector('.btn-add').addEventListener('click', function() {
-            const productName = document.querySelector('h1').textContent;
-            const selectedColor = document.getElementById('selected-color').textContent;
-            
-            alert(`Ajouté au panier: ${productName} (${selectedColor}) - Quantité: ${quantity}`);
-        });
-        
-        // Buy now functionality
-        document.querySelector('.btn-buy').addEventListener('click', function() {
-            alert('Redirection vers la page de paiement...');
-        });
-    </script>
 </body>
 </html>
