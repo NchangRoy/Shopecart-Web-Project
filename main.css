@@ -1,0 +1,105 @@
+/* main.css */
+
+/* Variables et Styles généraux (répétés ici pour l'autonomie du fichier) */
+:root {
+    --primary-green: #5cb85c;
+    --text-color: #333;
+    --light-gray-bg: #f7f7f7;
+    --border-color: #eeeeee;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray-bg); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenu Principal */
+.account-page {
+    width: 100%;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.breadcrumb {
+    font-size: 0.85em;
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto 15px;
+    padding-left: 10px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* Conteneur principal (la "carte" blanche) */
+.settings-card {
+    background-color: white;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Ligne de paramètre */
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.setting-item.no-btn {
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.setting-info {
+    flex-grow: 1;
+}
+
+.setting-label {
+    display: block;
+    font-weight: normal;
+    color: var(--text-color);
+    font-size: 1em;
+    margin-bottom: 2px;
+}
+
+.old-value {
+    font-size: 0.85em;
+    color: #999;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bouton "Modifier" */
+.modify-btn {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px; 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: lowercase;
+}
+
+.modify-btn:hover {
+    background-color: #4cae4c; 
+}
