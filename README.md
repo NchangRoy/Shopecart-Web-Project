@@ -34,10 +34,10 @@ Chaque TP est évalué sur l'organisation Git (20%), la contribution individuell
 
 ## Structure du Dépôt
 - `/assets/` : CSS, images, JS communs.
-- `/tp1/` : Site statique (HTML/CSS).
-- `/tp2/` : Ajouts JS (panier dynamique).
-- `/tp3/` : Thème CMS et extensions.
-- `/tp4/` : Application Laravel complète.
+- `/tp/1-static/` : Site statique (HTML/CSS).
+- `/tp/2-js-dynamics/` : Ajouts JS (panier dynamique).
+- `/tp/3-cms-ecommerce/` : Thème CMS et extensions.
+- `/tp/4-laravel-full/` : Application Laravel complète.
 - `/docs/` : Designs Figma (captures), répartition des tâches, et documents du cours.
 
 ## Contributions
