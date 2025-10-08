@@ -83,55 +83,40 @@ input {
     border-radius: 5px;
 }
 
-.social-login {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    justify-content: space-between;
-    margin: 10px 0;
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 14px 0 8px;
 }
 
-.social-login i {
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 100px;
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(9,30,66,0.03);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  transition: all 0.3s ease;
 }
 
-.social-btn {
-    flex: 1;
-    padding: 15px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-
-    /* Layout and spacing */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background-color 0.2s;
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(9,30,66,0.15);
+  border-color: rgba(0,0,0,0.15);
 }
 
-.social-btn:hover {
-  background-color: #f7f7f7;
-}
+.social-icon .fa-google { color: #db4437; }
+.social-icon .fa-apple { color: #000; }
+.social-icon .fa-facebook-f { color: #1877f2; }
 
-.social-btn.google {
-    background-color: #4285f4; color: #fff; 
-    border-radius: 20px;
-}
-.social-btn.apple { 
-    background-color: #000; color: #fff; 
-    border-radius: 20px;
-}
-.social-btn.facebook { 
-    background-color: #3b5998; color: #fff; 
-    border-radius: 20px;
-}
 
 .submit-btn {
     padding: 10px;
@@ -182,3 +167,4 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
+

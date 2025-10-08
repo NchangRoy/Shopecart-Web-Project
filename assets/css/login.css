@@ -129,6 +129,7 @@ body::before {
   transform: scale(1.02);
 }
 
+
 .social-row {
   display: flex;
   justify-content: center;
