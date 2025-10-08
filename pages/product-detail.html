@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
+   
+   
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
@@ -64,7 +66,6 @@
                 <!-- Product Features -->
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-lg font-semibold mb-4">Points clés</h3>
-                    <ul class="space-y-3">
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-blue-500 mr-3"></i>
                             <span>Réduction de bruit active</span>
@@ -73,8 +74,7 @@
                             <i class="fas fa-check-circle text-blue-500 mr-3"></i>
                             <span>Bluetooth 5.2 multipoint</span>
                         </li>
-                        
-                    </ul>
+                     
                 </div>
             </div>
 
@@ -93,6 +93,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                    
                             <i class="fas fa-star-half-alt"></i>
                         </div>
                         <span class="text-sm text-gray-500 ml-2">4.7 (738 avis)</span>
@@ -112,7 +113,7 @@
                             <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #4CAF50;" data-color="Vert"></div>
                             <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #8BC34A;" data-color="Vert clair"></div>
                         </div>
-                        <p class="text-sm text-gray-500 mt-2">Couleur sélectionnée: <span id="selected-color" class="font-medium">Rose</span></p>
+                        <span class="text-sm text-gray-500 mt-2">Couleur sélectionnée: <span id="selected-color" class="font-medium">Rose</span></span>
                     </div>
 
                     <!-- Quantity & Cart -->
@@ -123,7 +124,7 @@
                                 <button class="quantity-btn w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-l-md">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <span id="quantity-display" class="w-10 text-center font-medium">1</span>
+                                <span  class="w-10 text-center font-medium">1</span>
                                 <button class="quantity-btn w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-r-md">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -201,7 +202,9 @@
 
     <!-- Related Products -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Produits similaires</h2>
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight section-title">
+                <span class="gradient-yellow-orange">Similar products</span>
+        </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Produit 1 -->
             <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
@@ -221,7 +224,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.9)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$299.99</span>
+                        <span class="text-lg font-bold text-gray-900">10.999FCCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -247,7 +250,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.7)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$279.99</span>
+                        <span class="text-lg font-bold text-gray-900">15.999FCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -273,7 +276,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.8)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$149.99</span>
+                        <span class="text-lg font-bold text-gray-900">14.999FCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -299,7 +302,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.6)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$499.99</span>
+                        <span class="text-lg font-bold text-gray-900">5.999FCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -308,26 +311,98 @@
             </div>
         </div>
 
-        <div class="mt-10 flex justify-center">
-            <nav class="flex items-center space-x-2">
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
-                    <i class="fas fa-chevron-left w-4 h-4"></i>
-                </button>
-                <button class="px-3 py-1 rounded bg-blue-600 text-white font-medium">1</button>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">2</button>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">3</button>
-                <span class="px-2 text-gray-500">...</span>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">8</button>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
-                    <i class="fas fa-chevron-right w-4 h-4"></i>
-                </button>
-            </nav>
+        <div class="mt-10 mb-10">
+            <div class="flex flex-col items-center">
+                <nav class="flex items-center space-x-1 text-sm">
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <i class="fas fa-chevron-left w-2 h-2"></i>
+                        <span>Précédent</span>
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-700 text-white font-medium shadow-md">
+                        1
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        2
+                    </button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        3
+                    </button>
+                    
+                    
+                    <span class="px-2 text-gray-500">...</span>
+                  
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        8
+                    </button>
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <span>Suivant</span>
+                        <i class="fas fa-chevron-right w-2 h-2"></i>
+                    </button>
+                </nav>
+
+                <div class="w-full flex justify-center mt-8 space-x-3">
+                    <hr class="w-1/3 max-w-sm h-1 bg-indigo-700 border-0 rounded-full">
+                    <hr class="w-1/4 max-w-xs h-1 bg-gray-300 border-0 rounded-full">
+                    <hr class="w-1/6 max-w-[100px] h-1 bg-gray-300 border-0 rounded-full">
+                </div>
+            </div>
         </div>
+
     </section>
-     
     <!-- Related Products -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Autres produits</h2>
+       
+
+        <!-- Grille des vidéos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Vidéo 1 -->
+            <section class="relative rounded-2xl overflow-hidden shadow-xl">
+                <video autoplay loop muted playsinline class="w-full h-96 object-cover">
+                <source src="/assets/vidéos/ipad1.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-6">
+                    <h3 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight section-title-promo">
+                        Restez en contact avec vos proches 
+                    </h3>
+                    <p class="text-lg mb-6 text-gray-200 max-w-xl">
+                        Profitez de réductions exceptionnelles sur nos casques sans fil jusqu’à 
+                        <span class="font-bold text-yellow-400">-30%</span> !
+                    </p>
+                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        Découvrir les Offres
+                    </button>
+                </div>
+            </section>
+
+            <!-- Vidéo 2 -->
+            <section class="relative rounded-2xl overflow-hidden shadow-xl">
+                <video autoplay loop muted playsinline class="w-full h-96 object-cover">
+                <source src="/assets/vidéos/MONTRE.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-6">
+                    <h3 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight section-title-promo">
+                        Avec une montre connectée suivez vos paramètres vitaux 
+                    </h3>
+                    <p class="text-lg mb-6 text-gray-200 max-w-xl">
+                        Bénéficiez d'offres exclusives et de réductions jusqu’à 
+                        <span class="font-bold text-yellow-400">-25%</span> !
+                    </p>
+                    <button class="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        Voir les Offres
+                    </button>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- Related Products -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight section-title">
+                <span class="gradient-yellow-orange">Best Sellers</span>
+        </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Produit 1 -->
             <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
@@ -347,7 +422,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.9)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$299.99</span>
+                        <span class="text-lg font-bold text-gray-900">19.99FCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -373,7 +448,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.7)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$279.99</span>
+                        <span class="text-lg font-bold text-gray-900">19.999FCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -399,7 +474,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.8)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$149.99</span>
+                        <span class="text-lg font-bold text-gray-900">5.999FCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -425,7 +500,7 @@
                         <span class="text-xs text-gray-500 ml-1">(4.6)</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$499.99</span>
+                        <span class="text-lg font-bold text-gray-900">10.990FCFA</span>
                         <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
@@ -434,23 +509,51 @@
             </div>
         </div>
 
-        <div class="mt-10 flex justify-center">
-            <nav class="flex items-center space-x-2">
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
-                    <i class="fas fa-chevron-left w-4 h-4"></i>
-                </button>
-                <button class="px-3 py-1 rounded bg-blue-600 text-white font-medium">1</button>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">2</button>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">3</button>
-                <span class="px-2 text-gray-500">...</span>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">8</button>
-                <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-blue-50 hover:text-blue-600">
-                    <i class="fas fa-chevron-right w-4 h-4"></i>
-                </button>
-            </nav>
+        <div class="mt-10 mb-10">
+            <div class="flex flex-col items-center">
+                <nav class="flex items-center space-x-1 text-sm">
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <i class="fas fa-chevron-left w-2 h-2"></i>
+                        <span>Précédent</span>
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-700 text-white font-medium shadow-md">
+                        1
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        2
+                    </button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        3
+                    </button>
+                    
+                    
+                    <span class="px-2 text-gray-500">...</span>
+                  
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        8
+                    </button>
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <span>Suivant</span>
+                        <i class="fas fa-chevron-right w-2 h-2"></i>
+                    </button>
+                </nav>
+
+                <div class="w-full flex justify-center mt-8 space-x-3">
+                    <hr class="w-1/3 max-w-sm h-1 bg-indigo-700 border-0 rounded-full">
+                    <hr class="w-1/4 max-w-xs h-1 bg-gray-300 border-0 rounded-full">
+                    <hr class="w-1/6 max-w-[100px] h-1 bg-gray-300 border-0 rounded-full">
+                </div>
+            </div>
         </div>
+
     </section>
 
+
+    
     
 
     <!-- Footer -->
