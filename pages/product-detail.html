@@ -5,503 +5,399 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Headphones Max - Détails | SonicWave</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
-   
-   
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
+<body class="body-bg">
     <header>
         <nav class="navbar">
         <div class="logo">
-            <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+            <img src="/assets/images/shopcart-logo.png" alt="Logo Shopcart" class="logo-img">
             <span class="logo-text">Shopcart</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Categories <span class="dropdown-arrow">▼</span></a></li>
-            <li><a href="#">Deals</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="#">Catégories <span class="dropdown-arrow">▼</span></a></li>
+            <li><a href="#">Offres</a></li>
+            <li><a href="#">À Propos</a></li>
             <li><a href="#">Blog</a></li>
         </ul>
         <div class="search-bar">
-            <input type="text" placeholder="🔍 Search Product" class="search-input">
+            <input type="text" placeholder="🔍 Rechercher un Produit" class="search-input">
         </div>
         <div class="user-actions">
-            <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> Account</a>
-            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> Compte</a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Panier</a>
         </div>
         </nav>
     </header>
 
-
-    <!-- Product Detail Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex flex-col md:flex-row gap-8">
-            <!-- Left: Image Gallery -->
-            <div class="md:w-1/2">
-                <div class="bg-white rounded-lg shadow-md p-4 mb-4">
-                    <div class="main-product-image h-80 md:h-96 overflow-hidden rounded-lg mb-4">
-                        <img id="main-image" src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500" alt="Headphones Max" class="w-full h-full object-cover">
+    <div class="product-detail-container">
+        <div class="product-detail-flex">
+            <div class="product-detail-left">
+                <div class="image-gallery-box">
+                    <div class="main-product-image">
+                        <img id="main-image" src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500" alt="Casque Max">
                     </div>
-                    <div class="thumbnail-row flex gap-2 justify-center">
-                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden active">
-                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="Vue 1" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+                    <div class="thumbnail-row">
+                        <div class="thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="Vue 1" data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
                         </div>
-                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100" alt="Vue 2" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100" alt="Vue 2" data-image="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500">
                         </div>
-                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=100" alt="Vue 3" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=100" alt="Vue 3" data-image="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500">
                         </div>
-                        <div class="thumbnail w-16 h-16 border-2 border-transparent rounded-md overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=100" alt="Vue 4" class="w-full h-full object-cover" data-image="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=100" alt="Vue 4" data-image="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500">
                         </div>
                     </div>
                 </div>
                 
-                <!-- Product Features -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg font-semibold mb-4">Points clés</h3>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            <span>Réduction de bruit active</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                            <span>Bluetooth 5.2 multipoint</span>
-                        </li>
-                     
-                </div>
+                
             </div>
 
-            <!-- Right: Product Info -->
-            <div class="md:w-1/2">
-                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                    <div class="mb-2">
-                        <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Nouveau</span>
+            <div class="product-detail-right">
+                <div class="product-info-box">
+                    <div class="new-tag-wrapper">
+                        <span class="new-tag">Nouveau</span>
                     </div>
-                    <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Headphones Max</h1>
-                    <p class="text-gray-600 mb-4">2-en-1 Élégance du Smart et de l'Audio. Multi-Connectivité Redéfinie.</p>
+                    <h1 class="product-title">Headphones Max</h1>
+                    <p class="product-subtitle">2-en-1 Élégance du Smart et de l'Audio. Multi-Connectivité Redéfinie.</p>
                     
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-400">
+                    <div class="rating-info">
+                        <div class="stars-list">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                    
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="text-sm text-gray-500 ml-2">4.7 (738 avis)</span>
+                        <span class="rating-text">4.7 (738 avis)</span>
                     </div>
 
-                    <div class="mb-6">
-                        <span class="text-3xl font-bold text-gray-900">15.999FCFA</span>
-                        <span class="text-sm text-gray-500 ml-1">TTC</span>
+                    <div class="price-info">
+                        <span class="main-price">15.999FCFA</span>
+                        <span class="tax-info">TTC</span>
                     </div>
 
-                    <!-- Color Selection -->
-                    <div class="mb-6">
-                        <h3 class="text-sm font-medium text-gray-900 mb-3">Choisir une couleur</h3>
-                        <div class="flex space-x-3">
-                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300 active" style="background-color: #E91E63;" data-color="Rose"></div>
-                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #4FC3F7;" data-color="Bleu"></div>
-                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #4CAF50;" data-color="Vert"></div>
-                            <div class="color-option w-10 h-10 rounded-full border-2 border-gray-300" style="background-color: #8BC34A;" data-color="Vert clair"></div>
+                    <div class="color-selection-area">
+                        <h3 class="color-selection-title">Choisissez une couleur</h3>
+                        <div class="color-options-row">
+                            <div class="color-option active" style="background-color: #E91E63;" data-color="Rose"></div>
+                            <div class="color-option" style="background-color: #4FC3F7;" data-color="Bleu"></div>
+                            <div class="color-option" style="background-color: #4CAF50;" data-color="Vert"></div>
+                            <div class="color-option" style="background-color: #8BC34A;" data-color="Vert clair"></div>
                         </div>
-                        <span class="text-sm text-gray-500 mt-2">Couleur sélectionnée: <span id="selected-color" class="font-medium">Rose</span></span>
+                        <span class="selected-color-text">Couleur sélectionnée: <span id="selected-color">Rose</span></span>
                     </div>
 
-                    <!-- Quantity & Cart -->
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
-                        <div class="flex items-center mb-4 sm:mb-0">
-                            <span class="text-sm font-medium text-gray-900 mr-3">Quantité:</span>
-                            <div class="flex items-center border border-gray-300 rounded-md">
-                                <button class="quantity-btn w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-l-md">
+                    <div class="quantity-cart-area">
+                        <div class="quantity-control">
+                            <span class="quantity-label">Quantité:</span>
+                            <div class="quantity-buttons-wrapper">
+                                <button class="quantity-btn">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <span  class="w-10 text-center font-medium">1</span>
-                                <button class="quantity-btn w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-r-md">
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn">
                                     <i class="fas fa-plus"></i>
                                 </button>
                             </div>
                         </div>
-                    
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
-                        <button class="btn-buy bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
-                            <i class="fas fa-bolt mr-2"></i>
+                    <div class="action-buttons-row">
+                        <button class="btn-buy">
+                            <i class="fas fa-bolt icon-margin"></i>
                             Acheter maintenant
                         </button>
-                        <button class="btn-add bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-md transition duration-300 flex-1 flex items-center justify-center">
-                            <i class="fas fa-shopping-cart mr-2"></i>
+                        <button class="btn-add">
+                            <i class="fas fa-shopping-cart icon-margin"></i>
                             Ajouter au panier
                         </button>
                     </div>
 
-                    <!-- Delivery Info -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="delivery-card bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <div class="flex items-center">
-                                <div class="bg-blue-100 p-2 rounded-full mr-3">
-                                    <i class="fas fa-truck text-blue-600"></i>
+                    <div class="delivery-grid">
+                        <div class="delivery-card">
+                            <div class="delivery-content">
+                                <div class="delivery-icon-bg bg-blue">
+                                    <i class="fas fa-truck delivery-icon text-blue"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium text-gray-900">Livraison rapide</p>
-                                    <p class="text-xs text-gray-500">1-2 jours</p>
+                                    <p class="delivery-title">Livraison rapide</p>
+                                    <p class="delivery-subtitle">1-2 jours</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="delivery-card bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <div class="flex items-center">
-                                <div class="bg-green-100 p-2 rounded-full mr-3">
-                                    <i class="fas fa-box text-green-600"></i>
+                        <div class="delivery-card">
+                            <div class="delivery-content">
+                                <div class="delivery-icon-bg bg-green">
+                                    <i class="fas fa-box delivery-icon text-green"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium text-gray-900">En stock</p>
-                                    <p class="text-xs text-gray-500">Expédié aujourd'hui</p>
+                                    <p class="delivery-title">En stock</p>
+                                    <p class="delivery-subtitle">Expédié aujourd'hui</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="delivery-card bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <div class="flex items-center">
-                                <div class="bg-purple-100 p-2 rounded-full mr-3">
-                                    <i class="fas fa-shield-alt text-purple-600"></i>
+                        <div class="delivery-card">
+                            <div class="delivery-content">
+                                <div class="delivery-icon-bg bg-purple">
+                                    <i class="fas fa-shield-alt delivery-icon text-purple"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-medium text-gray-900">Garantie</p>
-                                    <p class="text-xs text-gray-500">2 ans</p>
+                                    <p class="delivery-title">Garantie</p>
+                                    <p class="delivery-subtitle">2 ans</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Product Tabs -->
-                <div class="bg-white rounded-lg shadow-md">
-                    <div class="border-b border-gray-200">
-                        <nav class="flex -mb-px">
-                            <button class="tab-button py-4 px-6 text-center border-b-2 border-blue-500 font-medium text-blue-600 flex-1" data-tab="description">
-                                Description
-                            </button>
-                            
-                            <button class="tab-button py-4 px-6 text-center border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 flex-1" data-tab="reviews">
-                                Avis (738)
-                            </button>
-                        </nav>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
 
-    <!-- Related Products -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight section-title">
-                <span class="gradient-yellow-orange">Similar products</span>
+    <section class="related-products-section">
+        <h2 class="section-title">
+            <span class="gradient-yellow-orange">Produits similaires</span>
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Produit 1 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio" class="w-full h-full object-cover">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio">
                 </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sony WH-1000XM4</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
+                <div class="product-card-info">
+                    <h3 class="product-card-title">Sony WH-1000XM4</h3>
+                    <div class="rating-info-small">
+                        <div class="stars-list-small">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        <span class="rating-text-small">(4.9)</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">10.999FCCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                    <div class="product-card-actions">
+                        <span class="product-card-price">10.999FCCFA</span>
+                        <button class="add-to-cart-btn">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Produit 2 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio" class="w-full h-full object-cover">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio">
                 </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Bose QuietComfort 35</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
+                <div class="product-card-info">
+                    <h3 class="product-card-title">Sennheiser HD 660 S</h3>
+                    <div class="rating-info-small">
+                        <div class="stars-list-small">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        <span class="rating-text-small">(4.6)</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">15.999FCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produit 3 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=300" alt="Casque audio" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Audio-Technica ATH-M50x</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.8)</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">14.999FCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produit 4 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sennheiser HD 660 S</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.6)</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">5.999FCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                    <div class="product-card-actions">
+                        <span class="product-card-price">5.999FCFA</span>
+                        <button class="add-to-cart-btn">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="mt-10 mb-10">
-            <div class="flex flex-col items-center">
-                <nav class="flex items-center space-x-1 text-sm">
+        
+        <div class="pagination-section">
+            <div class="pagination-center-wrapper">
+                <nav class="pagination-nav">
                     
-                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
-                        <i class="fas fa-chevron-left w-2 h-2"></i>
+                    <button class="pagination-btn-prev">
+                        <i class="fas fa-chevron-left icon-small-margin-right"></i>
                         <span>Précédent</span>
                     </button>
                     
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-700 text-white font-medium shadow-md">
+                    <button class="pagination-page-btn active-page">
                         1
                     </button>
                     
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                    <button class="pagination-page-btn">
                         2
                     </button>
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                    <button class="pagination-page-btn">
                         3
                     </button>
                     
+                    <span class="pagination-ellipsis">.......</span>
                     
-                    <span class="px-2 text-gray-500">...</span>
-                  
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                    <button class="pagination-page-btn">
                         8
                     </button>
                     
-                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                    <button class="pagination-btn-next">
                         <span>Suivant</span>
-                        <i class="fas fa-chevron-right w-2 h-2"></i>
+                        <i class="fas fa-chevron-right icon-small-margin-left"></i>
                     </button>
                 </nav>
 
-                <div class="w-full flex justify-center mt-8 space-x-3">
-                    <hr class="w-1/3 max-w-sm h-1 bg-indigo-700 border-0 rounded-full">
-                    <hr class="w-1/4 max-w-xs h-1 bg-gray-300 border-0 rounded-full">
-                    <hr class="w-1/6 max-w-[100px] h-1 bg-gray-300 border-0 rounded-full">
+                <div class="progress-bar-row">
+                    <hr class="progress-bar-segment-1">
+                    <hr class="progress-bar-segment-2">
+                    <hr class="progress-bar-segment-3">
                 </div>
             </div>
         </div>
-
     </section>
-    <!-- Related Products -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-       
 
-        <!-- Grille des vidéos -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Vidéo 1 -->
-            <section class="relative rounded-2xl overflow-hidden shadow-xl">
-                <video autoplay loop muted playsinline class="w-full h-96 object-cover">
+    <section class="video-promo-section">
+        <div class="video-grid">
+            <section class="video-card">
+                <video autoplay loop muted playsinline class="video-element">
                 <source src="/assets/vidéos/ipad1.mp4" type="video/mp4">
                 </video>
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-6">
-                    <h3 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight section-title-promo">
+                <div class="video-overlay">
+                    <h3 class="video-title">
                         Restez en contact avec vos proches 
                     </h3>
-                    <p class="text-lg mb-6 text-gray-200 max-w-xl">
+                    <p class="video-subtitle">
                         Profitez de réductions exceptionnelles sur nos casques sans fil jusqu’à 
-                        <span class="font-bold text-yellow-400">-30%</span> !
+                        <span class="video-discount-highlight">-30%</span> !
                     </p>
-                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    <button class="video-cta-button button-blue-purple">
                         Découvrir les Offres
                     </button>
                 </div>
             </section>
 
-            <!-- Vidéo 2 -->
-            <section class="relative rounded-2xl overflow-hidden shadow-xl">
-                <video autoplay loop muted playsinline class="w-full h-96 object-cover">
+            <section class="video-card">
+                <video autoplay loop muted playsinline class="video-element">
                 <source src="/assets/vidéos/MONTRE.mp4" type="video/mp4">
                 </video>
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-6">
-                    <h3 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight section-title-promo">
+                <div class="video-overlay">
+                    <h3 class="video-title">
                         Avec une montre connectée suivez vos paramètres vitaux 
                     </h3>
-                    <p class="text-lg mb-6 text-gray-200 max-w-xl">
+                    <p class="video-subtitle">
                         Bénéficiez d'offres exclusives et de réductions jusqu’à 
-                        <span class="font-bold text-yellow-400">-25%</span> !
+                        <span class="video-discount-highlight">-25%</span> !
                     </p>
-                    <button class="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    <button class="video-cta-button button-green-teal">
                         Voir les Offres
                     </button>
                 </div>
             </section>
         </div>
     </section>
-    <!-- Related Products -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight section-title">
-                <span class="gradient-yellow-orange">Best Sellers</span>
+    
+    <section class="best-sellers-section">
+        <h2 class="section-title">
+            <span class="gradient-yellow-orange">Meilleures Ventes</span>
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Produit 1 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio" class="w-full h-full object-cover">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio">
                 </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sony WH-1000XM4</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
+                <div class="product-card-info">
+                    <h3 class="product-card-title">Sony WH-1000XM4</h3>
+                    <div class="rating-info-small">
+                        <div class="stars-list-small">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        <span class="rating-text-small">(4.9)</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">19.99FCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                    <div class="product-card-actions">
+                        <span class="product-card-price">19.99FCFA</span>
+                        <button class="add-to-cart-btn">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Produit 2 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio" class="w-full h-full object-cover">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
                 </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Bose QuietComfort 35</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
+                <div class="product-card-info">
+                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
+                    <div class="rating-info-small">
+                        <div class="stars-list-small">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        <span class="rating-text-small">(4.7)</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">19.999FCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                    <div class="product-card-actions">
+                        <span class="product-card-price">19.999FCFA</span>
+                        <button class="add-to-cart-btn">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Produit 3 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=300" alt="Casque audio" class="w-full h-full object-cover">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=300" alt="Casque audio">
                 </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Audio-Technica ATH-M50x</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
+                <div class="product-card-info">
+                    <h3 class="product-card-title">Audio-Technica ATH-M50x</h3>
+                    <div class="rating-info-small">
+                        <div class="stars-list-small">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.8)</span>
+                        <span class="rating-text-small">(4.8)</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">5.999FCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                    <div class="product-card-actions">
+                        <span class="product-card-price">5.999FCFA</span>
+                        <button class="add-to-cart-btn">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Produit 4 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio" class="w-full h-full object-cover">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio">
                 </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sennheiser HD 660 S</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
+                <div class="product-card-info">
+                    <h3 class="product-card-title">Sennheiser HD 660 S</h3>
+                    <div class="rating-info-small">
+                        <div class="stars-list-small">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        <span class="rating-text-small">(4.6)</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">10.990FCFA</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+                    <div class="product-card-actions">
+                        <span class="product-card-price">10.990FCFA</span>
+                        <button class="add-to-cart-btn">
                             <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
@@ -509,89 +405,83 @@
             </div>
         </div>
 
-        <div class="mt-10 mb-10">
-            <div class="flex flex-col items-center">
-                <nav class="flex items-center space-x-1 text-sm">
+        <div class="pagination-section">
+            <div class="pagination-center-wrapper">
+                <nav class="pagination-nav">
                     
-                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
-                        <i class="fas fa-chevron-left w-2 h-2"></i>
+                    <button class="pagination-btn-prev">
+                        <i class="fas fa-chevron-left icon-small-margin-right"></i>
                         <span>Précédent</span>
                     </button>
                     
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-700 text-white font-medium shadow-md">
+                    <button class="pagination-page-btn active-page">
                         1
                     </button>
                     
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                    <button class="pagination-page-btn">
                         2
                     </button>
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                    <button class="pagination-page-btn">
                         3
                     </button>
                     
+                    <span class="pagination-ellipsis">......</span>
                     
-                    <span class="px-2 text-gray-500">...</span>
-                  
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                    <button class="pagination-page-btn">
                         8
                     </button>
                     
-                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                    <button class="pagination-btn-next">
                         <span>Suivant</span>
-                        <i class="fas fa-chevron-right w-2 h-2"></i>
+                        <i class="fas fa-chevron-right icon-small-margin-left"></i>
                     </button>
                 </nav>
 
-                <div class="w-full flex justify-center mt-8 space-x-3">
-                    <hr class="w-1/3 max-w-sm h-1 bg-indigo-700 border-0 rounded-full">
-                    <hr class="w-1/4 max-w-xs h-1 bg-gray-300 border-0 rounded-full">
-                    <hr class="w-1/6 max-w-[100px] h-1 bg-gray-300 border-0 rounded-full">
+                <div class="progress-bar-row">
+                    <hr class="progress-bar-segment-1">
+                    <hr class="progress-bar-segment-2">
+                    <hr class="progress-bar-segment-3">
                 </div>
             </div>
         </div>
 
     </section>
 
-
-    
-    
-
-    <!-- Footer -->
     <footer>
         <div class="footer-container">
         <div class="footer-section">
-            <h3>About Us</h3>
+            <h3>À Propos de Nous</h3>
             <ul>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Partners</a></li>
+            <li><a href="#">Localisations</a></li>
+            <li><a href="#">Partenaires</a></li>
             </ul>
         </div>
         <div class="footer-section">
-            <h3>Our Shop</h3>
+            <h3>Notre Boutique</h3>
             <ul>
-            <li><a href="#">Partners</a></li>
+            <li><a href="#">Partenaires</a></li>
             </ul>
         </div>
         <div class="footer-section">
-            <h3>Contact Us</h3>
+            <h3>Contactez-Nous</h3>
             <ul>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">business@gmail.com</a></li>
             </ul>
         </div>
         <div class="footer-section">
-            <h3>Customer Care</h3>
+            <h3>Service Client</h3>
             <ul>
-            <li><a href="#">Promotion Policy</a></li>
-            <li><a href="#">Track Order</a></li>
-            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Politique de Promotion</a></li>
+            <li><a href="#">Suivre la Commande</a></li>
+            <li><a href="#">Informations de Livraison</a></li>
             </ul>
         </div>
         </div>
         <div class="footer-bottom">
         <p>© Copyright 2025 Shopcart</p>
         <div class="footer-links">
-            <a href="#">Privacy</a> | <a href="#">Terms & Conditions</a>
+            <a href="#">Confidentialité</a> | <a href="#">Termes & Conditions</a>
         </div>
         </div>
     </footer>
