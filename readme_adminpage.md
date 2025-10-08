@@ -113,7 +113,7 @@ Ouvrez votre navigateur et allez à : `http://localhost:8000`
 - **Vue** : Toggle entre vue liste et vue grille
 - **Sélection multiple** : Actions en masse sur les produits
 
-## 🛠️ Personnalisation
+##  Personnalisation
 
 ### Variables CSS
 
@@ -141,7 +141,7 @@ const CONFIG = {
 };
 ```
 
-## 📊 Intégration de graphiques
+## Intégration de graphiques
 
 ### Option 1 : Chart.js (Recommandé)
 
