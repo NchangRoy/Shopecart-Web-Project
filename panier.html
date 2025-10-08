@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = 'footer.css'>
+    <link rel = 'stylesheet' href = 'header.css'>
+    <link rel = 'stylesheet' href = 'panier.css'>
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+        <span class="logo-text">Shopcart</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Categories <span class="dropdown-arrow">▼</span></a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="🔍 Search Product" class="search-input">
+      </div>
+      <div class="user-actions">
+        <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> Account</a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Cart</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN CART SECTION ========== -->
+    <!-- This is the main content area for the shopping cart -->
+     <main class = 'cart-container'>
+        <!-- Page Title -->
+         <h1 class = 'cart-title'> Review Cart Items</h1>
+
+         <!-- Cart Content: Split into two columns -->
+          <div class = 'cart-content'> 
+
+            <!--LEFT COLUMN: Cart Item List-->
+            <div class = 'cart-items'>
+              <div class = 'cart-item'>
+                  <!-- Product Image -->
+                  <img src = 'headphones.jpg' class = 'item-image'>
+
+                  <!--Product Details-->
+                  <div class = 'item-details'>
+                    <h3 class = 'item-name'> HeadPhones Max</h3>
+                    <p class = 'item-color'> Color: red</p>
+                  </div>
+
+                  <!--Product Price and Actions-->
+                  <div class = 'item-actions'>
+                    <p class = 'item-price'> Price: $30</p>
+                    <p class = 'item-quantity'> Quantity: 02</p>
+
+                    <!--Remove Button-->
+                    <button class = 'remove-btn'> Remove</button>
+                  </div>
+
+                </div>
+                <!--Second Cart Item-->
+                <div class = 'cart-item'>
+                  <!-- Product Image -->
+                  <img src = 'headphones.jpg' class = 'item-image'>
+
+                  <!--Product Details-->
+                  <div class = 'item-details'>
+                    <h3 class = 'item-name'> HeadPhones Max</h3>
+                    <p class = 'item-color'> Color: red</p>
+                  </div>
+
+                  <!--Product Price and Actions-->
+                  <div class = 'item-actions'>
+                    <p class = 'item-price'> Price: $30</p>
+                    <p class = 'item-quantity'> Quantity: 02</p>
+
+                    <!--Remove Button-->
+                    <button class = 'remove-btn'> Remove</button>
+                  </div>
+
+                </div>
+
+                <!--Third Cart Item-->
+                <div class = 'cart-item'>
+                  <!-- Product Image -->
+                  <img src = 'headphones.jpg' class = 'item-image'>
+
+                  <!--Product Details-->
+                  <div class = 'item-details'>
+                    <h3 class = 'item-name'> HeadPhones Max</h3>
+                    <p class = 'item-color'> Color: red</p>
+                  </div>
+
+                  <!--Product Price and Actions-->
+                  <div class = 'item-actions'>
+                    <p class = 'item-price'> Price: $30</p>
+                    <p class = 'item-quantity'> Quantity: 02</p>
+
+                    <!--Remove Button-->
+                    <button class = 'remove-btn'> Remove</button>
+                  </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Order Summary-->
+             <div class = 'order-summary'>
+                <h2 class = 'summary-title'> Order Summary</h2>
+
+                <!-- Summary Box with pricing details-->
+                 <div class = 'summary-box'>
+                  <!-- Subtotal-->
+                   <div class = 'summary-row'>
+                      <span class = 'summary-label'> Subtotal:</span>
+                      <span class = 'summary-value'> $90</span>
+                   </div>
+                   
+                   <!--Discount-->
+                   <div class = 'summary-row'>
+                      <span class = 'summary-label'> Discount:</span>
+                      <span class = 'summary-value'> $0</span>
+                   </div>
+                   <!--Total (Bold and prominent)-->
+                   <div class = 'summary-row summary-total'>
+                      <span class = 'summary-label'> Total:</span>
+                      <span class = 'summary-value'> $90</span>
+                   </div>
+                 </div>
+
+                 <!-- Checkout Button -->
+                  <button class = 'checkout-btn'> Process to payment</button>
+             </div>
+          </div>
+
+     </main>
+
+    <!-- Footer --> 
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Our Shop</h3>
+        <ul>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">business@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Care</h3>
+        <ul>
+          <li><a href="#">Promotion Policy</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Shipping Info</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Copyright 2025 Shopcart</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a> | <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
