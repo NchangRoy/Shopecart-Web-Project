@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casques Audio </title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <title>Casques Audio | Shopcart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/products.css">
+    
     
 </head>
 <body class="bg-gray-50">
@@ -40,151 +36,1001 @@
         </div>
         </nav>
     </header>
-
     
-
-    <!-- Products Grid -->
-    <main class="container">
-        <!-- Filters Section -->
-        <div class="filters-section">
-            <div class="filter-group">
-                <label>Marque</label>
-                <select class="filter-select">
-                    <option value="">Toutes les marques</option>
-                    <option value="sony">Sony</option>
-                    <option value="bose">Bose</option>
-                    <option value="beats">Beats</option>
-                    <option value="jbl">JBL</option>
-                    <option value="sennheiser">Sennheiser</option>
-                    <option value="razer">Razer</option>
-                </select>
+    <section class="relative">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <video autoplay loop muted playsinline class="w-full h-96 object-cover">
+            <source src="/assets/vidéos/istockphoto-1474338774-640_adpp_is.mp4" type="video/mp4">
+        </video>
+    </section>
+    
+    <main class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex overflow-x-auto space-x-3 p-4 bg-gray-50 border-b border-gray-200 hide-scrollbar">
+            <button class="flex items-center justify-center p-3 border border-gray-300 rounded-xl bg-white text-gray-700 font-medium whitespace-nowrap shadow-sm min-w-max">
+                <i class="fas fa-sliders-h mr-2"></i> Filters
+            </button>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-3 border border-blue-600 rounded-xl bg-blue-600 text-white whitespace-nowrap shadow-sm font-semibold tag-selected">
+                    Casques
+                </button>
+                <button class="px-4 py-3 border border-gray-300 rounded-xl bg-white text-gray-700 whitespace-nowrap shadow-sm">
+                    Prix
+                </button>
+                <button class="px-4 py-3 border border-gray-300 rounded-xl bg-white text-gray-700 whitespace-nowrap shadow-sm">
+                    Couleurs
+                </button>
+                <button class="px-4 py-3 border border-gray-300 rounded-xl bg-white text-gray-700 whitespace-nowrap shadow-sm">
+                    Marque
+                </button>
+                <button class="px-4 py-3 border border-gray-300 rounded-xl bg-white text-gray-700 whitespace-nowrap shadow-sm">
+                    Nouveautés
+                </button>
+                <button class="px-4 py-3 border border-gray-300 rounded-xl bg-white text-gray-700 whitespace-nowrap shadow-sm">
+                    Promotions
+                </button>
             </div>
-
-            <div class="filter-group">
-                <label>Prix</label>
-                <select class="filter-select">
-                    <option value="">Tous les prix</option>
-                    <option value="0-100">0 - 100.000 FCFA</option>
-                    <option value="100-200">100.000 - 200.000 FCFA</option>
-                    <option value="200-300">200.000 - 300.000 FCFA</option>
-                    <option value="300+">300.000+ FCFA</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label>Type</label>
-                <select class="filter-select">
-                    <option value="">Tous les types</option>
-                    <option value="wireless">Sans fil</option>
-                    <option value="gaming">Gaming</option>
-                    <option value="studio">Studio</option>
-                    <option value="sport">Sport</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label>Trier par</label>
-                <select class="filter-select">
-                    <option value="">Par défaut</option>
-                    <option value="price-asc">Prix croissant</option>
-                    <option value="price-desc">Prix décroissant</option>
-                    <option value="rating">Meilleures notes</option>
-                    <option value="popular">Popularité</option>
-                </select>
-            </div>
-
-            <button class="btn-reset">Réinitialiser</button>
         </div>
 
-        <div class="products-grid">
-            <!-- Produit 1 --> 
+        
+
+        <section class="mt-20 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight section-title">
+                <span class="gradient-blue-purple">Our Headphones</span>
+            </h2>
+            <p class="text-gray-500 mb-10 text-sm uppercase tracking-widest">Découvrez notre collection premium</p>
+            <div class="products-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-indigo-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PREMIUM</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="far fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Audio-Technica ATH-M50x" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-full">NOUVEAU</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Audio-Technica</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">ATH-M50x Studio</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">200.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Marshall Major IV" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Marshall</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Major IV Marron</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">140.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400" alt="Sony WH-1000XM5 Noir" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Bose</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Noise Cancelling 700</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star-half-alt w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">250.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Bose QuietComfort Blanc" class="w-full h-full object-cover">
+
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-full">NOUVEAU</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sony</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">WF-1000XM5</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.8)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">190.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=400" alt="Razer Gaming RGB" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TOP VENTE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">HD 660S</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(5.0)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">350.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md opacity-60">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400" alt="JBL Tune Bleu" class="w-full h-full object-cover">
+                       
+                        <div class="absolute inset-0 bg-black opacity-30"></div>
+                        <div class="absolute top-2 left-2 bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-full">RUPTURE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Marshall</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Motif II</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star-half-alt w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">180.000 FCFA</span>
+                            <button class="bg-gray-400 text-white rounded-full p-2 cursor-not-allowed" disabled>
+                                <i class="fas fa-ban w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Marshall Major IV" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Marshall</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Major IV Marron</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">140.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Sony WH-1000XM4" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TOP VENTE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sony</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">WH-1000XM4</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$299.99</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md opacity-60">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400" alt="Audio-Technica Studio" class="w-full h-full object-cover">
+
+                        <div class="absolute inset-0 bg-black opacity-30"></div>
+                        <div class="absolute top-2 left-2 bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-full">RUPTURE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Bose</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">QuietComfort 35</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star-half-alt w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$279.99</span>
+                            <button class="bg-gray-400 text-white rounded-full p-2 cursor-not-allowed" disabled>
+                                <i class="fas fa-ban w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Audio-Technica ATH-M50x" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-full">NOUVEAU</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Audio-Technica</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">ATH-M50x Studio</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">200.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Marshall Major IV" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Marshall</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Major IV Marron</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">140.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="mt-10 mb-10">
+            <div class="flex flex-col items-center">
+                <nav class="flex items-center space-x-1 text-sm">
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <i class="fas fa-chevron-left w-2 h-2"></i>
+                        <span>Précédent</span>
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-700 text-white font-medium shadow-md">
+                        1
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        2
+                    </button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        3
+                    </button>
+                    
+                    
+                    <span class="px-2 text-gray-500">...</span>
+                  
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        8
+                    </button>
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <span>Suivant</span>
+                        <i class="fas fa-chevron-right w-2 h-2"></i>
+                    </button>
+                </nav>
+
+                <div class="w-full flex justify-center mt-8 space-x-3">
+                    <hr class="w-1/3 max-w-sm h-1 bg-indigo-700 border-0 rounded-full">
+                    <hr class="w-1/4 max-w-xs h-1 bg-gray-300 border-0 rounded-full">
+                    <hr class="w-1/6 max-w-[100px] h-1 bg-gray-300 border-0 rounded-full">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Related Products -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            
+            <section class="mt-20 relative rounded-2xl overflow-hidden shadow-xl">
+                <video autoplay loop muted playsinline class="w-full h-96 object-cover">
+                <source src="/assets/vidéos/News.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-6">
+                    <h2 class="text-4xl font-extrabold mb-3 tracking-tight section-title-promo">
+                        Plongez-vous dans un autre monde 
+                    </h2>
+                    <p class="text-lg mb-6 text-gray-200 max-w-xl">
+                        Profitez de réductions exceptionnelles  <span class="font-bold text-yellow-400">-30%</span> !
+                    </p>
+                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        Découvrir les Offres
+                    </button>
+                </div>
+        </section>
      
 
-
-           
-
-            <!-- Produit 1 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sony WH-1000XM4</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+        <section class="mt-20 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight section-title">
+                <span class="gradient-yellow-orange">Best Sellers</span>
+            </h2>
+            <p class="text-gray-500 mb-10 text-sm uppercase tracking-widest">Nos meilleures ventes cette saison</p>
+            <div class="products-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-indigo-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PREMIUM</div>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$299.99</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="far fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md opacity-60">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black opacity-30"></div>
+                        <div class="absolute top-2 left-2 bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-full">RUPTURE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">CX Plus TWS</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="far fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-gray-400 text-white rounded-full p-2 cursor-not-allowed" disabled>
+                                <i class="fas fa-ban w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Audio-Technica ATH-M50x" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-full">NOUVEAU</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Audio-Technica</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">ATH-M50x Studio</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">200.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Marshall Major IV" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Marshall</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Major IV Marron</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">140.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Sony WH-1000XM4" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TOP VENTE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sony</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">WH-1000XM4</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$299.99</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400" alt="Apple AirPods Max" class="w-full h-full object-cover">
+
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Bose</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Noise Cancelling 700</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star-half-alt w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">250.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Marshall Major IV" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Marshall</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Major IV Marron</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">140.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Sony WH-1000XM4" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TOP VENTE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sony</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">WH-1000XM4</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$299.99</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Marshall Vintage" class="w-full h-full object-cover">
+
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Bose</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Noise Cancelling 700</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star-half-alt w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">250.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=400" alt="Marshall Major IV" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Marshall</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Major IV Marron</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">140.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Sony WH-1000XM4" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TOP VENTE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sony</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">WH-1000XM4</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.9)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">$299.99</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400" alt="Beats Studio Rose" class="w-full h-full object-cover">
+
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded-full">TOP</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Bose</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Noise Cancelling 700</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star-half-alt w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">250.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400" alt="Beats Studio 3" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded-full">PROMO</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Beats</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Studio 3 Rose Gold</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.6)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 line-through text-sm">300.000 FCFA</span>
+                            <span class="text-lg font-bold text-gray-900">280.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md group">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=400" alt="Sennheiser Momentum Sport" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-semibold px-2 py-1 rounded-full">TENDANCE</div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Sennheiser</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2 truncate">Momentum Sport Orange</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400"><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i><i class="fas fa-star w-4 h-4"></i></div>
+                            <span class="text-xs text-gray-500 ml-1">(4.4)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-gray-900">150.000 FCFA</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 transition-colors duration-300">
+                                <i class="fas fa-shopping-cart w-4 h-4"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <div class="mt-10 mb-10">
+            <div class="flex flex-col items-center">
+                <nav class="flex items-center space-x-1 text-sm">
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <i class="fas fa-chevron-left w-2 h-2"></i>
+                        <span>Précédent</span>
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-700 text-white font-medium shadow-md">
+                        1
+                    </button>
+                    
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        2
+                    </button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        3
+                    </button>
+                    
+                    
+                    <span class="px-2 text-gray-500">...</span>
+                  
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        8
+                    </button>
+                    
+                    <button class="flex items-center space-x-1 px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100 min-w-[100px] justify-center">
+                        <span>Suivant</span>
+                        <i class="fas fa-chevron-right w-2 h-2"></i>
+                    </button>
+                </nav>
 
-            <!-- Produit 1 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sony WH-1000XM4</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.9)</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$299.99</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Produit 1 -->
-            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="relative h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sony WH-1000XM4</h3>
-                    <div class="flex items-center mb-2">
-                        <div class="flex text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="text-xs text-gray-500 ml-1">(4.9)</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-bold text-gray-900">$299.99</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
+                <div class="w-full flex justify-center mt-8 space-x-3">
+                    <hr class="w-1/3 max-w-sm h-1 bg-indigo-700 border-0 rounded-full">
+                    <hr class="w-1/4 max-w-xs h-1 bg-gray-300 border-0 rounded-full">
+                    <hr class="w-1/6 max-w-[100px] h-1 bg-gray-300 border-0 rounded-full">
                 </div>
             </div>
-
-           
-
-            
-
         </div>
+
+        <section class="mt-20 relative rounded-2xl overflow-hidden shadow-xl">
+            <video autoplay loop muted playsinline class="w-full h-96 object-cover">
+               <source src="/assets/vidéos/istockphoto-2162099613-640_adpp_is.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-6">
+                <h2 class="text-4xl font-extrabold mb-3 tracking-tight section-title-promo">
+                    Encore plus miniatures  !
+                </h2>
+                <p class="text-lg mb-6 text-gray-200 max-w-xl">
+                    Profitez de réductions exceptionnelles jusqu’à <span class="font-bold text-yellow-400">-30%</span> !
+                </p>
+                <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    Découvrir les Offres
+                </button>
+            </div>
+        </section>
+
+        
     </main>
 
     <!-- Footer -->
