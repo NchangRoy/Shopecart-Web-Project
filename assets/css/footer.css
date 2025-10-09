@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Footer Styles */
+>>>>>>> feature/1-e1-landing-page-DELMAT
 footer {
   background-color: #87ceeb;
   color: #fff;
