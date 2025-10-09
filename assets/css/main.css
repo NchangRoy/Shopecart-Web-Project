@@ -303,9 +303,11 @@
 }
 
 .spotlight h2{
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .spotlight-item {
   background-color: var(--white);
@@ -315,6 +317,7 @@
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .spotlight-item:hover {
