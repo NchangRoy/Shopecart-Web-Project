@@ -1,6 +1,6 @@
 /* Sidebar */
 .sidebar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 280px;
@@ -12,6 +12,7 @@
     z-index: var(--z-fixed);
     transform: translateX(-100%);
     transition: transform var(--transition-normal);
+    
 }
 
 .sidebar.active {
@@ -180,6 +181,7 @@
     background: var(--color-gray-50);
 }
 
+
 /* Responsive */
 @media (min-width: 768px) {
     .sidebar {
@@ -188,7 +190,7 @@
     }
     
     .main-content {
-      /*  margin-left: 280px;*/
+        margin-left: 280px;
     }
     
     .sidebar-close {

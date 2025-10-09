@@ -682,6 +682,20 @@
     font-size: var(--font-size-xs);
 }
 
+
+.btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+    background-color: #0066FF;
+}
+
+.btn:hover {
+    color: var(--color-text);
+    background-color: #0066ffc4;
+}
 /* Responsive */
 @media (max-width: 1024px) {
     .products-grid {
