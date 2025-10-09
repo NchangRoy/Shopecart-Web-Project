@@ -1,6 +1,6 @@
 /* Sidebar */
 .sidebar {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 280px;
@@ -12,6 +12,7 @@
     z-index: var(--z-fixed);
     transform: translateX(-100%);
     transition: transform var(--transition-normal);
+    z-index:2;
     
 }
 
@@ -63,7 +64,7 @@
 .sidebar-menu {
     flex: 1;
     padding: var(--spacing-lg);
-    overflow-y: auto;
+    /*overflow-y: auto;*/
 }
 
 .menu-group {

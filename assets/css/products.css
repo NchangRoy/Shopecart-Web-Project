@@ -689,7 +689,7 @@
     font-weight: 500;
     color: var(--color-text);
     transition: all var(--transition-fast);
-    background-color: #0066FF;
+    background-color: #00CC66;
 }
 
 .btn:hover {
