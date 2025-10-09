@@ -231,9 +231,9 @@
 }
 
 /* Support du mode sombre optionnel */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light){
     :root {
-        --color-background: #0F0F0F;
+        --color-background: #fdfbfb;
         --color-surface: #1A1A1A;
         --color-surface-elevated: #252525;
         --color-surface-hover: #2A2A2A;

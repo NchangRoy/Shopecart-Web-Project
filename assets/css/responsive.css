@@ -154,7 +154,7 @@
 @media (min-width: 1536px) {
     .page-container {
         max-width: 1400px;
-        margin: 20px;
+        margin: 0px;
     }
     
     .sidebar {
@@ -167,7 +167,7 @@
 }
 
 /* Mode sombre (optionnel) */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         --color-background: #0F172A;
         --color-surface: #1E293B;
