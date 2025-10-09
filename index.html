@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
   <!-- Utilisation de Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
   </style>
@@ -18,164 +20,247 @@
 <body>
   <!-- Header -->
   <header>
+    <!-- Checkbox cachée pour contrôler le menu mobile -->
+    <input type="checkbox" id="menu-toggle">
+
     <nav class="navbar">
       <div class="logo">
-        <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+        <div class="logo-img">
+          <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+
+        </div>
         <span class="logo-text">Shopcart</span>
       </div>
+
+      <!-- Hamburger icon comme label pour la checkbox -->
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <ul class="nav-links">
-        <li><a href="#">Categories <span class="dropdown-arrow">▼</span></a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="#">About Us</a></li>
+        <li class="categories-dropdown">
+          <!-- Checkbox pour le sous-menu des catégories -->
+          <input type="checkbox" id="categories-toggle">
+          <label for="categories-toggle">
+            Catégories <span class="dropdown-arrow">▼</span>
+          </label>
+          <div class="dropdown-content">
+            <a href="#"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+            <a href="#"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+            <a href="#"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+            <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+            <a href="#"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+            <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
+            <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+            <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+            <a href="#"><i class="fas fa-gamepad"></i> Gaming</a>
+            <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+          </div>
+        </li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="#">À propos</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
+
       <div class="search-bar">
-        <input type="text" placeholder="🔍 Search Product" class="search-input">
+        <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
+
       <div class="user-actions">
-        <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> Account</a>
-        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+            class="cart-count">3</span></a>
       </div>
     </nav>
+
+    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
+    <a href="#" class="overlay" id="overlay"></a>
   </header>
 
   <!-- Contenu principal de la landing page -->
   <main>
     <section class="hero">
       <div class="hero-content">
-        <h1>Providing the Best Electronic Devices for the Community</h1>
-        <p class="hero-subtitle">Discover top-quality gadgets, unbeatable prices, and fast delivery across Cameroon and beyond.</p>
+        <h1>L'Excellence en Électronique pour Tous</h1>
+        <p class="hero-subtitle">Découvrez des appareils de qualité supérieure, des prix imbattables et une livraison
+          rapide à travers le Cameroun et au-delà.</p>
         <div class="search-bar">
-          <input type="text" placeholder="🔍 Search for Electronics" class="search-input">
+          <input type="text" placeholder=" Rechercher des produits électroniques" class="search-input">
         </div>
-        <a href="#explore" class="hero-cta">Explore Now</a>
+        <a href="#explore" class="hero-cta">Explorer Maintenant</a>
       </div>
     </section>
 
     <section class="features">
       <div class="feature-item">
         <i class="fas fa-network-wired"></i>
-        <span>A Large Network of Suppliers</span>
-        <p>Connect with hundreds of verified suppliers for the latest electronics.</p>
+        <span>Réseau Étendu de Fournisseurs</span>
+        <p>Connectez-vous avec des centaines de fournisseurs vérifiés pour les derniers appareils électroniques.</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-lock"></i>
-        <span>Offers Security for Customers</span>
-        <p>Secure transactions with our encrypted payment system.</p>
+        <span>Sécurité Garantie pour les Clients</span>
+        <p>Transactions sécurisées avec notre système de paiement crypté et protection des données.</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-star"></i>
-        <span>Rated Best E-commerce in Cameroon</span>
-        <p>Trusted by thousands for quality and service since 2020.</p>
+        <span>Meilleur E-commerce au Cameroun</span>
+        <p>Reconnu par des milliers de clients pour la qualité et le service depuis 2020.</p>
       </div>
     </section>
 
-    <section class="spotlight">
-      <h2>Spotlight What's Hot</h2>
-      <div class="spotlight-content">
-        <div class="spotlight-item">
-          <h3>Top Ranking</h3>
-          <div class="ranking">
-            <img src="/assets/images/ranking.jpg" alt="Ranking 1">
-            <div class="progress-bar"></div>
+<section class="spotlight">
+  <h2>À la Une</h2>
+  <div class="spotlight-content">
+    <div class="spotlight-item">
+      <h3>Classement</h3>
+            <img src="/assets/images/classement.png" alt="classement ">
+
+      <p>Leader du marché avec un taux de satisfaction client de 85%.</p>
+      <div class="progress-bar"></div>
+    </div>
+    
+    <div class="spotlight-item">
+      <h3>Nouveautés</h3>
+      <div class="new-arrivals">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/ranking.jpg" alt="iPhone 15 Pro">
           </div>
-          <p>Leading the market with a 85% customer satisfaction rate.</p>
+          <div class="product-info">
+            <span class="product-badge">Nouveau</span>
+            <h4>iPhone 15 Pro</h4>
+            <p class="product-price">849 000 FCFA</p>
+          </div>
         </div>
-        <div class="spotlight-item">
-          <h3>New Arrivals</h3>
-          <p>Latest Products Added</p>
-          <div class="new-arrivals">
-            <img src="/assets/images/new-arrival1.jpg" alt="New Arrival 1">
-            <img src="/assets/images/new-arrival2.jpg" alt="New Arrival 2">
-            <img src="/assets/images/new-arrival3.jpg" alt="New Arrival 3">
-            <img src="/assets/images/new-arrival4.jpg" alt="New Arrival 4">
+        
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/new-arrival1.jpg" alt="Produits Populaires">
           </div>
-          <p>Updated as of 11:57 AM WAT, October 08, 2025</p>
-        </div>
-        <div class="spotlight-item">
-          <h3>Top Deals</h3>
-          <div class="deal-images">
-            <img src="/assets/images/product1.jpg" alt="Product 1">
-            <img src="/assets/images/product2.jpg" alt="Product 2">
-            <img src="/assets/images/product3.jpg" alt="Product 3">
+          <div class="product-info">
+            <span class="product-badge">Populaire</span>
+            <h4>Produits Populaires</h4>
+            <p class="product-price">Voir plus</p>
           </div>
-          <p>Save up to 30% on selected items this week!</p>
         </div>
       </div>
-      <p class="explore-text">Explore millions of offerings tailored to your business needs</p>
-      <div class="stats">
-        <span style="color: orange;">2k+ products</span>
-        <span style="color: orange;">20+ countries</span>
-        <span style="color: orange;">50 product categories</span>
+    </div>
+    
+    <div class="spotlight-item">
+      <h3>Meilleures Offres</h3>
+      <div class="deal-images">
+        <div class="deal-item">-30%</div>
+        <div class="deal-item">-25%</div>
+        <div class="deal-item">-20%</div>
       </div>
-    </section>
+      <p>Économisez jusqu'à 30% sur les articles sélectionnés cette semaine !</p>
+    </div>
+  </div>
+  
+  <p class="explore-text">Explorez des millions d'offres adaptées à vos besoins</p>
+  <div class="stats">
+    <span>2k+ produits</span>
+    <span>20+ pays</span>
+    <span>50 catégories</span>
+  </div>
+</section>
 
     <section class="explore" id="explore">
-      <h2>Ready to Shop?</h2>
-      <p>Discover the best deals and products tailored for you today!</p>
-      <button>Shop Now</button>
+      <h2>Prêt à Acheter ?</h2>
+      <p>Découvrez les meilleures offres et produits conçus pour vous dès aujourd'hui !</p>
+      <button>Acheter Maintenant</button>
       <div class="testimonials">
-        <p>"Amazing service and fast delivery! Highly recommend!" - John D.</p>
-        <p>"Best electronics store in Cameroon, great prices!" - Sarah K.</p>
+        <p>"Service incroyable et livraison rapide ! Je recommande vivement !" - Jean D.</p>
+        <p>"Meilleur magasin d'électronique au Cameroun, des prix excellents !" - Sarah K.</p>
       </div>
     </section>
 
     <section class="payment-methods">
-      <h3>Accepted Payment Methods</h3>
+      <h3>Méthodes de Paiement Acceptées</h3>
       <div class="payment-icons">
-        <img src="/assets/images/payment1.png" alt="Payment 1">
-        <img src="/assets/images/payment2.png" alt="Payment 2">
-        <img src="/assets/images/payment3.png" alt="Payment 3">
-        <img src="/assets/images/payment4.png" alt="Payment 4">
-        <img src="/assets/images/payment5.png" alt="Payment 5">
+        <div class="payment-icon">
+          <i class="fab fa-cc-visa"></i>
+        </div>
+        <div class="payment-icon">
+          <i class="fab fa-cc-mastercard"></i>
+        </div>
+        <div class="payment-icon">
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+        <div class="payment-icon">
+          <i class="fab fa-cc-apple-pay"></i>
+        </div>
+        <div class="payment-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
       </div>
     </section>
   </main>
+
 
   <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-section">
-        <h3>About Us</h3>
+        <h3>Navigation Rapide</h3>
         <ul>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Partners</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Our Shop</h3>
-        <ul>
-          <li><a href="#">Shop Now</a></li>
           <li><a href="#">Deals</a></li>
-          <li><a href="#">Categories</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Promotions</a></li>
         </ul>
       </div>
+
       <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">business@shopcart.com</a></li>
-        </ul>
+        <h3>À propos de Shopcart</h3>
+        <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
+          client exceptionnel.</p>
+
+        <div class="social-row">
+          <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
+          <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
+          <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
+        </div>
       </div>
+
       <div class="footer-section">
-        <h3>Customer Care</h3>
-        <ul>
-          <li><a href="#">Promotion Policy</a></li>
-          <li><a href="#">Track Order</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
+        <h3>Boutique</h3>
+        <div class="shop-categories">
+          <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Ordinateurs</a></li>
+            <li><a href="#">Tablettes</a></li>
+            <li><a href="#">Accessoires</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+          <p><i class="fas fa-phone"></i> +237 657450314</p>
+          <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+          <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
+        </div>
       </div>
     </div>
+
+    <div class="footer-divider"></div>
+
     <div class="footer-bottom">
-      <p>© Copyright 2025 Shopcart. All Rights Reserved.</p>
+      <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
       <div class="footer-links">
-        <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Support</a>
+        <a href="#">Confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Mentions légales</a>
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
