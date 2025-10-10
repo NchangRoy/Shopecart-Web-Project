@@ -73,7 +73,7 @@ body {
 
 .banner-content {
     position: relative;
-    left: 10%;
+    left: 5%;
 }
 
 .banner-content h1 {
@@ -81,6 +81,11 @@ body {
     font-size: 36px;
     line-height: 1.3;
     margin-bottom: 20px;
+    text-shadow: #1a1a5e 2px 2px 2px;
+}
+
+.banner-content h1:hover {
+    transform: translateY(-5%);
 }
 
 .btn-primary {
@@ -91,6 +96,11 @@ body {
     border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
 }
 
 .banner-image img {
@@ -98,6 +108,7 @@ body {
     position: relative;
     right: 10%;
     border-radius: 5%;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .banner-dots {
