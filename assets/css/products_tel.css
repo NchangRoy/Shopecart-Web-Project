@@ -43,7 +43,6 @@ body {
     width: 400%;             /* 4 fois 100% */
     height: 100%;
     position: relative;
-    transition: tranform 2s ease-in-out;
 }
 
 .slide {
