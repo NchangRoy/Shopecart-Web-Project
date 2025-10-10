@@ -1,0 +1,275 @@
+.product-detail-section {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+}
+
+.product-detail-wrapper {
+    display: grid;                      /* Utilise une grille */
+    grid-template-columns: 1fr 1fr;     /* 2 colonnes égales */
+    gap: 60px;                          /* Espace entre les colonnes */
+    background: white;                  /* Fond blanc */
+    padding: 40px;                      /* Espace intérieur */
+    border-radius: 10px;                /* Coins arrondis */
+}
+
+/* === GALERIE D'IMAGES (colonne gauche) === */
+.product-gallery {
+    display: flex;                      /* Flexbox pour organiser */
+    flex-direction: column;             /* Empile verticalement */
+    gap: 20px;                          /* Espace entre image et miniatures */
+}
+
+.main-image-container {
+    width: 100%;
+    background: #f8f8f8;               /* Fond gris clair */
+    border-radius: 10px;               /* Coins arrondis */
+    padding: 20px;                     /* Espace autour de l'image */
+    display: flex;                     /* Centre l'image */
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    max-width: 100%;                   /* Ne dépasse pas le conteneur */
+    height: auto;                      /* Garde les proportions */
+    object-fit: contain;               /* Contient l'image sans déformation */
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+}
+
+.thumbnails {
+    display: flex;                     /* Aligne horizontalement */
+    gap: 15px;                         /* Espace entre miniatures */
+    justify-content: center;           /* Centre les miniatures */
+}
+
+.thumbnail {
+    width: 80px;                       /* Largeur fixe */
+    height: 80px;                      /* Hauteur fixe */
+    border: 3px solid #ccc;     /* Bordure invisible par défaut */
+    border-radius: 10px;               /* Coins arrondis */
+    cursor: pointer;                   /* Curseur main au survol */
+    object-fit: cover;                 /* Remplit l'espace */
+    transition: border-color 0.3s;     /* Anime le changement de bordure */
+}
+
+.thumbnail:hover {
+    border-color: #4da8e8;                /* Bordure grise au survol */
+}
+
+.thumbnail-active {
+    width: 80px;                       /* Largeur fixe */
+    height: 80px;                      /* Hauteur fixe */
+    border: 3px solid #1a1a5e;     /* Bordure invisible par défaut */
+    border-radius: 10px;               /* Coins arrondis */
+    cursor: pointer;                   /* Curseur main au survol */
+    object-fit: cover;                 /* Remplit l'espace */
+    transition: border-color 0.3s;
+}
+
+/* === INFORMATIONS PRODUIT (colonne droite) === */
+.product-info {
+    display: flex;
+    flex-direction: column;            /* Empile les éléments verticalement */
+    gap: 20px;                         /* Espace entre chaque section */
+}
+
+.product-name {
+    font-size: 32px;                   /* Grande taille pour le titre */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.product-description {
+    color: #666;                       /* Gris pour la description */
+    line-height: 1.6;                  /* Espacement des lignes */
+    font-size: 16px;
+}
+
+.product-rate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars {
+    color: #ffa500;                    /* Orange pour les étoiles */
+    font-size: 20px;
+}
+
+.rating-text {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Prix */
+.price-section {
+    display: flex;
+    align-items: baseline;             /* Aligne le texte sur la ligne de base */
+    gap: 15px;
+}
+
+.label {
+    font-size: 18px;
+    color: #666;
+}
+
+.price {
+    font-size: 42px;                   /* Très grand pour le prix */
+    font-weight: bold;
+    color: #333;
+}
+
+.price sup {
+    font-size: 20px;                   /* Plus petit pour les centimes */
+}
+
+/* Sélection de couleur */
+.color-selection {
+    padding: 20px 10px;
+    border-top: 1px solid #eee;        /* Ligne de séparation en haut */
+    border-bottom: 1px solid #eee;     /* Ligne de séparation en bas */
+}
+
+.section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;                         /* Espace entre les boutons couleur */
+}
+
+.color-btn {
+    width: 30px;                       /* Cercles de couleur */
+    height: 30px;
+    border-radius: 50%;              /* Forme circulaire */
+    border: 3px solid transparent;     /* Bordure invisible par défaut */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);             /* Agrandit au survol */
+}
+
+.color-btn-active {
+    width: 30px;                       /* Cercles de couleur */
+    height: 30px;
+    border-radius: 50%;              /* Forme circulaire */
+    border: 3px solid #333333;     /* Bordure invisible par défaut */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.color-btn-active:hover {
+    transform: scale(1.1);
+}
+
+/* Quantité */
+.quantity-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.qty-btn {
+    width: 40px;                       /* Boutons carrés */
+    height: 40px;
+    background: #66c7f4;               /* Bleu clair */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.qty-btn:hover {
+    background: #4da8e8;               /* Bleu plus foncé au survol */
+}
+
+.qty-input {
+    width: 60px;
+    height: 40px;
+    text-align: center;                /* Centre le nombre */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stock-info {
+    margin-left: 20px;
+}
+
+.stock-text {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+.stock-warning {
+    font-size: 12px;
+    color: #ff4444;                    /* Rouge pour l'urgence */
+    margin: 0;
+}
+
+/* Bouton d'ajout au panier */
+.btn-add-to-cart {
+    width: 100%;                       /* Prend toute la largeur */
+    padding: 18px;                     /* Grand espace intérieur */
+    background: #1a1a5e;               /* Bleu foncé */
+    color: white;
+    border: none;
+    border-radius: 30px;               /* Très arrondi */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+/* Bouton de retrait du panier */
+.btn-remove-from-cart {
+    width: 100%;                       /* Prend toute la largeur */
+    padding: 18px;                     /* Grand espace intérieur */
+    background: #1a1a5e;               /* Bleu foncé */
+    color: white;
+    border: none;
+    border-radius: 30px;               /* Très arrondi */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.btn-add-to-cart:hover {
+    background: #2a2a7e;               /* Plus clair au survol */
+    transform: translateY(-2px);       /* Monte légèrement */
+    box-shadow: 0 4px 12px rgba(26, 26, 94, 0.3);  /* Ajoute une ombre */
+}
+
+.btn-remove-from-cart:hover {
+    background: #2a2a7e;               /* Plus clair au survol */
+    transform: translateY(-2px);       /* Monte légèrement */
+    box-shadow: 0 4px 12px rgba(26, 26, 94, 0.3);  /* Ajoute une ombre */
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .product-detail-wrapper {
+        grid-template-columns: 1fr;    /* Une seule colonne sur mobile */
+    }
+
+    .thumbnails {
+        overflow-x: auto;              /* Défilement horizontal si nécessaire */
+    }
+}
