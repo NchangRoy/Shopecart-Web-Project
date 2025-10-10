@@ -18,7 +18,6 @@ body {
 
 /* Hero Banner */
 .hero-banner {
-    background: linear-gradient(135deg, #66c7f4 0%, #4da8e8 100%);
     padding: 60px 20px;
     display: flex;
     justify-content: space-between;
@@ -27,6 +26,43 @@ body {
     margin: 40px auto;
     max-width: 1200px;
     border-radius: 10px;
+}
+
+.hero-banner input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 400%;             /* 4 fois 100% */
+    height: 100%;
+    transition: tranform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+    background: linear-gradient(135deg, #66c7f4 0%, #4da8e8 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    position: relative;
+}
+
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-25%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-50%);
+}
+
+#slide4:checked ~ .slides {
+    transform: translateX(-75%);
 }
 
 .banner-content {
@@ -74,10 +110,19 @@ body {
     background: rgba(255,255,255,0.5);
 }
 
-.dot-active {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+#slide1:checked ~ .dot[for="slide1"] {
+    background: white;
+}
+
+#slide2:checked ~ .dot[for="slide2"] {
+    background: white;
+}
+
+#slide3:checked ~ .dot[for="slide3"] {
+    background: white;
+}
+
+#slide4:checked ~ .dot[for="slide4"] {
     background: white;
 }
 
@@ -88,7 +133,7 @@ body {
     top: 50%;
     left: 1%;
     color: white;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -104,13 +149,29 @@ body {
     top: 50%;
     right: 1%;
     color: white;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
 
 .right-arrow:hover {
     transform: translateX(5px);
+}
+
+#slide1:checked ~ .right-arrow[for="slide2"] {
+    display: flex;
+}
+
+#slide2:checked ~ .right-arrow[for="slide3"], #slide2:checked ~ .left-arrow[for="slide1"] {
+    display: flex;
+}
+
+#slide3:checked ~ .right-arrow[for="slide4"], #slide2:checked ~ .left-arrow[for="slide2"] {
+    display: flex;
+}
+
+#slide4:checked ~ .left-arrow[for="slide3"] {
+    display: flex;
 }
 
 /* Filters */
