@@ -3,11 +3,11 @@
     --color-bg-light: #f9fafb; /* bg-gray-50 */
     --color-white: #fff; /* bg-white */
     --color-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
-    --color-blue-500: #3b82f6; /* text-blue-500 */
-    --color-blue-600: #2563eb; /* bg-blue-600, text-blue-600 */
-    --color-blue-700: #1d4ed8; /* hover:bg-blue-700 */
+    --color-blue-500: #3b82f6; /* Bleu Clair - accents */
+    --color-blue-600: #1e40af; /* Bleu Secondaire - boutons principaux */
+    --color-blue-700: #1e3a8a; /* Bleu Principal - hover et états actifs */
     --color-blue-100: #dbeafe; /* bg-blue-100 */
-    --color-blue-800: #1e40af; /* text-blue-800 */
+    --color-blue-800: #1e3a8a; /* Bleu Principal - texte foncé */
     --color-gray-900: #111827; /* text-gray-900 */
     --color-gray-600: #4b5563; /* text-gray-600 */
     --color-gray-500: #6b7280; /* text-gray-500 */
@@ -26,7 +26,7 @@
 /* Base Body Style */
 .body-bg {
     background-color: var(--color-bg-light);
-    font-family: sans-serif; /* Tailwind default is sans-serif */
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -872,10 +872,10 @@
 }
 
 .pagination-page-btn.active-page {
-    background-color: var(--color-indigo-700);
+    background-color: var(--color-blue-700);
     color: var(--color-white);
     box-shadow: var(--color-shadow); /* shadow-md */
-    border-color: var(--color-indigo-700);
+    border-color: var(--color-blue-700);
 }
 
 .pagination-ellipsis {
@@ -901,7 +901,7 @@
 .progress-bar-segment-1 {
     width: 33.333333%; /* w-1/3 */
     max-width: 24rem; /* max-w-sm */
-    background-color: var(--color-indigo-700);
+    background-color: var(--color-blue-700);
 }
 
 .progress-bar-segment-2 {
@@ -943,7 +943,6 @@
     position: relative;
     border-radius: 1rem; /* rounded-2xl */
     overflow: hidden;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-xl */
 }
 
 .video-element {
@@ -955,7 +954,7 @@
 .video-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* bg-black bg-opacity-30 */
+    background-color: rgba(0, 0, 0, 0.2); /* bg-black bg-opacity-20 - augmenté pour meilleure visibilité */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -970,24 +969,28 @@
     font-weight: 800;
     margin-bottom: 0.75rem;
     letter-spacing: -0.025em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Ombre portée pour meilleure lisibilité */
+    color: #ffffff; /* Blanc pur */
 }
 
 @media (min-width: 768px) {
     .video-title {
-        font-size: 2.25rem; /* md:text-4xl */
+        font-size: 3.25rem; /* md:text-4xl */
     }
 }
 
 .video-subtitle {
     font-size: 1.125rem; /* text-lg */
     margin-bottom: 1.5rem;
-    color: rgba(229, 231, 235, 0.9); /* text-gray-200, slightly adjusted for better readability over the video */
+    color: #ffffff; /* Blanc pur au lieu de gris */
     max-width: 32rem; /* max-w-xl */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); /* Ombre portée pour meilleure lisibilité */
 }
 
 .video-discount-highlight {
     font-weight: 700;
     color: var(--color-yellow-400);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* Ombre pour meilleure visibilité */
 }
 
 .video-cta-button {
@@ -1028,11 +1031,10 @@
     position: relative;
 }
 
-.video-overlay {
+.hero-video-section .video-overlay {
     position: absolute;
     inset: 0;
-    background-color: var(--color-black);
-    opacity: 0.4; /* opacity-40 */
+    background-color: rgba(0, 0, 0, 0.2); /* opacity augmentée pour meilleure visibilité */
 }
 
 .video-element {
@@ -1061,43 +1063,11 @@
     }
 }
 
-.video-card {
-    position: relative;
-    border-radius: 1rem; /* rounded-2xl */
-    overflow: hidden;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-xl */
-}
-
-.video-element {
-    width: 100%;
-    height: 24rem; /* h-96 */
-    object-fit: cover;
-}
-
-.video-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* bg-black bg-opacity-30 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--color-white);
-    padding: 1.5rem; /* p-6 */
-}
-
-.video-title {
-    font-size: 1.875rem; /* text-3xl */
-    font-weight: 800;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.025em;
-}
 
 
 /* --- Barre de Filtres/Tags --- */
 .tag-button:hover {
-    background-color: #4f46e5; /* violet */
+    background-color: var(--color-blue-600);
     color: white;
 }
 .filter-bar {
