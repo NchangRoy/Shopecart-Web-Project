@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopcart - Create an account</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+ <!-- Header -->
+  <header>
+    <!-- Checkbox cachée pour contrôler le menu mobile -->
+    <input type="checkbox" id="menu-toggle">
+
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-img">
+          <a href="index.html">
+            <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+          </a>
+        </div>
+        <span class="logo-text">Shopcart</span>
+      </div>
+
+      <!-- Hamburger icon comme label pour la checkbox -->
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li class="categories-dropdown">
+          <!-- Checkbox pour le sous-menu des catégories -->
+          <input type="checkbox" id="categories-toggle">
+          <label for="categories-toggle">
+            Catégories <span class="dropdown-arrow">▼</span>
+          </label>
+          <div class="dropdown-content">
+            <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+            <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+            <a href="/pages/produit_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+            <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+            <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+            <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
+            <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+            <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+            <a href="/pages/product_manette.html"><i class="fas fa-gamepad"></i> Gaming</a>
+            <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+          </div>
+        </li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="/about.html">À propos</a></li>
+        <li><a href="/Blog.html">Blog</a></li>
+      </ul>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher un produit..." class="search-input">
+      </div>
+
+      <div class="user-actions">
+        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+            class="cart-count">3</span></a>
+      </div>
+    </nav>
+
+    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
+    <a href="#" class="overlay" id="overlay"></a>
+  </header>
+    <main>
+        <section class="register-container">
+            <h2 data-translate="title">Create an account</h2>
+            <form>
+                <p class="p1"> <b>Enter mobile number or email </b></p>
+                <input type="text" placeholder="" data-placeholder="emailPhone" required>
+                <p class="p2"><b>Enter name account</b></p>
+                <input type="text" placeholder="" data-placeholder="name" required>
+                <p class="p3"><b>Enter password</b></p>
+                <input type="password" placeholder="" data-placeholder="password" required>
+                <p class="p4"><b>Confirm Password</b></p>
+                <input type="password" placeholder="" data-placeholder="confirmPassword" required>
+                
+                <button type="submit" class="submit-btn" data-translate="submit">Sign up</button>
+            </form>
+            <a href="">
+              <p data-translate="help">Need help?</p>
+            </a>
+            <p>Already having an account ? <a href="login.html">Sign in </a></p>
+            <div class="divider">OR</div>
+            <div class="social-row">
+              <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
+              <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
+              <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
+            </div>
+            
+        </section>
+    </main>
+    
+
+</body>
+</html>

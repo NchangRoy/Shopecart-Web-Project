@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casques Audio | Shopcart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/products_ordi.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+      <!-- Utilisation de Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
+  </style>
+    
+</head>
+<body class="body-bg">
+   <!-- Header -->
+  <header>
+    <!-- Checkbox cachée pour contrôler le menu mobile -->
+    <input type="checkbox" id="menu-toggle">
+
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-img">
+          <a href="index.html">
+            <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+          </a>
+        </div>
+        <span class="logo-text">Shopcart</span>
+      </div>
+
+      <!-- Hamburger icon comme label pour la checkbox -->
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li class="categories-dropdown">
+          <!-- Checkbox pour le sous-menu des catégories -->
+          <input type="checkbox" id="categories-toggle">
+          <label for="categories-toggle">
+            Catégories <span class="dropdown-arrow">▼</span>
+          </label>
+          <div class="dropdown-content">
+            <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+            <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+            <a href="/pages/produit_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+            <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+            <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+            <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
+            <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+            <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+            <a href="#"><i class="fas fa-gamepad"></i> Gaming</a>
+            <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+          </div>
+        </li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="/about.html">À propos</a></li>
+        <li><a href="/Blog.html">Blog</a></li>
+      </ul>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher un produit..." class="search-input">
+      </div>
+
+      <div class="user-actions">
+        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+            class="cart-count">3</span></a>
+      </div>
+    </nav>
+
+    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
+    <a href="#" class="overlay" id="overlay"></a>
+  </header>
+    
+    <section class="hero-video-section">
+        <div class="video-overlay"></div>
+        <video autoplay loop muted playsinline class="video-element">
+            <source src="../assets/vidéos/14469549_2160_3840_30fps.mp4" type="video/mp4">
+        </video>
+    </section>
+    
+    <main class="main-content-container">
+        <div class="filter-bar hide-scrollbar">
+            <button class="filter-button primary-filter">
+                <i class="fas fa-sliders-h icon-margin-right"></i> Filtres
+            </button>
+            
+            <div class="tag-buttons-group">
+                <button class="tag-button selected-tag">
+                    Ordinateur ▼
+                </button>
+                <button class="tag-button">
+                    Prix ▼
+                </button>
+                <button class="tag-button">
+                    Couleurs ▼
+                </button>
+                <button class="tag-button">
+                    Meilleures ventes ▼
+                </button>
+                <button class="tag-button">
+                    Nouveautés ▼
+                </button>
+                <button class="tag-button">
+                    Promotions ▼
+                </button>
+            </div>
+        </div>
+
+        
+
+        <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Nos Ordinateurs</span>
+            </h2>
+            <p class="section-subtitle">Découvrez notre collection premium</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">HP</p>
+                        <h3 class="product-title-card">HP 14 Laptop,Intel</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap2.jpg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">acer</p>
+                        <h3 class="product-title-card">Acer Aspire 15 Slim</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap3.jpg" alt="Beats Studio 3" class="product-image">
+                        <div class="product-tag tag-promo tag-right">PROMO</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Dell</p>
+                        <h3 class="product-title-card">Dell inspiron 3530</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions-promo">
+                            <span class="old-price">300.000 FCFA</span>
+                            <span class="product-price">280.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap4.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">acer</p>
+                        <h3 class="product-title-card">Acer Aspire 3 A315-24P-R7VH</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap5.jpg" alt="Marshall Major IV" class="product-image">
+                        <div class="product-tag tag-top tag-right">TOP</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">ASUS</p>
+                        <h3 class="product-title-card">ASUS ROG Strix G16 2025</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">114.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap6.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">10.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap7.jpg" alt="Sony WH-1000XM5 Noir" class="product-image">
+                        <div class="product-tag tag-top tag-right">TOP</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">Noise Cancelling 700</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">20.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap8.jpg" alt="Beats Studio 3" class="product-image">
+                        <div class="product-tag tag-promo tag-right">PROMO</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Beats</p>
+                        <h3 class="product-title-card">Studio 3 Rose Gold</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions-promo">
+                            <span class="old-price">300.000 FCFA</span>
+                            <span class="product-price">20.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card out-of-stock">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg1" alt="JBL Tune Bleu" class="product-image">
+                        
+                        <div class="image-overlay-disabled"></div>
+                        <div class="product-tag tag-oos tag-left">RUPTURE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Motif II</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions-oos">
+                            <span class="product-price">10.000 FCFA</span>
+                            <button class="add-to-cart-btn disabled-btn" disabled>
+                                <i class="fas fa-ban"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Razer Gaming RGB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">HD 660S</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(5.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">50.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Beats Studio 3" class="product-image">
+                        <div class="product-tag tag-promo tag-right">PROMO</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Beats</p>
+                        <h3 class="product-title-card">Studio 3 Rose Gold</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions-promo">
+                            <span class="old-price">300.000 FCFA</span>
+                            <span class="product-price">20.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">15.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Marshall Major IV" class="product-image">
+                        <div class="product-tag tag-top tag-right">TOP</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Major IV Marron</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">10.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card out-of-stock">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Audio-Technica Studio" class="product-image">
+
+                        <div class="image-overlay-disabled"></div>
+                        <div class="product-tag tag-oos tag-left">RUPTURE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 35</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions-oos">
+                            <span class="product-price">19.999</span>
+                            <button class="add-to-cart-btn disabled-btn" disabled>
+                                <i class="fas fa-ban"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="pagination-section">
+            <div class="pagination-center-wrapper">
+                <nav class="pagination-nav">
+                    
+                    <button class="pagination-btn-prev disabled-btn" disabled>
+                        <i class="fas fa-chevron-left icon-small-margin-right"></i>
+                        <span>Précédent</span>
+                    </button>
+                    
+                    <button class="pagination-page-btn active-page">
+                        1
+                    </button>
+                    
+                    <button class="pagination-page-btn">
+                        2
+                    </button>
+                    <button class="pagination-page-btn">
+                        3
+                    </button>
+                    
+                    <span class="pagination-ellipsis">...</span>
+                    
+                    <button class="pagination-page-btn">
+                        8
+                    </button>
+                    
+                    <button class="pagination-btn-next">
+                        <span>Suivant</span>
+                        <i class="fas fa-chevron-right icon-small-margin-left"></i>
+                    </button>
+                </nav>
+
+                <div class="progress-bar-row">
+                    <hr class="progress-bar-segment-1">
+                    <hr class="progress-bar-segment-2">
+                    <hr class="progress-bar-segment-3">
+                </div>
+            </div>
+        </div>
+
+
+        <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Nos casques</span>
+            </h2>
+            <p class="section-subtitle">Découvrez notre collection premium</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Beats Studio 3" class="product-image">
+                        <div class="product-tag tag-promo tag-right">PROMO</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Beats</p>
+                        <h3 class="product-title-card">Studio 3 Rose Gold</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions-promo">
+                            <span class="old-price">300.000 FCFA</span>
+                            <span class="product-price">280.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Marshall Major IV" class="product-image">
+                        <div class="product-tag tag-top tag-right">TOP</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Major IV Marron</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">14.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">10.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sony WH-1000XM5 Noir" class="product-image">
+                        <div class="product-tag tag-top tag-right">TOP</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">Noise Cancelling 700</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">20.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Beats Studio 3" class="product-image">
+                        <div class="product-tag tag-promo tag-right">PROMO</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Beats</p>
+                        <h3 class="product-title-card">Studio 3 Rose Gold</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions-promo">
+                            <span class="old-price">300.000 FCFA</span>
+                            <span class="product-price">20.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card out-of-stock">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="JBL Tune Bleu" class="product-image">
+                        
+                        <div class="image-overlay-disabled"></div>
+                        <div class="product-tag tag-oos tag-left">RUPTURE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Motif II</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions-oos">
+                            <span class="product-price">10.000 FCFA</span>
+                            <button class="add-to-cart-btn disabled-btn" disabled>
+                                <i class="fas fa-ban"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Razer Gaming RGB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">HD 660S</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(5.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">50.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Beats Studio 3" class="product-image">
+                        <div class="product-tag tag-promo tag-right">PROMO</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Beats</p>
+                        <h3 class="product-title-card">Studio 3 Rose Gold</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions-promo">
+                            <span class="old-price">300.000 FCFA</span>
+                            <span class="product-price">20.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sennheiser Momentum Sport" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">15.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Marshall Major IV" class="product-image">
+                        <div class="product-tag tag-top tag-right">TOP</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Major IV Marron</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">10.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card out-of-stock">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Audio-Technica Studio" class="product-image">
+
+                        <div class="image-overlay-disabled"></div>
+                        <div class="product-tag tag-oos tag-left">RUPTURE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 35</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions-oos">
+                            <span class="product-price">19.999</span>
+                            <button class="add-to-cart-btn disabled-btn" disabled>
+                                <i class="fas fa-ban"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="pagination-section">
+            <div class="pagination-center-wrapper">
+                <nav class="pagination-nav">
+                    
+                    <button class="pagination-btn-prev disabled-btn" disabled>
+                        <i class="fas fa-chevron-left icon-small-margin-right"></i>
+                        <span>Précédent</span>
+                    </button>
+                    
+                    <button class="pagination-page-btn active-page">
+                        1
+                    </button>
+                    
+                    <button class="pagination-page-btn">
+                        2
+                    </button>
+                    <button class="pagination-page-btn">
+                        3
+                    </button>
+                    
+                    <span class="pagination-ellipsis">...</span>
+                    
+                    <button class="pagination-page-btn">
+                        8
+                    </button>
+                    
+                    <button class="pagination-btn-next">
+                        <span>Suivant</span>
+                        <i class="fas fa-chevron-right icon-small-margin-left"></i>
+                    </button>
+                </nav>
+
+                <div class="progress-bar-row">
+                    <hr class="progress-bar-segment-1">
+                    <hr class="progress-bar-segment-2">
+                    <hr class="progress-bar-segment-3">
+                </div>
+            </div>
+        </div>
+        <section class="video-promo-section">
+            <div class="video-grid">
+                <section class="video-card">
+                    <video autoplay loop muted playsinline class="video-element">
+                    <source src="/assets/vidéos/ipad1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <h3 class="video-title">
+                            Restez en contact avec vos proches 
+                        </h3>
+                        <p class="video-subtitle">
+                            Profitez de réductions exceptionnelles sur nos casques sans fil jusqu’à 
+                            <span class="video-discount-highlight">-30%</span> !
+                        </p>
+                        <button class="video-cta-button button-blue">
+                            Découvrir les Offres
+                        </button>
+                    </div>
+                </section>
+
+                <section class="video-card">
+                    <video autoplay loop muted playsinline class="video-element">
+                    <source src="/assets/vidéos/MONTRE.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <h3 class="video-title">
+                            Avec une montre connectée suivez vos paramètres vitaux 
+                        </h3>
+                        <p class="video-subtitle">
+                            Bénéficiez d'offres exclusives et de réductions jusqu’à 
+                            <span class="video-discount-highlight">-25%</span> !
+                        </p>
+                        <button class="video-cta-button button-green">
+                            Voir les Offres
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        
+
+        
+
+    </main>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Navigation Rapide</h3>
+        <ul>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Promotions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>À propos de Shopcart</h3>
+        <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
+          client exceptionnel.</p>
+
+        <div class="social-row">
+          <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
+          <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
+          <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Boutique</h3>
+        <div class="shop-categories">
+          <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Ordinateurs</a></li>
+            <li><a href="#">Tablettes</a></li>
+            <li><a href="#">Accessoires</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+          <p><i class="fas fa-phone"></i> +237 657450314</p>
+          <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+          <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
