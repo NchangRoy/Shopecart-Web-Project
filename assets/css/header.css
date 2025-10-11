@@ -238,6 +238,9 @@
   .hamburger {
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/1-e4-Blog-Nguetchuissi
   }
   
   .nav-links {
@@ -339,6 +342,7 @@
   .logo-img {
     width: 40px;
   }
+<<<<<<< HEAD
 =======
     align-items: center;
     justify-content: space-between;
@@ -466,6 +470,8 @@
     color: var(--color-text);
     font-size: var(--font-size-sm);
 >>>>>>> origin/feature/1-e1-adminstatic-BALA
+=======
+>>>>>>> origin/feature/1-e4-Blog-Nguetchuissi
 }
 
 @media (max-width: 480px) {
@@ -484,6 +490,9 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/1-e4-Blog-Nguetchuissi
 .overlay {
   display: none;
   position: fixed;
@@ -513,6 +522,7 @@
 
 .overlay:target ~ .hamburger span:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
+<<<<<<< HEAD
 =======
 .dropdown-icon {
     color: var(--color-text-muted);
@@ -548,4 +558,6 @@
         gap: var(--spacing-sm);
     }
 >>>>>>> origin/feature/1-e1-adminstatic-BALA
+=======
+>>>>>>> origin/feature/1-e4-Blog-Nguetchuissi
 }
