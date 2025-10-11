@@ -221,55 +221,46 @@
     margin: 0;
 }
 
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 /* Bouton d'ajout au panier */
 .btn-add-to-cart {
     width: 100%;                       /* Prend toute la largeur */
-    padding: 18px;                     /* Grand espace intérieur */
     background: #1a1a5e;               /* Bleu foncé */
     color: white;
     border: none;
-    border-radius: 30px;               /* Très arrondi */
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
-    margin-top: 20px;
+    padding: 15px;
 }
 
 /* Bouton de retrait du panier */
-.btn-remove-from-cart {
-    width: 100%;                       /* Prend toute la largeur */
-    padding: 18px;                     /* Grand espace intérieur */
-    background: #1a1a5e;               /* Bleu foncé */
-    color: white;
-    border: none;
-    border-radius: 30px;               /* Très arrondi */
+.btn-buy-it-now {
+    width: 100%; /* Prend toute la largeur */
+    background: white;               /* Blanc */
+    color: #1a1a5e;
+    border: 2px solid #1a1a5e;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
-    margin-top: 20px;
+    padding: 15px;
 }
 
 .btn-add-to-cart:hover {
-    background: #2a2a7e;               /* Plus clair au survol */
+    background: #1A1A40;               /* Plus clair au survol */
     transform: translateY(-2px);       /* Monte légèrement */
     box-shadow: 0 4px 12px rgba(26, 26, 94, 0.3);  /* Ajoute une ombre */
 }
 
-.btn-remove-from-cart:hover {
-    background: #2a2a7e;               /* Plus clair au survol */
+.btn-buy-it-now:hover {
+    background: #87ceeb;               /* Plus fonce au survol */
     transform: translateY(-2px);       /* Monte légèrement */
     box-shadow: 0 4px 12px rgba(26, 26, 94, 0.3);  /* Ajoute une ombre */
-}
-
-/* Responsive pour mobile */
-@media (max-width: 768px) {
-    .product-detail-wrapper {
-        grid-template-columns: 1fr;    /* Une seule colonne sur mobile */
-    }
-
-    .thumbnails {
-        overflow-x: auto;              /* Défilement horizontal si nécessaire */
-    }
 }
