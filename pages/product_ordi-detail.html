@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Headphones Max - Détails | SonicWave</title>
+    <title>Ordinateur Portables - Détails | SonicWave</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/product_ordi-detail.css">
@@ -12,46 +12,84 @@
 </head>
 <body class="body-bg">
     <header>
-        <nav class="navbar">
-        <div class="logo">
-            <img src="../assets/images/shopcart-logo.png" alt="Logo Shopcart" class="logo-img">
-            <span class="logo-text">Shopcart</span>
+    <!-- Checkbox cachée pour contrôler le menu mobile -->
+    <input type="checkbox" id="menu-toggle">
+
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-img">
+          <img src="../assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Catégories <span class="dropdown-arrow">▼</span></a></li>
-            <li><a href="#">Offres</a></li>
-            <li><a href="#">À Propos</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-        <div class="search-bar">
-            <input type="text" placeholder="🔍 Rechercher un Produit" class="search-input">
-        </div>
-        <div class="user-actions">
-            <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> Compte</a>
-            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Panier</a>
-        </div>
-        </nav>
-    </header>
+        <span class="logo-text">Shopcart</span>
+      </div>
+
+      <!-- Hamburger icon comme label pour la checkbox -->
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li class="categories-dropdown">
+          <!-- Checkbox pour le sous-menu des catégories -->
+          <input type="checkbox" id="categories-toggle">
+          <label for="categories-toggle">
+            Catégories <span class="dropdown-arrow">▼</span>
+          </label>
+          <div class="dropdown-content">
+            <a href="#"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+            <a href="#"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+            <a href="#"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+            <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+            <a href="#"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+            <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
+            <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+            <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+            <a href="#"><i class="fas fa-gamepad"></i> Gaming</a>
+            <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+          </div>
+        </li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher un produit..." class="search-input">
+      </div>
+
+      <div class="user-actions">
+        <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+            class="cart-count">3</span></a>
+      </div>
+    </nav>
+
+    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
+    <a href="#" class="overlay" id="overlay"></a>
+  </header>
 
     <div class="product-detail-container">
         <div class="product-detail-flex">
             <div class="product-detail-left">
                 <div class="image-gallery-box">
                     <div class="main-product-image">
-                        <img id="main-image" src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500" alt="Casque Max">
+                        <img id="main-image" src="../assets/images/img_Lap2.jpg" alt="Casque Max">
                     </div>
                     <div class="thumbnail-row">
                         <div class="thumbnail active">
-                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="Vue 1" data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+                            <img src="../assets/images/img_Lap2.jpg" alt="Vue 1" data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
                         </div>
                         <div class="thumbnail">
-                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100" alt="Vue 2" data-image="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500">
+                            <img src="../assets/images/img_Lap15.jpg" alt="Vue 2" data-image="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500">
                         </div>
                         <div class="thumbnail">
-                            <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=100" alt="Vue 3" data-image="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500">
+                            <img src="../assets/images/img_Lap4.jpg" alt="Vue 3" data-image="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500">
                         </div>
                         <div class="thumbnail">
-                            <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=100" alt="Vue 4" data-image="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500">
+                            <img src="../assets/images/img_Lap5.jpg" alt="Vue 4" data-image="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500">
                         </div>
                     </div>
                 </div>
@@ -64,8 +102,8 @@
                     <div class="new-tag-wrapper">
                         <span class="new-tag">Nouveau</span>
                     </div>
-                    <h1 class="product-title">Headphones Max</h1>
-                    <p class="product-subtitle">2-en-1 Élégance du Smart et de l'Audio. Multi-Connectivité Redéfinie.</p>
+                    <h1 class="product-title">acer</h1>
+                    <p class="product-subtitle">Acer Aspire 15 Slim Laptop AG15-32P-39R2|15.6" FHD 1920x1080 IPS</p>
                     
                     <div class="rating-info">
                         <div class="stars-list">
@@ -79,7 +117,7 @@
                     </div>
 
                     <div class="price-info">
-                        <span class="main-price">15.999FCFA</span>
+                        <span class="main-price">200.000 FCFA</span>
                         <span class="tax-info">TTC</span>
                     </div>
 
@@ -709,43 +747,65 @@
 
     </section>
 
-    <footer>
-        <div class="footer-container">
-        <div class="footer-section">
-            <h3>À Propos de Nous</h3>
-            <ul>
-            <li><a href="#">Localisations</a></li>
-            <li><a href="#">Partenaires</a></li>
-            </ul>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Navigation Rapide</h3>
+        <ul>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Promotions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>À propos de Shopcart</h3>
+        <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
+          client exceptionnel.</p>
+
+        <div class="social-row">
+          <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
+          <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
+          <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
         </div>
-        <div class="footer-section">
-            <h3>Notre Boutique</h3>
-            <ul>
-            <li><a href="#">Partenaires</a></li>
-            </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Boutique</h3>
+        <div class="shop-categories">
+          <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Ordinateurs</a></li>
+            <li><a href="#">Tablettes</a></li>
+            <li><a href="#">Accessoires</a></li>
+          </ul>
         </div>
-        <div class="footer-section">
-            <h3>Contactez-Nous</h3>
-            <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">business@gmail.com</a></li>
-            </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+          <p><i class="fas fa-phone"></i> +237 657450314</p>
+          <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+          <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
         </div>
-        <div class="footer-section">
-            <h3>Service Client</h3>
-            <ul>
-            <li><a href="#">Politique de Promotion</a></li>
-            <li><a href="#">Suivre la Commande</a></li>
-            <li><a href="#">Informations de Livraison</a></li>
-            </ul>
-        </div>
-        </div>
-        <div class="footer-bottom">
-        <p>© Copyright 2025 Shopcart</p>
-        <div class="footer-links">
-            <a href="#">Confidentialité</a> | <a href="#">Termes & Conditions</a>
-        </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

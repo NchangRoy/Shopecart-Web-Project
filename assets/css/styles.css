@@ -570,9 +570,6 @@
     text-align: center;
     font-weight: 500;
     line-height: 2rem;
-    /* To visually separate the display from buttons if needed, without borders: */
-    /* border-left: 1px solid var(--color-gray-300); */
-    /* border-right: 1px solid var(--color-gray-300); */
 }
 
 

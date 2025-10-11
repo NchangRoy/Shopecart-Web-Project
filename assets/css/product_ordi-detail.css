@@ -9,65 +9,6 @@ body {
     background: #F5F5F5;
 }
 
-/* HEADER */
-header {
-    background: white;
-    padding: 15px 50px;
-    border-bottom: 1px solid #E0E0E0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-size: 14px;
-}
-
-.nav-right {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.nav-right input {
-    padding: 8px 15px;
-    border: 1px solid #DDD;
-    border-radius: 5px;
-    width: 200px;
-}
-
-.nav-right span {
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.btn-account, .btn-cart {
-    padding: 8px 16px;
-    border: 1px solid #DDD;
-    background: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 /* PRODUCT WRAPPER */
 .product-wrapper {
     max-width: 1200px;
