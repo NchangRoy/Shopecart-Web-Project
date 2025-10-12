@@ -124,19 +124,10 @@ input {
   margin-bottom: 18px;
 }
 
-.brand-logo {                     
+.brand-logo {
+  width: 92px;                      
   height: auto;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0.06);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(9,30,66,0.03);
-  font-size: 16px;
-  line-height: 1;
+  display: block;
 }
 
 .brand-title {
