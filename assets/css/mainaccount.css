@@ -71,7 +71,7 @@
   .section{margin-top:18px}
   .section-title{font-weight:600;margin-bottom:10px}
 
-  .row{display:flex;gap:12px;align-items:center}
+  .row-right{display:flex;gap:12px;align-items:center; justify-content: flex-end;}
   .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;font-weight:600}
   .btn-primary{background:var(--accent);color:white}
   .btn-danger{background:var(--danger);color:white}
