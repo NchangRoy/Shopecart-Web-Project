@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans serif;
+    /* background-color: #f5f5f5; */
+}
+
+/*
+    Main cart container
+*/
+
+/* Main container that wraps all cart content */
+.cart-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #ffffff;
+}
+
+.cart-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Cart content layout (two column gird)*/
+
+.cart-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LEFT COLUMN */
+
+/* Container for all cart item cards */
+
+.cart-items {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual cart item */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba (0, 0, 0, 0.1)
+}
+
+/* Product image */
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* PRODUCT DETAILS SECTION */
+
+/* Container for product name and color */
+.item-details {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Product name */
+.item-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Product color description */
+
+.item-color {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* PRODUCT ACTIONS SECTION (Price, Quantity, Remove) */
+
+/* Container for price, quantity and remove button */
+
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Product price */
+.item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Dark gray color */
+    margin: 0;
+}
+
+/*Quantity text */
+
+.item-quantity {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Remove button */
+.remove-btn {
+    padding: 8px 20px;
+    background-color: #1a237e;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Remove button hover effect */
+.remove-btn:hover {
+    background-color: #0d1654;
+}
+
+/* Container for the entier order summary*/
+.order-summary {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Makes the summary to stick to viewport when scrolling*/
+    top: 20px; /* Stays 20px from the top when scrolling (sticky postioning)*/
+    height: fit-content; /*Height adjusts to content inside */
+}
+
+/* Order Summary title */
+.summary-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* SUMMARY BOX (Price Breakdown)*/
+.summary-box {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* Each row in the summary */
+.summary-row {
+    display: flex;
+    justify-content: space-between; /* Pushes label to left and value to right */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Remove bottom margin from the last row */
+.summary-row:last-child {
+    margin-bottom: 0; /*No margin after last row (Total)*/
+}
+
+/* Label text */
+.summary-label {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.summary-value {
+    font-size: 16px; 
+    color: #333;
+    font-weight: bold;
+}
+
+/* TOTAL ROW */
+
+/* Special styling for the Total row */
+.summary-total {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+    margin-top: 5px;
+}
+
+/* Total label */
+.summary-total .summary-label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Total value */
+.summary-total .summary-value {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* CHECKOUT BUTTON */
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #1a237e;
+    color: #ffffff;
+    border-color: #1a237e;
+}
