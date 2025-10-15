@@ -169,7 +169,7 @@
 }
 
 .color-btn-active:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 /* Quantité */
@@ -238,6 +238,7 @@
     cursor: pointer;
     transition: all 0.3s;
     padding: 15px;
+    border-radius: 30px;
 }
 
 /* Bouton de retrait du panier */
@@ -251,6 +252,7 @@
     cursor: pointer;
     transition: all 0.3s;
     padding: 15px;
+    border-radius: 30px;
 }
 
 .btn-add-to-cart:hover {
