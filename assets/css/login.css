@@ -314,3 +314,18 @@ body::before {
   text-align: center;
   width: 100%;
 }
+
+/* Style pour l'icône de visualisation du mot de passe */
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
