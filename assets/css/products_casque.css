@@ -48,13 +48,8 @@
    ============================================ */
 
 .main-content-container {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    /* max-width: 1280px; */
+    padding: 2rem;
     position: relative; /* IMPORTANT pour le z-index */
 }
 

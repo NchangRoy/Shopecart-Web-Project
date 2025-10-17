@@ -5,6 +5,10 @@
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+.header{
+  position: fixed ;
+  z-index:1;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
