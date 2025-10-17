@@ -18,34 +18,28 @@ Site statique fonctionnel, testable localement.
 ## Installation Spécifique
 Ouvrez `index.html` dans un navigateur moderne (Chrome, Firefox).
 
-## Fichiers Clés
-- `index.html` : Page d'accueil.
-- `/assets/css/main.css` : Styles globaux.
-- `/assets/images/` : Répertoire des images produits.
-- `/assets/css/style-login.css`, `/assets/css/style-contact.css` : Styles spécifiques.
+## Structure du Dépôt
+- `/assets/` : CSS, images, JS communs.
+- `/tp1/` : Site statique (HTML/CSS).
+- `/tp2/` : Ajouts JS (panier dynamique).
+- `/tp3/` : Thème CMS et extensions.
+- `/tp4/` : Application Laravel complète.
+- `/docs/` : Designs Figma (captures), répartition des tâches, et documents du cours.
 
-## Arborescence Proposée
-```
-shopecart-web-project/
-├── index.html
-├── products.html
-├── product-detail.html
-├── login.html
-├── register.html
-├── about.html
-├── contact.html
-├── assets/
-│   ├── css/
-│   │   ├── main.css
-│   │   ├── style-login.css
-│   │   ├── style-contact.css
-│   │   └── style-product.css
-│   └── images/
-│       ├── product1.jpg
-│       ├── product2.jpg
-│       └── ...
-├── README.md
-└── .gitignore
-```
+## Contributions
+Chaque étudiant doit committer sur des branches dédiées avec des messages clairs (ex. "feat: ajout formulaire contact - Équipe 3"). 
+Utilisez les issues GitHub pour tracker les tâches. Rotation des rôles visible via commits.
 
-Voir la répartition des tâches pour plus de détails.
+## Technologies Utilisées
+- Frontend : HTML5, CSS3, JavaScript (vanilla).
+- CMS : WordPress/Joomla/Drupal + WooCommerce.
+- Backend : Laravel (PHP), MySQL.
+- Outils : Git, Figma pour designs.
+
+## Difficultés et Solutions (Retour d'Expérience)
+- À remplir après chaque TP : ex. "Intégration JS dans TP2 : Résolu via localStorage pour persistance panier."
+
+Pour plus de détails sur chaque TP, consultez les READMEs dédiés dans les dossiers correspondants.
+
+## Licence
+MIT - Projet éducatif.
