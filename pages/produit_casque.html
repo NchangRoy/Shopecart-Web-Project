@@ -6,7 +6,6 @@
     <title>Casques Audio | Shopcart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/products_casque.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
@@ -33,27 +32,104 @@
         </nav>
     </header>
     
-    <section class="hero-video-section">
-        <div class="video-overlay"></div>
-        <video autoplay loop muted playsinline class="video-element">
-            <source src="/assets/images/C15.mp4" type="video/mp4">
-        </video>
-    </section>
     
+    <section class="image-hero">
+         <div class="image-hero">
+             <img src="/assets/images/C13.jpeg" class="image-element"/>
+         </div>
+    </section>
     <main class="main-content-container">
-        <div class="filter-bar hide-scrollbar">
-            <button class="filter-button primary-filter">
-                <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
-            </button>
+
             <div class="tag-buttons-group">
-                <button class="tag-button selected-tag">Casques ▼</button>
-                <button class="tag-button">Prix ▼</button>
-                <button class="tag-button">Couleurs ▼</button>
-                <button class="tag-button">Meilleures ventes ▼</button>
-                <button class="tag-button">Nouveautés ▼</button>
-                <button class="tag-button">Promotions ▼</button>
+                <!-- Filtre Casques -->
+
+                <div class="filter-button primary-filter">
+                    <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
+                    
+                </div>
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="casques-toggle" class="filter-checkbox">
+                    <label for="casques-toggle" class="tag-button selected-tag">
+                        Casques <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-filter="sans-fil"><i class="fas fa-headphones"></i> Sans fil</a>
+                        <a href="#" data-filter="filaire"><i class="fas fa-headphones"></i> Avec fil</a>
+                    
+                    </div>
+                </div>
+
+                <!-- Filtre Prix -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="prix-toggle" class="filter-checkbox">
+                    <label for="prix-toggle" class="tag-button">
+                        Prix <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-price="0-5000"><i class="fas fa-tag"></i> Moins de 5.000 FCFA</a>
+                        <a href="#" data-price="5000-10000"><i class="fas fa-tag"></i> 5.000 - 10.000 FCFA</a>
+                        <a href="#" data-price="10000-20000"><i class="fas fa-tag"></i> 10.000 - 20.000 FCFA</a>
+                        <a href="#" data-price="20000+"><i class="fas fa-tag"></i> Plus de 20.000 FCFA</a>
+                    </div>
+                </div>
+
+                <!-- Filtre Couleurs -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="couleurs-toggle" class="filter-checkbox">
+                    <label for="couleurs-toggle" class="tag-button">
+                        Couleurs <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-color="noir"><i class="fas fa-circle" style="color: #000;"></i> Noir</a>
+                        <a href="#" data-color="blanc"><i class="fas fa-circle" style="color: #fff; text-shadow: 0 0 1px #000;"></i> Blanc</a>
+                        <a href="#" data-color="gris"><i class="fas fa-circle" style="color: #888;"></i> Gris</a>
+                        <a href="#" data-color="bleu"><i class="fas fa-circle" style="color: #3b82f6;"></i> Bleu</a>
+                        <a href="#" data-color="rouge"><i class="fas fa-circle" style="color: #ef4444;"></i> Rouge</a>
+                        <a href="#" data-color="rose"><i class="fas fa-circle" style="color: #ec4899;"></i> Rose</a>
+                    </div>
+                </div>
+
+                <!-- Filtre Meilleures ventes -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="ventes-toggle" class="filter-checkbox">
+                    <label for="ventes-toggle" class="tag-button">
+                        Meilleures ventes <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-sort="top10"><i class="fas fa-trophy"></i> Top 10</a>
+                        <a href="#" data-sort="top50"><i class="fas fa-star"></i> Top 50</a>
+                        <a href="#" data-sort="tendance"><i class="fas fa-fire"></i> Tendances</a>
+                    </div>
+                </div>
+
+                <!-- Filtre Nouveautés -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="nouveautes-toggle" class="filter-checkbox">
+                    <label for="nouveautes-toggle" class="tag-button">
+                        Nouveautés <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-date="7days"><i class="fas fa-clock"></i> Cette semaine</a>
+                        <a href="#" data-date="30days"><i class="fas fa-calendar"></i> Ce mois-ci</a>
+                        <a href="#" data-date="90days"><i class="fas fa-calendar-alt"></i> Ces 3 derniers mois</a>
+                    </div>
+                </div>
+
+                <!-- Filtre Promotions -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="promotions-toggle" class="filter-checkbox">
+                    <label for="promotions-toggle" class="tag-button">
+                        Promotions <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-promo="10"><i class="fas fa-percentage"></i> -10%</a>
+                        <a href="#" data-promo="20"><i class="fas fa-percentage"></i> -20%</a>
+                        <a href="#" data-promo="30"><i class="fas fa-percentage"></i> -30% et plus</a>
+                        <a href="#" data-promo="flash"><i class="fas fa-bolt"></i> Ventes flash</a>
+                    </div>
+                </div>
             </div>
-        </div>
+      
 
         <section class="products-section">
             <h2 class="section-title">
@@ -262,7 +338,7 @@
                 </a>
 
                 <!-- Produit 10 -->
-                <a href="produit_asqueDetail.html" class="product-card">
+                <a href="produit_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
                         <img src="/assets/images/C10.jpeg" alt="Sennheiser HD 660S" class="product-image">
                         <div class="product-tag tag-best-seller">TOP VENTE</div>
@@ -823,46 +899,7 @@
                 </div>
             </div>
         </div>
-
-        <section class="video-promo-section">
-            <div class="video-grid">
-                <section class="video-card">
-                    <video autoplay loop muted playsinline class="video-element">
-                        <source src="/assets/vidéos/ipad1.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-overlay">
-                        <h3 class="video-title">
-                            Restez en contact avec vos proches 
-                        </h3>
-                        <p class="video-subtitle">
-                            Profitez de réductions exceptionnelles sur nos casques sans fil jusqu'à 
-                            <span class="video-discount-highlight">-30%</span> !
-                        </p>
-                        <button class="video-cta-button button-blue-purple">
-                            Découvrir les Offres
-                        </button>
-                    </div>
-                </section>
-
-                <section class="video-card">
-                    <video autoplay loop muted playsinline class="video-element">
-                        <source src="/assets/vidéos/MONTRE.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-overlay">
-                        <h3 class="video-title">
-                            Avec une montre connectée suivez vos paramètres vitaux 
-                        </h3>
-                        <p class="video-subtitle">
-                            Bénéficiez d'offres exclusives et de réductions jusqu'à 
-                            <span class="video-discount-highlight">-25%</span> !
-                        </p>
-                        <button class="video-cta-button button-green-teal">
-                            Voir les Offres
-                        </button>
-                    </div>
-                </section>
-            </div>
-        </section>
+ 
     </main>
 
     <footer>
