@@ -1178,11 +1178,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 45%;
+    max-width: 70%;
 }
 
 .banner-image img {
-    max-width: 100%;
+    max-width: 200%;
     width: 300px;
     height: auto;
     
