@@ -115,7 +115,6 @@ body {
     position: absolute;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%);
     display: flex;
     gap: 8px;
 }
@@ -123,8 +122,9 @@ body {
 .dot {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
+    border-radius: 5px;
     background: rgba(255,255,255,0.5);
+    transition: all 0.5s ease;
 }
 
 #slide1:checked ~ .banner-dots label[for="slide1"],
@@ -132,6 +132,7 @@ body {
 #slide3:checked ~ .banner-dots label[for="slide3"],
 #slide4:checked ~ .banner-dots label[for="slide4"] {
     background: white;
+    width: 50px;
 }
 
 .left-arrow {
@@ -229,8 +230,20 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.1s;
+    animation: fadeIn 0.5s ease;
 }
+
+@keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
 .product-card:hover {
     transform: translateY(-10px);
@@ -306,10 +319,25 @@ body {
 
 .page-btn, .page-num {
     padding: 8px 15px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     background: white;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.page-btn:disabled, .page-num:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 5px;
+}
+
+.page-btn:hover, .page-num:hover {
+    border: 2px solid #1e3a8a;
+    color: #1e3a8a;
+    background: #87ceeb;
 }
 
 .page-num-active {
