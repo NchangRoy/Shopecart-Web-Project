@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casques Audio | Shopcart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/products_casque.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+</head>
+<body class="body-bg">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+                <span class="logo-text">Shopcart</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Categories <span class="dropdown-arrow">▼</span></a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="🔍 Search Product" class="search-input">
+            </div>
+            <div class="user-actions">
+                <a href="#" class="account-icon"><i class="fa-regular fa-user"></i> Account</a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Cart</a>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <section class="hero-banner">
+        <!--Radio buttons pour controler les slides-->
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <div class="carousel-container">
+            <!--Les slides-->
+            <div class="slides">
+                <!--Slide 1-->
+                <div class="slide">
+                    <div class="banner-content">
+                        <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
+                        <button class="btn-primary">Buy Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/pexels-pavel-danilyuk-7776154-removebg-preview.png" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
+                </div>
+                <!--Slide 2-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>New Collection Of<br>Smart Phones<br>Available Now</h1>
+                        <button class="btn-primary">Shop Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/m2-removebg-preview.png" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
+                </div>
+                <!--Slide 3-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Latest Google Pixels<br>Up To 30% Off<br>Limited Time</h1>
+                        <button class="btn-primary">Get Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/m3-removebg-preview.png" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
+                </div>
+                <!--Slide 4-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                        <button class="btn-primary">Maybe Yes</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/m4-removebg-preview.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-dots">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+            <label for="slide4" class="dot"></label>
+        </div>
+    </section>
+    <main class="main-content-container">
+
+            <div class="tag-buttons-group">
+                <div class="filter-button primary-filter">
+                    <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
+                </div>
+
+                <!-- Filtre Prix -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="prix-toggle" class="filter-checkbox">
+                    <label for="prix-toggle" class="tag-button">
+                        Prix <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-price="0-5000"><i class="fas fa-tag"></i> Moins de 5.000 FCFA</a>
+                        <a href="#" data-price="5000-10000"><i class="fas fa-tag"></i> 5.000 - 10.000 FCFA</a>
+                        <a href="#" data-price="10000-20000"><i class="fas fa-tag"></i> 10.000 - 20.000 FCFA</a>
+                        <a href="#" data-price="20000+"><i class="fas fa-tag"></i> Plus de 20.000 FCFA</a>
+                    </div>
+                </div>
+
+                <!-- Filtre Marques -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="marques-toggle" class="filter-checkbox">
+                    <label for="marques-toggle" class="tag-button">
+                        Marques <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-brand="sony"><i class="fab fa-playstation"></i> Sony</a>
+                        <a href="#" data-brand="microsoft"><i class="fab fa-xbox"></i> Microsoft</a>
+                        <a href="#" data-brand="nintendo"><i class="fas fa-gamepad"></i> Nintendo</a>
+                        <a href="#" data-brand="logitech"><i class="fas fa-mouse"></i> Logitech</a>
+                        <a href="#" data-brand="razer"><i class="fas fa-bolt"></i> Razer</a>
+                        <a href="#" data-brand="8bitdo"><i class="fas fa-retweet"></i> 8BitDo</a>
+                    </div>
+                </div>
+
+                <!-- Filtre Notes -->
+                <div class="filter-dropdown">
+                    <input type="checkbox" id="notes-toggle" class="filter-checkbox">
+                    <label for="notes-toggle" class="tag-button">
+                        Notes <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="#" data-rating="5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5 étoiles)</a>
+                        <a href="#" data-rating="4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+                        <a href="#" data-rating="3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+                        <a href="#" data-rating="2"><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+                        <a href="#" data-rating="1"><i class="fas fa-star"></i> et +</a>
+                    </div>
+                </div>
+            </div>
+ 
+      
+
+        <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Nos manettes</span>
+            </h2>
+            <p class="section-subtitle">Découvrez notre collection premium</p>
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.jpeg" alt="Sennheiser Momentum Sport Orange" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 2 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M10.jpeg" alt="Beats by Dre Studio 3" class="product-image">
+                        <div class="product-tag tag-promo">-25%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Beats by Dre</p>
+                        <h3 class="product-title-card">Studio 3 Wireless</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">220.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 3 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.jpeg" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">299.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 4 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.jpeg" alt="Sony WH-1000XM5" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM5</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">349.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 5 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.jpeg" alt="JBL Live 660NC" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">JBL</p>
+                        <h3 class="product-title-card">Live 660NC</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">129.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 6 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Marshall Major IV" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Major IV Bluetooth</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">179.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 7 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M5.jpeg" alt="Anker Soundcore Life Q35" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Anker</p>
+                        <h3 class="product-title-card">Soundcore Life Q35</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 8 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M6.jpeg" alt="Skullcandy Crusher Evo" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Skullcandy</p>
+                        <h3 class="product-title-card">Crusher Evo</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">159.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 9 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M7.jpeg" alt="Jabra Elite 85h" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Jabra</p>
+                        <h3 class="product-title-card">Elite 85h Titanium Black</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">249.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 10 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.jpeg" alt="AKG K371" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">AKG</p>
+                        <h3 class="product-title-card">K371 Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">139.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 11 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.jpeg" alt="Razer Barracuda X" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Barracuda X Wireless</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.1)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 12 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.jpeg" alt="Sennheiser HD 450BT" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">HD 450BT Black</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">169.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 13 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.jpeg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 14 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.jpeg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 15 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M5.jpeg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 16 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M7.jpeg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Nouvelle pagination -->
+        <div class="pagination">
+            <button class="page-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+            
+            <button class="page-num-active">1</button>
+            <button class="page-num">2</button>
+            <button class="page-num">3</button>
+            <span>...</span>
+            <button class="page-num">8</button>
+            
+            <button class="page-btn">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Nos casques</span>
+            </h2>
+            <p class="section-subtitle">Découvrez notre collection premium</p>
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M10.jpeg" alt="Sennheiser Momentum Sport Orange" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 2 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.jpeg" alt="Beats by Dre Studio 3" class="product-image">
+                        <div class="product-tag tag-promo">-25%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Beats by Dre</p>
+                        <h3 class="product-title-card">Studio 3 Wireless</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">220.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 3 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.jpeg" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">299.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 4 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Sony WH-1000XM5" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM5</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">349.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 5 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M6.jpeg" alt="JBL Live 660NC" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">JBL</p>
+                        <h3 class="product-title-card">Live 660NC</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">129.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 6 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M6.jpeg" alt="Marshall Major IV" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Major IV Bluetooth</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">179.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 7 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.jpeg" alt="Anker Soundcore Life Q35" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Anker</p>
+                        <h3 class="product-title-card">Soundcore Life Q35</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 8 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.jpeg" alt="Skullcandy Crusher Evo" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Skullcandy</p>
+                        <h3 class="product-title-card">Crusher Evo</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">159.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 9 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.jpeg" alt="Jabra Elite 85h" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Jabra</p>
+                        <h3 class="product-title-card">Elite 85h Titanium Black</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">249.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 10 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M10.jpeg" alt="AKG K371" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">AKG</p>
+                        <h3 class="product-title-card">K371 Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">139.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 11 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.jpeg" alt="Razer Barracuda X" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Barracuda X Wireless</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.1)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 12 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.jpeg" alt="Sennheiser HD 450BT" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">HD 450BT Black</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">169.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 13 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 14 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M6.jpeg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 15 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.jpeg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 16 -->
+                <a href="product_manetteDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.jpeg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Nouvelle pagination -->
+        <div class="pagination">
+            <button class="page-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+            
+            <button class="page-num-active">1</button>
+            <button class="page-num">2</button>
+            <button class="page-num">3</button>
+            <span>...</span>
+            <button class="page-num">8</button>
+            
+            <button class="page-btn">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+ 
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Shop</h3>
+                <ul>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">business@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Promotion Policy</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright 2025 Shopcart</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a> | <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
