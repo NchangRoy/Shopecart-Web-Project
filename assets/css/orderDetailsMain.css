@@ -63,7 +63,7 @@ h1{
 .important{
     color:red;
 }
-.input{
+input{
     height: 30px;
     padding: 1rem;;
     border:1px solid #1e40af;
@@ -105,6 +105,7 @@ h1{
     flex-direction: row;
     gap: 0.25rem;
     font-size: .9rem;
+    align-items: center;
 
 }
 .delivery_options{
@@ -144,8 +145,29 @@ h1{
     color:white;
     border-radius: 15px;
     box-shadow: 5px 5px 3px #7a84a7;
+    border:none;
+
 }
-a{
-    text-decoration: none;
-    color:white
+
+.payment_methods{
+display:  flex;
+flex-direction: column;
+gap: 1rem;
+}
+.payment_methods img{
+    height: 80px;
+    border-radius: 10%;
+}
+.payment_method{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.cards{
+    display: flex;
+    gap: .5rem;
+}
+.review:hover{
+    cursor: pointer;
 }

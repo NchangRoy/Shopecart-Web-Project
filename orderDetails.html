@@ -15,7 +15,7 @@
       <div class="logo">
         <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
         <span class="logo-text">Shopcart</span>
-      </div>tp2
+
       <ul class="nav-links">
         <li><a href="#">Categories <span class="dropdown-arrow">▼</span></a></li>
         <li><a href="#">Deals</a></li>
@@ -56,17 +56,17 @@
                 <div class="info">
                 <div class="description">First Name
                      <span class="important">*</span></div>
-                    <input type="text" class="input" placeholder="first Name">
+                    <input type="text" class="firstname" placeholder="first Name">
             </div>
             <div class="info">
                 <div class="description">Last Name
                      <span class="important">*</span></div>
-                    <input type="text" class="input" placeholder="last name">
+                    <input type="text" class="lastname" placeholder="last name">
             </div>
             <div class="info">
                 <div class="description">Email
                      <span class="important">*</span></div>
-                    <input type="text" class="input" placeholder="email@gmail.com">
+                    <input type="text" class="email" placeholder="email@gmail.com">
             </div>
             <div class="info">
                 <div class="description">Phone Number
@@ -77,7 +77,7 @@
                 <option value="+234">+234</option>
                 <option value="+1">+1</option>
                 </select>
-                    <input type="tel" class="input" placeholder="6XXXXXXXX ">
+                    <input type="tel" class="phoneNumber" placeholder="6XXXXXXXX ">
                     </div>
                     
             </div>
@@ -94,11 +94,11 @@
                  
                        <div class="delivery_options">
                         <div class="delivery_option">
-                         <input type="radio" value="Pick_up" name="Pick_up">
+                         <input type="radio"  value="Pick_up" name="delivery_option">
                          <div>Pick Up</div>
                        </div>
                         <div class="delivery_option">
-                        <input type="radio" value="Home Delivery" name="Home Deliver">
+                        <input type="radio"  value="Home Delivery" name="delivery_option">
                          <div>Home Delivery</div>
                        </div>
                        </div>
@@ -116,12 +116,12 @@
                 <div class="info">
                 <div class="description">Country
                      <span class="important">*</span></div>
-                    <input type="text" class="input" placeholder="Cameroon">
+                    <input type="text" class="country" placeholder="Cameroon">
             </div>
             <div class="info">
                 <div class="description">City
                      <span class="important">*</span></div>
-                    <input type="text" class="input" placeholder="Yaounde">
+                    <input type="text" class="city" placeholder="Yaounde">
             </div>
             
             <div class="info">
@@ -129,7 +129,7 @@
                    
                     
             </div>
-           <input type="text" class="input" placeholder="Center">
+           <input type="text" class="state" placeholder="Center">
             
             </div>
 
@@ -137,7 +137,7 @@
                 <div class="description">Zip Code
                    
                     
-            </div><input type="number" class="input" placeholder="Center">
+            </div><input type="number" class="zipCode" placeholder="Center">
             </div>
                 
             </div>
@@ -149,25 +149,29 @@
               <h1>Payment Details</h1>
               <div class="description">Payment Method</div>
             <div class="payment_methods">
-                <label>
-  <input type="radio" name="payment" value="card" required>
-  Credit / Debit Card
-  <img src="" alt="">
-</label><br>
+                
 
-<label>
-  <input type="radio" name="payment" value="mobile">
-  Mobile Money
-</label><br>
-
-<label>
-  <input type="radio" name="payment" value="paypal">
-  Orange Money
+<label class="payment_method">
+  <input type="radio" name="payment" value="mtn mobile money" >
+ <img src="./assets/images/mtn.png" alt="mobile money">
 </label>
+<label class="payment_method">
+  <input type="radio" name="payment" value="orange money">
+ <img src="./assets/images/orange.png" alt="orange money">
+</label>
+  <label class="payment_method">
+  <input type="radio" name="payment" value="card" required>
+ 
+  <div class="cards">
+    <img src="./assets/images/mastercard.png" alt="mastercard">
+    <img src="./assets/images/paypal.jpg" alt="paypal">
+  </div>
+</label>
+
             </div>
             
         </div>
-        <div class="review"><a href="#">Proceed to Review</a></div>
+        <button type="submit" class="review">Proceed to Review</button>
         
     </main>
 
