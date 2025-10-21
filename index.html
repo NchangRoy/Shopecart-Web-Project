@@ -15,14 +15,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
   </style>
+  <script src="/assets/js/header.js" defer></script>
 </head>
 
 <body>
  <!-- Header -->
-  <header>
-    <!-- Checkbox cachée pour contrôler le menu mobile -->
-    <input type="checkbox" id="menu-toggle">
 
+  <header>
     <nav class="navbar">
       <div class="logo">
         <div class="logo-img">
@@ -33,20 +32,18 @@
         <span class="logo-text">Shopcart</span>
       </div>
 
-      <!-- Hamburger icon comme label pour la checkbox -->
-      <label for="menu-toggle" class="hamburger">
+      <!-- Hamburger icon -->
+      <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
-      </label>
+      </div>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li class="categories-dropdown">
-          <!-- Checkbox pour le sous-menu des catégories -->
-          <input type="checkbox" id="categories-toggle">
-          <label for="categories-toggle">
+          <a href="javascript:void(0)" class="categories-label">
             Catégories <span class="dropdown-arrow">▼</span>
-          </label>
+          </a>
           <div class="dropdown-content">
             <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
             <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
@@ -65,20 +62,21 @@
         <li><a href="/Blog.html">Blog</a></li>
       </ul>
 
-      <div class="search-bar">
+      <div class="search-bar" id="searchBar">
         <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
 
-      <div class="user-actions">
+      <div class="user-actions" id="userActions">
         <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
         <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
             class="cart-count">3</span></a>
       </div>
-    </nav>
 
-    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
-    <a href="#" class="overlay" id="overlay"></a>
+      <!-- Overlay pour mobile -->
+      <div class="overlay" id="overlay"></div>
+    </nav>
   </header>
+
   <!-- Contenu principal de la landing page -->
   <main>
     <section class="hero">
