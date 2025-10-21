@@ -16,15 +16,24 @@
     color: #1e40af;
     font-weight: bolder;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
 main{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
     margin: 2rem;
-    width: 100%;
+    width:70%;
     height: 100%;
     padding: 1rem;
+    margin-inline: auto;;
 }
 .sections{
     display:  flex;
@@ -59,6 +68,7 @@ section{
 }
 .info_box{
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
 }
 .field{
