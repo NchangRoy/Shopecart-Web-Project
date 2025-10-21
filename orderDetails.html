@@ -35,7 +35,7 @@
 
 
     <main>
-
+<form id="form">
         <div class="section_list">
     <div class="Cart">Cart</div>
     <img src="./assets/images/arrow.svg" alt="arrow">
@@ -56,28 +56,28 @@
                 <div class="info">
                 <div class="description">First Name
                      <span class="important">*</span></div>
-                    <input type="text" class="firstname" placeholder="first Name">
+                    <input type="text" class="firstname" placeholder="first Name" required>
             </div>
             <div class="info">
                 <div class="description">Last Name
                      <span class="important">*</span></div>
-                    <input type="text" class="lastname" placeholder="last name">
+                    <input type="text" class="lastname" placeholder="last name" required>
             </div>
             <div class="info">
                 <div class="description">Email
                      <span class="important">*</span></div>
-                    <input type="text" class="email" placeholder="email@gmail.com">
+                    <input type="text" class="email" placeholder="email@gmail.com" required>
             </div>
             <div class="info">
                 <div class="description">Phone Number
                      <span class="important">*</span></div>
                     <div class="phone_field">
-                         <select name="country_code">
+                         <select name="country_code" class="country_code">
                 <option value="+237">+237</option>
                 <option value="+234">+234</option>
                 <option value="+1">+1</option>
                 </select>
-                    <input type="tel" class="phoneNumber" placeholder="6XXXXXXXX ">
+                    <input type="tel" class="phoneNumber" placeholder="6XXXXXXXX " required>
                     </div>
                     
             </div>
@@ -94,7 +94,7 @@
                  
                        <div class="delivery_options">
                         <div class="delivery_option">
-                         <input type="radio"  value="Pick_up" name="delivery_option">
+                         <input type="radio"  value="Pick_up" name="delivery_option" required>
                          <div>Pick Up</div>
                        </div>
                         <div class="delivery_option">
@@ -102,10 +102,14 @@
                          <div>Home Delivery</div>
                        </div>
                        </div>
+
+                      
+
                          
                     
                     
             </div>
+            
             </div>
 
             <div class="address">
@@ -116,12 +120,12 @@
                 <div class="info">
                 <div class="description">Country
                      <span class="important">*</span></div>
-                    <input type="text" class="country" placeholder="Cameroon">
+                    <input type="text" class="country" placeholder="Cameroon" required>
             </div>
             <div class="info">
                 <div class="description">City
                      <span class="important">*</span></div>
-                    <input type="text" class="city" placeholder="Yaounde">
+                    <input type="text" class="city" placeholder="Yaounde" required>
             </div>
             
             <div class="info">
@@ -137,7 +141,7 @@
                 <div class="description">Zip Code
                    
                     
-            </div><input type="number" class="zipCode" placeholder="Center">
+            </div><input type="number" class="zipCode" placeholder="Center" maxlength="5">
             </div>
                 
             </div>
@@ -169,10 +173,56 @@
 </label>
 
             </div>
+
+            <div class="disappear" id="Number_payment">
+              <div class="description">Phone Number</div>
+              <input type="number" class="paymentNumber">
+
+            </div>
+            <div class="disappear" id="Card_payment">
+               
+                 <select name="" id="cardType">
+                  <option value="paypal">Paypal</option>
+                  <option value="mastercard">MasterCard</option>
+                 </select>
+           
+
+               <div class="field">
+                 <div class="description">Card Holder</div>
+              <input type="text" class="cardHolder">
+
+            </div>
+             <div class="field">
+                 <div class="description">Card Number</div>
+              <input type="number" class="cardNumber" >
+
+            </div>
+
+            <div>
+               <div class="field">
+                 <div class="description">CCV</div>
+              <input type="number" class="CCV">
+
+            </div>
+             <div class="field">
+                 <div class="description">Expires on</div>
+              <input type="date" class="expiryDate">
+
+            </div>
+            
+            </div>
+
+               </div>
+
+            </div>
+            </div>
             
         </div>
         <button type="submit" class="review">Proceed to Review</button>
         
+
+
+        </form>
     </main>
 
 
@@ -222,4 +272,5 @@
 
 
 </body>
+<script src="./assets/js/orderDetail.js"></script>
 </html>
