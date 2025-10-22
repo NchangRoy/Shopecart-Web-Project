@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cameras | Shopcart</title>
+    <link rel="stylesheet" href="/assets/css/products_tel_cam.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <!-- Checkbox cachée pour contrôler le menu mobile -->
+    <input type="checkbox" id="menu-toggle">
+
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-img">
+                <a href="index.html">
+                    <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+                </a>
+            </div>
+            <span class="logo-text">Shopcart</span>
+        </div>
+
+        <!-- Hamburger icon comme label pour la checkbox -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li class="categories-dropdown">
+                <!-- Checkbox pour le sous-menu des catégories -->
+                <input type="checkbox" id="categories-toggle">
+                <label for="categories-toggle">
+                    Catégories <span class="dropdown-arrow">▼</span>
+                </label>
+                <div class="dropdown-content">
+                    <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+                    <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+                    <a href="/pages/produit_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+                    <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+                    <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+                    <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
+                    <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+                    <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+                    <a href="/pages/product_manette.html"><i class="fas fa-gamepad"></i> Gaming</a>
+                    <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+                </div>
+            </li>
+            <li><a href="#">Promotions</a></li>
+            <li><a href="/about.html">À propos</a></li>
+            <li><a href="/Blog.html">Blog</a></li>
+        </ul>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher un produit..." class="search-input">
+        </div>
+
+        <div class="user-actions">
+            <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+                    class="cart-count">3</span></a>
+        </div>
+    </nav>
+
+    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
+    <a href="#" class="overlay" id="overlay"></a>
+</header>
+
+<!--Hero Banner-->
+<section class="hero-banner">
+    <!--Radio buttons pour controler les slides-->
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+    <input type="radio" name="slide" id="slide4">
+    <div class="carousel-container">
+        <!--Les slides-->
+        <div class="slides">
+            <!--Slide 1-->
+            <div class="slide">
+                <div class="banner-content">
+                    <h1>Get Up to 50% Off<br>On Cameras<br>And Other Gadgets</h1>
+                    <button class="btn-primary">Buy Now</button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://img.freepik.com/premium-photo/smiling-african-american-woman-using-professional-camera-street_93675-145579.jpg" alt="">
+                </div>
+                <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
+            </div>
+            <!--Slide 2-->
+            <div class="slide">
+                <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
+                <div class="banner-content">
+                    <h1>New Collection Of<br>Digital Cameras<br>Available Now</h1>
+                    <button class="btn-primary">Shop Now</button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://media.istockphoto.com/photos/black-young-woman-making-a-selfie-with-old-camera-picture-id1226677999?k=20&m=1226677999&s=612x612&w=0&h=lppg1bl0E4xPLDgyqpjgOL8INlIqqJgSBD8XvbXxFNk=" alt="">
+                </div>
+                <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
+            </div>
+            <!--Slide 3-->
+            <div class="slide">
+                <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
+                <div class="banner-content">
+                    <h1>Latest Sony Alpha<br>Up To 30% Off<br>Limited Time</h1>
+                    <button class="btn-primary">Get Now</button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://t3.ftcdn.net/jpg/05/03/62/04/360_F_503620462_FStnLAZadQt6CHd1ipNdExSBnlriUG22.jpg" alt="">
+                </div>
+                <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
+            </div>
+            <!--Slide 4-->
+            <div class="slide">
+                <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                <div class="banner-content">
+                    <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                    <button class="btn-primary">Maybe Yes</button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://media.istockphoto.com/id/1038145136/photo/woman-taking-a-photography.jpg?b=1&s=170667a&w=0&k=20&c=LWhRyfvuMwkP2a4DoZeJ86IHaKaGw4JPzB0b129oHAY=" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-dots">
+        <label for="slide1" class="dot"></label>
+        <label for="slide2" class="dot"></label>
+        <label for="slide3" class="dot"></label>
+        <label for="slide4" class="dot"></label>
+    </div>
+</section>
+
+<!--Filters-->
+<section class="filters">
+    <div class="container">
+        <button class="filter-btn">Type <span>&#9660</span></button>
+        <button class="filter-btn">Price <span>&#9660</span></button>
+        <button class="filter-btn">Brand <span>&#9660</span></button>
+        <button class="filter-btn">Review <span>&#9661</span></button>
+        <button class="filter-btn">All Filters <span>&#9776</span></button>
+    </div>
+</section>
+
+<!--Products Section-->
+<section class="products">
+    <div class="container">
+        <h2>Products For You</h2>
+        <div class="products-group">
+            <div class="products-grid" id="grid1">
+                <!--Product-Card-->
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://fototrade.lu/wp-content/uploads/2023/07/SONY-alpha-6700-18-135-8.png" alt="Sony Alpha 6700" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony Alpha 6700</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1250000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkqpex8LD4KBEwhLRQR6Dj_3qvP-iJGlMB7g&s" alt="Canon EOS 4000D" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS 4000D</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i> (3.8)</div>
+                    <div class="price-cart">
+                        <p class="product-price">285000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://petapixel.com/assets/uploads/2024/09/nikon-zfc-heralbony-featured-800x420.jpg" alt="Nikon Heralbony ZFC" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Heralbony ZFC</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
+                    <div class="price-cart">
+                        <p class="product-price">950000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://www.panasonic.com/content/dam/pim/uk/en/DC/DC-S5M/DC-S5M2X/ast-1824751.jpg.pub.crop.pc.thumb.640.1200.jpg" alt="Lumix Z5IIX Hybride" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix Z5IIX Hybride</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.7)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1580000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://www.kamera-express.fr/_ipx/b_%23ffffff00,f_webp,fit_contain,s_484x484/https://www.kamera-express.nl/media/008f3906-76bd-4b30-80a6-7b1e947a3e39/sony-a7-iv-35mm-f-1-4-gm.jpg" alt="Sony Alpha 7 IV" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony Alpha 7 IV</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.8)</div>
+                    <div class="price-cart">
+                        <p class="product-price">2150000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://cdn.media.amplience.net/i/canon/09_frontback-pro_0c048afdc81c488eb9e5592f9cccc06e" alt="Canon EOS R6 Mark II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS R6 Mark II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
+                    <div class="price-cart">
+                        <p class="product-price">2850000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://static.bhphoto.com/images/multiple_images/images500x500/1738709312_IMG_2421914.jpg" alt="Nikon Coolpix P1100" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Coolpix P1100</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.9)</div>
+                    <div class="price-cart">
+                        <p class="product-price">485000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://apprendre-la-photo.fr/wp-content/uploads/2024/06/f4b186ad-4e02-46fc-94e1-f74df9a99426.jpeg" alt="Lumix S9 Hybride" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix S9 Hybride</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1680000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://sony.scene7.com/is/image/sonyglobalsolutions/Mobile_ZV-E10_202507?$productIntroPlatemobile$&fmt=png-alpha" alt="Sony ZV E10" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony ZV E10</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
+                    <div class="price-cart">
+                        <p class="product-price">685000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://apprendre-la-photo.fr/wp-content/uploads/2024/07/44efa78a-eb08-41bf-a91b-407d086228f2.jpeg" alt="Canon EOS R50" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS R50</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.3)</div>
+                    <div class="price-cart">
+                        <p class="product-price">825000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://cdn.lesnumeriques.com/optim/product/60/60197/2ab41fa8-z-6ii__1200_678__overflow.jpeg" alt="Nikon Z6 II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Z6 II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1950000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://2.img-dpreview.com/files/p/E~TS590x0~articles/6043990845/Panasonic_Lumix_DC-GH5_II.jpeg" alt="Lumix DC-GH5 II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix DC-GH5 II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1450000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination" id="pagin1">
+                <button class="page-btn">Previous</button>
+                <button class="page-num">1</button>
+                <button class="page-num">2</button>
+                <button class="page-num-active">3</button>
+                <button class="page-num">4</button>
+                <button class="page-num">5</button>
+                <button class="page-btn">Next</button>
+            </div>
+        </div>
+        <div class="lines">
+            <span class="thick-line"></span>
+            <span class="thin-line"></span>
+        </div>
+        <h2>Best Sellers</h2>
+        <div class="product-group">
+            <div class="products-grid" id="grid2">
+                <!--Product-Card-->
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://fototrade.lu/wp-content/uploads/2023/07/SONY-alpha-6700-18-135-8.png" alt="Sony Alpha 6700" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony Alpha 6700</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1250000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkqpex8LD4KBEwhLRQR6Dj_3qvP-iJGlMB7g&s" alt="Canon EOS 4000D" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS 4000D</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i> (3.8)</div>
+                    <div class="price-cart">
+                        <p class="product-price">285000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://petapixel.com/assets/uploads/2024/09/nikon-zfc-heralbony-featured-800x420.jpg" alt="Nikon Heralbony ZFC" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Heralbony ZFC</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
+                    <div class="price-cart">
+                        <p class="product-price">950000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://www.panasonic.com/content/dam/pim/uk/en/DC/DC-S5M/DC-S5M2X/ast-1824751.jpg.pub.crop.pc.thumb.640.1200.jpg" alt="Lumix Z5IIX Hybride" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix Z5IIX Hybride</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.7)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1580000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://www.kamera-express.fr/_ipx/b_%23ffffff00,f_webp,fit_contain,s_484x484/https://www.kamera-express.nl/media/008f3906-76bd-4b30-80a6-7b1e947a3e39/sony-a7-iv-35mm-f-1-4-gm.jpg" alt="Sony Alpha 7 IV" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony Alpha 7 IV</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.8)</div>
+                    <div class="price-cart">
+                        <p class="product-price">2150000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://cdn.media.amplience.net/i/canon/09_frontback-pro_0c048afdc81c488eb9e5592f9cccc06e" alt="Canon EOS R6 Mark II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS R6 Mark II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
+                    <div class="price-cart">
+                        <p class="product-price">2850000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://static.bhphoto.com/images/multiple_images/images500x500/1738709312_IMG_2421914.jpg" alt="Nikon Coolpix P1100" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Coolpix P1100</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.9)</div>
+                    <div class="price-cart">
+                        <p class="product-price">485000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://apprendre-la-photo.fr/wp-content/uploads/2024/06/f4b186ad-4e02-46fc-94e1-f74df9a99426.jpeg" alt="Lumix S9 Hybride" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix S9 Hybride</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1680000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://sony.scene7.com/is/image/sonyglobalsolutions/Mobile_ZV-E10_202507?$productIntroPlatemobile$&fmt=png-alpha" alt="Sony ZV E10" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony ZV E10</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
+                    <div class="price-cart">
+                        <p class="product-price">685000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://apprendre-la-photo.fr/wp-content/uploads/2024/07/44efa78a-eb08-41bf-a91b-407d086228f2.jpeg" alt="Canon EOS R50" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS R50</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.3)</div>
+                    <div class="price-cart">
+                        <p class="product-price">825000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://cdn.lesnumeriques.com/optim/product/60/60197/2ab41fa8-z-6ii__1200_678__overflow.jpeg" alt="Nikon Z6 II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Z6 II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1950000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://2.img-dpreview.com/files/p/E~TS590x0~articles/6043990845/Panasonic_Lumix_DC-GH5_II.jpeg" alt="Lumix DC-GH5 II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix DC-GH5 II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1450000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination" id="pagin2">
+                <button class="page-btn">Previous</button>
+                <button class="page-num">1</button>
+                <button class="page-num">2</button>
+                <button class="page-num-active">3</button>
+                <button class="page-num">4</button>
+                <button class="page-num">5</button>
+                <button class="page-btn">Next</button>
+            </div>
+        </div>
+        <div class="lines">
+            <span class="thick-line"></span>
+            <span class="thin-line"></span>
+        </div>
+        <h2>Products On Promotion</h2>
+        <div class="products-group">
+            <div class="products-grid" id="grid3">
+                <!--Product-Card-->
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://fototrade.lu/wp-content/uploads/2023/07/SONY-alpha-6700-18-135-8.png" alt="Sony Alpha 6700" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony Alpha 6700</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1250000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkqpex8LD4KBEwhLRQR6Dj_3qvP-iJGlMB7g&s" alt="Canon EOS 4000D" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS 4000D</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i> (3.8)</div>
+                    <div class="price-cart">
+                        <p class="product-price">285000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://petapixel.com/assets/uploads/2024/09/nikon-zfc-heralbony-featured-800x420.jpg" alt="Nikon Heralbony ZFC" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Heralbony ZFC</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
+                    <div class="price-cart">
+                        <p class="product-price">950000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://www.panasonic.com/content/dam/pim/uk/en/DC/DC-S5M/DC-S5M2X/ast-1824751.jpg.pub.crop.pc.thumb.640.1200.jpg" alt="Lumix Z5IIX Hybride" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix Z5IIX Hybride</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.7)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1580000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://www.kamera-express.fr/_ipx/b_%23ffffff00,f_webp,fit_contain,s_484x484/https://www.kamera-express.nl/media/008f3906-76bd-4b30-80a6-7b1e947a3e39/sony-a7-iv-35mm-f-1-4-gm.jpg" alt="Sony Alpha 7 IV" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony Alpha 7 IV</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.8)</div>
+                    <div class="price-cart">
+                        <p class="product-price">2150000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://cdn.media.amplience.net/i/canon/09_frontback-pro_0c048afdc81c488eb9e5592f9cccc06e" alt="Canon EOS R6 Mark II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS R6 Mark II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
+                    <div class="price-cart">
+                        <p class="product-price">2850000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://static.bhphoto.com/images/multiple_images/images500x500/1738709312_IMG_2421914.jpg" alt="Nikon Coolpix P1100" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Coolpix P1100</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.9)</div>
+                    <div class="price-cart">
+                        <p class="product-price">485000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://apprendre-la-photo.fr/wp-content/uploads/2024/06/f4b186ad-4e02-46fc-94e1-f74df9a99426.jpeg" alt="Lumix S9 Hybride" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix S9 Hybride</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1680000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://sony.scene7.com/is/image/sonyglobalsolutions/Mobile_ZV-E10_202507?$productIntroPlatemobile$&fmt=png-alpha" alt="Sony ZV E10" class="product-image">
+                    </div>
+                    <h3 class="product-title">Sony ZV E10</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
+                    <div class="price-cart">
+                        <p class="product-price">685000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://apprendre-la-photo.fr/wp-content/uploads/2024/07/44efa78a-eb08-41bf-a91b-407d086228f2.jpeg" alt="Canon EOS R50" class="product-image">
+                    </div>
+                    <h3 class="product-title">Canon EOS R50</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.3)</div>
+                    <div class="price-cart">
+                        <p class="product-price">825000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://cdn.lesnumeriques.com/optim/product/60/60197/2ab41fa8-z-6ii__1200_678__overflow.jpeg" alt="Nikon Z6 II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Nikon Z6 II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1950000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-frame">
+                        <img src="https://2.img-dpreview.com/files/p/E~TS590x0~articles/6043990845/Panasonic_Lumix_DC-GH5_II.jpeg" alt="Lumix DC-GH5 II" class="product-image">
+                    </div>
+                    <h3 class="product-title">Lumix DC-GH5 II</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
+                    <div class="price-cart">
+                        <p class="product-price">1450000 FCFA</p>
+                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination" id="pagin3">
+                <button class="page-btn">Previous</button>
+                <button class="page-num">1</button>
+                <button class="page-num">2</button>
+                <button class="page-num-active">3</button>
+                <button class="page-num">4</button>
+                <button class="page-num">5</button>
+                <button class="page-btn">Next</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Navigation Rapide</h3>
+            <ul>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>À propos de Shopcart</h3>
+            <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
+                client exceptionnel.</p>
+
+            <div class="social-row">
+                <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
+                <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
+                <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Boutique</h3>
+            <div class="shop-categories">
+                <ul>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Ordinateurs</a></li>
+                    <li><a href="#">Tablettes</a></li>
+                    <li><a href="#">Accessoires</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+                <p><i class="fas fa-phone"></i> +237 657450314</p>
+                <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+                <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#">Confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Mentions légales</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
