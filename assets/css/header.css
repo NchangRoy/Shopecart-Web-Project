@@ -385,3 +385,58 @@
 .overlay:target ~ .hamburger span:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+/* Force horizontal layout even if JS changes it */
+.filter-bar {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important; /* Allow dropdowns to overflow without clipping */
+    contain: layout; /* Isolate layout changes */
+}
+
+.tag-buttons-group {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+}
+
+/* Prevent any potential shift from dropdowns */
+.dropdown-content {
+    contain: layout paint; /* Modern CSS to prevent reflow/shift */
+    z-index: 10001 !important; /* Higher than bar's 1000 */
+}
+
+/* Force on mobile/small screens */
+@media (max-width: 1024px) {
+    .filter-bar, .tag-buttons-group {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-bar, .tag-buttons-group {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-bar, .tag-buttons-group {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+}
+
+/* Override potential JS-added classes (assuming common names like .open or .active) */
+.filter-bar.open, .filter-bar.active,
+.tag-buttons-group.open, .tag-buttons-group.active {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Remove any potential outline/focus shift */
+.filter-checkbox, .tag-button {
+    outline: none !important;
+}
