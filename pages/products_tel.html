@@ -9,122 +9,123 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<!-- Header -->
-<header>
+ <!-- Header -->
+  <header>
     <!-- Checkbox cachée pour contrôler le menu mobile -->
     <input type="checkbox" id="menu-toggle">
 
     <nav class="navbar">
-        <div class="logo">
-            <div class="logo-img">
-                <a href="index.html">
-                    <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
-                </a>
-            </div>
-            <span class="logo-text">Shopcart</span>
+      <div class="logo">
+        <div class="logo-img">
+          <a href="/index.html">
+            <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+          </a>
         </div>
+        <span class="logo-text">Shopcart</span>
+      </div>
 
-        <!-- Hamburger icon comme label pour la checkbox -->
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+      <!-- Hamburger icon comme label pour la checkbox -->
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
-        <ul class="nav-links">
-            <li class="categories-dropdown">
-                <!-- Checkbox pour le sous-menu des catégories -->
-                <input type="checkbox" id="categories-toggle">
-                <label for="categories-toggle">
-                    Catégories <span class="dropdown-arrow">▼</span>
-                </label>
-                <div class="dropdown-content">
-                    <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
-                    <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
-                    <a href="/pages/produit_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
-                    <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
-                    <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
-                    <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
-                    <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
-                    <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
-                    <a href="/pages/product_manette.html"><i class="fas fa-gamepad"></i> Gaming</a>
-                    <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
-                </div>
-            </li>
-            <li><a href="#">Promotions</a></li>
-            <li><a href="/about.html">À propos</a></li>
-            <li><a href="/Blog.html">Blog</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li class="categories-dropdown">
+          <!-- Checkbox pour le sous-menu des catégories -->
+          <input type="checkbox" id="categories-toggle">
+          <label for="categories-toggle">
+            Catégories <span class="dropdown-arrow">▼</span>
+          </label>
+          <div class="dropdown-content">
+            <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+            <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+            <a href="/pages/product_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+            <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+            <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+            <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
+            <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+            <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+            <a href="/pages/product_manettes.html"><i class="fas fa-gamepad"></i> Gaming</a>
+            <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+          </div>
+        </li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="/about.html">À propos</a></li>
+        <li><a href="/Blog.html">Blog</a></li>
+      </ul>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Rechercher un produit..." class="search-input">
-        </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher un produit..." class="search-input">
+      </div>
 
-        <div class="user-actions">
-            <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
-            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-                    class="cart-count">3</span></a>
-        </div>
+      <div class="user-actions">
+        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+            class="cart-count">3</span></a>
+      </div>
     </nav>
 
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
-</header>
-
-<!--Hero Banner-->
-<section class="hero-banner">
-    <!--Radio buttons pour controler les slides-->
-    <input type="radio" name="slide" id="slide1" checked>
-    <input type="radio" name="slide" id="slide2">
-    <input type="radio" name="slide" id="slide3">
-    <input type="radio" name="slide" id="slide4">
-    <div class="carousel-container">
-        <!--Les slides-->
-        <div class="slides">
-            <!--Slide 1-->
-            <div class="slide">
-                <div class="banner-content">
-                    <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
-                    <button class="btn-primary">Buy Now</button>
+  </header>
+  
+    <!--Hero Banner-->
+    <section class="hero-banner">
+        <!--Radio buttons pour controler les slides-->
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <div class="carousel-container">
+            <!--Les slides-->
+            <div class="slides">
+                <!--Slide 1-->
+                <div class="slide">
+                    <div class="banner-content">
+                        <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
+                        <button class="btn-primary">Buy Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
-                <div class="banner-image">
-                    <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg" alt="">
+                <!--Slide 2-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>New Collection Of<br>Smart Phones<br>Available Now</h1>
+                        <button class="btn-primary">Shop Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://img.freepik.com/premium-photo/woman-blows-air-kiss-camera-smartphone-takes-selfie-sends-mwah-via-online-call_849040-1293.jpg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
                 </div>
-                <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
-            </div>
-            <!--Slide 2-->
-            <div class="slide">
-                <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
-                <div class="banner-content">
-                    <h1>New Collection Of<br>Smart Phones<br>Available Now</h1>
-                    <button class="btn-primary">Shop Now</button>
+                <!--Slide 3-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Latest Google Pixels<br>Up To 30% Off<br>Limited Time</h1>
+                        <button class="btn-primary">Get Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://thumbs.dreamstime.com/b/black-young-woman-phone-hands-empty-blue-background-smiling-african-woman-working-phone-portrait-empty-copy-263033266.jpg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
                 </div>
-                <div class="banner-image">
-                    <img src="https://img.freepik.com/premium-photo/woman-blows-air-kiss-camera-smartphone-takes-selfie-sends-mwah-via-online-call_849040-1293.jpg" alt="">
-                </div>
-                <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
-            </div>
-            <!--Slide 3-->
-            <div class="slide">
-                <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
-                <div class="banner-content">
-                    <h1>Latest Google Pixels<br>Up To 30% Off<br>Limited Time</h1>
-                    <button class="btn-primary">Get Now</button>
-                </div>
-                <div class="banner-image">
-                    <img src="https://thumbs.dreamstime.com/b/black-young-woman-phone-hands-empty-blue-background-smiling-african-woman-working-phone-portrait-empty-copy-263033266.jpg" alt="">
-                </div>
-                <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
-            </div>
-            <!--Slide 4-->
-            <div class="slide">
-                <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
-                <div class="banner-content">
-                    <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
-                    <button class="btn-primary">Maybe Yes</button>
-                </div>
-                <div class="banner-image">
-                    <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg" alt="">
+                <!--Slide 4-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                        <button class="btn-primary">Maybe Yes</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -619,52 +620,66 @@
             </ul>
         </div>
 
-        <div class="footer-section">
-            <h3>À propos de Shopcart</h3>
-            <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
-                client exceptionnel.</p>
+    <!--Footer-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Navigation Rapide</h3>
+        <ul>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Promotions</a></li>
+        </ul>
+      </div>
 
-            <div class="social-row">
-                <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
-                <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
-                <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
-            </div>
-        </div>
+      <div class="footer-section">
+        <h3>À propos de Shopcart</h3>
+        <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
+          client exceptionnel.</p>
 
-        <div class="footer-section">
-            <h3>Boutique</h3>
-            <div class="shop-categories">
-                <ul>
-                    <li><a href="#">Smartphones</a></li>
-                    <li><a href="#">Ordinateurs</a></li>
-                    <li><a href="#">Tablettes</a></li>
-                    <li><a href="#">Accessoires</a></li>
-                </ul>
-            </div>
+        <div class="social-row">
+          <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
+          <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
+          <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
         </div>
+      </div>
 
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
-                <p><i class="fas fa-phone"></i> +237 657450314</p>
-                <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
-                <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
-            </div>
+      <div class="footer-section">
+        <h3>Boutique</h3>
+        <div class="shop-categories">
+          <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Ordinateurs</a></li>
+            <li><a href="#">Tablettes</a></li>
+            <li><a href="#">Accessoires</a></li>
+          </ul>
         </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+          <p><i class="fas fa-phone"></i> +237 657450314</p>
+          <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+          <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
+        </div>
+      </div>
     </div>
 
     <div class="footer-divider"></div>
 
     <div class="footer-bottom">
-        <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
-        <div class="footer-links">
-            <a href="#">Confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
-            <a href="#">Mentions légales</a>
-        </div>
+      <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="conditions.html">Conditions of use</a>
+        <a href="help.html">Help</a>
+        <a href="cookies.html">cookies</a>
+        <a href="security.html">Security</a>
+        <a href="advertisement.html">Advertisement</a>
+      </div>
     </div>
-</footer>
-
+  </footer>
 </body>
 </html>
