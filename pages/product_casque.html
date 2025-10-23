@@ -103,12 +103,14 @@
                 <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
             </div>
 
+            <input type="radio" name="filters" id="none" class="filter-checkbox" checked hidden>
             <!-- Filtre Prix -->
-            <div class="filter-dropdown">
-                <input type="checkbox" id="prix-casques-toggle" class="filter-checkbox">
-                <label for="prix-casques-toggle" class="tag-button">
+            <div class="filter-dropdown" tabindex="0">
+                <input type="radio" name="filters" id="prix-casques-toggle" class="filter-checkbox">
+                <label for="prix-casques-toggle" class="tag-button"">
                     Prix <span class="dropdown-arrow">▼</span>
                 </label>
+              
                 <div class="dropdown-content">
                     <a href="#" data-price="0-5000"><i class="fas fa-tag"></i> Moins de 5.000 FCFA</a>
                     <a href="#" data-price="5000-10000"><i class="fas fa-tag"></i> 5.000 - 10.000 FCFA</a>
@@ -118,9 +120,9 @@
             </div>
 
             <!-- Filtre Marques -->
-            <div class="filter-dropdown">
-                <input type="checkbox" id="marques-casques-toggle" class="filter-checkbox">
-                <label for="marques-casques-toggle" class="tag-button">
+            <div class="filter-dropdown" tabindex="0">
+                <input type="radio" name="filters" id="marques-casques-toggle" class="filter-checkbox">
+                <label for="marques-casques-toggle"  class="tag-button">
                     Marques <span class="dropdown-arrow">▼</span>
                 </label>
                 <div class="dropdown-content">
@@ -134,9 +136,9 @@
             </div>
 
             <!-- Filtre Notes -->
-            <div class="filter-dropdown">
-                <input type="checkbox" id="notes-casques-toggle" class="filter-checkbox">
-                <label for="notes-casques-toggle" class="tag-button">
+            <div class="filter-dropdown" tabindex="0">
+                <input type="radio" name="filters" id="notes-casques-toggle" class="filter-checkbox">
+                <label for="notes-casques-toggle" class="tag-button" >
                     Notes <span class="dropdown-arrow">▼</span>
                 </label>
                 <div class="dropdown-content">
@@ -151,7 +153,7 @@
 
         <section class="products-section">
             <h2 class="section-title">
-                <span class="gradient-blue-purple">Nos casques</span>
+                <span class="gradient-blue-purple">Product for you</span>
             </h2>
             <p class="section-subtitle">Découvrez notre collection premium</p>
             <div class="products-grid">
@@ -177,32 +179,30 @@
                     </div>
                 </a>
 
-                <!-- Produit 2 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C2.jpeg" alt="Beats by Dre Studio 3" class="product-image">
-                        <div class="product-tag tag-promo">-25%</div>
+                        <img src="/assets/images/C2.jpeg" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Beats by Dre</p>
-                        <h3 class="product-title-card">Studio 3 Wireless</h3>
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
                         <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">220.000 FCFA
+                            <span class="product-price">299.000 FCFA
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button></span>
                         </div>
                     </div>
                 </a>
-
                 <!-- Produit 3 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C3.jpeg" alt="Bose QuietComfort 45" class="product-image">
+                        <img src="/assets/images/C2.jpeg" alt="Bose QuietComfort 45" class="product-image">
                         <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
@@ -310,7 +310,7 @@
                 <!-- Produit 8 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C8.jpeg" alt="Skullcandy Crusher Evo" class="product-image">
+                        <img src="/assets/images/C3.png" alt="Skullcandy Crusher Evo" class="product-image">
                     </div>
                     <div class="product-info">
                         <p class="product-brand">Skullcandy</p>
@@ -373,7 +373,7 @@
                 <!-- Produit 11 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C11.jpeg" alt="Razer Barracuda X" class="product-image">
+                        <img src="/assets/images/C11.jpg" alt="Razer Barracuda X" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
                     </div>
                     <div class="product-info">
@@ -395,7 +395,7 @@
                 <!-- Produit 12 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C12.jpeg" alt="Sennheiser HD 450BT" class="product-image">
+                        <img src="/assets/images/C12.png" alt="Sennheiser HD 450BT" class="product-image">
                     </div>
                     <div class="product-info">
                         <p class="product-brand">Sennheiser</p>
@@ -522,7 +522,7 @@
 
         <section class="products-section">
             <h2 class="section-title">
-                <span class="gradient-blue-purple">Nos casques</span>
+                <span class="gradient-blue-purple">Best seller</span>
             </h2>
             <p class="section-subtitle">Découvrez notre collection premium</p>
             <div class="products-grid">
@@ -547,33 +547,55 @@
                         </div>
                     </div>
                 </a>
-
-                <!-- Produit 2 -->
+                <!-- Produit 3 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C2.jpeg" alt="Beats by Dre Studio 3" class="product-image">
-                        <div class="product-tag tag-promo">-25%</div>
+                        <img src="/assets/images/C3.png" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Beats by Dre</p>
-                        <h3 class="product-title-card">Studio 3 Wireless</h3>
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
                         <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">220.000 FCFA</span>
+                            <span class="product-price">299.000 FCFA
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
-                            </button>
+                            </button></span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Produit 3 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C2.jpeg" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">299.000 FCFA
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button></span>
                         </div>
                     </div>
                 </a>
 
+                
+
                 <!-- Produit 3 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C3.jpeg" alt="Bose QuietComfort 45" class="product-image">
+                        <img src="/assets/images/C3.png" alt="Bose QuietComfort 45" class="product-image">
                         <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
@@ -681,7 +703,7 @@
                 <!-- Produit 8 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C8.jpeg" alt="Skullcandy Crusher Evo" class="product-image">
+                        <img src="/assets/images/C3.png" alt="Skullcandy Crusher Evo" class="product-image">
                     </div>
                     <div class="product-info">
                         <p class="product-brand">Skullcandy</p>
@@ -744,7 +766,7 @@
                 <!-- Produit 11 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C11.jpeg" alt="Razer Barracuda X" class="product-image">
+                        <img src="/assets/images/C11.jpg" alt="Razer Barracuda X" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
                     </div>
                     <div class="product-info">
@@ -766,7 +788,383 @@
                 <!-- Produit 12 -->
                 <a href="product_casqueDetail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/C12.jpeg" alt="Sennheiser HD 450BT" class="product-image">
+                        <img src="/assets/images/C12.png" alt="Sennheiser HD 450BT" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">HD 450BT Black</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">169.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 13 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C14.jpeg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 14 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C15.jpeg" alt="Sony WH-1000XM4" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM4</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">19.990 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 15 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C1.jpeg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 16 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C2.jpeg" alt="Audio-Technica ATH-M50x" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Audio-Technica</p>
+                        <h3 class="product-title-card">ATH-M50x Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Product in promotion</span>
+            </h2>
+            <p class="section-subtitle">Découvrez notre collection premium</p>
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C1.jpeg" alt="Sennheiser Momentum Sport Orange" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sennheiser</p>
+                        <h3 class="product-title-card">Momentum Sport Orange</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <!-- Produit 3 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C3.png" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">299.000 FCFA
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button></span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Produit 3 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C2.jpeg" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">299.000 FCFA
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button></span>
+                        </div>
+                    </div>
+                </a>
+
+                
+
+                <!-- Produit 3 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C3.png" alt="Bose QuietComfort 45" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bose</p>
+                        <h3 class="product-title-card">QuietComfort 45</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">299.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 4 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C4.jpeg" alt="Sony WH-1000XM5" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">WH-1000XM5</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">349.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 5 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C5.jpeg" alt="JBL Live 660NC" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">JBL</p>
+                        <h3 class="product-title-card">Live 660NC</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">129.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 6 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C6.jpeg" alt="Marshall Major IV" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Marshall</p>
+                        <h3 class="product-title-card">Major IV Bluetooth</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">179.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 7 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C7.jpeg" alt="Anker Soundcore Life Q35" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Anker</p>
+                        <h3 class="product-title-card">Soundcore Life Q35</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 8 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C3.png" alt="Skullcandy Crusher Evo" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Skullcandy</p>
+                        <h3 class="product-title-card">Crusher Evo</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">159.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 9 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C9.jpeg" alt="Jabra Elite 85h" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Jabra</p>
+                        <h3 class="product-title-card">Elite 85h Titanium Black</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">249.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 10 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C10.jpeg" alt="AKG K371" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">AKG</p>
+                        <h3 class="product-title-card">K371 Studio</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">139.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 11 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C11.jpg" alt="Razer Barracuda X" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Barracuda X Wireless</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.1)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Produit 12 -->
+                <a href="product_casqueDetail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/C12.png" alt="Sennheiser HD 450BT" class="product-image">
                     </div>
                     <div class="product-info">
                         <p class="product-brand">Sennheiser</p>
@@ -931,5 +1329,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
