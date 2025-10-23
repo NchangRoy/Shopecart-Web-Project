@@ -12,7 +12,7 @@
     z-index: var(--z-fixed);
     transform: translateX(-100%);
     transition: transform var(--transition-normal);
-    z-index:2;
+    /*z-index:2;*/
     
 }
 
@@ -186,7 +186,7 @@
 /* Responsive */
 @media (min-width: 768px) {
     .sidebar {
-        position: static;
+        /*position: static;*/
         transform: translateX(0);
     }
     
