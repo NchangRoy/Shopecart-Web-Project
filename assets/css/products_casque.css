@@ -382,9 +382,13 @@
     gap: 0.85rem;
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding-bottom: 10px;
+    padding-bottom: 250px;
+    margin-bottom: -220px;
+    padding-top: 10px;
     justify-content: center;
     -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 1000;
 }
 
 .tag-buttons-group::-webkit-scrollbar {
@@ -401,7 +405,7 @@
 .filter-dropdown {
     position: relative;
     display: inline-block;
-    z-index: 100;
+    z-index: 1001;
 }
 
 .filter-checkbox {
@@ -424,6 +428,7 @@
     transition: all 0.3s ease;
     user-select: none;
     position: relative;
+    z-index: 1001;
 }
 
 .tag-button:hover {
@@ -469,10 +474,10 @@
     background-color: var(--color-white);
     min-width: 220px;
     border-radius: 0.5rem;
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--color-gray-200);
-    z-index: 9999;
-    overflow: hidden;
+    z-index: 10000;
+    overflow: visible;
 }
 
 .filter-checkbox:checked ~ .dropdown-content {
@@ -510,6 +515,9 @@
     transition: all 0.2s ease;
     border-left: 3px solid transparent;
     text-decoration: none;
+    background-color: var(--color-white);
+    position: relative;
+    z-index: 10001;
 }
 
 .dropdown-content a:hover {
@@ -536,7 +544,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 99;
+    z-index: 9999;
     background: transparent;
     cursor: default;
 }
@@ -552,7 +560,7 @@
     margin-top: 2rem;
     text-align: center;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 .section-title {
@@ -1428,4 +1436,39 @@
         width: 2rem;
         height: 2rem;
     }
+}
+/* ============================================
+   BARRES DE PROGRESSION / PAGINATION
+   ============================================ */
+
+.progress-bar-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.75rem;
+}
+
+.progress-bar-row hr {
+    height: 0.25rem;
+    border: 0;
+    border-radius: 9999px;
+}
+
+.progress-bar-segment-1 {
+    width: 33.333333%; /* 1/3 */
+    max-width: 24rem;
+    background-color: var(--color-blue-900); /* Bleu foncé - segment actif */
+}
+
+.progress-bar-segment-2 {
+    width: 25%; /* 1/4 */
+    max-width: 20rem;
+    background-color: var(--color-gray-300); /* Gris clair - segment inactif */
+}
+
+.progress-bar-segment-3 {
+    width: 16.666667%; /* 1/6 */
+    max-width: 6.25rem;
+    background-color: var(--color-gray-300); /* Gris clair - segment inactif */
 }
