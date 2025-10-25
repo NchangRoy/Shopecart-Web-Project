@@ -1,3 +1,36 @@
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 14px 0 8px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(9,30,66,0.03);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(9,30,66,0.15);
+  border-color: rgba(0,0,0,0.15);
+}
+
+.social-icon .fa-google { color: #db4437; }
+.social-icon .fa-apple { color: #000; }
+.social-icon .fa-facebook-f { color: #1877f2; }
+
 html, body {
   height: 100%;
 }
