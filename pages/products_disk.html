@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dell XPS 13 - Détails | Shopcart</title>
+    <title>Disques Durs | Shopcart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/products_ordi.css">
+    <link rel="stylesheet" href="../assets/css/products_disk.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
@@ -46,6 +46,7 @@
                         <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
                         <a href="product_manette.html"><i class="fas fa-gamepad"></i> Gaming</a>
                         <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+                        <a href="products_disk.html"><i class="fas fa-hdd"></i> Disques Durs</a>
                     </div>
                 </li>
                 <li><a href="#">Promotions</a></li>
@@ -74,44 +75,44 @@
             <div class="slides">
                 <div class="slide">
                     <div class="banner-content">
-                        <h1>Get Up to 50% Off<br>On Laptops<br>And Other Gadgets</h1>
+                        <h1>Get Up to 50% Off<br>On Hard Drives<br>And Storage Solutions</h1>
                         <button class="btn-primary">Buy Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="../assets/images/img_prom1.png" alt="">
+                        <img src="../assets/images/img_prom_disk1.png" alt="">
                     </div>
                     <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
                 <div class="slide">
                     <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>New Collection Of<br>Powerful Computers<br>Available Now</h1>
+                        <h1>New Collection Of<br>High-Capacity Hard Drives<br>Available Now</h1>
                         <button class="btn-primary">Shop Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="../assets/images/img_prom2.png" alt="">
+                        <img src="../assets/images/img_prom_disk2.png" alt="">
                     </div>
                     <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
                 </div>
                 <div class="slide">
                     <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Latest Gaming Laptops<br>Up To 30% Off<br>Limited Time</h1>
+                        <h1>Latest SSD Drives<br>Up To 30% Off<br>Limited Time</h1>
                         <button class="btn-primary">Get Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="../assets/images/img_prom3.png" alt="">
+                        <img src="../assets/images/img_prom_disk3.png" alt="">
                     </div>
                     <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
                 </div>
                 <div class="slide">
                     <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                        <h1>Are You Ready For<br>Our Storage Products ?<br>Surely Not</h1>
                         <button class="btn-primary">Maybe Yes</button>
                     </div>
                     <div class="banner-image">
-                        <img src="../assets/images/img_com5.png" alt="">
+                        <img src="../assets/images/img_prom_disk4.png" alt="">
                     </div>
                 </div>
             </div>
@@ -130,34 +131,58 @@
                 <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
             </div>
             <div class="filter-dropdown">
-                <input type="checkbox" id="prix-ordi-toggle" class="filter-checkbox">
-                <label for="prix-ordi-toggle" class="tag-button">
+                <input type="checkbox" id="prix-disk-toggle" class="filter-checkbox">
+                <label for="prix-disk-toggle" class="tag-button">
                     Prix <span class="dropdown-arrow">▼</span>
                 </label>
                 <div class="dropdown-content2">
-                    <a href="#" data-price="0-100000"><i class="fas fa-tag"></i> Moins de 100.000 FCFA</a>
+                    <a href="#" data-price="0-50000"><i class="fas fa-tag"></i> Moins de 50.000 FCFA</a>
+                    <a href="#" data-price="50000-100000"><i class="fas fa-tag"></i> 50.000 - 100.000 FCFA</a>
                     <a href="#" data-price="100000-200000"><i class="fas fa-tag"></i> 100.000 - 200.000 FCFA</a>
-                    <a href="#" data-price="200000-300000"><i class="fas fa-tag"></i> 200.000 - 300.000 FCFA</a>
-                    <a href="#" data-price="300000+"><i class="fas fa-tag"></i> Plus de 300.000 FCFA</a>
+                    <a href="#" data-price="200000+"><i class="fas fa-tag"></i> Plus de 200.000 FCFA</a>
                 </div>
             </div>
             <div class="filter-dropdown">
-                <input type="checkbox" id="marques-ordi-toggle" class="filter-checkbox">
-                <label for="marques-ordi-toggle" class="tag-button">
+                <input type="checkbox" id="marques-disk-toggle" class="filter-checkbox">
+                <label for="marques-disk-toggle" class="tag-button">
                     Marques <span class="dropdown-arrow">▼</span>
                 </label>
                 <div class="dropdown-content2">
-                    <a href="#" data-brand="hp"><i class="fas fa-laptop"></i> HP</a>
-                    <a href="#" data-brand="dell"><i class="fas fa-laptop"></i> Dell</a>
-                    <a href="#" data-brand="lenovo"><i class="fas fa-laptop"></i> Lenovo</a>
-                    <a href="#" data-brand="acer"><i class="fas fa-laptop"></i> Acer</a>
-                    <a href="#" data-brand="asus"><i class="fas fa-laptop"></i> ASUS</a>
-                    <a href="#" data-brand="apple"><i class="fab fa-apple"></i> Apple</a>
+                    <a href="#" data-brand="seagate"><i class="fas fa-hdd"></i> Seagate</a>
+                    <a href="#" data-brand="wd"><i class="fas fa-hdd"></i> Western Digital</a>
+                    <a href="#" data-brand="samsung"><i class="fas fa-hdd"></i> Samsung</a>
+                    <a href="#" data-brand="toshiba"><i class="fas fa-hdd"></i> Toshiba</a>
+                    <a href="#" data-brand="kingston"><i class="fas fa-hdd"></i> Kingston</a>
+                    <a href="#" data-brand="crucial"><i class="fas fa-hdd"></i> Crucial</a>
                 </div>
             </div>
             <div class="filter-dropdown">
-                <input type="checkbox" id="notes-ordi-toggle" class="filter-checkbox">
-                <label for="notes-ordi-toggle" class="tag-button">
+                <input type="checkbox" id="capacite-disk-toggle" class="filter-checkbox">
+                <label for="capacite-disk-toggle" class="tag-button">
+                    Capacité <span class="dropdown-arrow">▼</span>
+                </label>
+                <div class="dropdown-content2">
+                    <a href="#" data-capacity="500gb"><i class="fas fa-database"></i> 500 Go et moins</a>
+                    <a href="#" data-capacity="1tb"><i class="fas fa-database"></i> 1 To</a>
+                    <a href="#" data-capacity="2tb"><i class="fas fa-database"></i> 2 To</a>
+                    <a href="#" data-capacity="4tb+"><i class="fas fa-database"></i> 4 To et plus</a>
+                </div>
+            </div>
+            <div class="filter-dropdown">
+                <input type="checkbox" id="type-disk-toggle" class="filter-checkbox">
+                <label for="type-disk-toggle" class="tag-button">
+                    Type <span class="dropdown-arrow">▼</span>
+                </label>
+                <div class="dropdown-content2">
+                    <a href="#" data-type="hdd"><i class="fas fa-hdd"></i> HDD</a>
+                    <a href="#" data-type="ssd"><i class="fas fa-hdd"></i> SSD</a>
+                    <a href="#" data-type="nvme"><i class="fas fa-hdd"></i> NVMe</a>
+                    <a href="#" data-type="externe"><i class="fas fa-hdd"></i> Externe</a>
+                </div>
+            </div>
+            <div class="filter-dropdown">
+                <input type="checkbox" id="notes-disk-toggle" class="filter-checkbox">
+                <label for="notes-disk-toggle" class="tag-button">
                     Notes <span class="dropdown-arrow">▼</span>
                 </label>
                 <div class="dropdown-content2">
@@ -172,21 +197,139 @@
 
         <section class="products-section">
             <h2 class="section-title">
-                <span class="gradient-blue-purple">Nos ordinateurs</span>
+                <span class="gradient-blue-purple">Nos disques durs</span>
             </h2>
             <p class="section-subtitle">Découvrez notre collection premium</p>
             <div class="products-grid">
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="HP 14 Laptop" class="product-image">
+                        <img src="../assets/images/img_disk1.png" alt="Seagate Barracuda 1TB" class="product-image">
                         <div class="product-tag tag-premium">PREMIUM</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">HP 14 Laptop, Intel</h3>
+                        <p class="product-brand">Seagate</p>
+                        <h3 class="product-title-card">Barracuda 1TB HDD</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
                             <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">30.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk2.png" alt="WD Blue 2TB" class="product-image">
+                        <div class="product-tag tag-promo">-25%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Western Digital</p>
+                        <h3 class="product-title-card">Blue 2TB HDD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">45.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk3.png" alt="Samsung 870 EVO 500GB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Samsung</p>
+                        <h3 class="product-title-card">870 EVO 500GB SSD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">50.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk4.png" alt="Toshiba Canvio 4TB" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Toshiba</p>
+                        <h3 class="product-title-card">Canvio 4TB Externe</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">80.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk5.png" alt="Kingston A400 960GB" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Kingston</p>
+                        <h3 class="product-title-card">A400 960GB SSD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk6.png" alt="Crucial MX500 1TB" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Crucial</p>
+                        <h3 class="product-title-card">MX500 1TB SSD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">70.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk7.png" alt="Seagate IronWolf 8TB" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Seagate</p>
+                        <h3 class="product-title-card">IronWolf 8TB NAS</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
                         </div>
                         <div class="product-actions">
                             <span class="product-price">150.000 FCFA</span>
@@ -196,630 +339,177 @@
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="Acer Aspire 15" class="product-image">
-                        <div class="product-tag tag-promo">-25%</div>
+                        <img src="../assets/images/img_disk8.png" alt="WD Red 6TB" class="product-image">
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 15 Slim</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">220.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap6.jpg" alt="Dell Inspiron 3530" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 3530</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">299.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap7.jpg" alt="Acer Aspire 3" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 3 A315</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">349.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap8.jpg" alt="ASUS ROG Strix" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">ASUS</p>
-                        <h3 class="product-title-card">ROG Strix G16</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.2)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">129.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap12.jpg" alt="HP Touchscreen" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Touchscreen Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.6)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">179.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap13.jpg" alt="Lenovo IdeaPad" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">IdeaPad 1</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.3)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">89.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap14.jpg" alt="Lenovo V-Series" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">V-Series V15</h3>
+                        <p class="product-brand">Western Digital</p>
+                        <h3 class="product-title-card">Red 6TB NAS</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
                             <span class="rating-text">(4.0)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">159.000 FCFA</span>
+                            <span class="product-price">120.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap15.jpg" alt="HP Chromebook" class="product-image">
+                        <img src="../assets/images/img_disk9.png" alt="Samsung 980 PRO 2TB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14</h3>
+                        <p class="product-brand">Samsung</p>
+                        <h3 class="product-title-card">980 PRO 2TB NVMe</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
                             <span class="rating-text">(4.7)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">249.000 FCFA</span>
+                            <span class="product-price">180.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap16.jpg" alt="Jumper 2 in 1" class="product-image">
+                        <img src="../assets/images/img_disk10.png" alt="Toshiba X300 10TB" class="product-image">
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Jumper</p>
-                        <h3 class="product-title-card">2 in 1 Laptop</h3>
+                        <p class="product-brand">Toshiba</p>
+                        <h3 class="product-title-card">X300 10TB HDD</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <span class="rating-text">(4.8)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">139.000 FCFA</span>
+                            <span class="product-price">200.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap1.jpg" alt="HP Stream 14" class="product-image">
+                        <img src="../assets/images/img_disk11.png" alt="Kingston KC3000 512GB" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Stream 14" HD</h3>
+                        <p class="product-brand">Kingston</p>
+                        <h3 class="product-title-card">KC3000 512GB NVMe</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
                             <span class="rating-text">(4.1)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">99.000 FCFA</span>
+                            <span class="product-price">40.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap2.jpg" alt="HP Chromebook 14" class="product-image">
+                        <img src="../assets/images/img_disk12.png" alt="Crucial P5 1TB" class="product-image">
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14 Premium</h3>
+                        <p class="product-brand">Crucial</p>
+                        <h3 class="product-title-card">P5 1TB NVMe</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
                             <span class="rating-text">(4.5)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">169.000 FCFA</span>
+                            <span class="product-price">90.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap3.jpg" alt="Dell Inspiron 15" class="product-image">
+                        <img src="../assets/images/img_disk13.png" alt="Seagate Expansion 2TB" class="product-image">
                         <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 15 3530</h3>
+                        <p class="product-brand">Seagate</p>
+                        <h3 class="product-title-card">Expansion 2TB Externe</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
+                            <span class="product-price">55.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="Lenovo Chromebook" class="product-image">
+                        <img src="../assets/images/img_disk14.png" alt="WD My Passport 5TB" class="product-image">
                         <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">Flagship Chromebook</h3>
+                        <p class="product-brand">Western Digital</p>
+                        <h3 class="product-title-card">My Passport 5TB Externe</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
+                            <span class="product-price">100.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="HP Business Laptop" class="product-image">
+                        <img src="../assets/images/img_disk15.png" alt="Samsung T7 1TB" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">15.6 Business Laptop</h3>
+                        <p class="product-brand">Samsung</p>
+                        <h3 class="product-title-card">T7 1TB Portable SSD</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
+                            <span class="product-price">110.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </a>
-                <a href="product_ordi-detail.html" class="product-card">
+                <a href="product_disk-detail.html" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap6.jpg" alt="HP Laptop Computer" class="product-image">
+                        <img src="../assets/images/img_disk16.png" alt="Toshiba N300 14TB" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Laptop Computer Pro</h3>
+                        <p class="product-brand">Toshiba</p>
+                        <h3 class="product-title-card">N300 14TB NAS</h3>
                         <div class="rating-info">
                             <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-        
-        <div class="pagination">
-            <button class="page-btn" disabled>
-                <i class="fas fa-chevron-left"></i> Précédent
-            </button>
-            <button class="page-num-active">1</button>
-            <button class="page-num">2</button>
-            <button class="page-num">3</button>
-            <span>...</span>
-            <button class="page-num">8</button>
-            <button class="page-btn">
-                Suivant <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-
-        <section class="products-section">
-            <h2 class="section-title">
-                <span class="gradient-blue-purple">Nos meilleurs Offres</span>
-            </h2>
-            <div class="products-grid">
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="HP 14 Laptop" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">HP 14 Laptop, Intel</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.4)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">150.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="Acer Aspire 15" class="product-image">
-                        <div class="product-tag tag-promo">-25%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 15 Slim</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">220.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/img_Lap6.jpg" alt="Dell Inspiron 3530" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 3530</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">299.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap7.jpg" alt="Acer Aspire 3" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 3 A315</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">349.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap8.jpg" alt="ASUS ROG Strix" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">ASUS</p>
-                        <h3 class="product-title-card">ROG Strix G16</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.2)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">129.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap12.jpg" alt="HP Touchscreen" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Touchscreen Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.6)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">179.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap13.jpg" alt="Lenovo IdeaPad" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">IdeaPad 1</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.3)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">89.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap14.jpg" alt="Lenovo V-Series" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">V-Series V15</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">159.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap15.jpg" alt="HP Chromebook" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.7)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">249.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap16.jpg" alt="Jumper 2 in 1" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Jumper</p>
-                        <h3 class="product-title-card">2 in 1 Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">139.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap1.jpg" alt="HP Stream 14" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Stream 14" HD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.1)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">99.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap2.jpg" alt="HP Chromebook 14" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14 Premium</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">169.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap3.jpg" alt="Dell Inspiron 15" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 15 3530</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="Lenovo Chromebook" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">Flagship Chromebook</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="HP Business Laptop" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">15.6 Business Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_ordi-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap6.jpg" alt="HP Laptop Computer" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Laptop Computer Pro</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
+                            <span class="product-price">250.000 FCFA</span>
                             <button class="add-to-cart-btn">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
@@ -843,6 +533,344 @@
             </button>
         </div>
     </main>
+    <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Nos Meilleurs Offres</span>
+            </h2>
+            <div class="products-grid">
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk1.png" alt="Seagate Barracuda 1TB" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Seagate</p>
+                        <h3 class="product-title-card">Barracuda 1TB HDD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">30.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk2.png" alt="WD Blue 2TB" class="product-image">
+                        <div class="product-tag tag-promo">-25%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Western Digital</p>
+                        <h3 class="product-title-card">Blue 2TB HDD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">45.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk3.png" alt="Samsung 870 EVO 500GB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Samsung</p>
+                        <h3 class="product-title-card">870 EVO 500GB SSD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">50.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk4.png" alt="Toshiba Canvio 4TB" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Toshiba</p>
+                        <h3 class="product-title-card">Canvio 4TB Externe</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">80.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk5.png" alt="Kingston A400 960GB" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Kingston</p>
+                        <h3 class="product-title-card">A400 960GB SSD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk6.png" alt="Crucial MX500 1TB" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Crucial</p>
+                        <h3 class="product-title-card">MX500 1TB SSD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">70.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk7.png" alt="Seagate IronWolf 8TB" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Seagate</p>
+                        <h3 class="product-title-card">IronWolf 8TB NAS</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">150.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk8.png" alt="WD Red 6TB" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Western Digital</p>
+                        <h3 class="product-title-card">Red 6TB NAS</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">120.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk9.png" alt="Samsung 980 PRO 2TB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Samsung</p>
+                        <h3 class="product-title-card">980 PRO 2TB NVMe</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">180.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk10.png" alt="Toshiba X300 10TB" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Toshiba</p>
+                        <h3 class="product-title-card">X300 10TB HDD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk11.png" alt="Kingston KC3000 512GB" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Kingston</p>
+                        <h3 class="product-title-card">KC3000 512GB NVMe</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.1)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">40.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk12.png" alt="Crucial P5 1TB" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Crucial</p>
+                        <h3 class="product-title-card">P5 1TB NVMe</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">90.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk13.png" alt="Seagate Expansion 2TB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Seagate</p>
+                        <h3 class="product-title-card">Expansion 2TB Externe</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">55.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk14.png" alt="WD My Passport 5TB" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Western Digital</p>
+                        <h3 class="product-title-card">My Passport 5TB Externe</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">100.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk15.png" alt="Samsung T7 1TB" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Samsung</p>
+                        <h3 class="product-title-card">T7 1TB Portable SSD</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">110.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_disk-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_disk16.png" alt="Toshiba N300 14TB" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Toshiba</p>
+                        <h3 class="product-title-card">N300 14TB NAS</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">250.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <button class="page-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+            <button class="page-num-active">1</button>
+            <button class="page-num">2</button>
+            <button class="page-num">3</button>
+            <span>...</span>
+            <button class="page-num">8</button>
+            <button class="page-btn">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
+
 <footer>
     <div class="footer-container">
       <div class="footer-section">
