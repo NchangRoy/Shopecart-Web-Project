@@ -313,6 +313,13 @@
 .user-actions {
     display: flex;
     gap: var(--spacing-xs);
+    background-color: #00CC66;
+    background: #FFFFFF;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #E8EAED;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);;
+    transition: all var(--transition-normal);
 }
 
 .action-btn {
@@ -416,6 +423,7 @@
     .users-actions .btn {
         flex: 1;
         min-width: auto;
+        background-color: #00CC66;
     }
     
     .toolbar-top {
