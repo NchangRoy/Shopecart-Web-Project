@@ -22,7 +22,8 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
-    margin-top: 80px; /* Adjust this value based on the actual height of your header */
+    padding-top: 7rem;
+
 }
 
 .container {

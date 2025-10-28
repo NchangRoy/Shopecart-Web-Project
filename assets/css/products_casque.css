@@ -99,6 +99,7 @@
     border-radius: 20px;
     box-shadow: var(--shadow-xl);
     margin-top: 1.5rem;
+    padding-top: 7rem;
 }
 
 .hero-banner input[type="radio"] {

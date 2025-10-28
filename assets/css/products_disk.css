@@ -54,6 +54,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     position: relative; /* IMPORTANT pour le z-index */
+    padding-top: 7rem;
 }
 
 /* ============================================

@@ -49,10 +49,10 @@
 
 .main-content-container {
     max-width: 1800px;
+    padding-top: 7rem;
     padding-left: 5rem;
     padding-right: 5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 7rem;
     position: relative; /* IMPORTANT pour le z-index */
 }
 
