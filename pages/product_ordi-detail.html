@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Headphones Max - Détails | SonicWave</title>
+    <title>Dell XPS 13 - Détails | Shopcart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/product_ordi-detail.css">
+    <link rel="stylesheet" href="../assets/css/products_ordi.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
 
@@ -22,8 +21,6 @@
  <!-- Header -->
   <header>
     <!-- Checkbox cachée pour contrôler le menu mobile -->
-    <input type="checkbox" id="menu-toggle">
-
     <nav class="navbar">
       <div class="logo">
         <div class="logo-img">
@@ -44,7 +41,6 @@
       <ul class="nav-links">
         <li class="categories-dropdown">
           <!-- Checkbox pour le sous-menu des catégories -->
-          <input type="checkbox" id="categories-toggle">
           <label for="categories-toggle">
             Catégories <span class="dropdown-arrow">▼</span>
           </label>
@@ -54,11 +50,11 @@
             <a href="/pages/product_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
             <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
             <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
-            <a href="#"><i class="fas fa-keyboard"></i> Périphériques</a>
+            <a href="/pages/products_disk.html"><i class="fas fa-keyboard"></i> Périphériques</a>
             <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
             <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
-            <a href="/pages/product_manettes.html"><i class="fas fa-gamepad"></i> Gaming</a>
-            <a href="#"><i class="fas fa-tv"></i> Écrans & Moniteurs</a>
+            <a href="/pages/products_manettes.html"><i class="fas fa-gamepad"></i> Gaming</a>
+            <a href="/pages/products_cam.html"><i class="fas fa-tv"></i> Caméras</a>
           </div>
         </li>
         <li><a href="#">Promotions</a></li>
@@ -81,782 +77,817 @@
     <a href="#" class="overlay" id="overlay"></a>
   </header>
 
-    <div class="product-detail-container">
-        <div class="product-detail-flex">
-            <div class="product-detail-left">
-                <div class="image-gallery-box">
-                    <div class="main-product-image">
-                        <img id="main-image" src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500" alt="Casque Max">
-                    </div>
-                    <div class="thumbnail-row">
-                        <div class="thumbnail active">
-                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100" alt="Vue 1" data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+    <main class="main-content-container">
+        <div class="product-detail-container">
+            <div class="product-detail-flex">
+                <div class="product-detail-left">
+                    <div class="image-gallery-box">
+                        <div class="main-product-image">
+                            <img id="main-image" src="../assets/images/img_Lap2.jpg" alt="Dell XPS 13">
                         </div>
-                        <div class="thumbnail">
-                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=100" alt="Vue 2" data-image="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=100" alt="Vue 3" data-image="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=100" alt="Vue 4" data-image="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500">
-                        </div>
-                    </div>
-                </div>
-                
-                
-            </div>
-
-            <div class="product-detail-right">
-                <div class="product-info-box">
-                    <div class="new-tag-wrapper">
-                        <span class="new-tag">Nouveau</span>
-                    </div>
-                    <h1 class="product-title">Headphones Max</h1>
-                    <p class="product-subtitle">2-en-1 Élégance du Smart et de l'Audio. Multi-Connectivité Redéfinie.</p>
-                    
-                    <div class="rating-info">
-                        <div class="stars-list">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text">4.7 (738 avis)</span>
-                    </div>
-
-                    <div class="price-info">
-                        <span class="main-price">15.999FCFA</span>
-                        <span class="tax-info">TTC</span>
-                    </div>
-
-                    <div class="color-selection-area">
-                        <h3 class="color-selection-title">Choisissez une couleur</h3>
-                        <div class="color-options-row">
-                            <div class="color-option active" style="background-color: #E91E63;" data-color="Rose"></div>
-                            <div class="color-option" style="background-color: #4FC3F7;" data-color="Bleu"></div>
-                            <div class="color-option" style="background-color: #4CAF50;" data-color="Vert"></div>
-                            <div class="color-option" style="background-color: #8BC34A;" data-color="Vert clair"></div>
-                        </div>
-                        <span class="selected-color-text">Couleur sélectionnée: <span id="selected-color">Rose</span></span>
-                    </div>
-
-                    <div class="quantity-cart-area">
-                        <div class="quantity-control">
-                            <span class="quantity-label">Quantité:</span>
-                            <div class="quantity-buttons-wrapper">
-                                <button class="quantity-btn">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <span class="quantity-display">1</span>
-                                <button class="quantity-btn">
-                                    <i class="fas fa-plus"></i>
-                                </button>
+                        <div class="thumbnail-row">
+                            <div class="thumbnail active">
+                                <img src="../assets/images/img_Lap2.jpg" alt="Vue 1" data-image="/assets/images/img_Lap2.jpg">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="../assets/images/img_Lap15.jpg" alt="Vue 2" data-image="/assets/images/img_Lap15.jpg">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="../assets/images/img_Lap4.jpg" alt="Vue 3" data-image="/assets/images/img_Lap4.jpg">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="../assets/images/img_Lap5.jpg" alt="Vue 4" data-image="/assets/images/img_Lap5.jpg">
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="action-buttons-row">
-                        <button class="btn-buy">
-                            <i class="fas fa-bolt icon-margin"></i>
-                            Acheter maintenant
-                        </button>
-                        <button class="btn-add">
-                            <i class="fas fa-shopping-cart icon-margin"></i>
-                            Ajouter au panier
-                        </button>
-                    </div>
+                <div class="product-detail-right">
+                    <div class="product-info-box">
+                        <div class="new-tag-wrapper">
+                            <span class="new-tag">Premium</span>
+                        </div>
+                        <h1 class="product-title">Dell XPS 13</h1>
+                        <p class="product-subtitle">Intel Core i7 | 16 Go RAM | SSD 512 Go - Performance et élégance réunies</p>
+                        
+                        <div class="rating-info">
+                            <div class="stars-list">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.7 (738 avis)</span>
+                        </div>
 
-                    
-                </div>
-                
-                
-            </div>
-        </div>
-    </div>
+                        <div class="price-info">
+                            <span class="main-price">750.000 FCFA</span>
+                            <span class="tax-info">TTC</span>
+                        </div>
 
-    <section class="related-products-section">
-        <h2 class="section-title">
-            <span class="gradient-yellow-orange">Vous pourrez aussi aimez</span>
-        </h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Sony WH-1000XM4</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="color-selection-area">
+                            <h3 class="color-selection-title">Choisissez une couleur</h3>
+                            <div class="color-options-row">
+                                <div class="color-option active" style="background-color: #C0C0C0;" data-color="Argent"></div>
+                                <div class="color-option" style="background-color: #2C3E50;" data-color="Noir"></div>
+                                <div class="color-option" style="background-color: #E8E8E8;" data-color="Blanc"></div>
+                                <div class="color-option" style="background-color: #7D8F9B;" data-color="Bleu nuit"></div>
+                            </div>
+                            <span class="selected-color-text">Couleur sélectionnée: <span id="selected-color">Argent</span></span>
                         </div>
-                        <span class="rating-text-small">(4.9)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">10.999FCCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Sennheiser HD 660 S</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                        <div class="quantity-cart-area">
+                            <div class="quantity-control">
+                                <span class="quantity-label">Quantité:</span>
+                                <div class="quantity-buttons-wrapper">
+                                    <button class="quantity-btn">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="quantity-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <span class="rating-text-small">(4.6)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">5.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="pagination-section">
-            <div class="pagination-center-wrapper">
-                <nav class="pagination-nav">
-                    
-                    <button class="pagination-btn-prev">
-                        <i class="fas fa-chevron-left icon-small-margin-right"></i>
-                        <span>Précédent</span>
-                    </button>
-                    
-                    <button class="pagination-page-btn active-page">
-                        1
-                    </button>
-                    
-                    <button class="pagination-page-btn">
-                        2
-                    </button>
-                    <button class="pagination-page-btn">
-                        3
-                    </button>
-                    
-                    <span class="pagination-ellipsis">.......</span>
-                    
-                    <button class="pagination-page-btn">
-                        8
-                    </button>
-                    
-                    <button class="pagination-btn-next">
-                        <span>Suivant</span>
-                        <i class="fas fa-chevron-right icon-small-margin-left"></i>
-                    </button>
-                </nav>
 
-                <div class="progress-bar-row">
-                    <hr class="progress-bar-segment-1">
-                    <hr class="progress-bar-segment-2">
-                    <hr class="progress-bar-segment-3">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="video-promo-section">
-        <div class="video-grid">
-            <section class="video-card">
-                <video autoplay loop muted playsinline class="video-element">
-                <source src="/assets/vidéos/ipad1.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay">
-                    <h3 class="video-title">
-                        Restez en contact avec vos proches 
-                    </h3>
-                    <p class="video-subtitle">
-                        Profitez de réductions exceptionnelles sur nos casques sans fil jusqu’à 
-                        <span class="video-discount-highlight">-30%</span> !
-                    </p>
-                    <button class="video-cta-button button-blue-purple">
-                        Découvrir les Offres
-                    </button>
-                </div>
-            </section>
-
-            <section class="video-card">
-                <video autoplay loop muted playsinline class="video-element">
-                <source src="/assets/vidéos/MONTRE.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay">
-                    <h3 class="video-title">
-                        Avec une montre connectée suivez vos paramètres vitaux 
-                    </h3>
-                    <p class="video-subtitle">
-                        Bénéficiez d'offres exclusives et de réductions jusqu’à 
-                        <span class="video-discount-highlight">-25%</span> !
-                    </p>
-                    <button class="video-cta-button button-green-teal">
-                        Voir les Offres
-                    </button>
-                </div>
-            </section>
-        </div>
-    </section>
-    
-    <section class="best-sellers-section">
-        <h2 class="section-title">
-            <span class="gradient-yellow-orange">Meilleures Ventes</span>
-        </h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Sony WH-1000XM4</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="action-buttons-row">
+                            <button class="btn-buy">
+                                <i class="fas fa-bolt icon-margin"></i>
+                                Acheter maintenant
+                            </button>
+                            <button class="btn-add">
+                                <i class="fas fa-shopping-cart icon-margin"></i>
+                                Ajouter au panier
+                            </button>
                         </div>
-                        <span class="rating-text-small">(4.9)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.99FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Bose QuietComfort 35</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.7)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">19.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Audio-Technica ATH-M50x</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="rating-text-small">(4.8)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">5.999FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=300" alt="Casque audio">
-                </div>
-                <div class="product-card-info">
-                    <h3 class="product-card-title">Sennheiser HD 660 S</h3>
-                    <div class="rating-info-small">
-                        <div class="stars-list-small">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text-small">(4.6)</span>
-                    </div>
-                    <div class="product-card-actions">
-                        <span class="product-card-price">10.990FCFA</span>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="pagination-section">
-            <div class="pagination-center-wrapper">
-                <nav class="pagination-nav">
-                    
-                    <button class="pagination-btn-prev">
-                        <i class="fas fa-chevron-left icon-small-margin-right"></i>
-                        <span>Précédent</span>
-                    </button>
-                    
-                    <button class="pagination-page-btn active-page">
-                        1
-                    </button>
-                    
-                    <button class="pagination-page-btn">
-                        2
-                    </button>
-                    <button class="pagination-page-btn">
-                        3
-                    </button>
-                    
-                    <span class="pagination-ellipsis">......</span>
-                    
-                    <button class="pagination-page-btn">
-                        8
-                    </button>
-                    
-                    <button class="pagination-btn-next">
-                        <span>Suivant</span>
-                        <i class="fas fa-chevron-right icon-small-margin-left"></i>
-                    </button>
-                </nav>
+        <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Vous pourrez aussi aimer</span>
+            </h2>
+            <p class="section-subtitle">Les meilleurs choix de nos clients</p>
+            <div class="products-grid">
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="HP Spectre x360" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">HP</p>
+                        <h3 class="product-title-card">Spectre x360</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">800.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
 
-                <div class="progress-bar-row">
-                    <hr class="progress-bar-segment-1">
-                    <hr class="progress-bar-segment-2">
-                    <hr class="progress-bar-segment-3">
-                </div>
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap3.jpg" alt="Lenovo ThinkPad X1" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Lenovo</p>
+                        <h3 class="product-title-card">ThinkPad X1</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">700.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap4.jpg" alt="MacBook Pro 14" class="product-image">
+                        <div class="product-tag tag-promo tag-right">PROMO</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Apple</p>
+                        <h3 class="product-title-card">MacBook Pro 14</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(5.0)</span>
+                        </div>
+                        <div class="product-actions-promo">
+                            <span class="product-price">900.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap5.jpg" alt="Asus ZenBook 14" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Asus</p>
+                        <h3 class="product-title-card">ZenBook 14</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">650.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap15.jpg" alt="Acer Swift 3" class="product-image">
+                        <div class="product-tag tag-top tag-right">TOP</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Acer</p>
+                        <h3 class="product-title-card">Swift 3</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">600.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap2.jpg" alt="Dell XPS 15" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Dell</p>
+                        <h3 class="product-title-card">XPS 15</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">850.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="HP Envy 13" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">HP</p>
+                        <h3 class="product-title-card">Envy 13</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">720.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap3.jpg" alt="Lenovo Yoga 9i" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Lenovo</p>
+                        <h3 class="product-title-card">Yoga 9i</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">780.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap4.jpg" alt="MacBook Air M2" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Apple</p>
+                        <h3 class="product-title-card">MacBook Air M2</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">820.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap5.jpg" alt="Asus ROG Zephyrus" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Asus</p>
+                        <h3 class="product-title-card">ROG Zephyrus</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">950.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap15.jpg" alt="Acer Predator Helios" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Acer</p>
+                        <h3 class="product-title-card">Predator Helios</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">880.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="HP Pavilion 15" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">HP</p>
+                        <h3 class="product-title-card">Pavilion 15</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.1)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">580.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap2.jpg" alt="Dell Inspiron 15" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Dell</p>
+                        <h3 class="product-title-card">Inspiron 15</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">620.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap3.jpg" alt="Lenovo IdeaPad 5" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Lenovo</p>
+                        <h3 class="product-title-card">IdeaPad 5</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">550.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap4.jpg" alt="MacBook Pro 16" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Apple</p>
+                        <h3 class="product-title-card">MacBook Pro 16</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(5.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">1.200.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap5.jpg" alt="Asus VivoBook 15" class="product-image">
+                        <div class="product-tag tag-premium">PREMIUM</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Asus</p>
+                        <h3 class="product-title-card">VivoBook 15</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(3.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">520.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
             </div>
+        </section>
+
+        <div class="pagination">
+            <button class="page-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+            <button class="page-num-active">1</button>
+            <button class="page-num">2</button>
+            <button class="page-num">3</button>
+            <span>...</span>
+            <button class="page-num">8</button>
+            <button class="page-btn">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
 
-    </section>
+        <section class="products-section">
+            <h2 class="section-title">
+                <span class="gradient-blue-purple">Des équipements qui vous ressemblent</span>
+            </h2>
+            <p class="section-subtitle">Les meilleurs choix de nos clients</p>
+            <div class="products-grid">
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap2.jpg" alt="Dell XPS 13" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Dell</p>
+                        <h3 class="product-title-card">XPS 13</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">750.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap4.jpg" alt="MacBook Pro 14" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Apple</p>
+                        <h3 class="product-title-card">MacBook Pro 14</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(5.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">900.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap1.jpg" alt="HP Spectre x360" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">HP</p>
+                        <h3 class="product-title-card">Spectre x360</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">800.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap5.jpg" alt="Asus ZenBook 14" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Asus</p>
+                        <h3 class="product-title-card">ZenBook 14</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">650.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap3.jpg" alt="Lenovo ThinkPad X1" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Lenovo</p>
+                        <h3 class="product-title-card">ThinkPad X1</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">700.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap15.jpg" alt="Acer Swift 3" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Acer</p>
+                        <h3 class="product-title-card">Swift 3</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">600.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap4.jpg" alt="MacBook Air M2" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Apple</p>
+                        <h3 class="product-title-card">MacBook Air M2</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">820.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap2.jpg" alt="Dell XPS 15" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Dell</p>
+                        <h3 class="product-title-card">XPS 15</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">850.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/img_Lap1.jpg" alt="HP Envy 13" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">HP</p>
+                        <h3 class="product-title-card">Envy 13</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.2)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">720.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap5.jpg" alt="Asus ROG Zephyrus" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Asus</p>
+                        <h3 class="product-title-card">ROG Zephyrus</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">950.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_ordi-detail.html" class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="../assets/images/img_Lap3.jpg" alt="Lenovo Yoga 9i" class="product-image">
+                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Lenovo</p>
+                        <h3 class="product-title-card">Yoga 9i</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">780.000 FCFA</span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <button class="page-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+            <button class="page-num-active">1</button>
+            <button class="page-num">2</button>
+            <button class="page-num">3</button>
+            <span>...</span>
+            <button class="page-num">8</button>
+            <button class="page-btn">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Navigation Rapide</h3>
+<footer>
+  <!-- Section des avantages -->
+  <div class="footer-top">
+    <div class="benefits">
+      <div class="benefit">
+        <i class="fas fa-truck"></i>
+        <p>Livraison à domicile</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-lock"></i>
+        <p>Paiement sécurisé</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-undo"></i>
+        <p>Retours faciles</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-headset"></i>
+        <p>Support client 24/7</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grille principale -->
+  <div class="footer-container">
+  
+    <!-- Section Navigation Rapide -->
+    <div class="footer-section">
+      <h3>Navigation Rapide</h3>
+      <ul>
+        <li><a href=""">Deals</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/Blog.html">Blog</a></li>
+        <li><a href="#">Promotions</a></li>
+      </ul>
+    </div>
+
+    <!-- Section À propos -->
+    <div class="footer-section about-section">
+      <h3>À propos de Shopcart</h3>
+      <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service client exceptionnel.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Section Boutique -->
+    <div class="footer-section">
+      <h3>Boutique</h3>
+      <div class="shop-categories">
         <ul>
-          <li><a href="#">Deals</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Promotions</a></li>
+          <li><a href="/pages/products_tel.html">Smartphones</a></li>
+          <li><a href="/pages/products_ordi.html">Ordinateurs</a></li>
+          <li><a href="/pages/products_casque.html">Casques</a></li>
+          <li><a href="/pages/products_disk.html">Accessoires</a></li>
         </ul>
       </div>
-
-      <div class="footer-section">
-        <h3>À propos de Shopcart</h3>
-        <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
-          client exceptionnel.</p>
-
-        <div class="social-row">
-          <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
-          <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
-          <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
-        </div>
-      </div>
-
-      <div class="footer-section">
-        <h3>Boutique</h3>
-        <div class="shop-categories">
-          <ul>
-            <li><a href="#">Smartphones</a></li>
-            <li><a href="#">Ordinateurs</a></li>
-            <li><a href="#">Tablettes</a></li>
-            <li><a href="#">Accessoires</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <div class="contact-info">
-          <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
-          <p><i class="fas fa-phone"></i> +237 657450314</p>
-          <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
-          <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
-        </div>
-      </div>
     </div>
 
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-      <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="conditions.html">Conditions of use</a>
-        <a href="help.html">Help</a>
-        <a href="cookies.html">cookies</a>
-        <a href="security.html">Security</a>
-        <a href="advertisement.html">Advertisement</a>
+    <!-- Section Newsletter et Contact -->
+    <div class="footer-section">
+      <h3>Restez Informé</h3>
+      <div class="newsletter-section">
+        <p>Inscrivez-vous à notre newsletter</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <div class="input-container">
+            <i class="far fa-envelope"></i>
+            <input type="email" id="newsletter-email" placeholder="Votre email" required>
+          </div>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+      
+      <div class="contact-info" style="margin-top: 20px;">
+        <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+        <p><i class="fas fa-phone"></i> +237 657450314</p>
+        <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+        <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
       </div>
     </div>
-  </footer>
+  </div>
+
+  <!-- Séparateur -->
+  <div class="footer-divider"></div>
+
+  <!-- Footer bottom -->
+  <div class="footer-bottom">
+    <div class="payment-methods">
+      <p>Nous acceptons</p>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-cc-apple-pay"></i>
+      </div>
+    </div>
+    
+    <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+    
+    <div class="footer-links">
+      <a href="/security.html">Confidentialité</a>
+      <a href="/conditions.html">Conditions d'utilisation</a>
+      <a href="/cookies.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
