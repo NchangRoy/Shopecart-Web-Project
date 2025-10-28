@@ -9,6 +9,8 @@ body {
   flex-direction: column;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background-color: #f8fafc;
+    padding-top: 7rem;
+
 }
 /* This wrapper holds main and aside, and it's the part that needs to grow */
 .content-wrapper {
