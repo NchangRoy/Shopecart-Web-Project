@@ -94,11 +94,11 @@
     background: linear-gradient(135deg, var(--color-blue-accent) 0%, var(--color-blue-secondary) 100%);
     padding: 50px;
     position: relative;
+    padding: 40px; 
+    width: 100vw;
     margin: 40px auto;
-    max-width: 1700px;
     border-radius: 20px;
     box-shadow: var(--shadow-xl);
-    margin-top: 1.5rem;
 }
 
 .hero-banner input[type="radio"] {
