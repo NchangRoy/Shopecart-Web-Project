@@ -1,9 +1,18 @@
+/* Charte graphique:
+Couleurs Principales :
+
+Bleu Principal : #1e3a8a (Bleu profond professionnel)
+Bleu Secondaire : #1e40af (Bleu moyen)
+Bleu Clair : #3b82f6 (Pour les accents)
+
+Police: "Segoe UI", Roboto, Arial, sans-serif */
+
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans serif;
+    font-family: "Segoe UI", Roboto, Arial, sans serif;
     padding-top: 7rem;
-
     /* background-color: #f5f5f5; */
 }
 
@@ -22,7 +31,7 @@ body {
 .cart-title {
     font-size: 28px;
     font-weight: bold;
-    color: #333;
+    color: #1e3a8a;
     margin-bottom: 30px;
     text-align: left;
 }
@@ -55,9 +64,14 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba (0, 0, 0, 0.1)
+    box-shadow: 0 2px 4px rgba (0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+.cart-item:hover {
+    box-shadow: o 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+}
 /* Product image */
 
 .item-image {
@@ -109,7 +123,7 @@ body {
 .item-price {
     font-size: 18px;
     font-weight: bold;
-    color: #333; /* Dark gray color */
+    color: #1e40af; /* Dark gray color */
     margin: 0;
 }
 
@@ -124,20 +138,29 @@ body {
 /* Remove button */
 .remove-btn {
     padding: 8px 20px;
-    background-color: #1a237e;
+    background-color: #1e3a8a;
     color: #ffffff;
     border: none;
     border-radius: 20px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Remove button hover effect */
 .remove-btn:hover {
-    background-color: #0d1654;
+    background-color: #1e40af;
+    transform: translateY(-2px); /*Légère élévation au survol*/
 }
+
+.remove-btn:active {
+    transform: translateY(0);
+}
+
+/* =======================================
+    RIGHT COLUMN: ORDER SUMMARY SECTION 
+    ====================================== */
 
 /* Container for the entier order summary*/
 .order-summary {
@@ -156,7 +179,7 @@ body {
 .summary-title {
     font-size: 22px;
     font-weight: bold;
-    color: #333;
+    color: #1e3a8a;
     margin-bottom: 20px;
     margin-top: 0;
     text-align: center;
@@ -168,6 +191,7 @@ body {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.1)
 }
 
 /* Each row in the summary */
@@ -209,12 +233,14 @@ body {
 .summary-total .summary-label {
     font-weight: bold;
     font-size: 18px;
+    color: #1e3a8a;
 }
 
 /* Total value */
 .summary-total .summary-value {
     font-weight: bold;
     font-size: 18px;
+    color: #1e40af;
 }
 
 /* CHECKOUT BUTTON */
@@ -223,7 +249,7 @@ body {
     width: 100%;
     padding: 15px;
     background-color: #ffffff;
-    color: #333;
+    color: #1e3a8a;
     border: 2px solid #333;
     border-radius: 25px;
     font-size: 16px;
@@ -233,7 +259,7 @@ body {
 }
 
 .checkout-btn:hover {
-    background-color: #1a237e;
+    background-color: #1e3a8a;
     color: #ffffff;
-    border-color: #1a237e;
+    border-color: #1e40af;
 }
