@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
+
 }
 
 :root {
@@ -27,6 +28,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+
 }
 
 .logo {
@@ -188,6 +190,8 @@
   color: var(--white);
   position: relative;
   overflow: hidden;
+    padding-top: 10rem;
+
 }
 
 .hero::before {

@@ -2,6 +2,8 @@
 
 /* === PAGE ARTICLE === */
 .article-content {
+    padding-top: 7rem;
+
   max-width: 750px;
   margin: 40px auto;
   padding: 50px;

@@ -21,17 +21,29 @@ body {
 }
 
 /* Éléments de formulaire */
-button, input, select, textarea {
+ input, select, textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
     border: none;
-    background: none;
+    border-radius: 7px;
+    background:#00CC66;
+    padding: 7px;
     outline: none;
+    color: aliceblue;
 }
 
 button {
     cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    border-radius: 7px;
+    background: #0066FF;
+    outline: none;
+    padding:7px;
+    color:aliceblue;
 }
 
 /* Liens */

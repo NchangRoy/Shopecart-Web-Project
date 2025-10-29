@@ -1,17 +1,11 @@
-
-header {
-    text-align: center;
-    padding: 20px;
-}
-
 * { box-sizing: border-box; }
 html,body { height: 100%; margin: 0; }
 
 body {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: url("/assets/images/login.jpg") center center fixed;
+  background: url("../images/login.jpg") center center fixed;
   background-size: cover;
-  color: #020202;
+  color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -19,11 +13,6 @@ body {
   justify-content: center;
   padding: 20px;
   position: relative;
-     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 body::before {
@@ -37,77 +26,6 @@ body::before {
   z-index: 1;
 }
 
-
-.logo-img {
-    width: 50px;
-    vertical-align: middle;
-    border-radius: 50px;
-}
-
-h1 {
-    display: inline;
-    font-size: 24px;
-    margin-left: 10px;
-    color: #000;
-}
-
-a {
-    color: #0000EE;
-    text-decoration: none;
-}
-
-.register-container {
-    max-width: 400px;
-    margin: 5px auto;
-    padding: 20px;
-    border: 2px solid  #87ceeb;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.register-container h2 {
-    background-color:  #87ceeb;
-    color: #fff;
-    padding: 10px;
-    border-radius : 15px 15px 0 0;
-}
-
-.p1{
-    text-align: left;
-    margin: 10px 0 10px 0;
-    font-size: 14px;
-}
-.p2{
-    text-align: left;
-    margin: 10px 0 10px 0;
-    font-size: 14px;
-}
-.p3{
-    text-align: left;
-    margin: 10px 0 10px 0;
-    font-size: 14px;
-}       
-.p4{
-    text-align: left;
-    margin: 10px 0 10px 0;
-    font-size: 14px;}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    position: relative;
-}
-
-
-
-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
 .center-column {
   width: 540px;                     
@@ -139,20 +57,20 @@ input {
   letter-spacing: 0.3px;
 }
 
-.register-area { margin-bottom: 18px; }
+.auth-area { margin-bottom: 18px; }
 
-.register-card {
+.auth-card {
   width: 450px;                     
   margin: 0 auto;
   background: #ffffff;
   border-radius: 20px;
   border: 2px solid #9bd7ff;        
   box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-  padding: 50px 30px 45px;          
+  padding: 40px 30px 35px;          
   position: relative;
 }
 
-.register-head {
+.auth-head {
   width: calc(100% + 60px);
   margin: -52px -30px 12px -30px;          
   background: #55bdf6;              
@@ -162,7 +80,7 @@ input {
   text-align: center;
 }
 
-.register-head h2 {
+.auth-head h2 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
@@ -170,11 +88,11 @@ input {
   font-family: "Inter", sans-serif;
 }
 
-.register-form { display: block; }
+.login-form { display: block; }
 
 .field-label {
   display: block;
-  margin: 20px 0 10px;
+  margin: 15px 0 8px;
   font-size: 14px;
   font-weight: 700;
   color: #333;
@@ -211,37 +129,6 @@ input {
   transform: scale(1.02);
 }
 
-.btn-continue {
-  width: 86%;
-  margin: 8px auto 10px;
-  display: block;
-  padding: 8px 10px;
-  border-radius: 20px;
-  border: none;
-  font-weight: 700;
-  text-transform: lowercase;
-  background: #79c5f8;
-  color: #06314a;
-  cursor: pointer;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.06) inset;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.btn-continue:hover {
-  background: #55bdf6;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(85, 189, 246, 0.4), 0 2px 0 rgba(0,0,0,0.06) inset;
-}
-
-.line-with-text {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #5a5a5a;
-  font-size: 12px;
-  margin-bottom: 12px;
-}
 
 .social-row {
   display: flex;
@@ -276,55 +163,27 @@ input {
 .social-icon .fa-apple { color: #000; }
 .social-icon .fa-facebook-f { color: #1877f2; }
 
-
-.submit-btn {
-    padding: 10px;
-    background-color:  #87ceeb;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-top: 10px;
+.btn-continue {
+  width: 86%;
+  margin: 8px auto 10px;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+  text-transform: lowercase;
+  background: #79c5f8;
+  color: #06314a;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06) inset;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.divider {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #888;
-  margin: 30px 0;
-}
-
-.divider::before,
-.divider::after {
-  content: '';
-  flex: 1;
-  border-bottom: 1px solid #eee;
-}
-
-.divider:not(:empty)::before {
-  margin-right: .5em;
-}
-
-.divider:not(:empty)::after {
-  margin-left: .5em;
-}
-
-footer {
-    margin-top: 5vh;
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid #ccc;
-}
-
-.footer-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #000;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
+.btn-continue:hover {
+  background: #55bdf6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(85, 189, 246, 0.4), 0 2px 0 rgba(0,0,0,0.06) inset;
 }
 
 .card-separator {
@@ -344,18 +203,25 @@ footer {
   transition: all 0.3s ease;
 }
 
-
 .help-link:hover {
   color: #55bdf6;
   transform: scale(1.05);
   letter-spacing: 0.8px;
 }
 
-.signin-area {
+.signup-area {
   margin-top: 14px;
   margin-bottom: 18px;
 }
 
+.line-with-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #5a5a5a;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
 
 .line-with-text span {
   position: relative;
@@ -364,7 +230,6 @@ footer {
   text-transform: none;
   color: #333;
 }
-
 .line-with-text::before,
 .line-with-text::after {
   content: "";
@@ -373,8 +238,26 @@ footer {
   flex: 1;
 }
 
+.btn-create {
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 18px;
+  text-decoration: none;
+  background: #79c5f8;
+  color: #06314a;
+  font-weight: 700;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.btn-create:hover {
+  background: #55bdf6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(85, 189, 246, 0.4);
+}
+
 .site-footer {
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 12px;
   color: #444;
   text-align: center;
@@ -387,7 +270,7 @@ footer {
   justify-content: space-between;
   width: 100%;
   max-width: 600px;
-  margin: 0 auto 8px;
+  margin: 0 auto 4px;
   flex-wrap: wrap;
 }
 
