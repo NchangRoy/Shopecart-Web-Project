@@ -186,12 +186,30 @@ body {
 }
 
 /* Filters */
-.primary-filter {
+.product-filters-bar {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: nowrap;
+    overflow: visible;
+    padding: 10px 0 20px 0;
+    margin-bottom: 30px;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 50;
+}
+
+.product-filters-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Bouton "Tous les filtres" */
+.filter-all-button {
     display: flex;
     align-items: center;
     padding: 0.75rem 1.25rem;
-    background-color: var(--color-blue-secondary);
-    color: var(--color-white);
+    background-color: #1e40af;
+    color: white;
     border: none;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -199,12 +217,13 @@ body {
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+    flex-shrink: 0;
 }
 
-.primary-filter:hover {
-    background-color: var(--color-blue-primary);
-    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+.filter-all-button:hover {
+    background-color: #1e3a8a;
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
     transform: translateY(-1px);
 }
 
@@ -212,47 +231,29 @@ body {
     margin-right: 0.5rem;
 }
 
-.tag-buttons-group {
-    display: flex;
-    gap: 0.85rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 250px;
-    margin-bottom: -220px;
-    padding-top: 10px;
-    justify-content: center;
-    -webkit-overflow-scrolling: touch;
+/* Container de chaque filtre */
+.product-filter-item {
     position: relative;
-    z-index: 1000;
-}
-
-.tag-buttons-group::-webkit-scrollbar {
-    display: none;
-}
-
-.tag-button {
+    display: inline-block;
+    z-index: 100;
     flex-shrink: 0;
 }
 
-.filter-dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 1001;
-}
-
-.filter-checkbox {
+/* Cacher les radio buttons */
+.filter-radio-input {
     display: none;
 }
 
-.tag-button {
+/* Label du filtre (bouton cliquable) */
+.filter-button-label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray-300);
+    background-color: white;
+    border: 1px solid #d1d5db;
     border-radius: 0.5rem;
-    color: var(--color-gray-700);
+    color: #374151;
     font-size: 0.875rem;
     font-weight: 500;
     cursor: pointer;
@@ -260,69 +261,64 @@ body {
     transition: all 0.3s ease;
     user-select: none;
     position: relative;
-    z-index: 1001;
 }
 
-.tag-button:hover {
-    background-color: var(--color-gray-50);
-    border-color: var(--color-blue-accent);
-    color: var(--color-blue-secondary);
+.filter-button-label:hover {
+    background-color: #f9fafb;
+    border-color: #3b82f6;
+    color: #1e40af;
     transform: translateY(-1px);
 }
 
-.tag-button.selected-tag {
-    background-color: var(--color-blue-secondary);
-    border-color: var(--color-blue-secondary);
-    color: var(--color-white);
-}
-
-.dropdown-arrow {
+/* Flèche du dropdown */
+.filter-arrow-icon {
     font-size: 0.75rem;
     transition: transform 0.3s ease;
     display: inline-block;
 }
 
-.filter-checkbox:checked + .tag-button .dropdown-arrow {
+/* Rotation de la flèche quand ouvert */
+.filter-radio-input:checked + .filter-button-label .filter-arrow-icon {
     transform: rotate(180deg);
 }
 
-.filter-checkbox:checked + .tag-button {
-    background-color: var(--color-blue-50);
-    border-color: var(--color-blue-accent);
-    color: var(--color-blue-primary);
+/* Style du label quand le filtre est ouvert */
+.filter-radio-input:checked + .filter-button-label {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    color: #1e3a8a;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.filter-checkbox:checked + .tag-button.selected-tag {
-    background-color: var(--color-blue-secondary);
-    color: var(--color-white);
-}
-
-.dropdown-content {
+/* Liste déroulante des options */
+.filter-options-list {
     display: none;
     position: absolute;
     top: calc(100% + 0.5rem);
     left: 0;
-    background-color: var(--color-white);
+    background-color: white;
     min-width: 220px;
     border-radius: 0.5rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--color-gray-200);
-    z-index: 10000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e5e7eb;
+    z-index: 9999;
     overflow: visible;
 }
 
-.filter-checkbox:checked ~ .dropdown-content {
+/* Afficher la liste quand le radio est coché */
+.filter-radio-input:checked ~ .filter-options-list {
     display: block;
-    animation: slideDown 0.3s ease;
+    animation: filterFadeIn 0.3s ease;
 }
 
-.filter-dropdown:focus-within .dropdown-content {
+/* Afficher la liste au focus */
+.product-filter-item:focus-within .filter-options-list {
     display: block;
-    animation: slideDown 0.25s ease;
+    animation: filterFadeIn 0.25s ease;
 }
 
-@keyframes slideDown {
+/* Animation d'apparition */
+@keyframes filterFadeIn {
     from {
         opacity: 0;
         transform: translateY(-10px);
@@ -333,56 +329,36 @@ body {
     }
 }
 
-.filter-checkbox:checked + .tag-button {
-    pointer-events: none;
-}
-
-.dropdown-content a {
+/* Options individuelles */
+.filter-options-list a {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1rem;
-    color: var(--color-gray-700);
+    color: #374151;
     font-size: 0.875rem;
     transition: all 0.2s ease;
     border-left: 3px solid transparent;
     text-decoration: none;
-    background-color: var(--color-white);
-    position: relative;
-    z-index: 10001;
+    background-color: white;
 }
 
-.dropdown-content a:hover {
-    background-color: var(--color-blue-50);
-    color: var(--color-blue-primary);
-    border-left-color: var(--color-blue-secondary);
+.filter-options-list a:hover {
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    border-left-color: #1e40af;
     padding-left: 1.25rem;
 }
 
-.dropdown-content a i {
+.filter-options-list a i {
     width: 1.25rem;
     text-align: center;
     font-size: 1rem;
+    flex-shrink: 0;
 }
 
-.dropdown-content a:not(:last-child) {
-    border-bottom: 1px solid var(--color-gray-100);
-}
-
-.dropdown-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: transparent;
-    cursor: default;
-}
-
-.filter-checkbox:checked ~ .dropdown-overlay {
-    display: block;
+.filter-options-list a:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
 }
 
 /* Products */

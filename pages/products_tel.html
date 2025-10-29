@@ -131,20 +131,20 @@
 </section>
 
 <!--Filters-->
- <div class="tag-buttons-group">
-     <div class="filter-button primary-filter">
+ <div class="product-filters-bar">
+     <div class="filter-all-button">
          <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
      </div>
+     <input type="radio" name="filters" id="none" class="filter-radio-input" checked hidden>
 
-     <input type="radio" name="filters" id="none" class="filter-checkbox" checked hidden>
      <!-- Filtre Prix -->
-     <div class="filter-dropdown" tabindex="0">
-         <input type="radio" name="filters" id="prix-casques-toggle" class="filter-checkbox">
-         <label for="prix-casques-toggle" class="tag-button">
-         Prix <span class="dropdown-arrow">▼</span>
+     <div class="product-filter-item" tabindex="0">
+         <input type="checkbox" name="filters" id="prix-casques-toggle" class="filter-radio-input">
+         <label for="prix-casques-toggle" class="filter-button-label">
+             Prix <span class="filter-arrow-icon">▼</span>
          </label>
 
-         <div class="dropdown-content">
+         <div class="filter-options-list">
              <a href="#" data-price="0-5000"><i class="fas fa-tag"></i> Moins de 5.000 FCFA</a>
              <a href="#" data-price="5000-10000"><i class="fas fa-tag"></i> 5.000 - 10.000 FCFA</a>
              <a href="#" data-price="10000-20000"><i class="fas fa-tag"></i> 10.000 - 20.000 FCFA</a>
@@ -153,12 +153,12 @@
      </div>
 
      <!-- Filtre Marques -->
-     <div class="filter-dropdown" tabindex="0">
-         <input type="radio" name="filters" id="marques-casques-toggle" class="filter-checkbox">
-         <label for="marques-casques-toggle"  class="tag-button">
-             Marques <span class="dropdown-arrow">▼</span>
+     <div class="product-filter-item" tabindex="0">
+         <input type="checkbox" name="filters" id="marques-casques-toggle" class="filter-radio-input">
+         <label for="marques-casques-toggle" class="filter-button-label">
+             Marques <span class="filter-arrow-icon">▼</span>
          </label>
-         <div class="dropdown-content">
+         <div class="filter-options-list">
              <a href="#" data-brand="sony"><i class="fas fa-headphones"></i> Sony</a>
              <a href="#" data-brand="bose"><i class="fas fa-volume-up"></i> Bose</a>
              <a href="#" data-brand="jbl"><i class="fas fa-music"></i> JBL</a>
@@ -169,12 +169,12 @@
      </div>
 
      <!-- Filtre Notes -->
-     <div class="filter-dropdown" tabindex="0">
-         <input type="radio" name="filters" id="notes-casques-toggle" class="filter-checkbox">
-         <label for="notes-casques-toggle" class="tag-button" >
-             Notes <span class="dropdown-arrow">▼</span>
+     <div class="product-filter-item" tabindex="0">
+         <input type="checkbox" name="filters" id="notes-casques-toggle" class="filter-radio-input">
+         <label for="notes-casques-toggle" class="filter-button-label">
+             Notes <span class="filter-arrow-icon">▼</span>
          </label>
-         <div class="dropdown-content">
+         <div class="filter-options-list">
              <a href="#" data-rating="5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5 étoiles)</a>
              <a href="#" data-rating="4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
              <a href="#" data-rating="3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
