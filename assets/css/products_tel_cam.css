@@ -22,7 +22,7 @@ body {
     padding: 60px 20px;
     display: flex;
     position: relative;
-    margin: 40px auto;
+    margin: 100px auto;
     max-width: 1200px;
     border-radius: 20px;
     padding-top: 7rem;
@@ -83,7 +83,7 @@ body {
     font-size: 36px;
     line-height: 1.3;
     margin-bottom: 20px;
-    text-shadow: #1a1a5e 2px 2px 2px;
+    text-shadow: #1e3a8a 2px 2px 2px;
 }
 
 .banner-content h1:hover {
@@ -188,28 +188,182 @@ body {
 }
 
 /* Filters */
-.filters {
-    padding: 20px 0;
+.product-filters-bar {
     display: flex;
+    gap: 0.85rem;
+    flex-wrap: nowrap;
+    overflow: visible;
+    padding: 10px 0 20px 0;
+    margin-bottom: 30px;
     justify-content: center;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 50;
 }
 
-.filters .container {
+.product-filters-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Bouton "Tous les filtres" */
+.filter-all-button {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.filter-btn {
-    padding: 8px 20px;
-    background: #e8e8e8;
+    padding: 0.75rem 1.25rem;
+    background-color: #1e40af;
+    color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
     cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+    flex-shrink: 0;
 }
 
-.filter-btn:hover {
-    background: #3d82f6;
+.filter-all-button:hover {
+    background-color: #1e3a8a;
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
+    transform: translateY(-1px);
+}
+
+.icon-margin-right {
+    margin-right: 0.5rem;
+}
+
+/* Container de chaque filtre */
+.product-filter-item {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    flex-shrink: 0;
+}
+
+/* Cacher les radio buttons */
+.filter-radio-input {
+    display: none;
+}
+
+/* Label du filtre (bouton cliquable) */
+.filter-button-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    user-select: none;
+    position: relative;
+}
+
+.filter-button-label:hover {
+    background-color: #f9fafb;
+    border-color: #3b82f6;
+    color: #1e40af;
+    transform: translateY(-1px);
+}
+
+/* Flèche du dropdown */
+.filter-arrow-icon {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Rotation de la flèche quand ouvert */
+.filter-radio-input:checked + .filter-button-label .filter-arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Style du label quand le filtre est ouvert */
+.filter-radio-input:checked + .filter-button-label {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Liste déroulante des options */
+.filter-options-list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    background-color: white;
+    min-width: 220px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e5e7eb;
+    z-index: 9999;
+    max-height: 200px;
+    overflow-x: visible;
+    overflow-y: auto;
+}
+
+/* Afficher la liste quand le radio est coché */
+.filter-radio-input:checked ~ .filter-options-list {
+    display: block;
+    animation: filterFadeIn 0.3s ease;
+}
+
+/* Afficher la liste au focus */
+.product-filter-item:focus-within .filter-options-list {
+    display: block;
+    animation: filterFadeIn 0.25s ease;
+}
+
+/* Animation d'apparition */
+@keyframes filterFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Options individuelles */
+.filter-options-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #374151;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+    height: 40px;
+    background-color: white;
+}
+
+.filter-options-list a:hover {
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    border-left-color: #1e40af;
+    padding-left: 1.25rem;
+}
+
+.filter-options-list a i {
+    width: 1.25rem;
+    text-align: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.filter-options-list a:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
 }
 
 /* Products */

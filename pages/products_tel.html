@@ -22,13 +22,6 @@
         <span class="logo-text">Shopcart</span>
       </div>
 
-      <!-- Hamburger icon comme label pour la checkbox -->
-      <label for="menu-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
       <ul class="nav-links">
         <li class="categories-dropdown">
           <!-- Checkbox pour le sous-menu des catégories -->
@@ -136,15 +129,64 @@
 </section>
 
 <!--Filters-->
-<section class="filters">
-    <div class="container">
-        <button class="filter-btn">Type <span>&#9660</span></button>
-        <button class="filter-btn">Price <span>&#9660</span></button>
-        <button class="filter-btn">Brand <span>&#9660</span></button>
-        <button class="filter-btn">Review <span>&#9661</span></button>
-        <button class="filter-btn">All Filters <span>&#9776</span></button>
-    </div>
-</section>
+ <div class="product-filters-bar">
+     <div class="filter-all-button">
+         <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
+     </div>
+     <input type="radio" name="filters" id="none" class="filter-radio-input" checked hidden>
+
+     <!-- Filtre Prix -->
+     <div class="product-filter-item" tabindex="0">
+         <input type="checkbox" name="filters" id="prix-casques-toggle" class="filter-radio-input">
+         <label for="prix-casques-toggle" class="filter-button-label">
+             Prix <span class="filter-arrow-icon">▼</span>
+         </label>
+
+         <div class="filter-options-list">
+             <a href="#" data-price="0-100000"><i class="fas fa-tag"></i> Moins de 100.000 FCFA</a>
+             <a href="#" data-price="100000-200000"><i class="fas fa-tag"></i> 100.000 - 200.000 FCFA</a>
+             <a href="#" data-price="200000-500000"><i class="fas fa-tag"></i> 200.000 - 500.000 FCFA</a>
+             <a href="#" data-price="500000+"><i class="fas fa-tag"></i> Plus de 500.000 FCFA</a>
+         </div>
+     </div>
+
+     <!-- Filtre Marques -->
+     <div class="product-filter-item" tabindex="0">
+         <input type="checkbox" name="filters" id="marques-casques-toggle" class="filter-radio-input">
+         <label for="marques-casques-toggle" class="filter-button-label">
+             Marques <span class="filter-arrow-icon">▼</span>
+         </label>
+         <div class="filter-options-list">
+             <a href="#" data-brand="samsung"><i class="fa-solid fa-phone"></i> Samsung</a>
+             <a href="#" data-brand="google"><i class="fa-brands fa-google"></i> Google</a>
+             <a href="#" data-brand="itel"><i class="fa-solid fa-mobile"></i></i> Itel</a>
+             <a href="#" data-brand="iphone"><i class="fa-brands fa-apple"></i> Iphone</a>
+             <a href="#" data-brand="nokia"><i class="fa-solid fa-mobile-retro"></i> Nokia</a>
+             <a href="#" data-brand="motorola"><i class="fa-solid fa-circle-user"></i> Motorola</a>
+             <a href="#" data-brand="tecno"><i class="fa-solid fa-mobile-button"></i> Tecno</a>
+             <a href="#" data-brand="vivo"><i class="fa-solid fa-bell"></i> Vivo</a>
+             <a href="#" data-brand="huawei"><i class="fa-solid fa-globe"></i> Huawei</a>
+             <a href="#" data-brand="xiaomi"><i class="fa-solid fa-mobile-screen-button"></i> Xiaomi</a>
+             <a href="#" data-brand="infinix"><i class="fas fa-bolt"></i> Infinix</a>
+             <a href="#" data-brand="alcatel"><i class="fa-solid fa-comment"></i> Alcatel</a>
+         </div>
+     </div>
+
+     <!-- Filtre Notes -->
+     <div class="product-filter-item" tabindex="0">
+         <input type="checkbox" name="filters" id="notes-casques-toggle" class="filter-radio-input">
+         <label for="notes-casques-toggle" class="filter-button-label">
+             Notes <span class="filter-arrow-icon">▼</span>
+         </label>
+         <div class="filter-options-list">
+             <a href="#" data-rating="5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5 étoiles)</a>
+             <a href="#" data-rating="4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+             <a href="#" data-rating="3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+             <a href="#" data-rating="2"><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+             <a href="#" data-rating="1"><i class="fas fa-star"></i> et +</a>
+         </div>
+     </div>
+ </div>
 
 <!--Products Section-->
 <section class="products">

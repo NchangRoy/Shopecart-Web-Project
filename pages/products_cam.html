@@ -135,15 +135,62 @@
 </section>
 
 <!--Filters-->
-<section class="filters">
-    <div class="container">
-        <button class="filter-btn">Type <span>&#9660</span></button>
-        <button class="filter-btn">Price <span>&#9660</span></button>
-        <button class="filter-btn">Brand <span>&#9660</span></button>
-        <button class="filter-btn">Review <span>&#9661</span></button>
-        <button class="filter-btn">All Filters <span>&#9776</span></button>
+<div class="product-filters-bar">
+    <div class="filter-all-button">
+        <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
     </div>
-</section>
+    <input type="radio" name="filters" id="none" class="filter-radio-input" checked hidden>
+
+    <!-- Filtre Prix -->
+    <div class="product-filter-item" tabindex="0">
+        <input type="checkbox" name="filters" id="prix-casques-toggle" class="filter-radio-input">
+        <label for="prix-casques-toggle" class="filter-button-label">
+            Prix <span class="filter-arrow-icon">▼</span>
+        </label>
+
+        <div class="filter-options-list">
+            <a href="#" data-price="0-500000"><i class="fas fa-tag"></i> Moins de 500.000 FCFA</a>
+            <a href="#" data-price="500000-750000"><i class="fas fa-tag"></i> 500.000 - 750.000 FCFA</a>
+            <a href="#" data-price="750000-1000000"><i class="fas fa-tag"></i> 750.000 - 1.000.000 FCFA</a>
+            <a href="#" data-price="1000000+"><i class="fas fa-tag"></i> Plus de 1.000.000 FCFA</a>
+        </div>
+    </div>
+
+    <!-- Filtre Marques -->
+    <div class="product-filter-item" tabindex="0">
+        <input type="checkbox" name="filters" id="marques-casques-toggle" class="filter-radio-input">
+        <label for="marques-casques-toggle" class="filter-button-label">
+            Marques <span class="filter-arrow-icon">▼</span>
+        </label>
+        <div class="filter-options-list">
+            <a href="#" data-brand="sony"><i class="fa-solid fa-camera"></i> Sony</a>
+            <a href="#" data-brand="canon"><i class="fa-solid fa-image"></i> Canon</a>
+            <a href="#" data-brand="nikon"><i class="fa-solid fa-print"></i> Nikon</a>
+            <a href="#" data-brand="lumix"><i class="fa-solid fa-camera-retro"></i> Lumix</a>
+            <a href="#" data-brand="fujifilm"><i class="fa-solid fa-icons"></i> Fujifilm</a>
+            <a href="#" data-brand="olympus"><i class="fa-solid fa-video"></i> Olympus</a>
+            <a href="#" data-brand="leica"><i class="fa-solid fa-panorama"></i> Leica</a>
+            <a href="#" data-brand="casio"><i class="fa-solid fa-images"></i> Casio</a>
+            <a href="#" data-brand="pentax"><i class="fa-solid fa-photo-film"></i> Pentax</a>
+            <a href="#" data-brand="sigma"><i class="fa-solid fa-image-portrait"></i> Sigma</a>
+        </div>
+    </div>
+
+    <!-- Filtre Notes -->
+    <div class="product-filter-item" tabindex="0">
+        <input type="checkbox" name="filters" id="notes-casques-toggle" class="filter-radio-input">
+        <label for="notes-casques-toggle" class="filter-button-label">
+            Notes <span class="filter-arrow-icon">▼</span>
+        </label>
+        <div class="filter-options-list">
+            <a href="#" data-rating="5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5 étoiles)</a>
+            <a href="#" data-rating="4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+            <a href="#" data-rating="3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+            <a href="#" data-rating="2"><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+            <a href="#" data-rating="1"><i class="fas fa-star"></i> et +</a>
+        </div>
+    </div>
+</div>
 
 <!--Products Section-->
 <section class="products">
