@@ -302,7 +302,9 @@ body {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     border: 1px solid #e5e7eb;
     z-index: 9999;
-    overflow: visible;
+    max-height: 200px;
+    overflow-x: visible;
+    overflow-y: auto;
 }
 
 /* Afficher la liste quand le radio est coché */
@@ -340,6 +342,7 @@ body {
     transition: all 0.2s ease;
     border-left: 3px solid transparent;
     text-decoration: none;
+    height: 40px;
     background-color: white;
 }
 
