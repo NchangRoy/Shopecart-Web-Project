@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopcart</title>
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/main_about.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/main_about.css">
 
-      <!-- Utilisation de Font Awesome pour les icônes -->
+     <!-- Utilisation de Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
- <!-- Header -->
+     <!-- Header -->
   <header>
     <!-- Checkbox cachée pour contrôler le menu mobile -->
     <nav class="navbar">
@@ -75,6 +75,7 @@
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
+
   <main>
 
     <section class="hero-about">
@@ -258,7 +259,7 @@
         </div>
     </section>
 
-    <!-- History Section -->
+     <!-- History Section -->
     <section class="history">
         <div class="container">
             <h2 class="section-title">Notre Histoire</h2>
@@ -303,11 +304,55 @@
             <a href="products.html" class="cta-button">Voir nos Produits</a>
         </div>
     </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <p class="contact-intro">Une question ? Notre équipe est là pour vous répondre</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <h3>Adresse</h3>
+                        <p>123 Rue Commerce<br>Yaoundé, Cameroun</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>business@gmail.com<br>support@shopcart.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <h3>Téléphone</h3>
+                        <p>+237 XXX XXX XXX<br>Lun - Sam: 8h - 18h</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Sujet">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Votre Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
   </main>
-  <!-- Footer -->
-<footer>
+
+  <footer>
   <!-- Section des avantages -->
   <div class="footer-top">
     <div class="benefits">
@@ -416,5 +461,70 @@
     </div>
   </div>
 </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".contact-form form");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // empêche le rechargement de la page
+
+        // Récupération des champs
+        const name = form.querySelector('input[placeholder="Votre Nom"]').value.trim();
+        const email = form.querySelector('input[placeholder="Votre Email"]').value.trim();
+        const subject = form.querySelector('input[placeholder="Sujet"]').value.trim();
+        const message = form.querySelector('textarea').value.trim();
+
+        // Vérification des champs
+        if (!name || !email || !message) {
+            showNotification("❌ Veuillez remplir tous les champs obligatoires.", "error");
+            return;
+        }
+
+        // Simulation d’envoi (avec une petite attente)
+        showNotification("⏳ Envoi en cours...", "info");
+
+        setTimeout(() => {
+            showNotification(`✅ Merci ${name} ! Votre message a été envoyé avec succès.`, "success");
+            form.reset(); // réinitialise les champs
+        }, 2000);
+    });
+
+    // Fonction d’affichage des notifications
+    function showNotification(message, type) {
+        // Supprime les notifications existantes
+        const existing = document.querySelector(".notification");
+        if (existing) existing.remove();
+
+        const notif = document.createElement("div");
+        notif.classList.add("notification", type);
+        notif.textContent = message;
+        document.body.appendChild(notif);
+
+        // Disparaît après 4 secondes
+        setTimeout(() => notif.remove(), 4000);
+    }
+});
+</script>
+<style>
+    .notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.notification.success { background-color: #28a745; }
+.notification.error { background-color: #dc3545; }
+.notification.info { background-color: #007bff; }
+
+</style>
 </body>
 </html>
