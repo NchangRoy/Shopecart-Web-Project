@@ -108,20 +108,20 @@
             <div class="form-grid">
               <div>
                 <label>First Name</label>
-                <input type="text" value="Pierre" />
+                <input type="text" id= "firstName" value="Pierre" />
               </div>
               <div>
                 <label>Last Name</label>
-                <input type="text" value="Marcelle" />
+                <input type="text" id= "lastName" value="Marcelle" />
               </div>
               <div>
                 <label>Email</label>
-                <input type="email" value="pierre@example.com" />
+                <input type="email" id= "email" value="pierre@example.com" />
                 <div class="muted">Email is used for authentification and notifications.</div>
               </div>
               <div>
                 <label>Phone</label>
-                <input type="text" value="+237 6XX XXX XXX" />
+                <input type="text" id= "phone" value="+237 6XX XXX XXX" />
               </div>
             </div>
   
@@ -136,9 +136,9 @@
               <div>
                 <label>Change password</label>
                 <div class="form-grid">
-                  <div><input type="password" placeholder="Mot de passe actuel"/></div>
-                  <div><input type="password" placeholder="Nouveau mot de passe"/></div>
-                  <div><input type="password" placeholder="Confirmer le nouveau mot de passe"/></div>
+                  <div><input type="password"  id="currentPassword" placeholder="Mot de passe actuel"/></div>
+                  <div><input type="password" id="newPassword" placeholder="Nouveau mot de passe"/></div>
+                  <div><input type="password" id="confirmPassword" placeholder="Confirmer le nouveau mot de passe"/></div>
                 </div>
               </div>
   
@@ -154,79 +154,110 @@
     </div>
   
     <script>
-      // Navigation fluide entre les sections
-      document.querySelectorAll('.nav a').forEach(a=>{
-        a.addEventListener('click', (e)=>{
-          e.preventDefault();
-          document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));
-          a.classList.add('active');
-          const id = a.getAttribute('href').slice(1);
+      const USER_LIST_KEY = "users";
+      const CURRENT_EMAIL_KEY = "currentUserEmail";
+      
+      function loadUserData() {
+        const users = JSON.parse(localStorage.getItem(USER_LIST_KEY)) || [];
+        const currentEmail = localStorage.getItem(CURRENT_EMAIL_KEY);
+        if (!currentEmail) return;
+      
+        const currentUser = users.find(u => u.email === currentEmail);
+        if (!currentUser) return;
+      
+        const setVal = (id, val) => {
           const el = document.getElementById(id);
-          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-        });
+          if (el) el.value = val ?? "";
+        };
+      
+        // Remplir les champs du profil
+        setVal("firstName", currentUser.firstName);
+        setVal("lastName", currentUser.lastName);
+        setVal("email", currentUser.email);
+        setVal("phone", currentUser.phone);
+      
+        // Mot de passe actuel (masqué)
+        const passDisplay = document.getElementById("currentPasswordDisplay");
+        if (passDisplay) passDisplay.value = currentUser.password;
+      
+        // Mettre à jour les infos du panneau latéral
+        const nameEl = document.querySelector(".name");
+        const emailEl = document.querySelector(".email");
+        const avatarEl = document.querySelector(".avatar");
+        if (nameEl) nameEl.textContent = `${currentUser.firstName} ${currentUser.lastName?.[0] ?? ""}.`;
+        if (emailEl) emailEl.textContent = currentUser.email;
+        if (avatarEl) {
+          const f = (currentUser.firstName || "").charAt(0);
+          const l = (currentUser.lastName || "").charAt(0);
+          avatarEl.textContent = (f + l).toUpperCase();
+        }
+      }
+      
+      function saveProfile() {
+        const users = JSON.parse(localStorage.getItem(USER_LIST_KEY)) || [];
+        const currentEmail = localStorage.getItem(CURRENT_EMAIL_KEY);
+        const index = users.findIndex(u => u.email === currentEmail);
+        if (index === -1) return;
+      
+        const confirmed = confirm("Voulez-vous vraiment modifier vos informations ?");
+        if (!confirmed) return loadUserData();
+      
+        users[index].firstName = document.getElementById("firstName").value;
+        users[index].lastName = document.getElementById("lastName").value;
+        users[index].email = document.getElementById("email").value;
+        users[index].phone = document.getElementById("phone").value;
+      
+        localStorage.setItem(USER_LIST_KEY, JSON.stringify(users));
+        localStorage.setItem(CURRENT_EMAIL_KEY, users[index].email);
+      
+        loadUserData();
+      }
+      
+      function updatePassword() {
+        const users = JSON.parse(localStorage.getItem(USER_LIST_KEY)) || [];
+        const currentEmail = localStorage.getItem(CURRENT_EMAIL_KEY);
+        const index = users.findIndex(u => u.email === currentEmail);
+        if (index === -1) return;
+      
+        const newPass = document.getElementById("newPassword").value;
+        const confirmPass = document.getElementById("confirmPassword").value;
+      
+        if (newPass !== confirmPass) {
+          alert("Les deux mots de passe ne correspondent pas !");
+          return clearPasswordFields();
+        }
+      
+        const confirmed = confirm("Voulez-vous vraiment changer votre mot de passe ?");
+        if (!confirmed) return clearPasswordFields();
+      
+        users[index].password = newPass;
+        localStorage.setItem(USER_LIST_KEY, JSON.stringify(users));
+        clearPasswordFields();
+        loadUserData();
+      }
+      
+      function clearPasswordFields() {
+        document.getElementById("newPassword").value = "";
+        document.getElementById("confirmPassword").value = "";
+      }
+      
+      // 👁️ Afficher / masquer le mot de passe actuel
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("togglePasswordView");
+        const passField = document.getElementById("currentPasswordDisplay");
+      
+        if (toggle && passField) {
+          toggle.addEventListener("click", () => {
+            const isHidden = passField.type === "password";
+            passField.type = isHidden ? "text" : "password";
+            toggle.classList.toggle("fa-eye");
+            toggle.classList.toggle("fa-eye-slash");
+          });
+        }
+      
+        loadUserData();
       });
     </script>
-
-    
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Navigation Rapide</h3>
-        <ul>
-          <li><a href="#">Deals</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Promotions</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>À propos de Shopcart</h3>
-        <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service
-          client exceptionnel.</p>
-
-        <div class="social-row">
-          <button type="button" class="social-icon" aria-label="Google"><i class="fab fa-google"></i></button>
-          <button type="button" class="social-icon" aria-label="Apple"><i class="fab fa-apple"></i></button>
-          <button type="button" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
-        </div>
-      </div>
-
-      <div class="footer-section">
-        <h3>Boutique</h3>
-        <div class="shop-categories">
-          <ul>
-            <li><a href="#">Smartphones</a></li>
-            <li><a href="#">Ordinateurs</a></li>
-            <li><a href="#">Tablettes</a></li>
-            <li><a href="#">Accessoires</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <div class="contact-info">
-          <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
-          <p><i class="fas fa-phone"></i> +237 657450314</p>
-          <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
-          <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-      <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="#">Confidentialité</a>
-        <a href="#">Conditions d'utilisation</a>
-        <a href="#">Mentions légales</a>
-      </div>
-    </div>
-  </footer>
-    
+     <script src="/account.js" defer></script>
 </body>
 </html>
