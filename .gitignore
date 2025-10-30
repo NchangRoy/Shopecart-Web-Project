@@ -3,3 +3,4 @@ PAT_GitHub.txt
 *.secret
 .idea
 .vscode
+.env
