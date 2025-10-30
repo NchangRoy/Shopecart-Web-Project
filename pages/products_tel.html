@@ -25,6 +25,7 @@
       <ul class="nav-links">
         <li class="categories-dropdown">
           <!-- Checkbox pour le sous-menu des catégories -->
+            <input type="checkbox" id="categories-toggle">
           <label for="categories-toggle">
             Catégories <span class="dropdown-arrow">▼</span>
           </label>
@@ -60,73 +61,100 @@
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
-  
-    <!--Hero Banner-->
-    <section class="hero-banner">
-        <!--Radio buttons pour controler les slides-->
-        <input type="radio" name="slide" id="slide1" checked>
-        <input type="radio" name="slide" id="slide2">
-        <input type="radio" name="slide" id="slide3">
-        <input type="radio" name="slide" id="slide4">
-        <div class="carousel-container">
-            <!--Les slides-->
-            <div class="slides">
-                <!--Slide 1-->
-                <div class="slide">
-                    <div class="banner-content">
-                        <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
-                        <button class="btn-primary">Buy Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
-                </div>
-                <!--Slide 2-->
-                <div class="slide">
-                    <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>New Collection Of<br>Smart Phones<br>Available Now</h1>
-                        <button class="btn-primary">Shop Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="https://img.freepik.com/premium-photo/woman-blows-air-kiss-camera-smartphone-takes-selfie-sends-mwah-via-online-call_849040-1293.jpg" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
-                </div>
-                <!--Slide 3-->
-                <div class="slide">
-                    <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>Latest Google Pixels<br>Up To 30% Off<br>Limited Time</h1>
-                        <button class="btn-primary">Get Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="https://thumbs.dreamstime.com/b/black-young-woman-phone-hands-empty-blue-background-smiling-african-woman-working-phone-portrait-empty-copy-263033266.jpg" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
-                </div>
-                <!--Slide 4-->
-                <div class="slide">
-                    <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
-                        <button class="btn-primary">Maybe Yes</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="banner-dots">
-        <label for="slide1" class="dot"></label>
-        <label for="slide2" class="dot"></label>
-        <label for="slide3" class="dot"></label>
-        <label for="slide4" class="dot"></label>
-    </div>
-</section>
+
+ <!--Hero Banner-->
+ <section class="hero-banner">
+     <!--Radio buttons pour controler les slides-->
+     <input type="radio" name="slide" id="slide4clone">
+     <input type="radio" name="slide" id="slide1" checked>
+     <input type="radio" name="slide" id="slide2">
+     <input type="radio" name="slide" id="slide3">
+     <input type="radio" name="slide" id="slide4">
+     <input type="radio" name="slide" id="slide1clone">
+     <div class="carousel-container">
+         <!--Les slides-->
+         <div class="slides" id="slides">
+             <!--Slide 4 Clone-->
+             <div class="slide">
+                 <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                     <button class="btn-primary">Maybe Yes</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg" alt="">
+                 </div>
+                 <label class="right-arrow" for="slide1"><strong>&#62</strong></label>
+             </div>
+             <!--Slide 1-->
+             <div class="slide">
+                 <label class="left-arrow" for="slide4clone"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
+                     <button class="btn-primary">Buy Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg" alt="">
+                 </div>
+                 <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
+             </div>
+             <!--Slide 2-->
+             <div class="slide">
+                 <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>New Collection Of<br>Smart Phones<br>Available Now</h1>
+                     <button class="btn-primary">Shop Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://img.freepik.com/premium-photo/woman-blows-air-kiss-camera-smartphone-takes-selfie-sends-mwah-via-online-call_849040-1293.jpg" alt="">
+                 </div>
+                 <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
+             </div>
+             <!--Slide 3-->
+             <div class="slide">
+                 <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Latest Google Pixels<br>Up To 30% Off<br>Limited Time</h1>
+                     <button class="btn-primary">Get Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://thumbs.dreamstime.com/b/black-young-woman-phone-hands-empty-blue-background-smiling-african-woman-working-phone-portrait-empty-copy-263033266.jpg" alt="">
+                 </div>
+                 <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
+             </div>
+             <!--Slide 4-->
+             <div class="slide">
+                 <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                     <button class="btn-primary">Maybe Yes</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg" alt="">
+                 </div>
+                 <label class="right-arrow" for="slide1clone"><strong>&#62</strong></label>
+             </div>
+             <!--Slide 1 Clone-->
+             <div class="slide">
+                 <label class="left-arrow" for="slide4"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
+                     <button class="btn-primary">Buy Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg" alt="">
+                 </div>
+                 <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
+             </div>
+         </div>
+     </div>
+     <div class="banner-dots">
+         <label for="slide1" class="dot"></label>
+         <label for="slide2" class="dot"></label>
+         <label for="slide3" class="dot"></label>
+         <label for="slide4" class="dot"></label>
+     </div>
+ </section>
 
 <!--Filters-->
  <div class="product-filters-bar">
@@ -191,7 +219,7 @@
 <!--Products Section-->
 <section class="products">
     <div class="container">
-        <h2>Products For You</h2>
+        <h2 id="title1">Products For You</h2>
         <div class="products-group">
             <div class="products-grid" id="grid1">
                 <!--Product-Card-->
@@ -343,7 +371,7 @@
             <span class="thick-line"></span>
             <span class="thin-line"></span>
         </div>
-        <h2>Best Sellers</h2>
+        <h2 id="title2">Best Sellers</h2>
         <div class="product-group">
             <div class="products-grid" id="grid2">
                 <!--Product-Card-->
@@ -495,7 +523,7 @@
             <span class="thick-line"></span>
             <span class="thin-line"></span>
         </div>
-        <h2>Products On Promotion</h2>
+        <h2 id="title3">Products On Promotion</h2>
         <div class="products-group">
             <div class="products-grid" id="grid3">
                 <!--Product-Card-->
@@ -677,7 +705,7 @@
     <div class="footer-section">
       <h3>Navigation Rapide</h3>
       <ul>
-        <li><a href=""">Deals</a></li>
+        <li><a href="">Deals</a></li>
         <li><a href="/about.html">About Us</a></li>
         <li><a href="/Blog.html">Blog</a></li>
         <li><a href="#">Promotions</a></li>
@@ -756,5 +784,9 @@
     </div>
   </div>
 </footer>
+
+ <script language="JavaScript" type="text/javascript" src="/assets/js/carousel_auto.js"></script>
+ <script language="JavaScript" type="text/javascript" src="/assets/js/pagination_tel.js"></script>
+
 </body>
 </html>

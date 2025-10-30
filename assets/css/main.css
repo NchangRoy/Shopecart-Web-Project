@@ -707,17 +707,19 @@
 }
 
 .payment-icons {
+/* Correction pour les icônes de paiement */
+.payment-methods .payment-icons {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.payment-icon {
-  background-color: var(--white);
+.payment-methods .payment-icon {
+  background: white;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -726,15 +728,32 @@
   transition: transform 0.3s ease;
 }
 
-.payment-icon i {
+.payment-methods .payment-icon i {
   font-size: 32px;
-  color: var(--primary-blue);
+  color: #1e3a8a;
 }
 
-.payment-icon:hover {
+.payment-methods .payment-icon:hover {
   transform: scale(1.1);
 }
 
+/* Correction pour le footer payment icons */
+.footer-bottom .payment-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-bottom .payment-icons i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Assurer que Font Awesome est chargé */
+.fa, .fas, .far, .fal, .fad, .fab {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+  font-weight: 900;
+}
 /* Responsive Design */
 @media (max-width: 1024px) {
   .features {
