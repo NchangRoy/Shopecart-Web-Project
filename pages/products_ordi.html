@@ -12,7 +12,6 @@
 <body class="body-bg">
  <!-- Header -->
   <header>
-    <!-- Checkbox cachée pour contrôler le menu mobile -->
     <nav class="navbar">
       <div class="logo">
         <div class="logo-img">
@@ -23,7 +22,6 @@
         <span class="logo-text">Shopcart</span>
       </div>
 
-      <!-- Hamburger icon comme label pour la checkbox -->
       <label for="menu-toggle" class="hamburger">
         <span></span>
         <span></span>
@@ -32,7 +30,6 @@
 
       <ul class="nav-links">
         <li class="categories-dropdown">
-          <!-- Checkbox pour le sous-menu des catégories -->
           <label for="categories-toggle">
             Catégories <span class="dropdown-arrow">▼</span>
           </label>
@@ -60,75 +57,107 @@
 
       <div class="user-actions">
         <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
-        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count">3</span></a>
+        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span class="cart-count">3</span></a>
       </div>
     </nav>
 
-    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
     
-    <section class="hero-banner">
-        <input type="radio" name="slide" id="slide1" checked>
-        <input type="radio" name="slide" id="slide2">
-        <input type="radio" name="slide" id="slide3">
-        <input type="radio" name="slide" id="slide4">
-        <div class="carousel-container">
-            <div class="slides">
-                <div class="slide">
-                    <div class="banner-content">
-                        <h1>Get Up to 50% Off<br>On Laptops<br>And Other Gadgets</h1>
-                        <button class="btn-primary">Buy Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="../assets/images/img_prom1.png" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
-                </div>
-                <div class="slide">
-                    <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>New Collection Of<br>Powerful Computers<br>Available Now</h1>
-                        <button class="btn-primary">Shop Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="../assets/images/img_prom2.png" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
-                </div>
-                <div class="slide">
-                    <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>Latest Gaming Laptops<br>Up To 30% Off<br>Limited Time</h1>
-                        <button class="btn-primary">Get Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="../assets/images/img_prom3.png" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
-                </div>
-                <div class="slide">
-                    <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
-                        <button class="btn-primary">Maybe Yes</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="../assets/images/img_com5.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="banner-dots">
-            <label for="slide1" class="dot"></label>
-            <label for="slide2" class="dot"></label>
-            <label for="slide3" class="dot"></label>
-            <label for="slide4" class="dot"></label>
-        </div>
-    </section>
+   <!--Hero Banner-->
+ <section class="hero-banner">
+     <input type="radio" name="slide" id="slide4clone">
+     <input type="radio" name="slide" id="slide1" checked>
+     <input type="radio" name="slide" id="slide2">
+     <input type="radio" name="slide" id="slide3">
+     <input type="radio" name="slide" id="slide4">
+     <input type="radio" name="slide" id="slide1clone">
+     <div class="carousel-container">
+         <div class="slides" id="slides">
+             <!-- Slide 4 Clone -->
+             <div class="slide">
+                 <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                     <button class="btn-primary">Maybe Yes</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://media.istockphoto.com/id/2202196797/fr/photo/loving-couple-organizing-their-home-finances.webp?a=1&b=1&s=612x612&w=0&k=20&c=x_53R2eFPQ_hLdkKy3FkfjtKjDN-k2uZbdfolTP2zHQ=" alt="Banner">
+                 </div>
+                 <label class="right-arrow" for="slide1"><strong>&#62</strong></label>
+             </div>
+             <!-- Slide 1 -->
+             <div class="slide">
+                 <label class="left-arrow" for="slide4clone"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Get Up to 50% Off<br>On Pc<br>And Other Gadgets</h1>
+                     <button class="btn-primary">Buy Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://media.istockphoto.com/id/2207541639/fr/photo/jeune-professionnel-travaillant-sur-un-ordinateur-portable-dans-un-environnement-de-bureau.webp?a=1&b=1&s=612x612&w=0&k=20&c=gHgq52KQ2tSqPcnY3ivQfh76J5b-Xop7RkQ_c457Oyk=" alt="Banner">
+                 </div>
+                 <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
+             </div>
+             <!-- Slide 2 -->
+             <div class="slide">
+                 <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>New Collection Of<br>Personal computer<br>Available Now</h1>
+                     <button class="btn-primary">Shop Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg" alt="Banner">
+                 </div>
+                 <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
+             </div>
+             <!-- Slide 3 -->
+             <div class="slide">
+                 <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Latest Pc gaming<br>Up To 30% Off<br>Limited Time</h1>
+                     <button class="btn-primary">Get Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://plus.unsplash.com/premium_photo-1682430553117-f1d0edb35a14?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvbXB1dGVyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Banner">
+                 </div>
+                 <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
+             </div>
+             <!-- Slide 4 -->
+             <div class="slide">
+                 <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                     <button class="btn-primary">Maybe Yes</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://media.istockphoto.com/id/2202196797/fr/photo/loving-couple-organizing-their-home-finances.webp?a=1&b=1&s=612x612&w=0&k=20&c=x_53R2eFPQ_hLdkKy3FkfjtKjDN-k2uZbdfolTP2zHQ=" alt="Banner">
+                 </div>
+                 <label class="right-arrow" for="slide1clone"><strong>&#62</strong></label>
+             </div>
+             <!-- Slide 1 Clone -->
+             <div class="slide">
+                 <label class="left-arrow" for="slide4"><strong>&#60</strong></label>
+                 <div class="banner-content">
+                     <h1>Get Up to 50% Off<br>On PC<br>And Other Gadgets</h1>
+                     <button class="btn-primary">Buy Now</button>
+                 </div>
+                 <div class="banner-image">
+                     <img src="https://media.istockphoto.com/id/2207541639/fr/photo/jeune-professionnel-travaillant-sur-un-ordinateur-portable-dans-un-environnement-de-bureau.webp?a=1&b=1&s=612x612&w=0&k=20&c=gHgq52KQ2tSqPcnY3ivQfh76J5b-Xop7RkQ_c457Oyk=" alt="Banner">
+                 </div>
+                 <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
+             </div>
+         </div>
+     </div>
+     <div class="banner-dots">
+         <label for="slide1" class="dot"></label>
+         <label for="slide2" class="dot"></label>
+         <label for="slide3" class="dot"></label>
+         <label for="slide4" class="dot"></label>
+     </div>
+ </section>
     
     <main class="main-content-container">
+        <!-- Barre de filtres -->
         <div class="tag-buttons-group2">
             <div class="primary-filter">
                 <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
@@ -174,682 +203,29 @@
             </div>
         </div>
 
-        <section class="products-section">
-            <h2 class="section-title">
-                <span class="gradient-blue-purple">Nos ordinateurs</span>
-            </h2>
-            <p class="section-subtitle">Découvrez notre collection premium</p>
-            <div class="products-grid">
-               <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="HP 14 Laptop" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">HP 14 Laptop, Intel</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.4)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">150.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="Acer Aspire 15" class="product-image">
-                        <div class="product-tag tag-promo">-25%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 15 Slim</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">220.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap6.jpg" alt="Dell Inspiron 3530" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 3530</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">299.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap7.jpg" alt="Acer Aspire 3" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 3 A315</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">349.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap8.jpg" alt="ASUS ROG Strix" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">ASUS</p>
-                        <h3 class="product-title-card">ROG Strix G16</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.2)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">129.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap12.jpg" alt="HP Touchscreen" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Touchscreen Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.6)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">179.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap13.jpg" alt="Lenovo IdeaPad" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">IdeaPad 1</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.3)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">89.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap14.jpg" alt="Lenovo V-Series" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">V-Series V15</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">159.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap15.jpg" alt="HP Chromebook" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.7)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">249.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap16.jpg" alt="Jumper 2 in 1" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Jumper</p>
-                        <h3 class="product-title-card">2 in 1 Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">139.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap1.jpg" alt="HP Stream 14" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Stream 14" HD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.1)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">99.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap2.jpg" alt="HP Chromebook 14" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14 Premium</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">169.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap3.jpg" alt="Dell Inspiron 15" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 15 3530</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="Lenovo Chromebook" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">Flagship Chromebook</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="HP Business Laptop" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">15.6 Business Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap6.jpg" alt="HP Laptop Computer" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Laptop Computer Pro</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div class="pagination">
-            <button class="page-btn" disabled>
-                <i class="fas fa-chevron-left"></i> Précédent
-            </button>
-            <button class="page-num-active">1</button>
-            <button class="page-num">2</button>
-            <button class="page-num">3</button>
-            <span>...</span>
-            <button class="page-num">8</button>
-            <button class="page-btn">
-                Suivant <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
+        <!-- SECTION 1 : Nos Ordinateurs (style conservé) -->
+    <section class="products-section">
+        <h2 class="section-title">
+            <span class="gradient-blue-purple">Nos ordinateurs</span>
+        </h2>
+        <p class="section-subtitle">Découvrez notre collection premium</p>
+        <div class="products-grid" id="grid1"></div>
+        <div class="pagination" id="pagin1"></div>
+    </section>
 
-        <section class="products-section">
-            <h2 class="section-title">
-                <span class="gradient-blue-purple">Nos meilleurs Offres</span>
-            </h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="HP 14 Laptop" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">HP 14 Laptop, Intel</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.4)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">150.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="Acer Aspire 15" class="product-image">
-                        <div class="product-tag tag-promo">-25%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 15 Slim</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">220.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/img_Lap6.jpg" alt="Dell Inspiron 3530" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 3530</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">299.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap7.jpg" alt="Acer Aspire 3" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Acer</p>
-                        <h3 class="product-title-card">Aspire 3 A315</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">349.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap8.jpg" alt="ASUS ROG Strix" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">ASUS</p>
-                        <h3 class="product-title-card">ROG Strix G16</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.2)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">129.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap12.jpg" alt="HP Touchscreen" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Touchscreen Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.6)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">179.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap13.jpg" alt="Lenovo IdeaPad" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">IdeaPad 1</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.3)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">89.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap14.jpg" alt="Lenovo V-Series" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">V-Series V15</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">159.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap15.jpg" alt="HP Chromebook" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.7)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">249.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap16.jpg" alt="Jumper 2 in 1" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Jumper</p>
-                        <h3 class="product-title-card">2 in 1 Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">139.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap1.jpg" alt="HP Stream 14" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Stream 14" HD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.1)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">99.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap2.jpg" alt="HP Chromebook 14" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Chromebook 14 Premium</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">169.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap3.jpg" alt="Dell Inspiron 15" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Dell</p>
-                        <h3 class="product-title-card">Inspiron 15 3530</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap4.jpg" alt="Lenovo Chromebook" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Lenovo</p>
-                        <h3 class="product-title-card">Flagship Chromebook</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">19.990 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap5.jpg" alt="HP Business Laptop" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">15.6 Business Laptop</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_Lap6.jpg" alt="HP Laptop Computer" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">HP</p>
-                        <h3 class="product-title-card">Laptop Computer Pro</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="pagination">
-            <button class="page-btn" disabled>
-                <i class="fas fa-chevron-left"></i> Précédent
-            </button>
-            <button class="page-num-active">1</button>
-            <button class="page-num">2</button>
-            <button class="page-num">3</button>
-            <span>...</span>
-            <button class="page-num">8</button>
-            <button class="page-btn">
-                Suivant <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
+    <!-- SECTION 2 : Nos Meilleures Offres (même style que section 1) -->
+    <section class="products-section">
+        <h2 class="section-title">
+            <span class="gradient-blue-purple">Nos Meilleures Offres</span>
+        </h2>
+        <p class="section-subtitle">Offres limitées</p>
+        <div class="products-grid" id="grid2"></div>
+        <div class="pagination" id="pagin2"></div>
+    </section>
     </main>
+
   <!-- Footer -->
 <footer>
-  <!-- Section des avantages -->
   <div class="footer-top">
     <div class="benefits">
       <div class="benefit">
@@ -871,21 +247,17 @@
     </div>
   </div>
 
-  <!-- Grille principale -->
   <div class="footer-container">
-  
-    <!-- Section Navigation Rapide -->
     <div class="footer-section">
       <h3>Navigation Rapide</h3>
       <ul>
-        <li><a href=""">Deals</a></li>
+        <li><a href="#">Deals</a></li>
         <li><a href="/about.html">About Us</a></li>
         <li><a href="/Blog.html">Blog</a></li>
         <li><a href="#">Promotions</a></li>
       </ul>
     </div>
 
-    <!-- Section À propos -->
     <div class="footer-section about-section">
       <h3>À propos de Shopcart</h3>
       <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service client exceptionnel.</p>
@@ -897,7 +269,6 @@
       </div>
     </div>
 
-    <!-- Section Boutique -->
     <div class="footer-section">
       <h3>Boutique</h3>
       <div class="shop-categories">
@@ -910,7 +281,6 @@
       </div>
     </div>
 
-    <!-- Section Newsletter et Contact -->
     <div class="footer-section">
       <h3>Restez Informé</h3>
       <div class="newsletter-section">
@@ -933,10 +303,8 @@
     </div>
   </div>
 
-  <!-- Séparateur -->
   <div class="footer-divider"></div>
 
-  <!-- Footer bottom -->
   <div class="footer-bottom">
     <div class="payment-methods">
       <p>Nous acceptons</p>
@@ -957,6 +325,11 @@
     </div>
   </div>
 </footer>
+
+<!-- Scripts - ORDRE IMPORTANT -->
+<script src="../assets/js/carousel_auto.js"></script>
+<script src="../assets/js/carousel_auto.js"></script>
+<script src="../assets/js/pagination_ordi.js"></script>
 <script src="../assets/js/product-ordi-navigation.js"></script>
 </body>
 </html>
