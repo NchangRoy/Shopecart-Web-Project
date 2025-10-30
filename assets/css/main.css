@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
+
 }
 
 :root {
@@ -27,6 +28,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+
 }
 
 .logo {
@@ -188,6 +190,8 @@
   color: var(--white);
   position: relative;
   overflow: hidden;
+    padding-top: 10rem;
+
 }
 
 .hero::before {
@@ -690,13 +694,13 @@
 }
 
 /* Payment Methods */
-.payment-methods {
+.payment-method {
   padding: 60px 20px;
   text-align: center;
   background-color: var(--white);
 }
 
-.payment-methods h3 {
+.payment-method h3 {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: var(--text-dark);

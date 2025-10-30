@@ -18,6 +18,31 @@ Site statique fonctionnel, testable localement.
 ## Installation Spécifique
 Ouvrez `index.html` dans un navigateur moderne (Chrome, Firefox).
 
+## Structure du Dépôt
+- `/assets/` : CSS, images, JS communs.
+- `/tp1/` : Site statique (HTML/CSS).
+- `/tp2/` : Ajouts JS (panier dynamique).
+- `/tp3/` : Thème CMS et extensions.
+- `/tp4/` : Application Laravel complète.
+- `/docs/` : Designs Figma (captures), répartition des tâches, et documents du cours.
+
+## Contributions
+Chaque étudiant doit committer sur des branches dédiées avec des messages clairs (ex. "feat: ajout formulaire contact - Équipe 3"). 
+Utilisez les issues GitHub pour tracker les tâches. Rotation des rôles visible via commits.
+
+## Technologies Utilisées
+- Frontend : HTML5, CSS3, JavaScript (vanilla).
+- CMS : WordPress/Joomla/Drupal + WooCommerce.
+- Backend : Laravel (PHP), MySQL.
+- Outils : Git, Figma pour designs.
+
+## Difficultés et Solutions (Retour d'Expérience)
+- À remplir après chaque TP : ex. "Intégration JS dans TP2 : Résolu via localStorage pour persistance panier."
+
+Pour plus de détails sur chaque TP, consultez les READMEs dédiés dans les dossiers correspondants.
+
+## Licence
+MIT - Projet éducatif.
 ## Fichiers Clés
 - `index.html` : Page d'accueil.
 - `/assets/css/main.css` : Styles globaux.

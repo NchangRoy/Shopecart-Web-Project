@@ -3,18 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
 main{
     display:  flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding-top: 7rem;
+
 }
 section{
     width: 100%;
 }
-
 .entry{
     display: flex;
     flex-direction: column;
