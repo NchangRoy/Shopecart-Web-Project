@@ -288,21 +288,8 @@ body {
   25% { transform: translateX(-5px); }
   75% { transform: translateX(5px); }
 }
-
-/* États de la newsletter */
-.newsletter-form.focused .input-container {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-  transform: translateY(-1px);
-}
-
-.newsletter-form.loading button {
-  background: #6b7280 !important;
-  cursor: not-allowed;
-}
-
-.newsletter-form.success button {
-  background: linear-gradient(135deg, #10b981, #34d399) !important;
+.card-meta .like-btn.shake {
+  animation: shake 0.3s;
 }
 
 /* Confettis */
@@ -337,21 +324,6 @@ body {
   .card-meta .like-btn {
     padding: 4px 10px;
     font-size: 11px;
-  }
-  
-  .card .read-badge {
-    top: 10px;
-    right: 10px;
-    font-size: 0.65rem;
-    padding: 3px 8px;
-  }
-  
-  .no-results-message {
-    padding: 40px 20px;
-  }
-  
-  .no-results-message i {
-    font-size: 36px;
   }
   
   #__toast__ {
