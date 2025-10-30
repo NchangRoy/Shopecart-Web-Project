@@ -1,114 +1,100 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ blog.js chargé - fonctionnalités activées");
+  console.log("✅ blog.js chargé - fonctionnalités du blog activées");
 
-  /* 
-     Fonctions réutilisables
-     --------------------------- */
+  // Fonctions utilitaires
   const qs = (sel, root = document) => root.querySelector(sel);
   const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const storage = window.localStorage;
 
-  /* 
-     Gestionnaire d'état global
-     --------------------------- */
-  const AppState = {
-    newsletterSubscribers: JSON.parse(storage.getItem('newsletterSubscribers')) || [],
-    readArticles: JSON.parse(storage.getItem('readArticles')) || [],
-    likes: JSON.parse(storage.getItem('articleLikes')) || {},
-    readingProgress: {}
+  // État des likes - BLOG SEULEMENT
+  const BlogState = {
+    likes: JSON.parse(storage.getItem('blogLikes')) || {}
   };
 
   /* 
-     Système de Likes pour Articles
+     SYSTÈME DE LIKES - EXCLUSIVEMENT POUR LE BLOG
      --------------------------- */
   function initLikeSystem() {
-    const likeButtons = qsa('.like-btn');
+    const likeButtons = qsa('.card .like-btn');
+    
+    console.log(`🎯 ${likeButtons.length} boutons like sur le blog`);
     
     likeButtons.forEach(btn => {
       const articleId = btn.dataset.articleId;
-      if (AppState.likes[articleId]) {
+      
+      // Initialiser l'état du bouton
+      if (articleId && BlogState.likes[articleId]) {
         btn.classList.add('liked');
-        updateLikeCount(btn, AppState.likes[articleId]);
+        updateLikeCount(btn, BlogState.likes[articleId]);
       }
       
-      btn.addEventListener('click', () => toggleLike(btn, articleId));
+      // Gérer le clic
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        handleBlogLike(btn, articleId);
+      });
     });
   }
 
-  function toggleLike(button, articleId) {
-    if (!AppState.likes[articleId]) {
-      // Nouveau like
-      AppState.likes[articleId] = 1;
+  function handleBlogLike(button, articleId) {
+    if (!articleId) {
+      console.error('❌ ID article manquant');
+      return;
+    }
+
+    if (!BlogState.likes[articleId]) {
+      // Ajouter like
+      BlogState.likes[articleId] = 1;
       button.classList.add('liked');
       updateLikeCount(button, 1);
-      lancerConfettis(button.parentElement, 15);
-      showToast('❤️ Article ajouté à vos favoris !');
+      showToast('❤️ Article liké sur le blog !');
     } else {
-      // Retirer le like
-      delete AppState.likes[articleId];
+      // Retirer like
+      delete BlogState.likes[articleId];
       button.classList.remove('liked');
       updateLikeCount(button, 0);
       showToast('💔 Like retiré');
     }
     
-    storage.setItem('articleLikes', JSON.stringify(AppState.likes));
+    // Sauvegarder les likes du blog
+    storage.setItem('blogLikes', JSON.stringify(BlogState.likes));
   }
 
   function updateLikeCount(button, count) {
-    const countElement = button.querySelector('.like-count') || document.createElement('span');
-    if (!button.contains(countElement)) {
+    let countElement = button.querySelector('.like-count');
+    if (!countElement) {
+      countElement = document.createElement('span');
       countElement.className = 'like-count';
       button.appendChild(countElement);
     }
     countElement.textContent = count > 0 ? count : '';
   }
 
- 
   /* 
-     Animations et Effets Visuels
+     INTERACTIONS DES CARTES
      --------------------------- */
-  function shakeElement(element) {
-    element.style.animation = 'shake 0.5s ease-in-out';
-    setTimeout(() => {
-      element.style.animation = '';
-    }, 500);
-  }
-
-  // Animation simple "confettis" (création d'éléments)
-  function lancerConfettis(parent = document.body, nombre = 30) {
-    const frag = document.createDocumentFragment();
-    const emojis = ['🎉', '✨', '🌟', '🎊', '🥳', '👍', '❤️', '🔥'];
+  function initArticleCards() {
+    const cards = qsa('.card');
     
-    for (let i = 0; i < nombre; i++) {
-      const p = document.createElement("span");
-      p.className = "confetti-item";
-      p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-      p.style.position = "fixed";
-      p.style.left = `${Math.random() * 100}vw`;
-      p.style.top = `${-5 - Math.random() * 10}vh`;
-      p.style.fontSize = `${8 + Math.random() * 18}px`;
-      p.style.opacity = `${0.6 + Math.random() * 0.4}`;
-      p.style.transform = `rotate(${Math.random() * 360}deg)`;
-      p.style.transition = `transform 2.5s cubic-bezier(0.1, 0.8, 0.3, 1), top 2.5s cubic-bezier(0.1, 0.8, 0.3, 1), opacity 2.5s`;
-      p.style.zIndex = "10000";
-      frag.appendChild(p);
+    cards.forEach(card => {
+      // Effet de survol
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-8px) scale(1.02)';
+        card.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+      });
       
-      // déclenchement d'un déplacement
-      setTimeout(() => {
-        p.style.top = `${80 + Math.random() * 30}vh`;
-        p.style.transform = `translateX(${Math.random() * 100 - 50}px) rotate(${Math.random()*720}deg)`;
-        p.style.opacity = "0";
-      }, 50);
-      
-      // suppression
-      setTimeout(() => p.remove(), 3000);
-    }
-    parent.appendChild(frag);
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) scale(1)';
+        card.style.boxShadow = '';
+      });
+    });
   }
 
-  // Petite notification toast
+  /* 
+     NOTIFICATIONS TOAST
+     --------------------------- */
   function showToast(message, duree = 3000) {
-    // Éviter les doublons
     const existingToast = qs("#__toast__");
     if (existingToast) existingToast.remove();
     
@@ -150,14 +136,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* 
-     Initialisation
+     INITIALISATION
      --------------------------- */
-  function init() {
+  function initBlog() {
     initLikeSystem();
+    initArticleCards();
     
-    console.log('les fonctionnalités sont initialisées');
+    console.log('🚀 Blog - Likes activés (blog seulement)');
+    console.log('💾 État actuel:', BlogState.likes);
   }
 
-  // Démarrer l'application
-  init();
+  // Démarrer
+  initBlog();
 });
