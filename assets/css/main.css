@@ -693,6 +693,20 @@
   color:white
 }
 
+/* Payment Methods */
+.payment-method {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.payment-method h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.payment-icons {
 /* Correction pour les icônes de paiement */
 .payment-methods .payment-icons {
   display: flex;

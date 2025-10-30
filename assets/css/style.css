@@ -1,0 +1,182 @@
+/* Container principal du blog */
+.blog-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #222;
+}
+
+/* Titre principal du blog */
+.blog-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #07328f;
+}
+
+.blog-container > p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Grille des articles */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  align-items: start;
+}
+
+/* Carte des articles */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Effet hover moderne */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image de l'article */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Titre */
+.card h2 {
+  font-size: 1.2rem;
+  margin: 15px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.card h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card h2 a:hover {
+  color: #016894;
+}
+
+/* Texte descriptif */
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 15px 15px;
+  line-height: 1.5;
+}
+
+/* Lien lire plus */
+.read-more {
+  margin: 10px 15px 15px;
+  color: #07328f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.read-more:hover {
+  color: #004466;
+  text-decoration: underline;
+}
+
+/* Page article */
+.article-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.article-content img {
+  width: 70%;
+  float:left;
+  margin: 0 20px 15px 0;
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+  
+}
+
+.article-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #07328f;
+}
+
+.article-content .date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+  display: block;
+}
+
+
+
+.article-content h2 {
+  margin-top: 25px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.article-content p {
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+ /* --- Hero Section --- */
+.blog-hero {
+  position: relative;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  background: url("/assets/images/fille_jeuvideo.jpg") center/cover no-repeat; /* image de fond */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* Overlay sombre pour lisibilité */
+}
+
+.hero-overlay {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #f0f0f0;
+}
