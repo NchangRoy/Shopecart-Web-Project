@@ -504,3 +504,41 @@ header {
     padding: 8px 12px;
   }
 }
+/* Correction pour le menu mobile */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+/* Assurer que le menu mobile fonctionne */
+@media (max-width: 768px) {
+  .nav-links:not(.active) {
+    display: none;
+  }
+  
+  .search-bar:not(.active) {
+    display: none;
+  }
+  
+  .user-actions:not(.active) {
+    display: none;
+  }
+  
+  .overlay:not(.active) {
+    display: none;
+  }
+  
+  .overlay.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+}
