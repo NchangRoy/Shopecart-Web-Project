@@ -183,7 +183,13 @@ body {
 .team-grid {
     display: flex;
     gap: 2rem;
-    animation: scrollTeam 40s linear infinite;
+    animation: scroll-right-to-left 40s linear infinite;
+    width: max-content;
+}
+.team-grid1 {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-left-to-right 40s linear infinite;
     width: max-content;
 }
 
@@ -240,15 +246,49 @@ body {
     line-height: 1.5;
 }
 
+.team-left-to-right{
+    margin-top: 5rem;
+}
+
+/* Animation gauche → droite */
+.team-left-to-right .container {
+  animation-name: scroll-left-to-right;
+  animation-duration: 20s;
+}
+
+/* Animation droite → gauche */
+.team-right-to-left .container {
+  animation-name: scroll-right-to-left;
+  animation-duration: 20s;
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* Animation fluide et infinie */
-@keyframes scrollTeam {
+/* @keyframes scrollTeam {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(-50%);
     }
-}
+} */
 
 /* Effet pause au survol */
 .team-grid:hover {
