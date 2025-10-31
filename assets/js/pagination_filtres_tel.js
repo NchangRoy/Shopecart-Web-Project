@@ -300,6 +300,10 @@ function displayProducts(pagination) {
         grid.appendChild(card);
     });
 
+    if (typeof attachNavigationEvents === 'function') {
+        attachNavigationEvents()
+    }
+
 }
 
 // Générer la pagination intelligente
