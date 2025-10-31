@@ -592,3 +592,47 @@ body {
         margin-bottom: 1rem;
     }
 }
+/* Styles pour le formulaire de contact */
+.contact-form-form.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.contact-form-form.success {
+    opacity: 0.9;
+}
+
+.contact-form-form.success .form-group input,
+.contact-form-form.success .form-group textarea {
+    background: #f0f9ff;
+    border-color: #a7f3d0;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* États des champs */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+.form-group input.valid,
+.form-group textarea.valid {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
