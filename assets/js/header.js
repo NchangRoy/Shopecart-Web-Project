@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const categoriesLabel = document.querySelector('.categories-dropdown label');
   const dropdownContent = document.querySelector('.dropdown-content');
 
+  //mets à jour le badge
+  updateCartBadge()
+
   // Toggle menu mobile
   if (hamburger) {
     hamburger.addEventListener('click', function(e) {
@@ -71,3 +74,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+let cartData = null; // Stocke les données du panier
+
+/**
+ * Met à jour le badge du panier dans le header
+ */
+function updateCartBadge() {
+    // Utiliser la classe 'cart-count' au lieu d'un ID
+    const cartBadge = document.querySelector('.cart-count');
+    
+    // Vérifier que l'élément existe
+    if (!cartBadge) {
+        console.warn('⚠️ Badge du panier introuvable');
+        return;
+    }
+    
+    if (!cartData || !cartData.cart_items || cartData.cart_items.length === 0) {
+        cartBadge.textContent = '0';
+        return;
+    }
+    
+    // Compter le nombre total d'articles
+    const totalItems = cartData.cart_items.reduce((sum, item) => sum + item.quantite, 0);
+    cartBadge.textContent = totalItems;
+}
