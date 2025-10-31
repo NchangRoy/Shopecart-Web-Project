@@ -218,3 +218,21 @@ img.controls{
     border-radius: 10px;
     text-decoration: none;
 }
+    .notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.notification.success { background-color: #28a745; }
+.notification.error { background-color: #dc3545; }
+.notification.info { background-color: #007bff; }
