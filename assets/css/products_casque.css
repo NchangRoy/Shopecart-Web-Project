@@ -144,10 +144,11 @@ body {
 /* Hero Banner */
 .hero-banner {
     background: linear-gradient(135deg, #3d82f6 0%, #1e40af 100%);
-    padding: 5px 5px;
+    padding: 0px 0px;
     display: flex;
     position: relative;
     margin: 100px auto;
+    max-height: 450px;
     max-width: 1200px;
     border-radius: 20px;
 }
