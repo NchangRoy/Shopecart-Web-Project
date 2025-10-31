@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <script src="/assets/js/product_filtres_manettes.js" defer></script> 
-    <script src="/assets/js/product_navigation_casques.js" defer></script> 
-  <script defer src="assets/js/newsletter.js"></script>
-
-  <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/product_navigation_manettes.js" defer></script> 
+    
+    <script src="/assets/js/product_pagination_manettes.js" defer></script> 
 </head>
 
 <body class="body-bg">
@@ -74,45 +73,73 @@
     <a href="#" class="overlay" id="overlay"></a>
   </header>
     
+    
+    
+    <!--Hero Banner-->
     <section class="hero-banner">
+        <!--Radio buttons pour contrôler les slides-->
+        <input type="radio" name="slide" id="slide4clone">
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
         <input type="radio" name="slide" id="slide3">
         <input type="radio" name="slide" id="slide4">
+
         <div class="carousel-container">
             <div class="slides">
+
+                <!--Slide 4 Clone (au début pour effet retour fluide)-->
                 <div class="slide">
+                    <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Dominez le jeu<br>Nouvelles manettes<br>et accessoires</h1>
-                        <button class="btn-primary">Acheter Maintenant</button>
+                        <h1>Découvrez Nos Nouveaux<br>Produits Incroyables<br>À Prix Cassés</h1>
+                        <button class="btn-primary">Voir Plus</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/m1-removebg-preview.png" alt="Manette de jeu" style="max-height: 400px; object-fit: contain;">
+                        <img src="/assets/images/28.jpeg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide1"><strong>&#62</strong></label>
+                </div>
+
+                <!--Slide 1-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide4clone"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Get Up to 50% Off<br>On Cameras<br>And Other Gadgets</h1>
+                        <button class="btn-primary">Buy Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/25.jpeg" alt="">
                     </div>
                     <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
+
+                <!--Slide 2-->
                 <div class="slide">
                     <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Éditions limitées<br>Manettes Pro<br>pour E-Sport</h1>
-                        <button class="btn-primary">Découvrir</button>
+                        <h1>New Collection Of<br>Digital Cameras<br>Available Now</h1>
+                        <button class="btn-primary">Shop Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/m2-removebg-preview.png" alt="Manette E-Sport" style="max-height: 400px; object-fit: contain;">
+                        <img src="/assets/images/26.jpeg" alt="">
                     </div>
                     <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
                 </div>
+
+                <!--Slide 3-->
                 <div class="slide">
                     <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Accessoires Gaming<br>Jusqu'à 40% de réduction<br>Temps limité</h1>
-                        <button class="btn-primary">Profiter</button>
+                        <h1>Latest Sony Alpha<br>Up To 30% Off<br>Limited Time</h1>
+                        <button class="btn-primary">Get Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/m3-removebg-preview.png" alt="Casque Gaming" style="max-height: 400px; object-fit: contain;">
+                        <img src="/assets/images/27.jpeg" alt="">
                     </div>
                     <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
                 </div>
+
+                <!--Slide 4-->
                 <div class="slide">
                     <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
                     <div class="banner-content">
@@ -120,11 +147,14 @@
                         <button class="btn-primary">Maybe Yes</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/m4-removebg-preview.png" alt="">
+                        <img src="/assets/images/28.jpeg" alt="">
                     </div>
+                    <label class="right-arrow" for="slide1"><strong>&#62</strong></label>
                 </div>
             </div>
         </div>
+
+        <!--Petits points de navigation-->
         <div class="banner-dots">
             <label for="slide1" class="dot"></label>
             <label for="slide2" class="dot"></label>
@@ -132,6 +162,7 @@
             <label for="slide4" class="dot"></label>
         </div>
     </section>
+
     <main class="main-content-container">
 
             <div class="tag-buttons-group">
@@ -186,7 +217,7 @@
  
       
         <section class="products-section">
-            <h2 class="section-title">
+            <h2 class="section-title" id="title-for-you">
                 <span class="gradient-blue-purple">Manettes pour vous</span>
             </h2>
             <p class="section-subtitle">Sélection basée sur vos plateformes favorites</p>
@@ -205,7 +236,7 @@
                             <span class="rating-text">(4.8)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">75 000 FCFA</span>
+                            <span class="product-price">75 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -223,7 +254,7 @@
                             <span class="rating-text">(4.5)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">60 000 FCFA</span>
+                            <span class="product-price">60 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -241,7 +272,7 @@
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">89 000 FCFA</span>
+                            <span class="product-price">89 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -259,7 +290,7 @@
                             <span class="rating-text">(4.7)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">165 000 FCFA</span>
+                            <span class="product-price">165 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -277,7 +308,7 @@
                             <span class="rating-text">(4.3)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">110 000 FCFA</span>
+                            <span class="product-price">110 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -295,7 +326,7 @@
                             <span class="rating-text">(4.6)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">35 000 FCFA</span>
+                            <span class="product-price">35 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -313,7 +344,7 @@
                             <span class="rating-text">(4.0)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">25 000 FCFA</span>
+                            <span class="product-price">25 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -331,7 +362,7 @@
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">155 000 FCFA</span>
+                            <span class="product-price">155 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -349,7 +380,7 @@
                             <span class="rating-text">(4.5)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">90 000 FCFA</span>
+                            <span class="product-price">90 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
@@ -367,26 +398,387 @@
                             <span class="rating-text">(4.4)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">99 000 FCFA</span>
+                            <span class="product-price">99 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
+                
+                <a href="product_manetteDetail.html?id=11" class="product-card" data-id="11" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (2)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=12" class="product-card" data-id="12" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (2)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=13" class="product-card" data-id="13" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.png" alt="Switch Pro Controller (2)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nintendo</p>
+                        <h3 class="product-title-card">Switch Pro Controller (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=14" class="product-card" data-id="14" data-brand="razer" data-price-raw="165000" data-rating-raw="4.7">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Wolverine V2 Pro (2)" class="product-image">
+                        <div class="product-tag tag-premium">PRO GAMING</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Wolverine V2 Pro (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">165 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=15" class="product-card" data-id="15" data-brand="nacon" data-price-raw="110000" data-rating-raw="4.3">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M5.png" alt="Nacon Revolution Pro 3 (2)" class="product-image">
+                        
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nacon</p>
+                        <h3 class="product-title-card">Revolution Pro 3 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">110 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=16" class="product-card" data-id="16" data-brand="8bitdo" data-price-raw="35000" data-rating-raw="4.6">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M6.png" alt="8BitDo Ultimate C (2)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">8BitDo</p>
+                        <h3 class="product-title-card">Ultimate C Wired (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">35 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=17" class="product-card" data-id="17" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (PC) (2)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=18" class="product-card" data-id="18" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (2)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=19" class="product-card" data-id="19" data-brand="sony" data-price-raw="90000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M7.png" alt="DualSense Edge Pro (2)" class="product-image">
+                        
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense Edge Pro (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">90 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=20" class="product-card" data-id="20" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Razer Kishi V2 (2)" class="product-image">
+                        
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_manetteDetail.html?id=21" class="product-card" data-id="21" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (3)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=22" class="product-card" data-id="22" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (3)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=23" class="product-card" data-id="23" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.png" alt="Switch Pro Controller (3)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nintendo</p>
+                        <h3 class="product-title-card">Switch Pro Controller (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=24" class="product-card" data-id="24" data-brand="razer" data-price-raw="165000" data-rating-raw="4.7">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Wolverine V2 Pro (3)" class="product-image">
+                        <div class="product-tag tag-premium">PRO GAMING</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Wolverine V2 Pro (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">165 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=25" class="product-card" data-id="25" data-brand="nacon" data-price-raw="110000" data-rating-raw="4.3">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M5.png" alt="Nacon Revolution Pro 3 (3)" class="product-image">
+                        
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nacon</p>
+                        <h3 class="product-title-card">Revolution Pro 3 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">110 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=26" class="product-card" data-id="26" data-brand="8bitdo" data-price-raw="35000" data-rating-raw="4.6">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M6.png" alt="8BitDo Ultimate C (3)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">8BitDo</p>
+                        <h3 class="product-title-card">Ultimate C Wired (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">35 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=27" class="product-card" data-id="27" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (PC) (3)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=28" class="product-card" data-id="28" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (3)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=29" class="product-card" data-id="29" data-brand="sony" data-price-raw="90000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M7.png" alt="DualSense Edge Pro (3)" class="product-image">
+                        
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense Edge Pro (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">90 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=30" class="product-card" data-id="30" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Razer Kishi V2 (3)" class="product-image">
+                        
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+
                 </div>
         </section>
         
-        <div class="pagination">
-            <button class="page-btn" disabled>
+        <div class="pagination" id="pagination-for-you">
+            <button class="page-btn" disabled data-direction="prev" data-grid-id="products-for-you-grid">
                     <i class="fas fa-chevron-left"></i> Précédent
             </button>
                 
-            <button class="page-num-active">1</button>
-            <button class="page-num">2</button>
-            <button class="page-num">3</button>
-            <span>...</span>
-            <button class="page-num">8</button>
+            <button class="page-num-active" data-page="1" data-grid-id="products-for-you-grid">1</button>
+            <button class="page-num" data-page="2" data-grid-id="products-for-you-grid">2</button>
+            <button class="page-num" data-page="3" data-grid-id="products-for-you-grid">3</button>
                 
-            <button class="page-btn">
+            <button class="page-btn" data-direction="next" data-grid-id="products-for-you-grid">
                 Suivant <i class="fas fa-chevron-right"></i>
             </button>
         </div>
@@ -397,12 +789,13 @@
         </div>
         
         <section class="products-section">
-            <h2 class="section-title">
+            <h2 class="section-title" id="title-best-sellers">
                 <span class="gradient-blue-purple">Best Sellers Gaming</span>
             </h2>
             <p class="section-subtitle">Les manettes les plus populaires</p>
             <div class="products-grid" id="best-sellers-grid">
-               <a href="product_manetteDetail.html?id=1" class="product-card">
+               
+                <a href="product_manetteDetail.html?id=1" class="product-card" data-id="1" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
                     <div class="product-image-wrapper">
                         <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc" class="product-image">
                         <div class="product-tag tag-best-seller">TOP VENTE</div>
@@ -415,14 +808,14 @@
                             <span class="rating-text">(4.8)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">75 000 FCFA</span>
+                            <span class="product-price">75 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
-                <a href="product_manetteDetail.html?id=8" class="product-card">
+                <a href="product_manetteDetail.html?id=8" class="product-card" data-id="8" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M2.png" alt="Xbox Elite Series 2" class="product-image">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2" class="product-image">
                         <div class="product-tag tag-premium">ELITE</div>
                     </div>
                     <div class="product-info">
@@ -433,12 +826,12 @@
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">155 000 FCFA</span>
+                            <span class="product-price">155 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
-                <a href="product_manetteDetail.html?id=3" class="product-card">
+                <a href="product_manetteDetail.html?id=3" class="product-card" data-id="3" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
                     <div class="product-image-wrapper">
                         <img src="/assets/images/M3.png" alt="Switch Pro Controller" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
@@ -451,261 +844,12 @@
                             <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">89 000 FCFA</span>
+                            <span class="product-price">89 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
-                <a href="product_manetteDetail.html?id=2" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M8.png" alt="Xbox Core Controller Noir" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Microsoft</p>
-                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">60 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=1" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M9.png" alt="DualSense PS5 Blanc" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Sony</p>
-                        <h3 class="product-title-card">DualSense PS5 Blanc</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">75 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=8" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M10.png" alt="Xbox Elite Series 2" class="product-image">
-                        <div class="product-tag tag-premium">ELITE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Microsoft</p>
-                        <h3 class="product-title-card">Xbox Elite Series 2</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">155 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=3" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Switch Pro Controller" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Nintendo</p>
-                        <h3 class="product-title-card">Switch Pro Controller</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">89 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=2" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M6.png" alt="Xbox Core Controller Noir" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Microsoft</p>
-                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">60 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=1" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc" class="product-image">
-                        <div class="product-tag tag-best-seller">TOP VENTE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Sony</p>
-                        <h3 class="product-title-card">DualSense PS5 Blanc</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.8)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">75 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=8" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M8.png" alt="Xbox Elite Series 2" class="product-image">
-                        <div class="product-tag tag-premium">ELITE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Microsoft</p>
-                        <h3 class="product-title-card">Xbox Elite Series 2</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">155 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                </div>
-        </section>
-        
-        <div class="progress-bar-row">
-            <hr class="progress-bar-segment-1">
-            <hr class="progress-bar-segment-2">
-            <hr class="progress-bar-segment-3">
-        </div>
-
-        <section class="products-section">
-            <h2 class="section-title">
-                <span class="gradient-blue-purple">Manettes en promotion</span>
-            </h2>
-            <p class="section-subtitle">Offres spéciales et remises</p>
-            <div class="products-grid" id="promotion-grid">
-               <a href="product_manetteDetail.html?id=2" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M1.png" alt="Xbox Core Controller Noir" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Microsoft</p>
-                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">60 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=7" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Logitech F310" class="product-image">
-                        <div class="product-tag tag-promo">-20%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Logitech</p>
-                        <h3 class="product-title-card">Logitech F310 (PC)</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">25 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=10" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M9.png" alt="Razer Kishi V2" class="product-image">
-                        <div class="product-tag tag-promo">-10%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Razer</p>
-                        <h3 class="product-title-card">Razer Kishi V2</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.4)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">99 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=2" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M8.png" alt="Xbox Core Controller Noir" class="product-image">
-                        <div class="product-tag tag-promo">-15%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Microsoft</p>
-                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">60 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=7" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M7.png" alt="Logitech F310" class="product-image">
-                        <div class="product-tag tag-promo">-20%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Logitech</p>
-                        <h3 class="product-title-card">Logitech F310 (PC)</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">25 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=10" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Razer Kishi V2" class="product-image">
-                        <div class="product-tag tag-promo">-10%</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Razer</p>
-                        <h3 class="product-title-card">Razer Kishi V2</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.4)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">99 000 FCFA</span>
-                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product_manetteDetail.html?id=2" class="product-card">
+                <a href="product_manetteDetail.html?id=2" class="product-card" data-id="2" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
                     <div class="product-image-wrapper">
                         <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir" class="product-image">
                         <div class="product-tag tag-promo">-15%</div>
@@ -718,50 +862,68 @@
                             <span class="rating-text">(4.5)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">60 000 FCFA</span>
+                            <span class="product-price">60 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
-                <a href="product_manetteDetail.html?id=7" class="product-card">
+                <a href="product_manetteDetail.html?id=1" class="product-card" data-id="1" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Logitech F310" class="product-image">
-                        <div class="product-tag tag-promo">-20%</div>
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Logitech</p>
-                        <h3 class="product-title-card">Logitech F310 (PC)</h3>
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc</h3>
                         <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">25 000 FCFA</span>
+                            <span class="product-price">75 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
-                <a href="product_manetteDetail.html?id=10" class="product-card">
+                <a href="product_manetteDetail.html?id=8" class="product-card" data-id="8" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Razer Kishi V2" class="product-image">
-                        <div class="product-tag tag-promo">-10%</div>
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
                     </div>
                     <div class="product-info">
-                        <p class="product-brand">Razer</p>
-                        <h3 class="product-title-card">Razer Kishi V2</h3>
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2</h3>
                         <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.4)</span>
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">99 000 FCFA</span>
+                            <span class="product-price">155 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
-                <a href="product_manetteDetail.html?id=2" class="product-card">
+                <a href="product_manetteDetail.html?id=3" class="product-card" data-id="3" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M4.jpeg" alt="Xbox Core Controller Noir" class="product-image">
+                        <img src="/assets/images/M3.png" alt="Switch Pro Controller" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nintendo</p>
+                        <h3 class="product-title-card">Switch Pro Controller</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=2" class="product-card" data-id="2" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir" class="product-image">
                         <div class="product-tag tag-promo">-15%</div>
                     </div>
                     <div class="product-info">
@@ -772,13 +934,1000 @@
                             <span class="rating-text">(4.5)</span>
                         </div>
                         <div class="product-actions">
-                            <span class="product-price">60 000 FCFA</span>
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=1" class="product-card" data-id="1" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=8" class="product-card" data-id="8" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_manetteDetail.html?id=11" class="product-card" data-id="11" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (2)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=18" class="product-card" data-id="18" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (2)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=13" class="product-card" data-id="13" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.png" alt="Switch Pro Controller (2)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nintendo</p>
+                        <h3 class="product-title-card">Switch Pro Controller (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=12" class="product-card" data-id="12" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (2)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=11" class="product-card" data-id="11" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (2)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=18" class="product-card" data-id="18" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (2)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=13" class="product-card" data-id="13" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.png" alt="Switch Pro Controller (2)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nintendo</p>
+                        <h3 class="product-title-card">Switch Pro Controller (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=12" class="product-card" data-id="12" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (2)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=11" class="product-card" data-id="11" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (2)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=18" class="product-card" data-id="18" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (2)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product_manetteDetail.html?id=21" class="product-card" data-id="21" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (3)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=28" class="product-card" data-id="28" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (3)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=23" class="product-card" data-id="23" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.png" alt="Switch Pro Controller (3)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nintendo</p>
+                        <h3 class="product-title-card">Switch Pro Controller (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=22" class="product-card" data-id="22" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (3)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=21" class="product-card" data-id="21" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (3)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=28" class="product-card" data-id="28" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (3)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=23" class="product-card" data-id="23" data-brand="nintendo" data-price-raw="89000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M3.png" alt="Switch Pro Controller (3)" class="product-image">
+                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Nintendo</p>
+                        <h3 class="product-title-card">Switch Pro Controller (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">89 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=22" class="product-card" data-id="22" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (3)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=21" class="product-card" data-id="21" data-brand="sony" data-price-raw="75000" data-rating-raw="4.8">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M1.png" alt="DualSense PS5 Blanc (3)" class="product-image">
+                        <div class="product-tag tag-best-seller">TOP VENTE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Sony</p>
+                        <h3 class="product-title-card">DualSense PS5 Blanc (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">75 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=28" class="product-card" data-id="28" data-brand="microsoft" data-price-raw="155000" data-rating-raw="4.9">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M9.png" alt="Xbox Elite Series 2 (3)" class="product-image">
+                        <div class="product-tag tag-premium">ELITE</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Elite Series 2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">155 000 FCFA</span>
                             <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </a>
                 </div>
         </section>
+        <div class="pagination" id="pagination-best-sellers">
+            <button class="page-btn" disabled data-direction="prev" data-grid-id="best-sellers-grid">
+                    <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+                
+            <button class="page-num-active" data-page="1" data-grid-id="best-sellers-grid">1</button>
+            <button class="page-num" data-page="2" data-grid-id="best-sellers-grid">2</button>
+            <button class="page-num" data-page="3" data-grid-id="best-sellers-grid">3</button>
+                
+            <button class="page-btn" data-direction="next" data-grid-id="best-sellers-grid">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="progress-bar-row">
+            <hr class="progress-bar-segment-1">
+            <hr class="progress-bar-segment-2">
+            <hr class="progress-bar-segment-3">
+        </div>
+
+        <section class="products-section">
+            <h2 class="section-title" id="title-promotion">
+                <span class="gradient-blue-purple">Manettes en promotion</span>
+            </h2>
+            <p class="section-subtitle">Offres spéciales et remises</p>
+            <div class="products-grid" id="promotion-grid">
+               
+                <a href="product_manetteDetail.html?id=2" class="product-card" data-id="2" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=7" class="product-card" data-id="7" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=10" class="product-card" data-id="10" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=2" class="product-card" data-id="2" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=7" class="product-card" data-id="7" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=10" class="product-card" data-id="10" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=2" class="product-card" data-id="2" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=7" class="product-card" data-id="7" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=10" class="product-card" data-id="10" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=2" class="product-card" data-id="2" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="product_manetteDetail.html?id=12" class="product-card" data-id="12" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (2)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=17" class="product-card" data-id="17" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (2)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=20" class="product-card" data-id="20" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2 (2)" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=12" class="product-card" data-id="12" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (2)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=17" class="product-card" data-id="17" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (2)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=20" class="product-card" data-id="20" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2 (2)" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=12" class="product-card" data-id="12" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (2)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=17" class="product-card" data-id="17" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (2)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=20" class="product-card" data-id="20" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2 (2)" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=12" class="product-card" data-id="12" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (2)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (2)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="product_manetteDetail.html?id=22" class="product-card" data-id="22" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (3)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=27" class="product-card" data-id="27" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (3)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=30" class="product-card" data-id="30" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2 (3)" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=22" class="product-card" data-id="22" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (3)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=27" class="product-card" data-id="27" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (3)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=30" class="product-card" data-id="30" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2 (3)" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=22" class="product-card" data-id="22" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (3)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=27" class="product-card" data-id="27" data-brand="logitech" data-price-raw="25000" data-rating-raw="4.0">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M8.png" alt="Logitech F310 (3)" class="product-image">
+                        <div class="product-tag tag-promo">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Logitech</p>
+                        <h3 class="product-title-card">Logitech F310 (PC) (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.0)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">25 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=30" class="product-card" data-id="30" data-brand="razer" data-price-raw="99000" data-rating-raw="4.4">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M4.jpeg" alt="Razer Kishi V2 (3)" class="product-image">
+                        <div class="product-tag tag-promo">-10%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Razer</p>
+                        <h3 class="product-title-card">Razer Kishi V2 (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">99 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                <a href="product_manetteDetail.html?id=22" class="product-card" data-id="22" data-brand="microsoft" data-price-raw="60000" data-rating-raw="4.5">
+                    <div class="product-image-wrapper">
+                        <img src="/assets/images/M2.png" alt="Xbox Core Controller Noir (3)" class="product-image">
+                        <div class="product-tag tag-promo">-15%</div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Microsoft</p>
+                        <h3 class="product-title-card">Xbox Core Controller Noir (3)</h3>
+                        <div class="rating-info">
+                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <div class="product-actions">
+                            <span class="product-price">60 000 FCFA</span>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </a>
+                </div>
+        </section>
+
+        <div class="pagination" id="pagination-promotion">
+            <button class="page-btn" disabled data-direction="prev" data-grid-id="promotion-grid">
+                    <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+                
+            <button class="page-num-active" data-page="1" data-grid-id="promotion-grid">1</button>
+            <button class="page-num" data-page="2" data-grid-id="promotion-grid">2</button>
+            <button class="page-num" data-page="3" data-grid-id="promotion-grid">3</button>
+                
+            <button class="page-btn" data-direction="next" data-grid-id="promotion-grid">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="progress-bar-row">
+            <hr class="progress-bar-segment-1">
+            <hr class="progress-bar-segment-2">
+            <hr class="progress-bar-segment-3">
+        </div>
  
     </main>
 
@@ -872,6 +2021,7 @@
       <a href="/cookies.html">Mentions légales</a>
     </div>
   </div>
+  <script src="/assets/js/carousel_infini.js" defer></script> 
 </footer>
 </body>
 </html>
