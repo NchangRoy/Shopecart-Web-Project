@@ -177,61 +177,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtns = document.querySelectorAll('.add-to-cart-btn, .btn-add');
-    
-    addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 150);
-            
-            let productInfo;
-            
-            if (this.classList.contains('btn-add')) {
-                productInfo = {
-                    title: document.querySelector('.product-title')?.textContent || '',
-                    price: document.querySelector('.main-price')?.textContent || '',
-                    quantity: parseInt(document.querySelector('.quantity-display')?.textContent) || 1,
-                    color: document.querySelector('#selected-color')?.textContent || '',
-                    image: document.querySelector('#main-image')?.src || ''
-                };
-            } else {
-                const card = this.closest('.product-card');
-                productInfo = {
-                    title: card.querySelector('.product-title-card')?.textContent || '',
-                    price: card.querySelector('.product-price')?.textContent || '',
-                    quantity: 1,
-                    image: card.querySelector('.product-image')?.src || ''
-                };
-            }
-            
-            console.log('Produit ajouté au panier:', productInfo);
-            
-            showNotification('Produit ajouté au panier !', 'success');
-            
-            updateCartCount();
-        });
-    });
-    
-    const buyNowBtn = document.querySelector('.btn-buy');
-    if (buyNowBtn) {
-        buyNowBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            showNotification('Redirection vers le paiement...', 'info');
-            
-            setTimeout(() => {
-                console.log('Redirection vers le panier');
-            }, 1000);
-        });
-    }
-});
 
+    
 function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
     notification.style.cssText = `

@@ -235,53 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// === PANIER & NOTIFICATIONS ===
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.add-to-cart-btn, .btn-add').forEach(btn => {
-        btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            let productInfo = {};
-            
-            if (this.classList.contains('btn-add')) {
-                // Bouton "Ajouter au panier" sur la page détail
-                productInfo = {
-                    title: document.querySelector('.product-title')?.textContent || '',
-                    price: document.querySelector('.main-price')?.textContent || '',
-                    quantity: parseInt(document.querySelector('.quantity-display')?.textContent) || 1,
-                    format: document.querySelector('#selected-color')?.textContent || '',
-                    image: document.querySelector('#main-image')?.src || ''
-                };
-            } else {
-                // Bouton panier sur les cartes produits
-                const card = this.closest('.product-card');
-                if (!card) return;
-                
-                productInfo = {
-                    title: card.querySelector('.product-title-card')?.textContent || '',
-                    price: card.querySelector('.product-price')?.textContent || '',
-                    quantity: 1,
-                    image: card.querySelector('.product-image')?.src || ''
-                };
-            }
-
-            // Sauvegarder dans le panier (localStorage)
-            let cart = [];
-            try {
-                cart = JSON.parse(localStorage.getItem('cart') || '[]');
-            } catch (e) {
-                cart = [];
-            }
-            
-            cart.push(productInfo);
-            localStorage.setItem('cart', JSON.stringify(cart));
-
-            showNotification('✓ Produit ajouté au panier !', 'success');
-            updateCartCount();
-        });
-    });
-});
 
 function showNotification(message, type = 'success') {
     const notif = document.createElement('div');

@@ -216,69 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//Ajouter au panier
-document.addEventListener('DOMContentLoaded', function() {
-    // Bouton "Ajouter au panier" sur les cartes produits
-    setTimeout(() => {
-        const addToCartBtns = document.querySelectorAll('.btn-outline');
 
-        addToCartBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 150);
-
-                const card = this.closest('.product-card');
-                const productInfo = {
-                    title: card.querySelector('.product-title')?.textContent || '',
-                    price: card.querySelector('.product-price')?.textContent || '',
-                    quantity: 1,
-                    image: card.querySelector('.product-image')?.src || ''
-                };
-
-                console.log('Produit ajouté au panier:', productInfo);
-                showNotification('Produit ajouté au panier !', 'success');
-                updateCartCount();
-            });
-        });
-    }, 500);
-
-    // Bouton "Acheter maintenant" sur la page de détails
-    const buyNowBtn = document.querySelector('.btn-buy-it-now');
-    if (buyNowBtn) {
-        buyNowBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            showNotification('Redirection vers le paiement...', 'info');
-            setTimeout(() => {
-                console.log('Redirection vers le panier');
-                // window.location.href = '/panier.html';
-            }, 1000);
-        });
-    }
-
-    // Bouton "Ajouter au panier" sur la page de détails
-    const addToCartBtn = document.querySelector('.btn-add-to-cart');
-    if (addToCartBtn) {
-        addToCartBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const productInfo = {
-                title: document.querySelector('.product.name')?.textContent || '',
-                price: document.querySelector('.price')?.textContent || '',
-                quantity: parseInt(document.querySelector('.qty-input')?.value) || 1,
-                image: document.querySelector('.main-image')?.src || ''
-            };
-
-            console.log('Produit ajouté au panier:', productInfo);
-            showNotification('Produit ajouté au panier !', 'success');
-            updateCartCount();
-        });
-    }
-});
 
 //Notification pour marquer l'ajout
 function showNotification(message, type = 'success') {
@@ -338,17 +276,4 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
-//Compteur du panier
-function updateCartCount() {
-    const cartCount = document.querySelector('.cart-count');
-    if (cartCount) {
-        let currentCount = parseInt(cartCount.textContent) || 0;
-        currentCount++;
-        cartCount.textContent = currentCount;
 
-        cartCount.style.transform = 'scale(1.3)';
-        setTimeout(() => {
-            cartCount.style.transform = 'scale(1)';
-        }, 200);
-    }
-}
