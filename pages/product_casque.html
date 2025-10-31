@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/assets/css/products_casque.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
-    <script src="/assets/js/product_filtres_casques.js" defer></script> 
-    <script src="/assets/js/product_pagination_casques.js" defer></script> 
-    <script src="/assets/js/product_navigation_casques.js" defer></script> 
-    <script src="/assets/js/carousel_infini.js" defer></script> 
-    <script defer src="/assets/js/newsletter.js"></script>
+    <script src="/assets/js/product_filtres_casques.js" ></script> 
+    <script src="/assets/js/product_pagination_casques.js" ></script> 
+    <script src="/assets/js/product_navigation_casques.js" ></script> 
+    <script src="/assets/js/carousel_infini.js"></script> 
+    <script src="/assets/js/newsletter.js"></script>
 </head>
 
 <body   >
@@ -75,6 +75,7 @@
         <a href="#" class="overlay" id="overlay"></a>
     </header>
     <!--Hero Banner-->
+
     <section class="hero-banner">
         <!--Radio buttons pour controler les slides-->
         <input type="radio" name="slide" id="slide4clone">
@@ -107,7 +108,8 @@
                         <button class="btn-primary">Buy Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/23.jpeg">
+                        <img src="/assets/images/22.jpeg"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
@@ -119,7 +121,7 @@
                         <button class="btn-primary">Shop Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/23.jpeg"
+                        <img src="/assets/images/22.jpeg"
                             alt="">
                     </div>
                     <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
@@ -158,7 +160,7 @@
                         <button class="btn-primary">Buy Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/24.jpeg"
+                        <img src="/assets/images/22.jpeg"
                             alt="">
                     </div>
                     <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
@@ -172,6 +174,7 @@
             <label for="slide4" class="dot"></label>
         </div>
     </section>
+    
 
     <main class="main-content-container">
 
@@ -179,10 +182,10 @@
                 <div class="filter-button primary-filter">
                     <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
                 </div>
-                <input type="radio" name="filters" id="none" class="filter-checkbox" checked hidden>
+                <input type="radio" name="filters" id="none"  checked hidden>
 
                 <div class="filter-dropdown" tabindex="0">
-                    <input type="radio" name="filters" id="prix-toggle" class="filter-checkbox">
+                    <input type="radio" name="filters" id="prix-toggle" checked hidden>
                     <label for="prix-toggle" class="tag-button">
                         Prix <span class="dropdown-arrow">▼</span>
                     </label>
@@ -194,7 +197,7 @@
                     </div>
                 </div>
                 <div class="filter-dropdown" tabindex="0">
-                    <input type="radio" name="filters" id="marques-casques-toggle" class="filter-checkbox">
+                    <input type="radio" name="filters" id="marques-casques-toggle" checked hidden>
                     <label for="marques-toggle" class="tag-button">
                         Marques <span class="dropdown-arrow">▼</span>
                     </label>
@@ -211,7 +214,7 @@
                 </div>
 
                 <div class="filter-dropdown" tabindex="0">
-                    <input type="radio" name="filters" id="notes-toggle" class="filter-checkbox">
+                    <input type="radio" name="filters" id="notes-toggle" checked hidden>
                     <label for="notes-toggle" class="tag-button">
                         Notes <span class="dropdown-arrow">▼</span>
                     </label>
