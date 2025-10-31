@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <script src="/assets/js/product_filtres_casques.js" defer></script> 
+    <script src="/assets/js/product_pagination_casques.js" defer></script> 
     <script src="/assets/js/product_navigation_casques.js" defer></script> 
-    <script src="/assets/js/carrousel_infini.js" defer></script> 
-  <script src="/assets/js/header.js"></script>
-  <script defer src="assets/js/newsletter.js"></script>
-
+    <script src="/assets/js/infi.js" defer></script> 
 </head>
 
 <body class="body-bg"  >
@@ -74,64 +72,84 @@
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
-    
-
-    
-
-  
-
-    
+    <!--Hero Banner-->
     <section class="hero-banner">
+        <!--Radio buttons pour contrôler les slides-->
+        <input type="radio" name="slide" id="slide4clone">
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
         <input type="radio" name="slide" id="slide3">
         <input type="radio" name="slide" id="slide4">
+
         <div class="carousel-container">
             <div class="slides">
+                <!--Slide 4 Clone-->
                 <div class="slide">
-                    <div class="banner-content">
-                        <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
-                        <button class="btn-primary">Buy Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="/assets/images/pexels-pavel-danilyuk-7776154-removebg-preview.png" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
-                </div>
-                <div class="slide">
-                    <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>New Collection Of<br>Smart Phones<br>Available Now</h1>
-                        <button class="btn-primary">Shop Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="/assets/images/m2-removebg-preview.png" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
-                </div>
-                <div class="slide">
-                    <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
-                    <div class="banner-content">
-                        <h1>Latest Google Pixels<br>Up To 30% Off<br>Limited Time</h1>
-                        <button class="btn-primary">Get Now</button>
-                    </div>
-                    <div class="banner-image">
-                        <img src="/assets/images/m3-removebg-preview.png" alt="">
-                    </div>
-                    <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
-                </div>
-                <div class="slide">
-                    <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                    <label class="left-arrow" for="slide3"><strong>&#60;</strong></label>
                     <div class="banner-content">
                         <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
                         <button class="btn-primary">Maybe Yes</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/m4-removebg-preview.png" alt="">
+                        <img src="/assets/images/28.jpeg" alt="">
                     </div>
+                    <label class="right-arrow" for="slide1"><strong>&#62;</strong></label>
+                </div>
+
+                <!--Slide 1-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide4clone"><strong>&#60;</strong></label>
+                    <div class="banner-content">
+                        <h1>Get Up to 50% Off<br>On Cameras<br>And Other Gadgets</h1>
+                        <button class="btn-primary">Buy Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/25.jpeg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide2"><strong>&#62;</strong></label>
+                </div>
+
+                <!--Slide 2-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide1"><strong>&#60;</strong></label>
+                    <div class="banner-content">
+                        <h1>New Collection Of<br>Digital Cameras<br>Available Now</h1>
+                        <button class="btn-primary">Shop Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/26.jpeg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide3"><strong>&#62;</strong></label>
+                </div>
+
+                <!--Slide 3-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide2"><strong>&#60;</strong></label>
+                    <div class="banner-content">
+                        <h1>Latest Sony Alpha<br>Up To 30% Off<br>Limited Time</h1>
+                        <button class="btn-primary">Get Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/27.jpeg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide4"><strong>&#62;</strong></label>
+                </div>
+
+                <!--Slide 4-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide3"><strong>&#60;</strong></label>
+                    <div class="banner-content">
+                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                        <button class="btn-primary">Maybe Yes</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/28.jpeg" alt="">
+                    </div>
+                    <label class="right-arrow" for="slide1"><strong>&#62;</strong></label>
                 </div>
             </div>
         </div>
+
         <div class="banner-dots">
             <label for="slide1" class="dot"></label>
             <label for="slide2" class="dot"></label>
@@ -139,6 +157,7 @@
             <label for="slide4" class="dot"></label>
         </div>
     </section>
+
     <main class="main-content-container">
 
             <div class="tag-buttons-group">
@@ -194,7 +213,7 @@
  
       
         <section class="products-section">
-            <h2 class="section-title">
+            <h2 class="section-title" id="title-for-you">
                 <span class="gradient-blue-purple">Produits pour vous</span>
             </h2>
             <p class="section-subtitle">Sélection basée sur vos préférences</p>
@@ -202,7 +221,7 @@
               
                 <a href="product_casqueDetail.html?id=1" class="product-card" data-id="1" data-brand="sennheiser" data-price-raw="150000" data-rating-raw="4.4">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M1.png" alt="Momentum Sport Orange" class="product-image">
+                        <img src="/assets/images/C1.jpeg" alt="Momentum Sport Orange" class="product-image">
                         <div class="product-tag tag-premium">PREMIUM</div>
                     </div>
                     <div class="product-info">
@@ -220,7 +239,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=2" class="product-card" data-id="2" data-brand="beats by dre" data-price-raw="220000" data-rating-raw="4.5">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M10.png" alt="Studio 3 Wireless" class="product-image">
+                        <img src="/assets/images/C6.jpeg" alt="Studio 3 Wireless" class="product-image">
                         <div class="product-tag tag-promo">-25%</div>
                     </div>
                     <div class="product-info">
@@ -238,7 +257,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=3" class="product-card" data-id="3" data-brand="bose" data-price-raw="299000" data-rating-raw="4.8">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M2.png" alt="QuietComfort 45" class="product-image">
+                        <img src="/assets/images/C" alt="QuietComfort 45" class="product-image">
                         <div class="product-tag tag-best-seller">TOP VENTE</div>
                     </div>
                     <div class="product-info">
@@ -274,7 +293,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=5" class="product-card" data-id="5" data-brand="jbl" data-price-raw="129000" data-rating-raw="4.2">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M3.png" alt="Live 660NC" class="product-image">
+                        <img src="/assets/images/C13.jpeg" alt="Live 660NC" class="product-image">
                         
                     </div>
                     <div class="product-info">
@@ -310,7 +329,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=7" class="product-card" data-id="7" data-brand="anker" data-price-raw="89000" data-rating-raw="4.3">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Soundcore Life Q35" class="product-image">
+                        <img src="/assets/images/C7.jpeg" alt="Soundcore Life Q35" class="product-image">
                         <div class="product-tag tag-promo">-15%</div>
                     </div>
                     <div class="product-info">
@@ -328,7 +347,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=8" class="product-card" data-id="8" data-brand="skullcandy" data-price-raw="159000" data-rating-raw="4.0">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M6.png" alt="Crusher Evo" class="product-image">
+                        <img src="/assets/images/C5.jpeg" alt="Crusher Evo" class="product-image">
                         
                     </div>
                     <div class="product-info">
@@ -346,7 +365,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=9" class="product-card" data-id="9" data-brand="jabra" data-price-raw="249000" data-rating-raw="4.7">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M7.png" alt="Elite 85h Titanium Black" class="product-image">
+                        <img src="/assets/images/C4.jpeg" alt="Elite 85h Titanium Black" class="product-image">
                         
                     </div>
                     <div class="product-info">
@@ -364,7 +383,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=10" class="product-card" data-id="10" data-brand="akg" data-price-raw="139000" data-rating-raw="4.8">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M8.png" alt="K371 Studio" class="product-image">
+                        <img src="/assets/images/C3.png" alt="K371 Studio" class="product-image">
                         
                     </div>
                     <div class="product-info">
@@ -383,18 +402,16 @@
                 </div>
         </section>
         
-        <div class="pagination">
-            <button class="page-btn" disabled>
+        <div class="pagination" id="pagination-for-you">
+            <button class="page-btn" data-direction="prev" data-grid-id="products-for-you-grid" disabled>
                     <i class="fas fa-chevron-left"></i> Précédent
             </button>
                 
-            <button class="page-num-active">1</button>
-            <button class="page-num">2</button>
-            <button class="page-num">3</button>
-            <span>...</span>
-            <button class="page-num">8</button>
-                
-            <button class="page-btn">
+            <button class="page-num-active" data-page="1" data-grid-id="products-for-you-grid">1</button>
+            <button class="page-num" data-page="2" data-grid-id="products-for-you-grid">2</button>
+            <button class="page-num" data-page="3" data-grid-id="products-for-you-grid">3</button>
+           
+            <button class="page-btn" data-direction="next" data-grid-id="products-for-you-grid">
                 Suivant <i class="fas fa-chevron-right"></i>
             </button>
         </div>
@@ -405,7 +422,7 @@
         </div>
         
         <section class="products-section">
-            <h2 class="section-title">
+            <h2 class="section-title" id="title-best-sellers">
                 <span class="gradient-blue-purple">Best Sellers</span>
             </h2>
             <p class="section-subtitle">Nos meilleures ventes</p>
@@ -448,7 +465,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=9" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M7.png" alt="Elite 85h Titanium Black" class="product-image">
+                        <img src="/assets/images/C4.jpeg" alt="Elite 85h Titanium Black" class="product-image">
                         
                     </div>
                     <div class="product-info">
@@ -466,7 +483,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=10" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M8.png" alt="K371 Studio" class="product-image">
+                        <img src="/assets/images/C3.png" alt="K371 Studio" class="product-image">
                         
                     </div>
                     <div class="product-info">
@@ -520,7 +537,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=15" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="ATH-M50x Studio" class="product-image">
+                        <img src="/assets/images/C7.jpeg" alt="ATH-M50x Studio" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
                     </div>
                     <div class="product-info">
@@ -538,7 +555,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=16" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M7.png" alt="ATH-M50x Studio" class="product-image">
+                        <img src="/assets/images/C4.jpeg" alt="ATH-M50x Studio" class="product-image">
                         <div class="product-tag tag-new tag-right">NOUVEAU</div>
                     </div>
                     <div class="product-info">
@@ -593,6 +610,20 @@
                 </div>
         </section>
         
+        <div class="pagination" id="pagination-for-you">
+            <button class="page-btn" disabled data-direction="prev" data-grid-id="products-for-you-grid">
+                    <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+                
+            <button class="page-num-active" data-page="1" data-grid-id="products-for-you-grid">1</button>
+            <button class="page-num" data-page="2" data-grid-id="products-for-you-grid">2</button>
+            <button class="page-num" data-page="3" data-grid-id="products-for-you-grid">3</button>
+                
+            <button class="page-btn" data-direction="next" data-grid-id="products-for-you-grid">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
         <div class="progress-bar-row">
             <hr class="progress-bar-segment-1">
             <hr class="progress-bar-segment-2">
@@ -600,14 +631,14 @@
         </div>
 
         <section class="products-section">
-            <h2 class="section-title">
+            <h2 class="section-title" id="title-promotion">
                 <span class="gradient-blue-purple">Produits en promotion</span>
             </h2>
             <p class="section-subtitle">Offres spéciales et remises</p>
             <div class="products-grid" id="promotion-grid">
                <a href="product_casqueDetail.html?id=1" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M1.png" alt="Momentum Sport Orange" class="product-image">
+                        <img src="/assets/images/C1.jpeg" alt="Momentum Sport Orange" class="product-image">
                         <div class="product-tag tag-premium">PREMIUM</div>
                     </div>
                     <div class="product-info">
@@ -625,7 +656,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=2" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M10.png" alt="Studio 3 Wireless" class="product-image">
+                        <img src="/assets/images/C6.jpeg" alt="Studio 3 Wireless" class="product-image">
                         <div class="product-tag tag-promo">-25%</div>
                     </div>
                     <div class="product-info">
@@ -643,7 +674,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=7" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Soundcore Life Q35" class="product-image">
+                        <img src="/assets/images/C7.jpeg" alt="Soundcore Life Q35" class="product-image">
                         <div class="product-tag tag-promo">-15%</div>
                     </div>
                     <div class="product-info">
@@ -661,7 +692,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=1" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M1.png" alt="Momentum Sport Orange" class="product-image">
+                        <img src="/assets/images/C1.jpeg" alt="Momentum Sport Orange" class="product-image">
                         <div class="product-tag tag-premium">PREMIUM</div>
                     </div>
                     <div class="product-info">
@@ -679,7 +710,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=2" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M10.png" alt="Studio 3 Wireless" class="product-image">
+                        <img src="/assets/images/C6.jpeg" alt="Studio 3 Wireless" class="product-image">
                         <div class="product-tag tag-promo">-25%</div>
                     </div>
                     <div class="product-info">
@@ -697,7 +728,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=7" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Soundcore Life Q35" class="product-image">
+                        <img src="/assets/images/C7.jpeg" alt="Soundcore Life Q35" class="product-image">
                         <div class="product-tag tag-promo">-15%</div>
                     </div>
                     <div class="product-info">
@@ -715,7 +746,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=1" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M1.png" alt="Momentum Sport Orange" class="product-image">
+                        <img src="/assets/images/C1.jpeg" alt="Momentum Sport Orange" class="product-image">
                         <div class="product-tag tag-premium">PREMIUM</div>
                     </div>
                     <div class="product-info">
@@ -733,7 +764,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=2" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M10.png" alt="Studio 3 Wireless" class="product-image">
+                        <img src="/assets/images/C6.jpeg" alt="Studio 3 Wireless" class="product-image">
                         <div class="product-tag tag-promo">-25%</div>
                     </div>
                     <div class="product-info">
@@ -751,7 +782,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=7" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M5.png" alt="Soundcore Life Q35" class="product-image">
+                        <img src="/assets/images/C7.jpeg" alt="Soundcore Life Q35" class="product-image">
                         <div class="product-tag tag-promo">-15%</div>
                     </div>
                     <div class="product-info">
@@ -769,7 +800,7 @@
                 </a>
                 <a href="product_casqueDetail.html?id=1" class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="/assets/images/M1.png" alt="Momentum Sport Orange" class="product-image">
+                        <img src="/assets/images/C1.jpeg" alt="Momentum Sport Orange" class="product-image">
                         <div class="product-tag tag-premium">PREMIUM</div>
                     </div>
                     <div class="product-info">
@@ -787,6 +818,25 @@
                 </a>
                 </div>
         </section>
+
+        <div class="pagination" id="pagination-for-you">
+            <button class="page-btn" disabled data-direction="prev" data-grid-id="products-for-you-grid">
+                    <i class="fas fa-chevron-left"></i> Précédent
+            </button>
+                
+            <button class="page-num-active" data-page="1" data-grid-id="products-for-you-grid">1</button>
+            <button class="page-num" data-page="2" data-grid-id="products-for-you-grid">2</button>
+            <button class="page-num" data-page="3" data-grid-id="products-for-you-grid">3</button>
+                
+            <button class="page-btn" data-direction="next" data-grid-id="products-for-you-grid">
+                Suivant <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="progress-bar-row">
+            <hr class="progress-bar-segment-1">
+            <hr class="progress-bar-segment-2">
+            <hr class="progress-bar-segment-3">
+        </div>
  
     </main>
 
