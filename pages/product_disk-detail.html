@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seagate Barracuda 1TB - Détails | Shopcart</title>
+    <title id="page-title">Détail Produit | Shopcart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/products_disk.css">
     <link rel="stylesheet" href="../assets/css/header.css">
@@ -18,808 +18,239 @@
  <!-- Header -->
   <header>
     <!-- Checkbox cachée pour contrôler le menu mobile -->
+
+<!-- Header -->
+<header>
     <nav class="navbar">
-      <div class="logo">
-        <div class="logo-img">
-          <a href="/index.html">
-            <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
-          </a>
+        <div class="logo">
+            <div class="logo-img">
+                <a href="/index.html">
+                    <img src="../assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+                </a>
+            </div>
+            <span class="logo-text">Shopcart</span>
         </div>
-        <span class="logo-text">Shopcart</span>
-      </div>
-      <!-- Hamburger icon comme label pour la checkbox -->
-      <label for="menu-toggle" class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
 
-      <ul class="nav-links" id="navLinks">
-        <li class="categories-dropdown">
-          <!-- Checkbox pour le sous-menu des catégories -->
-          <label for="categories-toggle">
-            Catégories <span class="dropdown-arrow">▼</span>
-          </label>
-          <div class="dropdown-content">
-            <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
-            <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
-            <a href="/pages/product_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
-            <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
-            <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
-            <a href="/pages/products_disk.html"><i class="fas fa-keyboard"></i> Périphériques</a>
-            <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
-            <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
-            <a href="/pages/products_manettes.html"><i class="fas fa-gamepad"></i> Gaming</a>
-            <a href="/pages/products_cam.html"><i class="fas fa-tv"></i> Caméras</a>
-          </div>
-        </li>
-        <li><a href="#">Promotions</a></li>
-        <li><a href="/about.html">À propos</a></li>
-        <li><a href="/Blog.html">Blog</a></li>
-      </ul>
+        <label for="menu-toggle" class="hamburger">
+            <span></span><span></span><span></span>
+        </label>
 
-      <div class="search-bar"  id="searchBar">
-        <input type="text" placeholder="Rechercher un produit..." class="search-input">
-      </div>
+        <input type="checkbox" id="menu-toggle" hidden>
 
-      <div class="user-actions"  id="userActions">
-        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
-        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count">3</span></a>
-      </div>
-    </nav>
-
-    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
-    <a href="#" class="overlay" id="overlay"></a>
-  </header>
-    <main class="main-content-container">
-        <div class="product-detail-container">
-            <div class="product-detail-flex">
-                <div class="product-detail-left">
-                    <div class="image-gallery-box">
-                        <div class="main-product-image">
-                            <img id="main-image" src="../assets/images/img_disk1.png" alt="Seagate Barracuda 1TB">
-                        </div>
-                        <div class="thumbnail-row">
-                            <div class="thumbnail active">
-                                <img src="../assets/images/img_disk1.png" alt="Vue 1" data-image="/assets/images/img_disk1.png">
-                            </div>
-                            <div class="thumbnail">
-                                <img src="../assets/images/img_disk2.png" alt="Vue 2" data-image="/assets/images/img_disk2.png">
-                            </div>
-                            <div class="thumbnail">
-                                <img src="../assets/images/img_disk3.png" alt="Vue 3" data-image="/assets/images/img_disk3.png">
-                            </div>
-                            <div class="thumbnail">
-                                <img src="../assets/images/img_disk4.png" alt="Vue 4" data-image="/assets/images/img_disk4.png">
-                            </div>
-                        </div>
-                    </div>
+        <ul class="nav-links">
+            <li class="categories-dropdown">
+                <label for="categories-toggle">Catégories <span class="dropdown-arrow">▼</span></label>
+                <input type="checkbox" id="categories-toggle" hidden>
+                <div class="dropdown-content">
+                    <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+                    <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+                    <a href="/pages/product_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+                    <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+                    <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+                    <a href="/pages/products_disk.html"><i class="fas fa-keyboard"></i> Périphériques</a>
+                    <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+                    <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+                    <a href="/pages/products_manettes.html"><i class="fas fa-gamepad"></i> Gaming</a>
+                    <a href="/pages/products_cam.html"><i class="fas fa-tv"></i> Caméras</a>
                 </div>
-
-                <div class="product-detail-right">
-                    <div class="product-info-box">
-                        <div class="new-tag-wrapper">
-                            <span class="new-tag">Premium</span>
-                        </div>
-                        <h1 class="product-title">Seagate Barracuda 1TB</h1>
-                        <p class="product-subtitle">HDD 7200 RPM | 3.5" | 64 Mo Cache - Stockage fiable et performant</p>
-                        
-                        <div class="rating-info">
-                            <div class="stars-list">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="rating-text">4.7 (738 avis)</span>
-                        </div>
-
-                        <div class="price-info">
-                            <span class="main-price">30.000 FCFA</span>
-                            <span class="tax-info">TTC</span>
-                        </div>
-
-                        <div class="color-selection-area">
-                            <h3 class="color-selection-title">Choisissez un format</h3>
-                            <div class="color-options-row">
-                                <div class="color-option active" style="background-color: #C0C0C0;" data-color="Interne 3.5&quot;"></div>
-                                <div class="color-option" style="background-color: #2C3E50;" data-color="Externe"></div>
-                                <div class="color-option" style="background-color: #E8E8E8;" data-color="2.5&quot;"></div>
-                                <div class="color-option" style="background-color: #7D8F9B;" data-color="M.2"></div>
-                            </div>
-                            <span class="selected-color-text">Format sélectionné: <span id="selected-color">Interne 3.5&quot;</span></span>
-                        </div>
-
-                        <div class="quantity-cart-area">
-                            <div class="quantity-control">
-                                <span class="quantity-label">Quantité:</span>
-                                <div class="quantity-buttons-wrapper">
-                                    <button class="quantity-btn">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <span class="quantity-display">1</span>
-                                    <button class="quantity-btn">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="action-buttons-row">
-                            <button class="btn-buy">
-                                <i class="fas fa-bolt icon-margin"></i>
-                                Acheter maintenant
-                            </button>
-                            <button class="btn-add">
-                                <i class="fas fa-shopping-cart icon-margin"></i>
-                                Ajouter au panier
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <section class="products-section">
-            <h2 class="section-title">
-                <span class="gradient-blue-purple">Vous pourrez aussi aimer</span>
-            </h2>
-            <p class="section-subtitle">Les meilleurs choix de nos clients</p>
-            <div class="products-grid">
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk5.png" alt="WD Blue 2TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Western Digital</p>
-                        <h3 class="product-title-card">Blue 2TB HDD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">45.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk6.png" alt="Samsung 870 EVO 500GB" class="product-image">
-                        <div class="product-tag tag-new tag-right">NOUVEAU</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Samsung</p>
-                        <h3 class="product-title-card">870 EVO 500GB SSD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">50.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk7.png" alt="Toshiba Canvio 4TB" class="product-image">
-                        <div class="product-tag tag-promo tag-right">PROMO</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Toshiba</p>
-                        <h3 class="product-title-card">Canvio 4TB Externe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(5.0)</span>
-                        </div>
-                        <div class="product-actions-promo">
-                            <span class="product-price">80.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk8.png" alt="Kingston A400 960GB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Kingston</p>
-                        <h3 class="product-title-card">A400 960GB SSD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">60.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk9.png" alt="Crucial MX500 1TB" class="product-image">
-                        <div class="product-tag tag-top tag-right">TOP</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Crucial</p>
-                        <h3 class="product-title-card">MX500 1TB SSD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">70.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk10.png" alt="Seagate IronWolf 8TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Seagate</p>
-                        <h3 class="product-title-card">IronWolf 8TB NAS</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.6)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">150.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk11.png" alt="WD Red 6TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Western Digital</p>
-                        <h3 class="product-title-card">Red 6TB NAS</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.2)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">120.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk12.png" alt="Samsung 980 PRO 2TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Samsung</p>
-                        <h3 class="product-title-card">980 PRO 2TB NVMe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">180.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk13.png" alt="Toshiba X300 10TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Toshiba</p>
-                        <h3 class="product-title-card">X300 10TB HDD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">200.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk14.png" alt="Kingston KC3000 512GB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Kingston</p>
-                        <h3 class="product-title-card">KC3000 512GB NVMe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.7)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">40.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk15.png" alt="Crucial P5 1TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Crucial</p>
-                        <h3 class="product-title-card">P5 1TB NVMe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">90.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk16.png" alt="Seagate Expansion 2TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Seagate</p>
-                        <h3 class="product-title-card">Expansion 2TB Externe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(5.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">55.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk1.png" alt="WD My Passport 5TB" class="product-image">
-                        <div class="product-tag tag-premium">PREMIUM</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Western Digital</p>
-                        <h3 class="product-title-card">My Passport 5TB Externe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(3.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">100.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <div class="pagination">
-            <button class="page-btn" disabled>
-                <i class="fas fa-chevron-left"></i> Précédent
-            </button>
-            <button class="page-num-active">1</button>
-            <button class="page-num">2</button>
-            <button class="page-num">3</button>
-            <span>...</span>
-            <button class="page-num">8</button>
-            <button class="page-btn">
-                Suivant <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-
-        <section class="products-section">
-            <h2 class="section-title">
-                <span class="gradient-blue-purple">Des équipements qui vous ressemblent</span>
-            </h2>
-            <p class="section-subtitle">Les meilleurs choix de nos clients</p>
-            <div class="products-grid">
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk2.png" alt="Samsung T7 1TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Samsung</p>
-                        <h3 class="product-title-card">T7 1TB Portable SSD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.7)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">110.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk3.png" alt="Toshiba N300 14TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Toshiba</p>
-                        <h3 class="product-title-card">N300 14TB NAS</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(5.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">250.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk4.png" alt="Seagate Barracuda 1TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Seagate</p>
-                        <h3 class="product-title-card">Barracuda 1TB HDD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">30.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk5.png" alt="WD Blue 2TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Western Digital</p>
-                        <h3 class="product-title-card">Blue 2TB HDD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">45.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk6.png" alt="Samsung 870 EVO 500GB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Samsung</p>
-                        <h3 class="product-title-card">870 EVO 500GB SSD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">50.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk7.png" alt="Toshiba Canvio 4TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Toshiba</p>
-                        <h3 class="product-title-card">Canvio 4TB Externe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.0)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">80.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk8.png" alt="Kingston A400 960GB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Kingston</p>
-                        <h3 class="product-title-card">A400 960GB SSD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <span class="rating-text">(4.9)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">60.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk9.png" alt="Crucial MX500 1TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Crucial</p>
-                        <h3 class="product-title-card">MX500 1TB SSD</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.6)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">70.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk10.png" alt="Seagate IronWolf 8TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Seagate</p>
-                        <h3 class="product-title-card">IronWolf 8TB NAS</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-                            <span class="rating-text">(4.2)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">150.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk11.png" alt="WD Red 6TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Western Digital</p>
-                        <h3 class="product-title-card">Red 6TB NAS</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.7)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">120.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="product_disk-detail.html" class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="../assets/images/img_disk12.png" alt="Samsung 980 PRO 2TB" class="product-image">
-                        <div class="product-tag tag-trending tag-right">TENDANCE</div>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-brand">Samsung</p>
-                        <h3 class="product-title-card">980 PRO 2TB NVMe</h3>
-                        <div class="rating-info">
-                            <div class="stars-list"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <span class="rating-text">(4.5)</span>
-                        </div>
-                        <div class="product-actions">
-                            <span class="product-price">180.000 FCFA</span>
-                            <button class="add-to-cart-btn">
-                                <i class="fas fa-shopping-cart"></i>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <div class="pagination">
-            <button class="page-btn" disabled>
-                <i class="fas fa-chevron-left"></i> Précédent
-            </button>
-            <button class="page-num-active">1</button>
-            <button class="page-num">2</button>
-            <button class="page-num">3</button>
-            <span>...</span>
-            <button class="page-num">8</button>
-            <button class="page-btn">
-                Suivant <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </main>
-  <!-- Footer -->
-<footer>
-  <!-- Section des avantages -->
-  <div class="footer-top">
-    <div class="benefits">
-      <div class="benefit">
-        <i class="fas fa-truck"></i>
-        <p>Livraison à domicile</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-lock"></i>
-        <p>Paiement sécurisé</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-undo"></i>
-        <p>Retours faciles</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-headset"></i>
-        <p>Support client 24/7</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Grille principale -->
-  <div class="footer-container">
-  
-    <!-- Section Navigation Rapide -->
-    <div class="footer-section">
-      <h3>Navigation Rapide</h3>
-      <ul>
-        <li><a href=""">Deals</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/Blog.html">Blog</a></li>
-        <li><a href="#">Promotions</a></li>
-      </ul>
-    </div>
-
-    <!-- Section À propos -->
-    <div class="footer-section about-section">
-      <h3>À propos de Shopcart</h3>
-      <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service client exceptionnel.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-
-    <!-- Section Boutique -->
-    <div class="footer-section">
-      <h3>Boutique</h3>
-      <div class="shop-categories">
-        <ul>
-          <li><a href="/pages/products_tel.html">Smartphones</a></li>
-          <li><a href="/pages/products_ordi.html">Ordinateurs</a></li>
-          <li><a href="/pages/products_casque.html">Casques</a></li>
-          <li><a href="/pages/products_disk.html">Accessoires</a></li>
+            </li>
+            <li><a href="#">Promotions</a></li>
+            <li><a href="/about.html">À propos</a></li>
+            <li><a href="/Blog.html">Blog</a></li>
         </ul>
-      </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher un produit..." class="search-input">
+        </div>
+
+        <div class="user-actions">
+            <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+            <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span class="cart-count">3</span></a>
+        </div>
+    </nav>
+    <a href="#" class="overlay" id="overlay"></a>
+</header>
+
+<main class="main-content-container">
+
+    <!-- DÉTAIL PRODUIT -->
+    <div class="product-detail-container">
+        <div class="product-detail-flex">
+            <!-- Galerie d'images (DYNAMIQUE) -->
+            <div class="product-detail-left">
+                <div class="image-gallery-box">
+                    <div class="main-product-image">
+                        <img id="main-image" src="" alt="Produit principal">
+                    </div>
+                    <div class="thumbnail-row">
+                        <!-- Les miniatures seront générées par JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informations produit -->
+            <div class="product-detail-right">
+                <div class="product-info-box">
+                    <div class="new-tag-wrapper">
+                        <span class="new-tag">Premium</span>
+                    </div>
+                    <h1 class="product-title">Produit</h1>
+                    <p class="product-subtitle">Chargement...</p>
+                    
+                    <div class="rating-info">
+                        <div class="stars-list">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">(0 avis)</span>
+                    </div>
+
+                    <div class="price-info">
+                        <span class="main-price">0 FCFA</span>
+                        <span class="tax-info">TTC</span>
+                    </div>
+
+                    <div class="color-selection-area">
+                        <h3 class="color-selection-title">Choisissez un format</h3>
+                        <div class="color-options-row">
+                            <div class="color-option active" data-color="Interne 3.5&quot;" style="background-color: #C0C0C0;"></div>
+                            <div class="color-option" data-color="Externe" style="background-color: #2C3E50;"></div>
+                            <div class="color-option" data-color="2.5&quot;" style="background-color: #E8E8E8;"></div>
+                            <div class="color-option" data-color="M.2" style="background-color: #7D8F9B;"></div>
+                        </div>
+                        <span class="selected-color-text">Format sélectionné: <span id="selected-color">Interne 3.5"</span></span>
+                    </div>
+
+                    <div class="quantity-cart-area">
+                        <div class="quantity-control">
+                            <label class="quantity-label">Quantité</label>
+                            <div class="quantity-buttons-wrapper">
+                                <button class="quantity-btn"><i class="fas fa-minus"></i></button>
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons-row">
+                        <button class="btn-buy"><i class="fas fa-credit-card icon-margin"></i> Acheter maintenant</button>
+                        <button class="btn-add"><i class="fas fa-shopping-cart icon-margin"></i> Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Section Newsletter et Contact -->
-    <div class="footer-section">
-      <h3>Restez Informé</h3>
-      <div class="newsletter-section">
-        <p>Inscrivez-vous à notre newsletter</p>
-        <form id="newsletter-form" class="newsletter-form">
-          <div class="input-container">
-            <i class="far fa-envelope"></i>
-            <input type="email" id="newsletter-email" placeholder="Votre email" required>
-          </div>
-          <button type="submit">S'inscrire</button>
-        </form>
-      </div>
-      
-      <div class="contact-info" style="margin-top: 20px;">
-        <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
-        <p><i class="fas fa-phone"></i> +237 657450314</p>
-        <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
-        <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
-      </div>
-    </div>
-  </div>
+    <!-- PRODUITS SIMILAIRES (DYNAMIQUE) -->
+    <section class="products-section">
+        <h2 class="section-title">
+            <span class="gradient-blue-purple">Produits Similaires</span>
+        </h2>
+        <p class="section-subtitle">Découvrez d'autres options</p>
 
-  <!-- Séparateur -->
-  <div class="footer-divider"></div>
+        <!-- GRILLE PRINCIPALE -->
+        <div class="products-grid" id="similar-grid">
+            <!-- Produits injectés par JS -->
+        </div>
 
-  <!-- Footer bottom -->
-  <div class="footer-bottom">
-    <div class="payment-methods">
-      <p>Nous acceptons</p>
-      <div class="payment-icons">
-        <i class="fab fa-cc-visa"></i>
-        <i class="fab fa-cc-mastercard"></i>
-        <i class="fab fa-cc-paypal"></i>
-        <i class="fab fa-cc-apple-pay"></i>
-      </div>
+        <!-- PAGINATION -->
+        <div class="pagination" id="similar-pagin"></div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-top">
+        <div class="benefits">
+            <div class="benefit"><i class="fas fa-truck"></i><p>Livraison à domicile</p></div>
+            <div class="benefit"><i class="fas fa-lock"></i><p>Paiement sécurisé</p></div>
+            <div class="benefit"><i class="fas fa-undo"></i><p>Retours faciles</p></div>
+            <div class="benefit"><i class="fas fa-headset"></i><p>Support client 24/7</p></div>
+        </div>
     </div>
-    
-    <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
-    
-    <div class="footer-links">
-      <a href="/security.html">Confidentialité</a>
-      <a href="/conditions.html">Conditions d'utilisation</a>
-      <a href="/cookies.html">Mentions légales</a>
+
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Navigation Rapide</h3>
+            <ul>
+                <li><a href="#">Deals</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/Blog.html">Blog</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section about-section">
+            <h3>À propos de Shopcart</h3>
+            <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service client exceptionnel.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Boutique</h3>
+            <div class="shop-categories">
+                <ul>
+                    <li><a href="/pages/products_tel.html">Smartphones</a></li>
+                    <li><a href="/pages/products_ordi.html">Ordinateurs</a></li>
+                    <li><a href="/pages/products_casque.html">Casques</a></li>
+                    <li><a href="/pages/products_disk.html">Accessoires</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Restez Informé</h3>
+            <div class="newsletter-section">
+                <p>Inscrivez-vous à notre newsletter</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <div class="input-container">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" id="newsletter-email" placeholder="Votre email" required>
+                    </div>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+            <div class="contact-info" style="margin-top: 20px;">
+                <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+                <p><i class="fas fa-phone"></i> +237 657450314</p>
+                <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+                <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        <div class="payment-methods">
+            <p>Nous acceptons</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </div>
+        </div>
+        <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="/security.html">Confidentialité</a>
+            <a href="/conditions.html">Conditions d'utilisation</a>
+            <a href="/cookies.html">Mentions légales</a>
+        </div>
+    </div>
 </footer>
+
+<!-- Scripts -->
 <script src="../assets/js/product-disk-navigation.js"></script>
+<script src="../assets/js/pagination-detail-disk.js"></script>
 </body>
 </html>
