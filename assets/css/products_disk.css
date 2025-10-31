@@ -49,6 +49,7 @@
 
 .main-content-container {
     max-width: 1800px;
+    margin: 0 auto;
     padding-left: 5rem;
     padding-right: 5rem;
     padding-top: 2rem;
@@ -274,11 +275,24 @@
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 25px;
-    margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 0.5rem; /* Petit padding interne pour éviter collage */
+    box-sizing: border-box;
 }
-
+/* AJOUT : Media query pour très grands écrans pour limiter l'étalement */
+@media (min-width: 1800px) {
+    .products-grid {
+        grid-template-columns: repeat(5, 1fr); /* Limite à 5 colonnes pour éviter trop de largeur */
+    }
+    .main-content-container {
+        padding-left: 3rem; /* Réduction légère des paddings pour plus de marge centrale */
+        padding-right: 3rem;
+    }
+}
 @media (max-width: 1024px) {
     .products-grid {
         grid-template-columns: repeat(6, 1fr);
@@ -287,7 +301,7 @@
 
 @media (max-width: 768px) {
     .products-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -298,16 +312,18 @@
 }
 
 .product-card {
-   
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: transform 0.3s;
-    background-color: var(--color-gray-50);
-    display: block;
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200); /* BORDURE RESTAURÉE */
+    border-radius: 0.75rem;
+    overflow: hidden; /* Cache le débordement interne (image, etc.) */
+    transition: all 0.3s ease;
+    box-shadow: var(--color-shadow); /* Ombre légère */
+    height: 100%; /* Pour égaliser la hauteur dans la grille */
 }
 
 
@@ -330,12 +346,10 @@
 }
 
 .product-price {
-    font-size: 18px;
-    
-    color: #333;
-    margin-bottom: 8px;
-    flex-grow: 1; 
-    font-weight: 700;
+   font-weight: 700;
+    color: var(--color-gray-900);
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
 .old-price {
@@ -363,6 +377,7 @@
 .product-image-wrapper {
     width: 100%;
     height: 100px;
+    padding-top: 100%; /* Ratio 1:1 */
     overflow: hidden;
     position: relative;
     background: #f8f9fa;
@@ -376,20 +391,26 @@
 
 .product-brand {
     font-size: 0.75rem;
-    color: var(--color-gray-500);
+    color: var(--color-gray-600);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .product-title-card {
-    font-size: 1.125rem;
-    font-weight: 500;
+   font-size: 0.9375rem;
+    font-weight: 600;
     color: var(--color-gray-900);
-    margin-bottom: 0.5rem;
-    white-space: nowrap;
+    margin: 0.75rem 0 0.5rem;
+    line-height: 1.4;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
 }
 
 .rating-info {
@@ -413,23 +434,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
+    padding-top: 0.75rem;
 }
 
 .add-to-cart-btn {
     width: 2.5rem;
+    width: 2.5rem;
     height: 2.5rem;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-blue-600);
-    color: var(--color-white);
-    border: none;
+    background: var(--color-blue-600);
+    color: white;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.875rem;
-    margin-left: 0.5rem; /* Un petit espacement entre le prix et le bouton */
-    padding: 0.5rem;
+    transition: all 0.2s ease;
 }
 
 .add-to-cart-btn:hover {
@@ -441,7 +461,7 @@
    IMAGES PRODUITS - STYLE CONTENU
    ============================================ */
 
-.product-image-wrapper {
+/*.product-image-wrapper {
     overflow: hidden;
     width: 100%;
     height: 200px;
@@ -449,18 +469,19 @@
     margin-bottom: 15px;
     border: 2px solid #f5f5f5;
     position: relative;
-}
+}*/
 
 .product-image {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
     width: 100%;
-    height: 200px;
-    border-radius: 8px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain; /* ou cover si tu veux remplir */
     transition: transform 0.3s ease;
 }
 
 .product-card:hover .product-image {
-    transform: scale(1.2);
+     transform: scale(1.2);
     filter: grayscale(20%);
 }
 
@@ -469,14 +490,15 @@
     position: absolute;
     top: 0.75rem;
     left: 0.75rem;
-    padding: 0.375rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     font-size: 0.625rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 0.25rem;
-    color: var(--color-white);
+    border-radius: 0.375rem;
     z-index: 10;
+    white-space: nowrap;
+    max-width: 80%; /* Empêche débordement */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tag-best-seller {
