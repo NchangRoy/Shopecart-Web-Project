@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <title>Mon Panier - Shopcart</title>
+ 
+  <script src="/assets/js/header.js"></script>
 </head>
+
 <body>
  <!-- Header -->
   <header>
+    <!-- Checkbox cachée pour contrôler le menu mobile -->
     <nav class="navbar">
       <div class="logo">
         <div class="logo-img">
@@ -26,15 +30,16 @@
         </div>
         <span class="logo-text">Shopcart</span>
       </div>
-
-      <label for="menu-toggle" class="hamburger">
+      <!-- Hamburger icon comme label pour la checkbox -->
+      <label for="menu-toggle" class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li class="categories-dropdown">
+          <!-- Checkbox pour le sous-menu des catégories -->
           <label for="categories-toggle">
             Catégories <span class="dropdown-arrow">▼</span>
           </label>
@@ -56,21 +61,18 @@
         <li><a href="/Blog.html">Blog</a></li>
       </ul>
 
-      <div class="search-bar">
+      <div class="search-bar"  id="searchBar">
         <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
 
-      <div class="user-actions">
-        <a href="/assets/css/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
-        <a href="/assets/css/panier.html" class="cart-icon">
-          <i class="fas fa-shopping-cart"></i> 
-          <span>Panier</span> 
-          <!-- Badge dynamique du nombre d'articles (utilise la classe existante) -->
-          <span class="cart-count">0</span>
-        </a>
+      <div class="user-actions"  id="userActions">
+        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+            class="cart-count">3</span></a>
       </div>
     </nav>
 
+    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
 
