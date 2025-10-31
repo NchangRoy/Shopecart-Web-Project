@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/footer.css">
     <script src="/assets/js/product_filtres_manettes.js" defer></script> 
     <script src="/assets/js/product_navigation_manettes.js" defer></script> 
-    
+    <script defer src="/assets/js/newsletter.js"></script>
     <script src="/assets/js/product_pagination_manettes.js" defer></script> 
 </head>
 
@@ -72,73 +72,70 @@
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
-    
-    
-    
-    <!--Hero Banner-->
+  <!--Hero Banner-->
     <section class="hero-banner">
-        <!--Radio buttons pour contrôler les slides-->
+        <!--Radio buttons pour controler les slides-->
         <input type="radio" name="slide" id="slide4clone">
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
         <input type="radio" name="slide" id="slide3">
         <input type="radio" name="slide" id="slide4">
-
+        <input type="radio" name="slide" id="slide1clone">
         <div class="carousel-container">
-            <div class="slides">
-
-                <!--Slide 4 Clone (au début pour effet retour fluide)-->
+            <!--Les slides-->
+            <div class="slides" id="slides">
+                <!--Slide 4 Clone-->
                 <div class="slide">
                     <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Découvrez Nos Nouveaux<br>Produits Incroyables<br>À Prix Cassés</h1>
-                        <button class="btn-primary">Voir Plus</button>
+                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                        <button class="btn-primary">Maybe Yes</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/28.jpeg" alt="">
+                        <img src="/assets/images/M1.png"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide1"><strong>&#62</strong></label>
                 </div>
-
                 <!--Slide 1-->
                 <div class="slide">
                     <label class="left-arrow" for="slide4clone"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Get Up to 50% Off<br>On Cameras<br>And Other Gadgets</h1>
+                        <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
                         <button class="btn-primary">Buy Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/25.jpeg" alt="">
+                        <img src="/assets/images/M1.png"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
-
                 <!--Slide 2-->
                 <div class="slide">
                     <label class="left-arrow" for="slide1"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>New Collection Of<br>Digital Cameras<br>Available Now</h1>
+                        <h1>New Collection Of<br>Smart Phones<br>Available Now</h1>
                         <button class="btn-primary">Shop Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/26.jpeg" alt="">
+                        <img src="https://img.freepik.com/premium-photo/woman-blows-air-kiss-camera-smartphone-takes-selfie-sends-mwah-via-online-call_849040-1293.jpg"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
                 </div>
-
                 <!--Slide 3-->
                 <div class="slide">
                     <label class="left-arrow" for="slide2"><strong>&#60</strong></label>
                     <div class="banner-content">
-                        <h1>Latest Sony Alpha<br>Up To 30% Off<br>Limited Time</h1>
+                        <h1>Latest Google Pixels<br>Up To 30% Off<br>Limited Time</h1>
                         <button class="btn-primary">Get Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/27.jpeg" alt="">
+                        <img src="/assets/images/M1.png"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
                 </div>
-
                 <!--Slide 4-->
                 <div class="slide">
                     <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
@@ -147,14 +144,26 @@
                         <button class="btn-primary">Maybe Yes</button>
                     </div>
                     <div class="banner-image">
-                        <img src="/assets/images/28.jpeg" alt="">
+                        <img src="/assets/images/M1.png"
+                            alt="">
                     </div>
-                    <label class="right-arrow" for="slide1"><strong>&#62</strong></label>
+                    <label class="right-arrow" for="slide1clone"><strong>&#62</strong></label>
+                </div>
+                <!--Slide 1 Clone-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide4"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
+                        <button class="btn-primary">Buy Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="/assets/images/M1.png"
+                            alt="">
+                    </div>
+                    <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
             </div>
         </div>
-
-        <!--Petits points de navigation-->
         <div class="banner-dots">
             <label for="slide1" class="dot"></label>
             <label for="slide2" class="dot"></label>
@@ -162,6 +171,10 @@
             <label for="slide4" class="dot"></label>
         </div>
     </section>
+    
+    
+    
+   
 
     <main class="main-content-container">
 
