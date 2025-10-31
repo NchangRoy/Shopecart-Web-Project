@@ -165,11 +165,13 @@ git push origin feat/carousel-equipe1
 ---
 
 ## Licence
+
 **MIT** - Projet éducatif. Libre réutilisation dans un cadre pédagogique.
 
 ---
 
 ## Équipe & Contact
+
 - **Professeur** : Mme .....
 - **GitHub** : `github.com/Delmat237/Shopecart-Web-Project.git `
 - **Issues** : Suivi des bugs et tâches
