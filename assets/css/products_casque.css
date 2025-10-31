@@ -61,17 +61,10 @@ body {
     background-color: #f5f5f5;
 }
 
-.body-bg {
-    background-color: #f5f5f5;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
+
 
 .container {
-    max-width: 1200px;
+    max-width: 2200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -370,7 +363,7 @@ body {
     justify-content: center;
     -webkit-overflow-scrolling: touch;
     position: relative;
-    z-index: 50;
+  
 }
 
 .product-filters-bar::-webkit-scrollbar {
@@ -462,7 +455,7 @@ body {
 .filter-dropdown {
     position: relative;
     display: inline-block;
-    z-index: 1001;
+   
 }
 
 .filter-checkbox,
@@ -504,14 +497,13 @@ body {
     color: var(--color-white);
 }
 
-.dropdown-arrow,
 .filter-arrow-icon {
     font-size: 0.75rem;
     transition: transform 0.3s ease;
     display: inline-block;
 }
 
-.filter-checkbox:checked + .tag-button .dropdown-arrow,
+.filter-checkbox:checked + .tag-button,
 .filter-radio-input:checked + .filter-button-label .filter-arrow-icon {
     transform: rotate(180deg);
 }
@@ -529,8 +521,6 @@ body {
     background-color: var(--color-blue-secondary);
     color: var(--color-white);
 }
-
-.dropdown-content,
 .filter-options-list {
     display: none;
     position: absolute;
@@ -608,21 +598,6 @@ body {
     border-bottom: 1px solid #f3f4f6;
 }
 
-.dropdown-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: transparent;
-    cursor: default;
-}
-
-.filter-checkbox:checked ~ .dropdown-overlay {
-    display: block;
-}
 
 /* ============================================
    SECTION PRODUITS
