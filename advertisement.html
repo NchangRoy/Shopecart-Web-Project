@@ -77,68 +77,136 @@
   </header>
 
   <div class="content-wrapper">
-    <main>
-      <section class="register-container">
-        <h1 class="adsTitle">Advertisement Policy</h1>
-        <p class="adsIntro">At Shopcart, we strive to provide a transparent and fair advertising experience. This policy
-          outlines how we handle advertisements, your rights as a user, and our commitment to ethical practices.</p>
+  <main class="ads-page">
+    <!-- Hero Section -->
+    <section class="ads-hero">
+      <h1 class="adsTitle">Advertisement Policy</h1>
+      <p class="adsIntro">
+        At Shopcart, we strive to provide a transparent and fair advertising experience. This policy outlines how we handle advertisements, your rights as a user, and our commitment to ethical practices.
+      </p>
+    </section>
 
-        <h3 class="adsPurpose">Purpose of Advertisements</h3>
-        <p class="adsPurposeDesc">To fund free features and improve our services, and to promote relevant products and
-          offers to enhance your shopping experience.</p>
+    <!-- Accordion -->
+    <div class="accordion" id="adsAccordion">
+      <!-- Purpose of Advertisements -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="icon"><i class="fas fa-bullhorn"></i></span>
+          <h3>Purpose of Advertisements</h3>
+          <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="accordion-body">
+          <p>To fund free features and improve our services, and to promote relevant products and offers to enhance your shopping experience.</p>
+        </div>
+      </div>
 
-        <h3 class="adsTypes">Types of Advertisements</h3>
-        <ul>
-          <li class="adsSponsored">Sponsored Listings: Promoted products from our partners.</li>
-          <li class="adsBanner">Banner Ads: Display ads on our site.</li>
-          <li class="adsEmail">Email Promotions: Targeted offers sent to subscribers.</li>
-          <li class="adsThirdParty">Third-Party Ads: Ads from external networks (e.g., Google Ads).</li>
-        </ul>
+      <!-- Types of Advertisements -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="icon"><i class="fas fa-ad"></i></span>
+          <h3>Types of Advertisements</h3>
+          <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Sponsored Listings:</strong> Promoted products from our partners.</li>
+            <li><strong>Banner Ads:</strong> Display ads on our site.</li>
+            <li><strong>Email Promotions:</strong> Targeted offers sent to subscribers.</li>
+            <li><strong>Third-Party Ads:</strong> Ads from external networks (e.g., Google Ads).</li>
+          </ul>
+        </div>
+      </div>
 
-        <h3 class="adsGuidelines">Advertising Guidelines</h3>
-        <ul>
-          <li class="adsGuideline1">All ads must comply with local laws and Shopcart’s terms.</li>
-          <li class="adsGuideline2">No misleading claims, offensive content, or prohibited products (e.g., illegal
-            goods).</li>
-          <li class="adsGuideline3">Ads must be clearly labeled as 'Sponsored' or 'Advertisement'.</li>
-        </ul>
+      <!-- Advertising Guidelines -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="icon"><i class="fas fa-clipboard-check"></i></span>
+          <h3>Advertising Guidelines</h3>
+          <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>All ads must comply with local laws and Shopcart’s terms.</li>
+            <li>No misleading claims, offensive content, or prohibited products (e.g., illegal goods).</li>
+            <li>Ads must be clearly labeled as 'Sponsored' or 'Advertisement'.</li>
+          </ul>
+        </div>
+      </div>
 
-        <h3 class="adsRights">User Rights and Control</h3>
-        <p class="adsRightsDesc">Ads may be personalized based on your browsing behavior or preferences. You can disable
-          personalized ads via your account settings or browser preferences. <a href="https://support.google.com/ads"
-            target="_blank">Click here for instructions</a>. We may share anonymized data with ad partners, subject to
-          our Privacy Policy.</p>
+      <!-- User Rights and Control -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="icon"><i class="fas fa-user-cog"></i></span>
+          <h3>User Rights and Control</h3>
+          <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="accordion-body">
+          <p>Ads may be personalized based on your browsing behavior or preferences.</p>
+          <p>You can disable personalized ads via your account settings or browser preferences.</p>
+          <p><a href="https://support.google.com/ads" target="_blank" rel="noopener">Click here for instructions</a>.</p>
+          <p>We may share anonymized data with ad partners, subject to our <a href="/html/privacy.html" class="privacy">Privacy Policy</a>.</p>
+        </div>
+      </div>
 
-        <h3 class="adsProhibited">Prohibited Practices</h3>
-        <ul>
-          <li class="adsProhibited1">False discounts or scams.</li>
-          <li class="adsProhibited2">Ads targeting vulnerable groups without consent.</li>
-          <li class="adsProhibited3">Malware or intrusive pop-ups.</li>
-        </ul>
+      <!-- Prohibited Practices -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="icon"><i class="fas fa-ban"></i></span>
+          <h3>Prohibited Practices</h3>
+          <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>False discounts or scams.</li>
+            <li>Ads targeting vulnerable groups without consent.</li>
+            <li>Malware or intrusive pop-ups.</li>
+          </ul>
+        </div>
+      </div>
 
-        <h3 class="adsEnforcement">Enforcement and Reporting</h3>
-        <p class="adsEnforcementDesc">We monitor ad compliance and reserve the right to remove violating content. Report
-          an ad issue by emailing <a href="mailto:support@shopcart.com">support@shopcart.com</a> with details.</p>
+      <!-- Enforcement and Reporting -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <h3>Enforcement and Reporting</h3>
+          <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="accordion-body">
+          <p>We monitor ad compliance and reserve the right to remove violating content.</p>
+          <p>Report an ad issue by emailing 
+            <a href="mailto:support@shopcart.com" class="email-link" data-copy="support@shopcart.com">
+              support@shopcart.com
+            </a>.
+            <span class="copy-feedback">Copied!</span>
+          </p>
+        </div>
+      </div>
 
-        <h3 class="adsLegal">Legal and Updates</h3>
-        <p class="adsLegalDesc">This policy complies with applicable advertising laws. We may update it
-          periodically—check back for changes.</p>
+      <!-- Legal and Updates -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <span class="icon"><i class="fas fa-gavel"></i></span>
+          <h3>Legal and Updates</h3>
+          <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="accordion-body">
+          <p>This policy complies with applicable advertising laws.</p>
+          <p>We may update it periodically—check back for changes.</p>
+          <p style="margin-top: 1rem;">
+            <a href="/html/privacy.html" class="privacy">Privacy Policy</a> |
+            <a href="/html/terms.html" class="terms">Terms & Conditions</a>
+          </p>
+        </div>
+      </div>
+    </div>
 
-        <p><a href="/html/privacy.html" class="privacy">Privacy Policy</a> | <a href="/html/terms.html"
-            class="terms">Terms & Conditions</a></p>
-      </section>
-    </main>
-
-    <aside>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde culpa nemo impedit consequuntur, a eum sunt fuga
-        fugit, accusantium ut quam aperiam voluptate magnam rerum excepturi ducimus molestias, ea placeat.</p>
-      <a href="#">consulter</a>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde culpa nemo impedit consequuntur, a eum sunt fuga
-        fugit, accusantium ut quam aperiam voluptate magnam rerum excepturi ducimus molestias, ea placeat.</p>
-      <a href="#">reduction</a>
-
-    </aside>
-  </div>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+      <input type="checkbox" id="darkSwitch">
+      <label for="darkSwitch"><i class="fas fa-moon"></i> Dark Mode</label>
+    </div>
+  </main>
+</div>
 
   <!-- Footer -->
 <footer>
@@ -247,9 +315,11 @@
       <a href="/security.html">Confidentialité</a>
       <a href="/conditions.html">Conditions d'utilisation</a>
       <a href="/cookies.html">Mentions légales</a>
+      <a href="/help.html">Aide</a>
+      <a href="/advertisement.html">Plublicité</a>
     </div>
   </div>
 </footer>
 </body>
-
+<script src="/assets/js/advertisement.js"></script>
 </html>
