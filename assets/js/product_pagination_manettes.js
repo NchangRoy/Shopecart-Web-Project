@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { gridId: 'products-for-you-grid', scrollTargetId: 'title-for-you', paginationId: 'pagination-for-you', currentPage: 1 },
         { gridId: 'best-sellers-grid', scrollTargetId: 'title-best-sellers', paginationId: 'pagination-best-sellers', currentPage: 1 },
         { gridId: 'promotion-grid', scrollTargetId: 'title-promotion', paginationId: 'pagination-promotion', currentPage: 1 }
+       
     ];
 
     /**

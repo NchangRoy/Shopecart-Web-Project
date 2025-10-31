@@ -113,7 +113,7 @@ body {
     padding: 50px 20px;
     display: flex;
     position: relative;
-    margin: 40px auto;  /* ← NOUVELLE VALEUR */
+    margin: 100px auto;
     max-width: 1200px;
     border-radius: 20px;
 }
