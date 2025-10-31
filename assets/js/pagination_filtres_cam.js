@@ -1,6 +1,6 @@
 const allProducts = [
 
-    // Page 1
+    // Page 1 - Mélange varié (haut/bas de gamme, toutes marques)
     { name: "Leica M11 P", price: 9850000, rating: 5.0, brand: "Leica", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTwfarFBbe2VCqNMIoF1sylX6qN2Yp4h0Jog&s" },
     { name: "Polaroid Now Instant Gen II", price: 145000, rating: 3.7, brand: "Polaroid", image: "https://cdn.shopify.com/s/files/1/1135/7914/files/Now_Purple__Shadows_V2.png?v=1733904182" },
     { name: "Sony Alpha 6700", price: 1250000, rating: 4.5, brand: "Sony", image: "https://fototrade.lu/wp-content/uploads/2023/07/SONY-alpha-6700-18-135-8.png" },
@@ -14,7 +14,7 @@ const allProducts = [
     { name: "Lumix Z5IIX Hybride", price: 1580000, rating: 4.7, brand: "Lumix", image: "https://www.panasonic.com/content/dam/pim/uk/en/DC/DC-S5M/DC-S5M2X/ast-1824751.jpg.pub.crop.pc.thumb.640.1200.jpg" },
     { name: "Olympus Tough TG-3", price: 385000, rating: 3.8, brand: "Olympus", image: "https://i.pcmag.com/imagery/reviews/02bX9GPtbKR56GIN65hX9pg-17..v1569472868.jpg" },
 
-    // Page 2
+    // Page 2 - Mélange varié (milieu/haut de gamme, toutes marques)
     { name: "Phase One XF", price: 15500000, rating: 5.0, brand: "Phase One", image: "https://teamworkphoto.com/wp-content/uploads/2023/11/xf-body-with-lens-phaseone-e1538410321114.jpg" },
     { name: "Kodak Smile Classic", price: 95000, rating: 3.0, brand: "Kodak", image: "https://www.digitaltrends.com/wp-content/uploads/2019/11/kodak_smile_classic_review-9641.jpg?p=1" },
     { name: "Canon EOS R6 Mark II", price: 2850000, rating: 4.6, brand: "Canon", image: "https://cdn.media.amplience.net/i/canon/09_frontback-pro_0c048afdc81c488eb9e5592f9cccc06e" },
@@ -28,7 +28,7 @@ const allProducts = [
     { name: "Samsung PL210", price: 115000, rating: 3.2, brand: "Samsung", image: "https://www.ephotozine.com/articles/samsung-pl210-digital-compact-camera-review-16511/images/samsung_pl210_front_lens.jpg" },
     { name: "Sigma FP L", price: 2850000, rating: 4.5, brand: "Sigma", image: "https://th.bing.com/th/id/R.027a2a95c16634ef89fa1e8527c4e836?rik=8n7sQ9tx%2fJq04g&pid=ImgRaw&r=0" },
 
-    // Page 3
+    // Page 3 - Mélange varié (entrée/milieu de gamme, toutes marques)
     { name: "Fujifilm GFX100RF", price: 7200000, rating: 4.8, brand: "Fujifilm", image: "https://www.cined.com/content/uploads/2025/03/FUJIFILM-GFX100RF.jpg" },
     { name: "Polaroid Go Gen 2", price: 125000, rating: 3.5, brand: "Polaroid", image: "https://media.foto-erhardt.de/images/product_images/original_images/264/polaroid-go-kamera-gen2-schwarz-169762046426460304.jpg" },
     { name: "Canon EOS R50", price: 825000, rating: 4.3, brand: "Canon", image: "https://apprendre-la-photo.fr/wp-content/uploads/2024/07/44efa78a-eb08-41bf-a91b-407d086228f2.jpeg" },
@@ -42,7 +42,7 @@ const allProducts = [
     { name: "Pentax K-1 II", price: 1850000, rating: 4.4, brand: "Pentax", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfxsjh59ueUf1MNiLykcPPMSEnl3ixDYdG-Q&s" },
     { name: "Edixa Mat Reflex Mod C", price: 225000, rating: 3.3, brand: "Edixa", image: "https://tse3.mm.bing.com/th/id/OIP.uggGfHmUkOnmLKOacutr5gAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
 
-    // Page 4
+    // Page 4 - Mélange varié (toutes gammes confondues)
     { name: "Phase One 645DF", price: 12500000, rating: 4.8, brand: "Phase One", image: "https://dtcommercialphoto.com/wp-content/upload/645DF-_110mm_low.jpg" },
     { name: "FAP Norca B", price: 145000, rating: 3.1, brand: "FAP", image: "https://collectiblend.com/Cameras/images/FAP-Norca-B.jpg" },
     { name: "Nikon Coolpix P1100", price: 485000, rating: 3.9, brand: "Nikon", image: "https://static.bhphoto.com/images/multiple_images/images500x500/1738709312_IMG_2421914.jpg" },
@@ -56,7 +56,7 @@ const allProducts = [
     { name: "Hasselblad X1D II", price: 7850000, rating: 4.6, brand: "Hasselblad", image: "https://media.wired.com/photos/5d41f41b90bf49000859ec4a/191:100/w_1280,c_limit/Gear-Hasselblad-x1d-front-tilt-SOURCE-Hasselblad.jpg?mbid=social_retweet" },
     { name: "Konica Autoreflex T3", price: 325000, rating: 3.8, brand: "Konica", image: "https://tse1.mm.bing.com/th/id/OIP.scxAL6SIXxYPX-J4zSFPuQAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
 
-    // Page 5
+    // Page 5 - Mélange varié (toutes gammes, toutes marques)
     { name: "Phase One IXM-100", price: 18500000, rating: 4.9, brand: "Phase One", image: "https://tohasen.com/images/detailed/40/N_1186228p2_r.jpg" },
     { name: "Polaroid Everything Box", price: 185000, rating: 3.6, brand: "Polaroid", image: "https://blush-conceptstore.com/cdn/shop/files/polaroidgo2.png?v=1719456395" },
     { name: "Pentax K-S2", price: 485000, rating: 3.9, brand: "Pentax", image: "https://m.media-amazon.com/images/I/51Kjqvb5kNL.jpg" },
@@ -94,7 +94,118 @@ const pagination3 = {
 }
 
 const productsPerPage = 12;
-const totalPages = 5;
+let totalPages = 5;
+
+let filteredProducts = allProducts;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterDropdownLinks = document.querySelectorAll('.product-filters-bar .filter-options-list a');
+    const allFiltersButton = document.querySelector('.filter-all-button');
+    const filterNone = document.getElementById('none');
+
+    let activeFilters = {
+        price: null,
+        brand: null,
+        rating: null
+    };
+
+    const applyFilters = () => {
+        let matchingProducts = [];
+
+        allProducts.forEach(product => {
+            let matches = true;
+
+            const brand = product.brand.toLowerCase();
+            const price = product.price;
+            const rating = product.rating;
+
+            if (activeFilters.brand) {
+                const filterBrandNormalized = activeFilters.brand.toLowerCase();
+                if (!brand.includes(filterBrandNormalized)) {
+                    matches = false;
+                }
+            }
+
+            if (matches && activeFilters.price) {
+                const [minStr, maxStr] = activeFilters.price.split('-');
+                const minPrice = parseFloat(minStr);
+                const maxPrice = maxStr === '+' ? Infinity : parseFloat(maxStr);
+
+                if (price < minPrice || price > maxPrice) {
+                    matches = false;
+                }
+            }
+
+            if (matches && activeFilters.rating) {
+                const minRating = parseFloat(activeFilters.rating);
+                let lowerBound, upperBound;
+
+                if (minRating === 5) {
+                    lowerBound = 4.75;
+                    upperBound = 5.1;
+                } else if (minRating === 4.5) {
+                    lowerBound = 4.25;
+                    upperBound = 4.75;
+                } else {
+                    lowerBound = minRating;
+                    upperBound = minRating + 0.5;
+                }
+
+                if (rating < lowerBound || rating >= upperBound) {
+                    matches = false;
+                }
+            }
+
+            if (matches) {
+                matchingProducts.push(product);
+            }
+        });
+
+        filteredProducts = matchingProducts;
+        totalPages = Math.ceil(filteredProducts.length/productsPerPage);
+
+        pagination1.currentPage = 1;
+        pagination2.currentPage = 1;
+        pagination3.currentPage = 1;
+
+        updateDisplay(pagination1);
+        updateDisplay(pagination2);
+        updateDisplay(pagination3);
+    };
+
+    const resetFilters = () => {
+        activeFilters = { price: null, brand: null, rating: null };
+
+        filteredProducts = allProducts;
+        totalPages = 5;
+
+        pagination1.currentPage = 1;
+        pagination2.currentPage = 1;
+        pagination3.currentPage = 1;
+
+        updateDisplay(pagination1);
+        updateDisplay(pagination2);
+        updateDisplay(pagination3);
+
+        filterNone.checked = true;
+    };
+
+    filterDropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dataAttributes = e.currentTarget.dataset;
+            activeFilters.price = dataAttributes.price || null;
+            activeFilters.brand = dataAttributes.brand || null;
+            activeFilters.rating = dataAttributes.rating || null;
+            applyFilters();
+            filterNone.checked = true;
+        });
+    });
+
+    allFiltersButton.addEventListener('click', () => {
+        resetFilters();
+    });
+});
 
 // Afficher les produits
 function displayProducts(pagination) {
@@ -102,8 +213,8 @@ function displayProducts(pagination) {
     if (grid===null) return;
 
     const startIndex = (pagination.currentPage - 1) * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
-    const products = allProducts.slice(startIndex, endIndex);
+    const endIndex = Math.min(startIndex + productsPerPage, filteredProducts.length);
+    const products = filteredProducts.slice(startIndex, endIndex);
     //On vide la grille pour la remplir à nouveau
     grid.innerHTML = '';
 
@@ -170,7 +281,10 @@ function renderPagination(pagination) {
     pagin.appendChild(prevBtn);
 
     // Créer les boutons de pagination
-    const pagesToShow = [1, 2, 3, 4, 5];
+    const pagesToShow = [];
+    for (let i=1; i<=totalPages; i++) {
+        pagesToShow.push(i);
+    }
     pagesToShow.forEach(page => {
         const btn = document.createElement('button');
 
