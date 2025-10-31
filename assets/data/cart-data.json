@@ -1,0 +1,40 @@
+{
+  "cart_items": [
+    {
+      "id": 1,
+      "nom": "HeadPhones Max",
+      "marque": "AudioTech",
+      "prix": 30.00,
+      "note": 4.5,
+      "couleur": "red",
+      "quantite": 2,
+      "description": "Casque audio haute qualité avec réduction de bruit active et autonomie de 30 heures",
+      "image": "/assets/images/M8.png"
+    },
+    {
+      "id": 2,
+      "nom": "HeadPhones Max",
+      "marque": "AudioTech",
+      "prix": 30.00,
+      "note": 4.5,
+      "couleur": "blue",
+      "quantite": 1,
+      "description": "Casque audio haute qualité avec réduction de bruit active et autonomie de 30 heures",
+      "image": "/assets/images/M8.png"
+    },
+    {
+      "id": 3,
+      "nom": "HeadPhones Max",
+      "marque": "AudioTech",
+      "prix": 30.00,
+      "note": 4.5,
+      "couleur": "black",
+      "quantite": 1,
+      "description": "Casque audio haute qualité avec réduction de bruit active et autonomie de 30 heures",
+      "image": "/assets/images/M8.png"
+    }
+  ],
+  "discount_percentage": 0,
+  "shipping_cost": 0,
+  "tax_percentage": 0
+}
