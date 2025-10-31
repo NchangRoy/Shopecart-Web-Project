@@ -370,7 +370,7 @@ body {
     justify-content: center;
     -webkit-overflow-scrolling: touch;
     position: relative;
-    z-index: 50;
+  
 }
 
 .product-filters-bar::-webkit-scrollbar {
