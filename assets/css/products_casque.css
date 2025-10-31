@@ -141,24 +141,10 @@ body {
     transition: all 0.5s ease;
 }
 
-#slide1:checked ~ .banner-dots label[for="slide1"],
-#slide2:checked ~ .banner-dots label[for="slide2"],
-#slide3:checked ~ .banner-dots label[for="slide3"],
-#slide4:checked ~ .banner-dots label[for="slide4"] {
-    background: white;
-    width: 50px;
-}
-
-#slide1clone:checked ~ .banner-dots label[for="slide1"],
-#slide4clone:checked ~ .banner-dots label[for="slide4"] {
-    background: white;
-    width: 50px;
-}
-
 /* Hero Banner */
 .hero-banner {
     background: linear-gradient(135deg, #3d82f6 0%, #1e40af 100%);
-    padding: 50px 20px;
+    padding: 5px 5px;
     display: flex;
     position: relative;
     margin: 100px auto;
@@ -296,16 +282,7 @@ body {
     display: flex;
 }
 @media screen and (max-width: 600px) {
-    .hero-banner {
-        max-width: 95%;
-        margin: 20px auto;
-        padding: 20px 10px;
-        border-radius: 15px;
-    }
 
-    .slide {
-        padding: 15px;
-    }
 
     .banner-content h1 {
         font-size: 20px;
