@@ -1,6 +1,6 @@
 const allProducts = [
 
-    // Page 1
+    // Page 1 - Mélange complet (premium/entrée de gamme)
     { name: "Asus ROG Phone 9 Pro", price: 850000, rating: 4.8, brand: "Asus", image: "https://www.gamereactor.dk/media/64/asusrogphone_4396473b.png" },
     { name: "Alcatel 1", price: 38000, rating: 3.2, brand: "Alcatel", image: "https://th.bing.com/th/id/OIP.dseHP53-H_rBVGi7cWfGdgHaHa?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "Google Pixel 9", price: 750000, rating: 4.6, brand: "Google", image: "https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/08/google-pixel-9-pro.png" },
@@ -14,7 +14,7 @@ const allProducts = [
     { name: "Oppo Find X8 Pro", price: 720000, rating: 4.8, brand: "Oppo", image: "https://insiderkenya.com/wp-content/uploads/2024/11/Oppo-Find.webp" },
     { name: "Haier G30", price: 38000, rating: 3.0, brand: "Haier", image: "https://www.phoneworld.com.pk/wp-content/uploads/2015/03/Haier-G30-Review-6.jpg" },
 
-    // Page 2
+    // Page 2 - Mélange varié (toutes gammes)
     { name: "Samsung Galaxy S10", price: 195000, rating: 3.7, brand: "Samsung", image: "https://fdn.gsmarena.com/imgroot/reviews/19/samsung-galaxy-s10/gal/-1024w2/gsmarena_001.jpg" },
     { name: "OnePlus 13", price: 680000, rating: 4.6, brand: "OnePlus", image: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1x126t.img?w=1200&h=675&m=4&q=91" },
     { name: "Microsoft Lumia 435", price: 38000, rating: 3.0, brand: "Microsoft", image: "https://www.mobiledor.com/wp-content/uploads/Microsoft-Lumia-435.webp" },
@@ -28,7 +28,7 @@ const allProducts = [
     { name: "LG K31", price: 72000, rating: 3.6, brand: "LG", image: "https://www.gizmochina.com/wp-content/uploads/2020/08/LG-K31-1-500x500.jpg" },
     { name: "Itel A90", price: 52000, rating: 3.9, brand: "Itel", image: "https://fdn2.gsmarena.com/vv/pics/itel/itel-a90-2.jpg" },
 
-    // Page 3
+    // Page 3 - Mélange varié (milieu/bas de gamme)
     { name: "Asus Zenfone 12 Ultra", price: 780000, rating: 4.7, brand: "Asus", image: "https://xiaomiui.net/wp-content/uploads/2025/02/Asus-Zenfone-12-Ultra.png" },
     { name: "Tecno Spark 7", price: 62000, rating: 3.5, brand: "Tecno", image: "https://www.gizmochina.com/wp-content/uploads/2021/04/banner-pc.jpg" },
     { name: "Xiaomi 17 Pro", price: 520000, rating: 4.6, brand: "Xiaomi", image: "https://images.frandroid.com/wp-content/uploads/2025/09/xiaomi-17-serie.jpg" },
@@ -42,7 +42,7 @@ const allProducts = [
     { name: "Oppo Reno 13 Pro", price: 480000, rating: 4.5, brand: "Oppo", image: "https://cdn-files.kimovil.com/default/0011/11/thumb_1010494_default_big.jpg" },
     { name: "Wiko View 4", price: 58000, rating: 3.3, brand: "Wiko", image: "https://img.generation-nt.com/wiko-view-4_07CA0A4001665761.jpg" },
 
-    // Page 4
+    // Page 4 - Mélange varié (toutes marques)
     { name: "CAT S75", price: 420000, rating: 4.4, brand: "CAT", image: "https://tse2.mm.bing.net/th/id/OIP.jF-RKodH9cU-BI73MpjpCwHaIn?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "Nokia G42", price: 110000, rating: 3.8, brand: "Nokia", image: "https://tse2.mm.bing.net/th/id/OIP.EHp9ELpWi9Y8F9dJ0oCl2wHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "Iphone 15", price: 720000, rating: 4.4, brand: "Iphone", image: "https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15.png" },
@@ -56,7 +56,7 @@ const allProducts = [
     { name: "OnePlus 12", price: 580000, rating: 4.4, brand: "OnePlus", image: "https://th.bing.com/th/id/OIP.JcLjvF3oov70BY6fo134fAHaHa?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "ZTE Blade L9", price: 55000, rating: 3.4, brand: "ZTE", image: "https://www.powerplanetonline.com/cdnassets/zte_blade_l9_gris_01_l.jpg" },
 
-    // Page 5
+    // Page 5 - Mélange varié (premium/budget)
     { name: "Asus ROG Phone 8 Pro", price: 720000, rating: 4.6, brand: "Asus", image: "https://newfortech.com/wp-content/uploads/2024/01/Asus-ROG-Phone-8-Pro.jpg" },
     { name: "Alcatel 1S", price: 52000, rating: 3.3, brand: "Alcatel", image: "https://th.bing.com/th/id/R.2e7cf5f040312e42431f1139229e3c20?rik=nR1zco6Bemp8cg&pid=ImgRaw&r=0" },
     { name: "Motorola Edge 50 Ultra", price: 320000, rating: 4.4, brand: "Motorola", image: "https://tse4.mm.bing.net/th/id/OIP.rOr4o3OJi7mrlIjUHjqOOAHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
@@ -70,7 +70,7 @@ const allProducts = [
     { name: "Realme 14 Pro", price: 280000, rating: 4.1, brand: "Realme", image: "https://image01.realme.net/general/20250106/1736141523266936bea99efd84028bad0d2322119d04c.jpg?width=1080&height=1080&size=604565" },
     { name: "Hisense H60 Smart", price: 68000, rating: 3.5, brand: "Hisense", image: "https://cdn-files.kimovil.com/default/0007/44/thumb_643677_default_big.jpg" },
 
-    // Page 6
+    // Page 6 - Mélange varié (toutes gammes)
     { name: "Nokia HMD Pulse Pro", price: 95000, rating: 4.0, brand: "Nokia", image: "https://www.go2android.de/wp-content/uploads/2024/04/nokia-hmd-pulse_01.jpg" },
     { name: "CAT S62 Pro", price: 380000, rating: 4.3, brand: "CAT", image: "https://m.media-amazon.com/images/I/71WUu+rQMgS.jpg" },
     { name: "Tecno Camon 16", price: 85000, rating: 3.8, brand: "Tecno", image: "https://images.fonearena.com/blog/wp-content/uploads/2021/01/Tecno-Camon-16-Premier-1-1024x971.jpg" },
@@ -84,7 +84,7 @@ const allProducts = [
     { name: "Iphone 14", price: 580000, rating: 4.5, brand: "Iphone", image: "https://i2.wp.com/imgix.bustle.com/uploads/image/2022/9/7/9fce650c-28aa-4995-81f4-ac72d963485b-iphone14.png" },
     { name: "LG W41 Plus", price: 88000, rating: 3.7, brand: "LG", image: "https://phonesdata.com/files/models/LG-W41+-147.jpg" },
 
-    // Page 7
+    // Page 7 - Mélange varié (bas/milieu de gamme)
     { name: "OnePlus Nord 4", price: 320000, rating: 4.2, brand: "OnePlus", image: "https://th.bing.com/th/id/OIP.Oaii_GbOjcDkFFsi7yJTQgHaE8?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "Innjoo Max 4 Pro", price: 52000, rating: 3.2, brand: "Innjoo", image: "https://tse1.mm.bing.net/th/id/OIP.QFTPv0lvOkLJ4XCphm4rQgHaF0?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "Vivo V21", price: 165000, rating: 4.0, brand: "Vivo", image: "https://th.bing.com/th/id/R.de569a76838b12b8cd4512e211039235?rik=oI65rolMnyz%2bqw&pid=ImgRaw&r=0" },
@@ -98,7 +98,7 @@ const allProducts = [
     { name: "Infinix GT 30 Pro", price: 125000, rating: 4.0, brand: "Infinix", image: "https://tse1.mm.bing.net/th/id/OIP.af9MczrA7Lz9EOdeeeY8xQHaHa?cb=12&w=800&h=800&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "TCL 505", price: 82000, rating: 3.9, brand: "TCL", image: "https://fdn2.gsmarena.com/vv/pics/tcl/tcl-505-2.jpg" },
 
-    // Page 8
+    // Page 8 - Mélange varié (toutes gammes finales)
     { name: "Poco F4", price: 245000, rating: 4.2, brand: "Poco", image: "https://i0.wp.com/www.androidpure.com/wp-content/uploads/2023/02/Whats-new-in-the-Poco-F4-Android-13-update.jpg?fit=541%2C495&ssl=1" },
     { name: "ZTE Nubia Neo", price: 95000, rating: 4.0, brand: "ZTE", image: "https://tse3.mm.bing.net/th/id/OIP.sBcZ-xnM6n1FIqYIWcqCnwHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { name: "CAT S53", price: 280000, rating: 4.1, brand: "CAT", image: "https://asset.conrad.com/media10/isa/160267/c1/-/en/002618732PI00/image.jpg" },
@@ -137,7 +137,118 @@ const pagination3 = {
 }
 
 const productsPerPage = 12;
-const totalPages = 8;
+let totalPages = 8;
+
+let filteredProducts = allProducts;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterDropdownLinks = document.querySelectorAll('.product-filters-bar .filter-options-list a');
+    const allFiltersButton = document.querySelector('.filter-all-button');
+    const filterNone = document.getElementById('none');
+
+    let activeFilters = {
+        price: null,
+        brand: null,
+        rating: null
+    };
+
+    const applyFilters = () => {
+        let matchingProducts = [];
+
+        allProducts.forEach(product => {
+            let matches = true;
+
+            const brand = product.brand.toLowerCase();
+            const price = product.price;
+            const rating = product.rating;
+
+            if (activeFilters.brand) {
+                const filterBrandNormalized = activeFilters.brand.toLowerCase();
+                if (!brand.includes(filterBrandNormalized)) {
+                    matches = false;
+                }
+            }
+
+            if (matches && activeFilters.price) {
+                const [minStr, maxStr] = activeFilters.price.split('-');
+                const minPrice = parseFloat(minStr);
+                const maxPrice = maxStr === '+' ? Infinity : parseFloat(maxStr);
+
+                if (price < minPrice || price > maxPrice) {
+                    matches = false;
+                }
+            }
+
+            if (matches && activeFilters.rating) {
+                const minRating = parseFloat(activeFilters.rating);
+                let lowerBound, upperBound;
+
+                if (minRating === 5) {
+                    lowerBound = 4.75;
+                    upperBound = 5.1;
+                } else if (minRating === 4.5) {
+                    lowerBound = 4.25;
+                    upperBound = 4.75;
+                } else {
+                    lowerBound = minRating;
+                    upperBound = minRating + 0.5;
+                }
+
+                if (rating < lowerBound || rating >= upperBound) {
+                    matches = false;
+                }
+            }
+
+            if (matches) {
+                matchingProducts.push(product);
+            }
+        });
+
+        filteredProducts = matchingProducts;
+        totalPages = Math.ceil(filteredProducts.length/productsPerPage);
+
+        pagination1.currentPage = 1;
+        pagination2.currentPage = 1;
+        pagination3.currentPage = 1;
+
+        updateDisplay(pagination1);
+        updateDisplay(pagination2);
+        updateDisplay(pagination3);
+    };
+
+    const resetFilters = () => {
+        activeFilters = { price: null, brand: null, rating: null };
+
+        filteredProducts = allProducts;
+        totalPages = 8;
+
+        pagination1.currentPage = 1;
+        pagination2.currentPage = 1;
+        pagination3.currentPage = 1;
+
+        updateDisplay(pagination1);
+        updateDisplay(pagination2);
+        updateDisplay(pagination3);
+
+        filterNone.checked = true;
+    };
+
+    filterDropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dataAttributes = e.currentTarget.dataset;
+            activeFilters.price = dataAttributes.price || null;
+            activeFilters.brand = dataAttributes.brand || null;
+            activeFilters.rating = dataAttributes.rating || null;
+            applyFilters();
+            filterNone.checked = true;
+        });
+    });
+
+    allFiltersButton.addEventListener('click', () => {
+        resetFilters();
+    });
+});
 
 // Afficher les produits
 function displayProducts(pagination) {
@@ -145,8 +256,8 @@ function displayProducts(pagination) {
     if (grid===null) return;
 
     const startIndex = (pagination.currentPage - 1) * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
-    const products = allProducts.slice(startIndex, endIndex);
+    const endIndex = Math.min(startIndex + productsPerPage, filteredProducts.length);
+    const products = filteredProducts.slice(startIndex, endIndex);
     //On vide la grille pour la remplir à nouveau
     grid.innerHTML = '';
 
@@ -215,15 +326,21 @@ function renderPagination(pagination) {
     // Logique d'affichage des numéros
     const pagesToShow = [];
 
-    if (currentPage <= 3) {
-        // Au début: 1 2 3 4 ... 8
-        pagesToShow.push(1, 2, 3, 4, '...', totalPages);
-    } else if (currentPage >= totalPages - 2) {
-        // À la fin: 1 ... 5 6 7 8
-        pagesToShow.push(1, 2, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+    if (totalPages >= 7) {
+        if (currentPage <= 3) {
+            // Au début: 1 2 3 4 ... 8
+            pagesToShow.push(1, 2, 3, 4, '...', totalPages);
+        } else if (currentPage >= totalPages - 2) {
+            // À la fin: 1 ... 5 6 7 8
+            pagesToShow.push(1, 2, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+        } else {
+            // Au milieu: 1 ... 4 5 6 ... 8
+            pagesToShow.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+        }
     } else {
-        // Au milieu: 1 ... 4 5 6 ... 8
-        pagesToShow.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+        for (let i=1; i<=totalPages; i++) {
+            pagesToShow.push(i);
+        }
     }
 
     // Créer les boutons de pagination
@@ -269,6 +386,6 @@ function goToPage(page, pagination) {
 }
 
 // Initialisation
-updateDisplay(pagination1)
-updateDisplay(pagination2)
-updateDisplay(pagination3)
+updateDisplay(pagination1);
+updateDisplay(pagination2);
+updateDisplay(pagination3);

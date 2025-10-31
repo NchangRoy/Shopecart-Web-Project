@@ -5,7 +5,7 @@ let users = JSON.parse(localStorage.getItem("users")) || [];
 // ✅ Si aucun utilisateur n'est connecté → redirection vers login
 if (!currentUser) {
     alert("Vous devez d'abord vous connecter !");
-    window.location.href = "/login.html"; // change si ton fichier login a un autre nom
+    window.location.href = "login.html"; // change si ton fichier login a un autre nom
 }
 
 // ✅ Pré-remplir les champs du formulaire avec les données de l'utilisateur

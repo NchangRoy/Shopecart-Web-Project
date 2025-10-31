@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="../assets/css/products_disk.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+
+  <script defer src="assets/js/newsletter.js"></script>
+
+  <script src="/assets/js/header.js"></script>
 </head>
+
 <body class="body-bg">
-  <!-- Header -->
+ <!-- Header -->
   <header>
     <!-- Checkbox cachée pour contrôler le menu mobile -->
     <nav class="navbar">
@@ -22,15 +27,14 @@
         </div>
         <span class="logo-text">Shopcart</span>
       </div>
-
       <!-- Hamburger icon comme label pour la checkbox -->
-      <label for="menu-toggle" class="hamburger">
+      <label for="menu-toggle" class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li class="categories-dropdown">
           <!-- Checkbox pour le sous-menu des catégories -->
           <label for="categories-toggle">
@@ -54,11 +58,11 @@
         <li><a href="/Blog.html">Blog</a></li>
       </ul>
 
-      <div class="search-bar">
+      <div class="search-bar"  id="searchBar">
         <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
 
-      <div class="user-actions">
+      <div class="user-actions"  id="userActions">
         <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
         <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
             class="cart-count">3</span></a>
@@ -68,7 +72,6 @@
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
-
     <main class="main-content-container">
         <div class="product-detail-container">
             <div class="product-detail-flex">

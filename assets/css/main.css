@@ -693,15 +693,28 @@
   color:white
 }
 
+/* Payment Methods */
+.payment-method {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.payment-method h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
 /* Correction pour les icônes de paiement */
-.payment-methods .payment-icons {
+.payment-method .payment-icons {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.payment-methods .payment-icon {
+.payment-method .payment-icon {
   background: white;
   padding: 15px;
   border-radius: 10px;
@@ -714,12 +727,12 @@
   transition: transform 0.3s ease;
 }
 
-.payment-methods .payment-icon i {
+.payment-method .payment-icon i {
   font-size: 32px;
   color: #1e3a8a;
 }
 
-.payment-methods .payment-icon:hover {
+.payment-method .payment-icon:hover {
   transform: scale(1.1);
 }
 
