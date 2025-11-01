@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const categoriesLabel = document.querySelector('.categories-dropdown label');
   const dropdownContent = document.querySelector('.dropdown-content');
 
+  //mets à jour le badge
+  updateCartBadge()
+
   // Toggle menu mobile
   if (hamburger) {
     hamburger.addEventListener('click', function(e) {
@@ -71,3 +74,49 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+let cartData = null; // Stocke les données du panier
+const CART_STORAGE_KEY = 'shopcart_cart'; // Clé pour localStorage
+
+/**
+ * Met à jour le badge du panier dans le header
+ */
+function updateCartBadge() {
+
+    //Charger les données du panier pour compter le nombre d'element
+    loadCartData()
+    // Utiliser la classe 'cart-count' au lieu d'un ID
+    const cartBadge = document.querySelector('.cart-count');
+    
+    // Vérifier que l'élément existe
+    if (!cartBadge) {
+        console.warn('⚠️ Badge du panier introuvable');
+        return;
+    }
+    
+    if (!cartData || !cartData.cart_items || cartData.cart_items.length === 0) {
+        cartBadge.textContent = '0';
+        return;
+    }
+    
+    // Compter le nombre total d'articles
+    const totalItems = cartData.cart_items.reduce((sum, item) => sum + item.quantite, 0);
+    cartBadge.textContent = totalItems;
+}
+/**
+ * Charge les données du panier depuis localStorage ou JSON
+ */
+async function loadCartData() {
+    try {
+        // Essayer de charger depuis localStorage d'abord
+        const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+        
+        if (savedCart) {
+            // Si des données existent dans localStorage, les utiliser
+            console.log('📦 Chargement depuis localStorage');
+            cartData = JSON.parse(savedCart);
+        }
+    } catch (error) {
+        console.error('❌ Erreur lors du chargement:', error);
+        showError('Impossible de charger le panier. Veuillez réactualiser la page.');
+    }
+}
