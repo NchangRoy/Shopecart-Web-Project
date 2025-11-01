@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = 'stylesheet' href = '/assets/css/footer.css'>
-    <link rel = 'stylesheet' href = '/assets/css/header.css'>
-    <link rel = 'stylesheet' href = '/assets/css/panier.css'>
-
-    <title>Document</title>
+    
+    <!-- Stylesheets -->
+    <link rel='stylesheet' href='/assets/css/footer.css'>
+    <link rel='stylesheet' href='/assets/css/header.css'>
+    <link rel='stylesheet' href='/assets/css/panier.css'>
+    <script src="/assets/js/panier.js"></script>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <title>Mon Panier - Shopcart</title>
+  <script defer src="assets/js/newsletter.js"></script>
+ 
+  <script src="/assets/js/header.js"></script>
 </head>
+
 <body>
  <!-- Header -->
   <header>
@@ -22,15 +31,14 @@
         </div>
         <span class="logo-text">Shopcart</span>
       </div>
-
       <!-- Hamburger icon comme label pour la checkbox -->
-      <label for="menu-toggle" class="hamburger">
+      <label for="menu-toggle" class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li class="categories-dropdown">
           <!-- Checkbox pour le sous-menu des catégories -->
           <label for="categories-toggle">
@@ -54,236 +62,215 @@
         <li><a href="/Blog.html">Blog</a></li>
       </ul>
 
-      <div class="search-bar">
+      <div class="search-bar"  id="searchBar">
         <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
 
-      <div class="user-actions">
-        <a href="/assets/css/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
-        <a href="/assets/css/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count">3</span></a>
+      <div class="user-actions"  id="userActions">
+        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
+        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+            class="cart-count"></span></a>
       </div>
     </nav>
 
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
+
   <!-- ========== MAIN CART SECTION ========== -->
-    <!-- This is the main content area for the shopping cart -->
-     <main class = 'cart-container'>
-        <!-- Page Title -->
-         <h1 class = 'cart-title'> Review Cart Items</h1>
+  <main class='cart-container'>
+    
+    <!-- En-tête du panier avec compteur -->
+    <div class="cart-header">
+      <h1 class='cart-title'>
+        <i class="fas fa-shopping-cart"></i> 
+        Mon Panier
+      </h1>
+      <!-- Compteur d'articles -->
+      <p class="cart-item-count">
+        <span id="total-items">0</span> article(s) dans votre panier
+      </p>
+    </div>
 
-         <!-- Cart Content: Split into two columns -->
-          <div class = 'cart-content'> 
+    <!-- Indicateur de chargement -->
+    <div id="loading-indicator" class="loading-indicator">
+      <i class="fas fa-spinner fa-spin"></i>
+      <p>Chargement de votre panier...</p>
+    </div>
 
-            <!--LEFT COLUMN: Cart Item List-->
-            <div class = 'cart-items'>
-              <div class = 'cart-item'>
-                  <!-- Product Image -->
-                  <img src = '/assets/images/M8.png' class = 'item-image'>
+    <!-- Message de panier vide (caché par défaut) -->
+    <div id="empty-cart-message" class="empty-cart-message" style="display: none;">
+      <i class="fas fa-shopping-cart"></i>
+      <h2>Votre panier est vide</h2>
+      <p>Découvrez nos produits et ajoutez-en à votre panier !</p>
+      <a href="/index.html" class="btn-continue-shopping">
+        <i class="fas fa-arrow-left"></i>
+        Continuer mes achats
+      </a>
+    </div>
 
-                  <!--Product Details-->
-                  <div class = 'item-details'>
-                    <h3 class = 'item-name'> HeadPhones Max</h3>
-                    <p class = 'item-color'> Color: red</p>
-                  </div>
+    <!-- Contenu du panier (caché pendant le chargement) -->
+    <div id="cart-content-wrapper" class='cart-content' style="display: none;">
 
-                  <!--Product Price and Actions-->
-                  <div class = 'item-actions'>
-                    <p class = 'item-price'> Price: $30</p>
-                    <p class = 'item-quantity'> Quantity: 02</p>
+      <!-- LEFT COLUMN: Liste des articles du panier -->
+      <div class='cart-items' id="cart-items-container">
+        <!-- Les articles seront injectés ici dynamiquement par JavaScript -->
+      </div>
 
-                    <!--Remove Button-->
-                    <button class = 'remove-btn'> Remove</button>
-                  </div>
+      <!-- RIGHT COLUMN: Résumé de commande -->
+      <div class='order-summary'>
+        <h2 class='summary-title'>
+          <i class="fas fa-receipt"></i>
+          Résumé de la commande
+        </h2>
 
-                </div>
-                <!--Second Cart Item-->
-                <div class = 'cart-item'>
-                  <!-- Product Image -->
-                  <img src = '/assets/images/M8.png' class = 'item-image'>
-
-                  <!--Product Details-->
-                  <div class = 'item-details'>
-                    <h3 class = 'item-name'> HeadPhones Max</h3>
-                    <p class = 'item-color'> Color: red</p>
-                  </div>
-
-                  <!--Product Price and Actions-->
-                  <div class = 'item-actions'>
-                    <p class = 'item-price'> Price: $30</p>
-                    <p class = 'item-quantity'> Quantity: 02</p>
-
-                    <!--Remove Button-->
-                    <button class = 'remove-btn'> Remove</button>
-                  </div>
-
-                </div>
-
-                <!--Third Cart Item-->
-                <div class = 'cart-item'>
-                  <!-- Product Image -->
-                  <img src = '/assets/images/M8.png' class = 'item-image'>
-
-                  <!--Product Details-->
-                  <div class = 'item-details'>
-                    <h3 class = 'item-name'> HeadPhones Max</h3>
-                    <p class = 'item-color'> Color: red</p>
-                  </div>
-
-                  <!--Product Price and Actions-->
-                  <div class = 'item-actions'>
-                    <p class = 'item-price'> Price: $30</p>
-                    <p class = 'item-quantity'> Quantity: 02</p>
-
-                    <!--Remove Button-->
-                    <button class = 'remove-btn'> Remove</button>
-                  </div>
-
-                </div>
-            </div>
-
-            <!-- RIGHT COLUMN: Order Summary-->
-             <div class = 'order-summary'>
-                <h2 class = 'summary-title'> Order Summary</h2>
-
-                <!-- Summary Box with pricing details-->
-                 <div class = 'summary-box'>
-                  <!-- Subtotal-->
-                   <div class = 'summary-row'>
-                      <span class = 'summary-label'> Subtotal:</span>
-                      <span class = 'summary-value'> $90</span>
-                   </div>
-                   
-                   <!--Discount-->
-                   <div class = 'summary-row'>
-                      <span class = 'summary-label'> Discount:</span>
-                      <span class = 'summary-value'> $0</span>
-                   </div>
-                   <!--Total (Bold and prominent)-->
-                   <div class = 'summary-row summary-total'>
-                      <span class = 'summary-label'> Total:</span>
-                      <span class = 'summary-value'> $90</span>
-                   </div>
-                 </div>
-
-                 <!-- Checkout Button -->
-                  <button class = 'checkout-btn'> Process to payment</button>
-             </div>
+        <!-- Box de résumé -->
+        <div class='summary-box'>
+          
+          <!-- Sous-total -->
+          <div class='summary-row'>
+            <span class='summary-label'>
+              <i class="fas fa-shopping-bag"></i>
+              Sous-total:
+            </span>
+            <span class='summary-value' id="subtotal-value">$0.00</span>
+          </div>
+          
+          <!-- Réduction -->
+          <div class='summary-row'>
+            <span class='summary-label'>
+              <i class="fas fa-tag"></i>
+              Réduction:
+            </span>
+            <span class='summary-value discount-value' id="discount-value">-$0.00</span>
           </div>
 
-     </main>
+          <!-- Frais de livraison -->
+          <div class='summary-row'>
+            <span class='summary-label'>
+              <i class="fas fa-truck"></i>
+              Livraison:
+            </span>
+            <span class='summary-value' id="shipping-value">Gratuite</span>
+          </div>
+          
+          <!-- Total (mis en évidence) -->
+          <div class='summary-row summary-total'>
+            <span class='summary-label'>
+              <i class="fas fa-calculator"></i>
+              Total:
+            </span>
+            <span class='summary-value' id="total-value">$0.00</span>
+          </div>
+        </div>
+
+        <!-- Bouton de paiement -->
+        <button class='checkout-btn' id="checkout-button">
+          <i class="fas fa-lock"></i>
+          Procéder au paiement
+        </button>
+
+        <!-- Lien pour continuer les achats -->
+        <a href="/index.html" class="continue-shopping-link">
+          <i class="fas fa-arrow-left"></i>
+          Continuer mes achats
+        </a>
+
+        <!-- Badges de sécurité -->
+        <div class="security-badges">
+          <div class="badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Paiement sécurisé</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-undo"></i>
+            <span>Retours gratuits</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
 
   <!-- Footer -->
-<footer>
-  <!-- Section des avantages -->
-  <div class="footer-top">
-    <div class="benefits">
-      <div class="benefit">
-        <i class="fas fa-truck"></i>
-        <p>Livraison à domicile</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-lock"></i>
-        <p>Paiement sécurisé</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-undo"></i>
-        <p>Retours faciles</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-headset"></i>
-        <p>Support client 24/7</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Grille principale -->
-  <div class="footer-container">
-  
-    <!-- Section Navigation Rapide -->
-    <div class="footer-section">
-      <h3>Navigation Rapide</h3>
-      <ul>
-        <li><a href=""">Deals</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/Blog.html">Blog</a></li>
-        <li><a href="#">Promotions</a></li>
-      </ul>
-    </div>
-
-    <!-- Section À propos -->
-    <div class="footer-section about-section">
-      <h3>À propos de Shopcart</h3>
-      <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service client exceptionnel.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <footer>
+    <div class="footer-top">
+      <div class="benefits">
+        <div class="benefit">
+          <i class="fas fa-truck"></i>
+          <p>Livraison à domicile</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-lock"></i>
+          <p>Paiement sécurisé</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-undo"></i>
+          <p>Retours faciles</p>
+        </div>
+        <div class="benefit">
+          <i class="fas fa-headset"></i>
+          <p>Support client 24/7</p>
+        </div>
       </div>
     </div>
 
-    <!-- Section Boutique -->
-    <div class="footer-section">
-      <h3>Boutique</h3>
-      <div class="shop-categories">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Navigation Rapide</h3>
         <ul>
-          <li><a href="/pages/products_tel.html">Smartphones</a></li>
-          <li><a href="/pages/products_ordi.html">Ordinateurs</a></li>
-          <li><a href="/pages/products_casque.html">Casques</a></li>
-          <li><a href="/pages/products_disk.html">Accessoires</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/Blog.html">Blog</a></li>
+          <li><a href="#">Promotions</a></li>
         </ul>
       </div>
-    </div>
 
-    <!-- Section Newsletter et Contact -->
-    <div class="footer-section">
-      <h3>Restez Informé</h3>
-      <div class="newsletter-section">
-        <p>Inscrivez-vous à notre newsletter</p>
-        <form id="newsletter-form" class="newsletter-form">
-          <div class="input-container">
-            <i class="far fa-envelope"></i>
-            <input type="email" id="newsletter-email" placeholder="Votre email" required>
-          </div>
-          <button type="submit">S'inscrire</button>
-        </form>
+      <div class="footer-section about-section">
+        <h3>À propos de Shopcart</h3>
+        <p>Votre destination en ligne pour les meilleurs appareils électroniques.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-      
-      <div class="contact-info" style="margin-top: 20px;">
-        <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
-        <p><i class="fas fa-phone"></i> +237 657450314</p>
-        <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
-        <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
+
+      <div class="footer-section">
+        <h3>Boutique</h3>
+        <div class="shop-categories">
+          <ul>
+            <li><a href="/pages/products_tel.html">Smartphones</a></li>
+            <li><a href="/pages/products_ordi.html">Ordinateurs</a></li>
+            <li><a href="/pages/products_casque.html">Casques</a></li>
+            <li><a href="/pages/products_disk.html">Accessoires</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Séparateur -->
-  <div class="footer-divider"></div>
-
-  <!-- Footer bottom -->
-  <div class="footer-bottom">
-    <div class="payment-methods">
-      <p>Nous acceptons</p>
-      <div class="payment-icons">
-        <i class="fab fa-cc-visa"></i>
-        <i class="fab fa-cc-mastercard"></i>
-        <i class="fab fa-cc-paypal"></i>
-        <i class="fab fa-cc-apple-pay"></i>
+      <div class="footer-section">
+        <h3>Restez Informé</h3>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+          <p><i class="fas fa-phone"></i> +237 657450314</p>
+          <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+        </div>
       </div>
     </div>
-    
-    <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
-    
-    <div class="footer-links">
-      <a href="/security.html">Confidentialité</a>
-      <a href="/conditions.html">Conditions d'utilisation</a>
-      <a href="/cookies.html">Mentions légales</a>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#">Confidentialité</a>
+        <a href="#">Conditions</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+  <!-- Script JavaScript -->
+  
 </body>
 </html>

@@ -15,10 +15,9 @@
 
     <!--  les icônes de paiement -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
-  </style>
- 
+  <script defer src="assets/js/newsletter.js"></script>
+
+  <script src="/assets/js/header.js"></script>
 </head>
 
 <body>
@@ -72,7 +71,12 @@
       <div class="user-actions"  id="userActions">
         <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
         <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count">3</span></a>
+            class="cart-count"></span></a>
+             <!-- Dark Mode Toggle -->
+      <div class="account-icon">
+        <input type="checkbox" id="darkSwitch">
+          <label for="darkSwitch" ><i class="fas fa-moon"></i> </label>
+      </div>
       </div>
     </nav>
 
@@ -312,4 +316,6 @@
   </div>
 </footer>
 </body>
+<script src="/assets/js/advertisement.js"></script>
+
 </html>

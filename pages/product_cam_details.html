@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="assets/js/newsletter.js"></script>
+  <script src="/assets/js/cart-manager.js" defer></script>
+ 
+  <script src="/assets/js/header.js"></script>
 </head>
+
 <body>
  <!-- Header -->
   <header>
@@ -22,15 +27,14 @@
         </div>
         <span class="logo-text">Shopcart</span>
       </div>
-
       <!-- Hamburger icon comme label pour la checkbox -->
-      <label for="menu-toggle" class="hamburger">
+      <label for="menu-toggle" class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li class="categories-dropdown">
           <!-- Checkbox pour le sous-menu des catégories -->
           <label for="categories-toggle">
@@ -54,14 +58,14 @@
         <li><a href="/Blog.html">Blog</a></li>
       </ul>
 
-      <div class="search-bar">
+      <div class="search-bar"  id="searchBar">
         <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
 
-      <div class="user-actions">
+      <div class="user-actions"  id="userActions">
         <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
         <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count">3</span></a>
+            class="cart-count"></span></a>
       </div>
     </nav>
 
@@ -130,7 +134,7 @@
 <!--Products Section-->
 <section class="products">
     <div class="container">
-        <h2>You Might Also Like</h2>
+        <h2 id="title1">You Might Also Like</h2>
         <div class="product-group">
             <div class="products-grid" id="grid1">
                 <!--Product-Card-->
@@ -281,7 +285,7 @@
             <span class="thick-line"></span>
             <span class="thin-line"></span>
         </div>
-        <h2>Best Sellers</h2>
+        <h2 id="title2">Best Sellers</h2>
         <div class="products-group">
             <div class="products-grid" id="grid2">
                 <!--Product-Card-->
@@ -462,7 +466,7 @@
     <div class="footer-section">
       <h3>Navigation Rapide</h3>
       <ul>
-        <li><a href=""">Deals</a></li>
+        <li><a href="">Deals</a></li>
         <li><a href="/about.html">About Us</a></li>
         <li><a href="/Blog.html">Blog</a></li>
         <li><a href="#">Promotions</a></li>
@@ -541,6 +545,9 @@
     </div>
   </div>
 </footer>
+
+ <script language="JavaScript" type="text/javascript" src="/assets/js/pagination_cam.js"></script>
+ <script language="JavaScript" type="text/javascript" src="/assets/js/navigation_tel_cam.js"></script>
 
 </body>
 </html>

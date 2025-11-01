@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopcart</title>
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/main_about.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/main_about.css">
 
-      <!-- Utilisation de Font Awesome pour les icônes -->
+     <!-- Utilisation de Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
-  </style>
+  <script defer src="assets/js/newsletter.js"></script>
+   <script src="/assets/js/about.js"> </script>
+  <script src="/assets/js/header.js"></script>
 </head>
+
 <body>
  <!-- Header -->
   <header>
@@ -29,15 +30,14 @@
         </div>
         <span class="logo-text">Shopcart</span>
       </div>
-
       <!-- Hamburger icon comme label pour la checkbox -->
-      <label for="menu-toggle" class="hamburger">
+      <label for="menu-toggle" class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li class="categories-dropdown">
           <!-- Checkbox pour le sous-menu des catégories -->
           <label for="categories-toggle">
@@ -61,20 +61,21 @@
         <li><a href="/Blog.html">Blog</a></li>
       </ul>
 
-      <div class="search-bar">
+      <div class="search-bar"  id="searchBar">
         <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
 
-      <div class="user-actions">
+      <div class="user-actions"  id="userActions">
         <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
         <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count">3</span></a>
+            class="cart-count"></span></a>
       </div>
     </nav>
 
     <!-- Overlay pour fermer le menu (utilise l'ancre) -->
     <a href="#" class="overlay" id="overlay"></a>
   </header>
+
   <main>
 
     <section class="hero-about">
@@ -151,12 +152,68 @@
 
     <!-- Team Section -->
     <section class="team">
-        <div class="container">
-            <h2 class="section-title">Notre Équipe</h2>
+      <h2 class="section-title">Notre Équipe</h2>
             <p class="team-intro">
                 Une équipe passionnée et expérimentée au service de vos besoins technologiques
             </p>
+        <div class="team-scroll team-right-to-left">
+          <div class="container">
             <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="/assets/images/ALD.png" alt="CHEF">
+                    </div>
+                    <h3>AZANGUE</h3>
+                    <p class="member-role">CEO</p>
+                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="#" alt="Sountsa Pio">
+                    </div>
+                    <h3>Sountsa Pio</h3>
+                    <p class="member-role">Responsable Achats</p>
+                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="#" alt="Roy">
+                    </div>
+                    <h3>Roy</h3>
+                    <p class="member-role">Responsable Achats</p>
+                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="#" alt="Daryl">
+                    </div>
+                    <h3>Daryl</h3>
+                    <p class="member-role">Responsable Achats</p>
+                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="#" alt="Gabrielle">
+                    </div>
+                    <h3>Gabrielle</h3>
+                    <p class="member-role">Responsable Achats</p>
+                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="#" alt="Sountsa Pio">
+                    </div>
+                    <h3>Sountsa Pio</h3>
+                    <p class="member-role">Responsable Achats</p>
+                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="team-scroll team-left-to-right">
+          <div class="container">
+            <div class="team-grid1">
                 <div class="team-member">
                     <div class="member-photo">
                         <img src="#" alt="Samuel">
@@ -207,45 +264,12 @@
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="#" alt="Azangue">
+                        <img src="/assets/images/ALD.png" alt="CHEF">
                     </div>
-                    <h3>Azangue</h3>
-                    <p class="member-role">Responsable Achats</p>
+                    <h3>AZANGUE</h3>
+                    <p class="member-role">CEO</p>
                     <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
                 </div>
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="#" alt="Sountsa Pio">
-                    </div>
-                    <h3>Sountsa Pio</h3>
-                    <p class="member-role">Responsable Achats</p>
-                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="#" alt="Roy">
-                    </div>
-                    <h3>Roy</h3>
-                    <p class="member-role">Responsable Achats</p>
-                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="#" alt="Daryl">
-                    </div>
-                    <h3>Daryl</h3>
-                    <p class="member-role">Responsable Achats</p>
-                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="#" alt="Gabrielle">
-                    </div>
-                    <h3>Gabrielle</h3>
-                    <p class="member-role">Responsable Achats</p>
-                    <p class="member-bio">Experte en sourcing et relations fournisseurs</p>
-                </div>
-
                 <div class="team-member">
                     <div class="member-photo">
                         <img src="#" alt="Sountsa Pio">
@@ -256,9 +280,10 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
-    <!-- History Section -->
+     <!-- History Section -->
     <section class="history">
         <div class="container">
             <h2 class="section-title">Notre Histoire</h2>
@@ -300,14 +325,58 @@
         <div class="container">
             <h2>Rejoignez des Milliers de Clients Satisfaits</h2>
             <p>Découvrez notre sélection de produits électroniques de qualité</p>
-            <a href="products.html" class="cta-button">Voir nos Produits</a>
+            <a href="/pages/product_catalogue.html" class="cta-button">Voir nos Produits</a>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <p class="contact-intro">Une question ? Notre équipe est là pour vous répondre</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <h3>Adresse</h3>
+                        <p>123 Rue Commerce<br>Yaoundé, Cameroun</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>business@gmail.com<br>support@shopcart.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <h3>Téléphone</h3>
+                        <p>+237 657450314<br>Lun - Sam: 8h - 18h</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Sujet">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Votre Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
 
   </main>
-  <!-- Footer -->
-<footer>
+
+  <footer>
   <!-- Section des avantages -->
   <div class="footer-top">
     <div class="benefits">
@@ -416,5 +485,6 @@
     </div>
   </div>
 </footer>
+
 </body>
 </html>

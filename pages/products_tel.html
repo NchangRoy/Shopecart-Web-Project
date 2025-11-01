@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Telephones | Shopcart</title>
@@ -7,78 +8,105 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="/assets/js/newsletter.js"></script>
+<script src="/assets/js/cart-manager.js" defer></script>
+    <script src="/assets/js/header.js"></script>
 </head>
+
 <body>
- <!-- Header -->
-  <header>
-    <!-- Checkbox cachée pour contrôler le menu mobile -->
-    <nav class="navbar">
-      <div class="logo">
-        <div class="logo-img">
-          <a href="/index.html">
-            <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
-          </a>
-        </div>
-        <span class="logo-text">Shopcart</span>
-      </div>
+    <!-- Header -->
+    <header>
+        <!-- Checkbox cachée pour contrôler le menu mobile -->
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-img">
+                    <a href="/index.html">
+                        <img src="/assets/images/shopcart-logo.png" alt="Shopcart Logo" class="logo-img">
+                    </a>
+                </div>
+                <span class="logo-text">Shopcart</span>
+            </div>
+            <!-- Hamburger icon comme label pour la checkbox -->
+            <label for="menu-toggle" class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-      <ul class="nav-links">
-        <li class="categories-dropdown">
-          <!-- Checkbox pour le sous-menu des catégories -->
-          <label for="categories-toggle">
-            Catégories <span class="dropdown-arrow">▼</span>
-          </label>
-          <div class="dropdown-content">
-            <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
-            <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
-            <a href="/pages/product_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
-            <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
-            <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
-            <a href="/pages/products_disk.html"><i class="fas fa-keyboard"></i> Périphériques</a>
-            <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
-            <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
-            <a href="/pages/products_manettes.html"><i class="fas fa-gamepad"></i> Gaming</a>
-            <a href="/pages/products_cam.html"><i class="fas fa-tv"></i> Caméras</a>
-          </div>
-        </li>
-        <li><a href="#">Promotions</a></li>
-        <li><a href="/about.html">À propos</a></li>
-        <li><a href="/Blog.html">Blog</a></li>
-      </ul>
+            <ul class="nav-links" id="navLinks">
+                <li class="categories-dropdown">
+                    <!-- Checkbox pour le sous-menu des catégories -->
+                    <label for="categories-toggle">
+                        Catégories <span class="dropdown-arrow">▼</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
+                        <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
+                        <a href="/pages/product_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
+                        <a href="#"><i class="fas fa-tablet-alt"></i> Tablettes</a>
+                        <a href="/pages/products_ordi.html"><i class="fas fa-desktop"></i> Ordinateurs de bureau</a>
+                        <a href="/pages/products_disk.html"><i class="fas fa-keyboard"></i> Périphériques</a>
+                        <a href="#"><i class="fas fa-microchip"></i> Composants PC</a>
+                        <a href="#"><i class="fas fa-print"></i> Imprimantes</a>
+                        <a href="/pages/products_manettes.html"><i class="fas fa-gamepad"></i> Gaming</a>
+                        <a href="/pages/products_cam.html"><i class="fas fa-tv"></i> Caméras</a>
+                    </div>
+                </li>
+                <li><a href="#">Promotions</a></li>
+                <li><a href="/about.html">À propos</a></li>
+                <li><a href="/Blog.html">Blog</a></li>
+            </ul>
 
-      <div class="search-bar">
-        <input type="text" placeholder="Rechercher un produit..." class="search-input">
-      </div>
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Rechercher un produit..." class="search-input">
+            </div>
 
-      <div class="user-actions">
-        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
-        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count">3</span></a>
-      </div>
-    </nav>
+            <div class="user-actions" id="userActions">
+                <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon
+                        Compte</span></a>
+                <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
+                        class="cart-count"></span></a>
+            </div>
+        </nav>
 
-    <!-- Overlay pour fermer le menu (utilise l'ancre) -->
-    <a href="#" class="overlay" id="overlay"></a>
-  </header>
-  
+        <!-- Overlay pour fermer le menu (utilise l'ancre) -->
+        <a href="#" class="overlay" id="overlay"></a>
+    </header>
     <!--Hero Banner-->
     <section class="hero-banner">
         <!--Radio buttons pour controler les slides-->
+        <input type="radio" name="slide" id="slide4clone">
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
         <input type="radio" name="slide" id="slide3">
         <input type="radio" name="slide" id="slide4">
+        <input type="radio" name="slide" id="slide1clone">
         <div class="carousel-container">
             <!--Les slides-->
-            <div class="slides">
+            <div class="slides" id="slides">
+                <!--Slide 4 Clone-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide3"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Are You Ready For<br>Our Products ?<br>Surely Not</h1>
+                        <button class="btn-primary">Maybe Yes</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg"
+                            alt="">
+                    </div>
+                    <label class="right-arrow" for="slide1"><strong>&#62</strong></label>
+                </div>
                 <!--Slide 1-->
                 <div class="slide">
+                    <label class="left-arrow" for="slide4clone"><strong>&#60</strong></label>
                     <div class="banner-content">
                         <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
                         <button class="btn-primary">Buy Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg" alt="">
+                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
@@ -90,7 +118,8 @@
                         <button class="btn-primary">Shop Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="https://img.freepik.com/premium-photo/woman-blows-air-kiss-camera-smartphone-takes-selfie-sends-mwah-via-online-call_849040-1293.jpg" alt="">
+                        <img src="https://img.freepik.com/premium-photo/woman-blows-air-kiss-camera-smartphone-takes-selfie-sends-mwah-via-online-call_849040-1293.jpg"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide3"><strong>&#62</strong></label>
                 </div>
@@ -102,7 +131,8 @@
                         <button class="btn-primary">Get Now</button>
                     </div>
                     <div class="banner-image">
-                        <img src="https://thumbs.dreamstime.com/b/black-young-woman-phone-hands-empty-blue-background-smiling-african-woman-working-phone-portrait-empty-copy-263033266.jpg" alt="">
+                        <img src="https://thumbs.dreamstime.com/b/black-young-woman-phone-hands-empty-blue-background-smiling-african-woman-working-phone-portrait-empty-copy-263033266.jpg"
+                            alt="">
                     </div>
                     <label class="right-arrow" for="slide4"><strong>&#62</strong></label>
                 </div>
@@ -114,647 +144,779 @@
                         <button class="btn-primary">Maybe Yes</button>
                     </div>
                     <div class="banner-image">
-                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg" alt="">
+                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-her-phone-with-smiling_216356-2370.jpg"
+                            alt="">
                     </div>
+                    <label class="right-arrow" for="slide1clone"><strong>&#62</strong></label>
+                </div>
+                <!--Slide 1 Clone-->
+                <div class="slide">
+                    <label class="left-arrow" for="slide4"><strong>&#60</strong></label>
+                    <div class="banner-content">
+                        <h1>Get Up to 50% Off<br>On Telephones<br>And Other Gadgets</h1>
+                        <button class="btn-primary">Buy Now</button>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://img.freepik.com/premium-photo/young-black-woman-using-smartphone_51530-5337.jpg"
+                            alt="">
+                    </div>
+                    <label class="right-arrow" for="slide2"><strong>&#62</strong></label>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="banner-dots">
-        <label for="slide1" class="dot"></label>
-        <label for="slide2" class="dot"></label>
-        <label for="slide3" class="dot"></label>
-        <label for="slide4" class="dot"></label>
-    </div>
-</section>
+        <div class="banner-dots">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+            <label for="slide4" class="dot"></label>
+        </div>
+    </section>
 
-<!--Filters-->
- <div class="product-filters-bar">
-     <div class="filter-all-button">
-         <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
-     </div>
-     <input type="radio" name="filters" id="none" class="filter-radio-input" checked hidden>
+    <!--Filters-->
+    <div class="product-filters-bar">
+        <div class="filter-all-button">
+            <i class="fas fa-sliders-h icon-margin-right"></i> Tous les filtres
+        </div>
+        <input type="radio" name="filters" id="none" class="filter-radio-input" checked hidden>
 
-     <!-- Filtre Prix -->
-     <div class="product-filter-item" tabindex="0">
-         <input type="checkbox" name="filters" id="prix-casques-toggle" class="filter-radio-input">
-         <label for="prix-casques-toggle" class="filter-button-label">
-             Prix <span class="filter-arrow-icon">▼</span>
-         </label>
+        <!-- Filtre Prix -->
+        <div class="product-filter-item" tabindex="0">
+            <input type="checkbox" name="filters" id="prix-casques-toggle" class="filter-radio-input">
+            <label for="prix-casques-toggle" class="filter-button-label">
+                Prix <span class="filter-arrow-icon">▼</span>
+            </label>
 
-         <div class="filter-options-list">
-             <a href="#" data-price="0-100000"><i class="fas fa-tag"></i> Moins de 100.000 FCFA</a>
-             <a href="#" data-price="100000-200000"><i class="fas fa-tag"></i> 100.000 - 200.000 FCFA</a>
-             <a href="#" data-price="200000-500000"><i class="fas fa-tag"></i> 200.000 - 500.000 FCFA</a>
-             <a href="#" data-price="500000+"><i class="fas fa-tag"></i> Plus de 500.000 FCFA</a>
-         </div>
-     </div>
-
-     <!-- Filtre Marques -->
-     <div class="product-filter-item" tabindex="0">
-         <input type="checkbox" name="filters" id="marques-casques-toggle" class="filter-radio-input">
-         <label for="marques-casques-toggle" class="filter-button-label">
-             Marques <span class="filter-arrow-icon">▼</span>
-         </label>
-         <div class="filter-options-list">
-             <a href="#" data-brand="samsung"><i class="fa-solid fa-phone"></i> Samsung</a>
-             <a href="#" data-brand="google"><i class="fa-brands fa-google"></i> Google</a>
-             <a href="#" data-brand="itel"><i class="fa-solid fa-mobile"></i></i> Itel</a>
-             <a href="#" data-brand="iphone"><i class="fa-brands fa-apple"></i> Iphone</a>
-             <a href="#" data-brand="nokia"><i class="fa-solid fa-mobile-retro"></i> Nokia</a>
-             <a href="#" data-brand="motorola"><i class="fa-solid fa-circle-user"></i> Motorola</a>
-             <a href="#" data-brand="tecno"><i class="fa-solid fa-mobile-button"></i> Tecno</a>
-             <a href="#" data-brand="vivo"><i class="fa-solid fa-bell"></i> Vivo</a>
-             <a href="#" data-brand="huawei"><i class="fa-solid fa-globe"></i> Huawei</a>
-             <a href="#" data-brand="xiaomi"><i class="fa-solid fa-mobile-screen-button"></i> Xiaomi</a>
-             <a href="#" data-brand="infinix"><i class="fas fa-bolt"></i> Infinix</a>
-             <a href="#" data-brand="alcatel"><i class="fa-solid fa-comment"></i> Alcatel</a>
-         </div>
-     </div>
-
-     <!-- Filtre Notes -->
-     <div class="product-filter-item" tabindex="0">
-         <input type="checkbox" name="filters" id="notes-casques-toggle" class="filter-radio-input">
-         <label for="notes-casques-toggle" class="filter-button-label">
-             Notes <span class="filter-arrow-icon">▼</span>
-         </label>
-         <div class="filter-options-list">
-             <a href="#" data-rating="5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5 étoiles)</a>
-             <a href="#" data-rating="4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
-             <a href="#" data-rating="3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
-             <a href="#" data-rating="2"><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
-             <a href="#" data-rating="1"><i class="fas fa-star"></i> et +</a>
-         </div>
-     </div>
- </div>
-
-<!--Products Section-->
-<section class="products">
-    <div class="container">
-        <h2>Products For You</h2>
-        <div class="products-group">
-            <div class="products-grid" id="grid1">
-                <!--Product-Card-->
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://dicas.olx.com.br/wp-content/uploads/2024/10/iphone-16-lancamento-recursos.jpg" alt="Iphone 16" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 16</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
-                    <div class="price-cart">
-                        <p class="product-price">850000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://www.gadgetpilipinas.net/wp-content/uploads/2024/09/Itel-A80-Philippines-4-770x576.jpg" alt="Itel A80" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel A80</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.8)</div>
-                    <div class="price-cart">
-                        <p class="product-price">45000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://tse1.explicit.bing.net/th/id/OIP.ifv4th66VNRv4pU3FfQt_gHaIC?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung Galaxy Note 20" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung Galaxy Note 20</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
-                    <div class="price-cart">
-                        <p class="product-price">280000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/08/google-pixel-9-pro.png" alt="Google Pixel 9" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 9</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
-                    <div class="price-cart">
-                        <p class="product-price">750000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15.png" alt="Iphone 15" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 15</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
-                    <div class="price-cart">
-                        <p class="product-price">720000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/itel/itel-a90-2.jpg" alt="Itel A90" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel A90</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.9)</div>
-                    <div class="price-cart">
-                        <p class="product-price">52000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn.gsmarena.com/imgroot/reviews/19/samsung-galaxy-s10/gal/-1024w2/gsmarena_001.jpg" alt="Samsung Galaxy S10" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung Galaxy S10</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.7)</div>
-                    <div class="price-cart">
-                        <p class="product-price">195000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://www.googlewatchblog.de/wp-content/uploads/pixel-7-pro-smartphones.jpg" alt="Google Pixel 7" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 7</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.3)</div>
-                    <div class="price-cart">
-                        <p class="product-price">420000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://i2.wp.com/imgix.bustle.com/uploads/image/2022/9/7/9fce650c-28aa-4995-81f4-ac72d963485b-iphone14.png" alt="Iphone 14" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 14</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
-                    <div class="price-cart">
-                        <p class="product-price">580000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://gizmologi.id/wp-content/uploads/2025/05/Itel-City-100-5.jpg" alt="Itel City 100" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel City 100</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i> (3.6)</div>
-                    <div class="price-cart">
-                        <p class="product-price">43000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://th.bing.com/th/id/OIP.-fMULcZXP1vljwR6A0XzXgHaFn?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung A52" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung A52</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
-                    <div class="price-cart">
-                        <p class="product-price">185000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-1.jpg" alt="Google Pixel 8" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 8</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
-                    <div class="price-cart">
-                        <p class="product-price">580000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination" id="pagin1">
-                <button class="page-btn">Previous</button>
-                <button class="page-num">1</button>
-                <button class="page-num">2</button>
-                <button class="page-num-active">3</button>
-                <button class="page-num">...</button>
-                <button class="page-num">7</button>
-                <button class="page-num">8</button>
-                <button class="page-btn">Next</button>
+            <div class="filter-options-list">
+                <a href="#" data-price="0-100000"><i class="fas fa-tag"></i> Moins de 100.000 FCFA</a>
+                <a href="#" data-price="100000-200000"><i class="fas fa-tag"></i> 100.000 - 200.000 FCFA</a>
+                <a href="#" data-price="200000-500000"><i class="fas fa-tag"></i> 200.000 - 500.000 FCFA</a>
+                <a href="#" data-price="500000+"><i class="fas fa-tag"></i> Plus de 500.000 FCFA</a>
             </div>
         </div>
-        <div class="lines">
-            <span class="thick-line"></span>
-            <span class="thin-line"></span>
-        </div>
-        <h2>Best Sellers</h2>
-        <div class="product-group">
-            <div class="products-grid" id="grid2">
-                <!--Product-Card-->
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://dicas.olx.com.br/wp-content/uploads/2024/10/iphone-16-lancamento-recursos.jpg" alt="Iphone 16" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 16</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
-                    <div class="price-cart">
-                        <p class="product-price">850000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://www.gadgetpilipinas.net/wp-content/uploads/2024/09/Itel-A80-Philippines-4-770x576.jpg" alt="Itel A80" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel A80</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.8)</div>
-                    <div class="price-cart">
-                        <p class="product-price">45000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://tse1.explicit.bing.net/th/id/OIP.ifv4th66VNRv4pU3FfQt_gHaIC?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung Galaxy Note 20" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung Galaxy Note 20</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
-                    <div class="price-cart">
-                        <p class="product-price">280000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/08/google-pixel-9-pro.png" alt="Google Pixel 9" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 9</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
-                    <div class="price-cart">
-                        <p class="product-price">750000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15.png" alt="Iphone 15" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 15</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
-                    <div class="price-cart">
-                        <p class="product-price">720000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/itel/itel-a90-2.jpg" alt="Itel A90" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel A90</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.9)</div>
-                    <div class="price-cart">
-                        <p class="product-price">52000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn.gsmarena.com/imgroot/reviews/19/samsung-galaxy-s10/gal/-1024w2/gsmarena_001.jpg" alt="Samsung Galaxy S10" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung Galaxy S10</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.7)</div>
-                    <div class="price-cart">
-                        <p class="product-price">195000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://www.googlewatchblog.de/wp-content/uploads/pixel-7-pro-smartphones.jpg" alt="Google Pixel 7" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 7</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.3)</div>
-                    <div class="price-cart">
-                        <p class="product-price">420000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://i2.wp.com/imgix.bustle.com/uploads/image/2022/9/7/9fce650c-28aa-4995-81f4-ac72d963485b-iphone14.png" alt="Iphone 14" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 14</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
-                    <div class="price-cart">
-                        <p class="product-price">580000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://gizmologi.id/wp-content/uploads/2025/05/Itel-City-100-5.jpg" alt="Itel City 100" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel City 100</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i> (3.6)</div>
-                    <div class="price-cart">
-                        <p class="product-price">43000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://th.bing.com/th/id/OIP.-fMULcZXP1vljwR6A0XzXgHaFn?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung A52" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung A52</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
-                    <div class="price-cart">
-                        <p class="product-price">185000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-1.jpg" alt="Google Pixel 8" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 8</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
-                    <div class="price-cart">
-                        <p class="product-price">580000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination" id="pagin2">
-                <button class="page-btn">Previous</button>
-                <button class="page-num">1</button>
-                <button class="page-num">2</button>
-                <button class="page-num-active">3</button>
-                <button class="page-num">...</button>
-                <button class="page-num">7</button>
-                <button class="page-num">8</button>
-                <button class="page-btn">Next</button>
+
+        <!-- Filtre Marques -->
+        <div class="product-filter-item" tabindex="0">
+            <input type="checkbox" name="filters" id="marques-casques-toggle" class="filter-radio-input">
+            <label for="marques-casques-toggle" class="filter-button-label">
+                Marques <span class="filter-arrow-icon">▼</span>
+            </label>
+            <div class="filter-options-list">
+                <a href="#" data-brand="samsung"><i class="fa-solid fa-phone"></i> Samsung</a>
+                <a href="#" data-brand="google"><i class="fa-brands fa-google"></i> Google</a>
+                <a href="#" data-brand="itel"><i class="fa-solid fa-mobile"></i></i> Itel</a>
+                <a href="#" data-brand="iphone"><i class="fa-brands fa-apple"></i> Iphone</a>
+                <a href="#" data-brand="nokia"><i class="fa-solid fa-mobile-retro"></i> Nokia</a>
+                <a href="#" data-brand="motorola"><i class="fa-solid fa-circle-user"></i> Motorola</a>
+                <a href="#" data-brand="tecno"><i class="fa-solid fa-mobile-button"></i> Tecno</a>
+                <a href="#" data-brand="vivo"><i class="fa-solid fa-bell"></i> Vivo</a>
+                <a href="#" data-brand="huawei"><i class="fa-solid fa-globe"></i> Huawei</a>
+                <a href="#" data-brand="xiaomi"><i class="fa-solid fa-mobile-screen-button"></i> Xiaomi</a>
+                <a href="#" data-brand="infinix"><i class="fas fa-bolt"></i> Infinix</a>
+                <a href="#" data-brand="alcatel"><i class="fa-solid fa-comment"></i> Alcatel</a>
             </div>
         </div>
-        <div class="lines">
-            <span class="thick-line"></span>
-            <span class="thin-line"></span>
-        </div>
-        <h2>Products On Promotion</h2>
-        <div class="products-group">
-            <div class="products-grid" id="grid3">
-                <!--Product-Card-->
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://dicas.olx.com.br/wp-content/uploads/2024/10/iphone-16-lancamento-recursos.jpg" alt="Iphone 16" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 16</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
-                    <div class="price-cart">
-                        <p class="product-price">850000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://www.gadgetpilipinas.net/wp-content/uploads/2024/09/Itel-A80-Philippines-4-770x576.jpg" alt="Itel A80" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel A80</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.8)</div>
-                    <div class="price-cart">
-                        <p class="product-price">45000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://tse1.explicit.bing.net/th/id/OIP.ifv4th66VNRv4pU3FfQt_gHaIC?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung Galaxy Note 20" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung Galaxy Note 20</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
-                    <div class="price-cart">
-                        <p class="product-price">280000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/08/google-pixel-9-pro.png" alt="Google Pixel 9" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 9</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
-                    <div class="price-cart">
-                        <p class="product-price">750000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15.png" alt="Iphone 15" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 15</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
-                    <div class="price-cart">
-                        <p class="product-price">720000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/itel/itel-a90-2.jpg" alt="Itel A90" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel A90</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.9)</div>
-                    <div class="price-cart">
-                        <p class="product-price">52000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn.gsmarena.com/imgroot/reviews/19/samsung-galaxy-s10/gal/-1024w2/gsmarena_001.jpg" alt="Samsung Galaxy S10" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung Galaxy S10</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (3.7)</div>
-                    <div class="price-cart">
-                        <p class="product-price">195000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://www.googlewatchblog.de/wp-content/uploads/pixel-7-pro-smartphones.jpg" alt="Google Pixel 7" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 7</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.3)</div>
-                    <div class="price-cart">
-                        <p class="product-price">420000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://i2.wp.com/imgix.bustle.com/uploads/image/2022/9/7/9fce650c-28aa-4995-81f4-ac72d963485b-iphone14.png" alt="Iphone 14" class="product-image">
-                    </div>
-                    <h3 class="product-title">Iphone 14</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
-                    <div class="price-cart">
-                        <p class="product-price">580000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://gizmologi.id/wp-content/uploads/2025/05/Itel-City-100-5.jpg" alt="Itel City 100" class="product-image">
-                    </div>
-                    <h3 class="product-title">Itel City 100</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i> (3.6)</div>
-                    <div class="price-cart">
-                        <p class="product-price">43000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://th.bing.com/th/id/OIP.-fMULcZXP1vljwR6A0XzXgHaFn?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Samsung A52" class="product-image">
-                    </div>
-                    <h3 class="product-title">Samsung A52</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.2)</div>
-                    <div class="price-cart">
-                        <p class="product-price">185000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-frame">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-1.jpg" alt="Google Pixel 8" class="product-image">
-                    </div>
-                    <h3 class="product-title">Google Pixel 8</h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> (4.1)</div>
-                    <div class="price-cart">
-                        <p class="product-price">580000 FCFA</p>
-                        <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination" id="pagin3">
-                <button class="page-btn">Previous</button>
-                <button class="page-num">1</button>
-                <button class="page-num">2</button>
-                <button class="page-num-active">3</button>
-                <button class="page-num">...</button>
-                <button class="page-num">7</button>
-                <button class="page-num">8</button>
-                <button class="page-btn">Next</button>
+
+        <!-- Filtre Notes -->
+        <div class="product-filter-item" tabindex="0">
+            <input type="checkbox" name="filters" id="notes-casques-toggle" class="filter-radio-input">
+            <label for="notes-casques-toggle" class="filter-button-label">
+                Notes <span class="filter-arrow-icon">▼</span>
+            </label>
+            <div class="filter-options-list">
+                <a href="#" data-rating="5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5 étoiles)</a>
+                <a href="#" data-rating="4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+                <a href="#" data-rating="3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i> et +</a>
+                <a href="#" data-rating="2"><i class="fas fa-star"></i><i class="fas fa-star"></i> et +</a>
+                <a href="#" data-rating="1"><i class="fas fa-star"></i> et +</a>
             </div>
         </div>
     </div>
-</section>
 
-   <!-- Footer -->
-<footer>
-  <!-- Section des avantages -->
-  <div class="footer-top">
-    <div class="benefits">
-      <div class="benefit">
-        <i class="fas fa-truck"></i>
-        <p>Livraison à domicile</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-lock"></i>
-        <p>Paiement sécurisé</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-undo"></i>
-        <p>Retours faciles</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-headset"></i>
-        <p>Support client 24/7</p>
-      </div>
-    </div>
-  </div>
+    <!--Products Section-->
+    <section class="products">
+        <div class="container">
+            <h2 id="title1">Products For You</h2>
+            <div class="products-group">
+                <div class="products-grid" id="grid1">
+                    <!--Product-Card-->
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://dicas.olx.com.br/wp-content/uploads/2024/10/iphone-16-lancamento-recursos.jpg"
+                                alt="Iphone 16" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 16</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.2)</div>
+                        <div class="price-cart">
+                            <p class="product-price">850000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://www.gadgetpilipinas.net/wp-content/uploads/2024/09/Itel-A80-Philippines-4-770x576.jpg"
+                                alt="Itel A80" class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel A80</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.8)</div>
+                        <div class="price-cart">
+                            <p class="product-price">45000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://tse1.explicit.bing.net/th/id/OIP.ifv4th66VNRv4pU3FfQt_gHaIC?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Samsung Galaxy Note 20" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung Galaxy Note 20</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.1)</div>
+                        <div class="price-cart">
+                            <p class="product-price">280000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/08/google-pixel-9-pro.png"
+                                alt="Google Pixel 9" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 9</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
+                        <div class="price-cart">
+                            <p class="product-price">750000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15.png"
+                                alt="Iphone 15" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 15</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
+                        <div class="price-cart">
+                            <p class="product-price">720000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn2.gsmarena.com/vv/pics/itel/itel-a90-2.jpg" alt="Itel A90"
+                                class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel A90</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.9)</div>
+                        <div class="price-cart">
+                            <p class="product-price">52000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn.gsmarena.com/imgroot/reviews/19/samsung-galaxy-s10/gal/-1024w2/gsmarena_001.jpg"
+                                alt="Samsung Galaxy S10" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung Galaxy S10</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.7)</div>
+                        <div class="price-cart">
+                            <p class="product-price">195000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://www.googlewatchblog.de/wp-content/uploads/pixel-7-pro-smartphones.jpg"
+                                alt="Google Pixel 7" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 7</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.3)</div>
+                        <div class="price-cart">
+                            <p class="product-price">420000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://i2.wp.com/imgix.bustle.com/uploads/image/2022/9/7/9fce650c-28aa-4995-81f4-ac72d963485b-iphone14.png"
+                                alt="Iphone 14" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 14</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                        <div class="price-cart">
+                            <p class="product-price">580000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://gizmologi.id/wp-content/uploads/2025/05/Itel-City-100-5.jpg"
+                                alt="Itel City 100" class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel City 100</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-regular fa-star"></i> (3.6)</div>
+                        <div class="price-cart">
+                            <p class="product-price">43000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://th.bing.com/th/id/OIP.-fMULcZXP1vljwR6A0XzXgHaFn?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Samsung A52" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung A52</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.2)</div>
+                        <div class="price-cart">
+                            <p class="product-price">185000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-1.jpg"
+                                alt="Google Pixel 8" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 8</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.1)</div>
+                        <div class="price-cart">
+                            <p class="product-price">580000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination" id="pagin1">
+                    <button class="page-btn">Previous</button>
+                    <button class="page-num">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num-active">3</button>
+                    <button class="page-num">...</button>
+                    <button class="page-num">7</button>
+                    <button class="page-num">8</button>
+                    <button class="page-btn">Next</button>
+                </div>
+            </div>
+            <div class="lines">
+                <span class="thick-line"></span>
+                <span class="thin-line"></span>
+            </div>
+            <h2 id="title2">Best Sellers</h2>
+            <div class="product-group">
+                <div class="products-grid" id="grid2">
+                    <!--Product-Card-->
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://dicas.olx.com.br/wp-content/uploads/2024/10/iphone-16-lancamento-recursos.jpg"
+                                alt="Iphone 16" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 16</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.2)</div>
+                        <div class="price-cart">
+                            <p class="product-price">850000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://www.gadgetpilipinas.net/wp-content/uploads/2024/09/Itel-A80-Philippines-4-770x576.jpg"
+                                alt="Itel A80" class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel A80</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.8)</div>
+                        <div class="price-cart">
+                            <p class="product-price">45000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://tse1.explicit.bing.net/th/id/OIP.ifv4th66VNRv4pU3FfQt_gHaIC?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Samsung Galaxy Note 20" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung Galaxy Note 20</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.1)</div>
+                        <div class="price-cart">
+                            <p class="product-price">280000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/08/google-pixel-9-pro.png"
+                                alt="Google Pixel 9" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 9</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
+                        <div class="price-cart">
+                            <p class="product-price">750000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15.png"
+                                alt="Iphone 15" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 15</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
+                        <div class="price-cart">
+                            <p class="product-price">720000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn2.gsmarena.com/vv/pics/itel/itel-a90-2.jpg" alt="Itel A90"
+                                class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel A90</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.9)</div>
+                        <div class="price-cart">
+                            <p class="product-price">52000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn.gsmarena.com/imgroot/reviews/19/samsung-galaxy-s10/gal/-1024w2/gsmarena_001.jpg"
+                                alt="Samsung Galaxy S10" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung Galaxy S10</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.7)</div>
+                        <div class="price-cart">
+                            <p class="product-price">195000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://www.googlewatchblog.de/wp-content/uploads/pixel-7-pro-smartphones.jpg"
+                                alt="Google Pixel 7" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 7</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.3)</div>
+                        <div class="price-cart">
+                            <p class="product-price">420000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://i2.wp.com/imgix.bustle.com/uploads/image/2022/9/7/9fce650c-28aa-4995-81f4-ac72d963485b-iphone14.png"
+                                alt="Iphone 14" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 14</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                        <div class="price-cart">
+                            <p class="product-price">580000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://gizmologi.id/wp-content/uploads/2025/05/Itel-City-100-5.jpg"
+                                alt="Itel City 100" class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel City 100</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-regular fa-star"></i> (3.6)</div>
+                        <div class="price-cart">
+                            <p class="product-price">43000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://th.bing.com/th/id/OIP.-fMULcZXP1vljwR6A0XzXgHaFn?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Samsung A52" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung A52</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.2)</div>
+                        <div class="price-cart">
+                            <p class="product-price">185000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-1.jpg"
+                                alt="Google Pixel 8" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 8</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.1)</div>
+                        <div class="price-cart">
+                            <p class="product-price">580000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination" id="pagin2">
+                    <button class="page-btn">Previous</button>
+                    <button class="page-num">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num-active">3</button>
+                    <button class="page-num">...</button>
+                    <button class="page-num">7</button>
+                    <button class="page-num">8</button>
+                    <button class="page-btn">Next</button>
+                </div>
+            </div>
+            <div class="lines">
+                <span class="thick-line"></span>
+                <span class="thin-line"></span>
+            </div>
+            <h2 id="title3">Products On Promotion</h2>
+            <div class="products-group">
+                <div class="products-grid" id="grid3">
+                    <!--Product-Card-->
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://dicas.olx.com.br/wp-content/uploads/2024/10/iphone-16-lancamento-recursos.jpg"
+                                alt="Iphone 16" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 16</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.2)</div>
+                        <div class="price-cart">
+                            <p class="product-price">850000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://www.gadgetpilipinas.net/wp-content/uploads/2024/09/Itel-A80-Philippines-4-770x576.jpg"
+                                alt="Itel A80" class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel A80</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.8)</div>
+                        <div class="price-cart">
+                            <p class="product-price">45000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://tse1.explicit.bing.net/th/id/OIP.ifv4th66VNRv4pU3FfQt_gHaIC?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Samsung Galaxy Note 20" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung Galaxy Note 20</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.1)</div>
+                        <div class="price-cart">
+                            <p class="product-price">280000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/08/google-pixel-9-pro.png"
+                                alt="Google Pixel 9" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 9</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.6)</div>
+                        <div class="price-cart">
+                            <p class="product-price">750000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15.png"
+                                alt="Iphone 15" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 15</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.4)</div>
+                        <div class="price-cart">
+                            <p class="product-price">720000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn2.gsmarena.com/vv/pics/itel/itel-a90-2.jpg" alt="Itel A90"
+                                class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel A90</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.9)</div>
+                        <div class="price-cart">
+                            <p class="product-price">52000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn.gsmarena.com/imgroot/reviews/19/samsung-galaxy-s10/gal/-1024w2/gsmarena_001.jpg"
+                                alt="Samsung Galaxy S10" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung Galaxy S10</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (3.7)</div>
+                        <div class="price-cart">
+                            <p class="product-price">195000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://www.googlewatchblog.de/wp-content/uploads/pixel-7-pro-smartphones.jpg"
+                                alt="Google Pixel 7" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 7</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.3)</div>
+                        <div class="price-cart">
+                            <p class="product-price">420000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://i2.wp.com/imgix.bustle.com/uploads/image/2022/9/7/9fce650c-28aa-4995-81f4-ac72d963485b-iphone14.png"
+                                alt="Iphone 14" class="product-image">
+                        </div>
+                        <h3 class="product-title">Iphone 14</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i> (4.5)</div>
+                        <div class="price-cart">
+                            <p class="product-price">580000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://gizmologi.id/wp-content/uploads/2025/05/Itel-City-100-5.jpg"
+                                alt="Itel City 100" class="product-image">
+                        </div>
+                        <h3 class="product-title">Itel City 100</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i
+                                class="fa-regular fa-star"></i> (3.6)</div>
+                        <div class="price-cart">
+                            <p class="product-price">43000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://th.bing.com/th/id/OIP.-fMULcZXP1vljwR6A0XzXgHaFn?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Samsung A52" class="product-image">
+                        </div>
+                        <h3 class="product-title">Samsung A52</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.2)</div>
+                        <div class="price-cart">
+                            <p class="product-price">185000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-frame">
+                            <img src="https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-1.jpg"
+                                alt="Google Pixel 8" class="product-image">
+                        </div>
+                        <h3 class="product-title">Google Pixel 8</h3>
+                        <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i> (4.1)</div>
+                        <div class="price-cart">
+                            <p class="product-price">580000 FCFA</p>
+                            <button class="btn-outline"><i class="fas fa-shopping-cart icon-margin"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination" id="pagin3">
+                    <button class="page-btn">Previous</button>
+                    <button class="page-num">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num-active">3</button>
+                    <button class="page-num">...</button>
+                    <button class="page-num">7</button>
+                    <button class="page-num">8</button>
+                    <button class="page-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Grille principale -->
-  <div class="footer-container">
-  
-    <!-- Section Navigation Rapide -->
-    <div class="footer-section">
-      <h3>Navigation Rapide</h3>
-      <ul>
-        <li><a href=""">Deals</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/Blog.html">Blog</a></li>
-        <li><a href="#">Promotions</a></li>
-      </ul>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <!-- Section des avantages -->
+        <div class="footer-top">
+            <div class="benefits">
+                <div class="benefit">
+                    <i class="fas fa-truck"></i>
+                    <p>Livraison à domicile</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-lock"></i>
+                    <p>Paiement sécurisé</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-undo"></i>
+                    <p>Retours faciles</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-headset"></i>
+                    <p>Support client 24/7</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Section À propos -->
-    <div class="footer-section about-section">
-      <h3>À propos de Shopcart</h3>
-      <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et service client exceptionnel.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
+        <!-- Grille principale -->
+        <div class="footer-container">
 
-    <!-- Section Boutique -->
-    <div class="footer-section">
-      <h3>Boutique</h3>
-      <div class="shop-categories">
-        <ul>
-          <li><a href="/pages/products_tel.html">Smartphones</a></li>
-          <li><a href="/pages/products_ordi.html">Ordinateurs</a></li>
-          <li><a href="/pages/products_casque.html">Casques</a></li>
-          <li><a href="/pages/products_disk.html">Accessoires</a></li>
-        </ul>
-      </div>
-    </div>
+            <!-- Section Navigation Rapide -->
+            <div class="footer-section">
+                <h3>Navigation Rapide</h3>
+                <ul>
+                    <li><a href="">Deals</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/Blog.html">Blog</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
 
-    <!-- Section Newsletter et Contact -->
-    <div class="footer-section">
-      <h3>Restez Informé</h3>
-      <div class="newsletter-section">
-        <p>Inscrivez-vous à notre newsletter</p>
-        <form id="newsletter-form" class="newsletter-form">
-          <div class="input-container">
-            <i class="far fa-envelope"></i>
-            <input type="email" id="newsletter-email" placeholder="Votre email" required>
-          </div>
-          <button type="submit">S'inscrire</button>
-        </form>
-      </div>
-      
-      <div class="contact-info" style="margin-top: 20px;">
-        <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
-        <p><i class="fas fa-phone"></i> +237 657450314</p>
-        <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
-        <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
-      </div>
-    </div>
-  </div>
+            <!-- Section À propos -->
+            <div class="footer-section about-section">
+                <h3>À propos de Shopcart</h3>
+                <p>Votre destination en ligne pour les meilleurs appareils électroniques. Qualité, prix compétitifs et
+                    service client exceptionnel.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
 
-  <!-- Séparateur -->
-  <div class="footer-divider"></div>
+            <!-- Section Boutique -->
+            <div class="footer-section">
+                <h3>Boutique</h3>
+                <div class="shop-categories">
+                    <ul>
+                        <li><a href="/pages/products_tel.html">Smartphones</a></li>
+                        <li><a href="/pages/products_ordi.html">Ordinateurs</a></li>
+                        <li><a href="/pages/products_casque.html">Casques</a></li>
+                        <li><a href="/pages/products_disk.html">Accessoires</a></li>
+                    </ul>
+                </div>
+            </div>
 
-  <!-- Footer bottom -->
-  <div class="footer-bottom">
-    <div class="payment-methods">
-      <p>Nous acceptons</p>
-      <div class="payment-icons">
-        <i class="fab fa-cc-visa"></i>
-        <i class="fab fa-cc-mastercard"></i>
-        <i class="fab fa-cc-paypal"></i>
-        <i class="fab fa-cc-apple-pay"></i>
-      </div>
-    </div>
-    
-    <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
-    
-    <div class="footer-links">
-      <a href="/security.html">Confidentialité</a>
-      <a href="/conditions.html">Conditions d'utilisation</a>
-      <a href="/cookies.html">Mentions légales</a>
-    </div>
-  </div>
-</footer>
+            <!-- Section Newsletter et Contact -->
+            <div class="footer-section">
+                <h3>Restez Informé</h3>
+                <div class="newsletter-section">
+                    <p>Inscrivez-vous à notre newsletter</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <div class="input-container">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" id="newsletter-email" placeholder="Votre email" required>
+                        </div>
+                        <button type="submit">S'inscrire</button>
+                    </form>
+                </div>
+
+                <div class="contact-info" style="margin-top: 20px;">
+                    <p><i class="fas fa-envelope"></i> business@shopcart.com</p>
+                    <p><i class="fas fa-phone"></i> +237 657450314</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+                    <p><i class="fas fa-clock"></i> Lun-Sam: 8h-18h</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Séparateur -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="payment-methods">
+                <p>Nous acceptons</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+
+            <p>© Copyright 2025 Shopcart. Tous droits réservés.</p>
+
+            <div class="footer-links">
+                <a href="/security.html">Confidentialité</a>
+                <a href="/conditions.html">Conditions d'utilisation</a>
+                <a href="/cookies.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script language="JavaScript" type="text/javascript" src="/assets/js/carousel_auto.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/assets/js/pagination_filtres_tel.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/assets/js/navigation_tel_cam.js"></script>
+
 </body>
+
 </html>
