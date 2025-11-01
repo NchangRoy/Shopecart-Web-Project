@@ -1,8 +1,8 @@
 /**
- * CART-MANAGER.JS - Gestion de l'ajout au panier via le HTML - VERSION CORRIGÉE ET GÉNÉRALISÉE
+ * CART-MANAGER.JS - Gestion de l'ajout au panier via le HTML - VERSION CORRIGÉE COMPLÈTE
  * =============================================
  * Récupère directement les infos depuis le HTML des produits
- * Modifié pour fonctionner sur tous les types de pages (listes et détails, casques, caméras, téléphones, manettes, disques, ordinateurs, etc.)
+ * Fonctionne sur TOUTES les pages (listes et détails)
  */
 
 // ========================================
@@ -33,9 +33,6 @@ const DEFAULT_IMAGES = {
 
 /**
  * Ajoute un produit au panier en récupérant les infos depuis le HTML
- * @param {HTMLElement} productElement - L'élément HTML du produit
- * @param {number} quantity - Quantité (défaut: 1)
- * @param {string} color - Couleur (défaut: 'Défaut')
  */
 function addToCartFromHTML(productElement, quantity = 1, color = 'Défaut') {
     try {
@@ -60,15 +57,18 @@ function addToCartFromHTML(productElement, quantity = 1, color = 'Défaut') {
         );
         
         if (existingItemIndex !== -1) {
-            // CORRECTION: Ajouter la quantité spécifiée
+            // Produit existant - ajouter la quantité
             const newQuantity = cart.cart_items[existingItemIndex].quantite + quantity;
             
-            
+            if (newQuantity > 10) {
+                showNotification('Quantité maximale atteinte (10)', 'warning');
+                cart.cart_items[existingItemIndex].quantite = 10;
+            } else {
                 cart.cart_items[existingItemIndex].quantite = newQuantity;
                 showNotification(`${quantity} ${productData.name} ajouté(s) - Total: ${newQuantity}`, 'success');
-            
+            }
         } else {
-            // Nouveau produit - CORRECTION: vérifier aussi la limite
+            // Nouveau produit
             const finalQuantity = quantity > 10 ? 10 : quantity;
             
             const cartItem = {
@@ -106,49 +106,59 @@ function addToCartFromHTML(productElement, quantity = 1, color = 'Défaut') {
 }
 
 /**
- * Extrait toutes les informations du produit depuis son HTML - VERSION CORRIGÉE ET GÉNÉRALISÉE
- * Ajout de plus de sélecteurs pour compatibilité avec tous les types de pages (casques, cams, tels, manettes, disques, ordinateurs, etc.)
- * @param {HTMLElement} productElement - L'élément du produit
- * @returns {Object} - Données du produit
+ * Extrait toutes les informations du produit depuis son HTML - VERSION UNIVERSELLE
  */
 function extractProductInfoFromHTML(productElement) {
     try {
         console.log('🔍 Extraction des données depuis HTML...', productElement);
 
-        // 1. Nom du produit - Ajout de sélecteurs pour détails cams/tels/manettes/disques/ordis
-        let nameElement = productElement.querySelector('.product-title-card, .product-title, .product-name, h1.product, h1.name, h3, h4, .product-detail-title');
+        // 1. NOM DU PRODUIT - Essayer tous les sélecteurs possibles
+        let nameElement = productElement.querySelector('.product-title-card, .product-title, .product-name, h1.product, h1.name, h3, h4, .product-detail-title, .product.name, h1.product-title, h3.product-title, h1.product.name, h2.product-name, .detail-name, .product-detail h2, h1, h2, .title, .item-title, .product-header h1, .product-header h2, .ordi-title, .disk-title');
         const name = nameElement ? nameElement.textContent.trim() : 'Produit sans nom';
         console.log('📝 Nom trouvé:', name);
 
-        // 2. Marque - Ajout de sélecteurs supplémentaires
-        let brandElement = productElement.querySelector('.product-brand, .brand, .marque, .product-info p:first-child');
-        let brand = brandElement ? brandElement.textContent.trim() : 'Marque inconnue';
-        
-        // Si pas de marque trouvée, essayer de l'extraire du nom
-        if (brand === 'Marque inconnue') {
-            brand = getBrandFromTitle(name);
-        }
+        // 2. MARQUE - Extraire depuis le nom ou un élément dédié
+        let brandElement = productElement.querySelector('.product-brand, .brand, .marque, .product-info p:first-child, .product-detail-right .product-brand, .detail-brand, .product-detail-brand, .brand-name, .item-brand, p.brand, .product-header p, .brand-logo + p, .ordi-brand, .disk-brand');
+        let brand = brandElement ? brandElement.textContent.trim() : getBrandFromTitle(name);
         console.log('🏷️ Marque trouvée:', brand);
 
-        // 3. Prix - Ajout de sélecteurs pour détails (ex: .price, .main-price, .product-price)
-        let priceElement = productElement.querySelector('.product-price, .price, .prix, .main-price, .price-section .price, .product-card-price');
+        // 3. PRIX - Chercher dans tous les formats possibles
+           let priceElement = productElement.querySelector('.product-price, .price, .prix, .main-price, .price-section .price, .product-card-price, .price-info .main-price, .detail-price, .product-detail-price, .product-detail .price, p.price, .item-price, span.price, .price-current, .product-price span, .ordi-price, .disk-price');
         let price = 0;
         if (priceElement) {
             const priceText = priceElement.textContent.trim();
             console.log('💰 Texte prix:', priceText);
-            // Supprimer "FCFA", espaces et convertir en nombre
+            // Supprimer tout sauf les chiffres
             price = parseInt(priceText.replace(/[^\d]/g, '')) || 0;
         }
         console.log('💰 Prix converti:', price);
 
-        // 4. Note/Rating - Ajout de sélecteurs pour différents formats
-        let ratingElement = productElement.querySelector('.product-rating, .rating-text, .product-rate .rating-text, .stars, .rating-text-small');
-        let rating = ratingElement ? parseFloat(ratingElement.textContent.trim().match(/\d+(\.\d+)?/)[0]) || 0 : 0;
+        // 4. NOTE/RATING - Extraire le nombre depuis le texte
+        let ratingElement = productElement.querySelector(
+            '.product-rating, .rating-text, ' +
+            '.product-rate .rating-text, .stars, ' +
+            '.rating-text-small'
+        );
+        let rating = 0;
+        if (ratingElement) {
+            const ratingText = ratingElement.textContent.trim();
+            console.log('⭐ Texte note:', ratingText);
+            // Chercher un nombre décimal dans le texte
+            const match = ratingText.match(/(\d+\.?\d*)/);
+            rating = match ? parseFloat(match[1]) : 0;
+        }
         console.log('⭐ Note trouvée:', rating);
 
-        // 5. Image - Ajout de sélecteurs pour miniatures et images principales
-        let imageElement = productElement.querySelector('img.product-image, .main-image, .product-frame img, .product-image-wrapper img, img[src*="assets/images"]');
-        const image = imageElement ? imageElement.src : DEFAULT_IMAGES[brand.toLowerCase()] || DEFAULT_IMAGES.default;
+        // 5. IMAGE - Chercher dans tous les conteneurs possibles
+               let imageElement = productElement.querySelector('img.product-image, img.product-img, .product-frame img, .main-image, .product-gallery img, .main-product-image img, .detail-image, img.main, .product-detail img, img[itemprop="image"], .item-image, img.primary, .product-image img, img[src^="/assets/images/"], .ordi-image, .disk-image');
+        let image = DEFAULT_IMAGES.default;
+        
+        if (imageElement) {
+            image = imageElement.src;
+        } else {
+            // Image par défaut selon la marque
+            image = DEFAULT_IMAGES[brand.toLowerCase()] || DEFAULT_IMAGES.default;
+        }
         console.log('🖼️ Image trouvée:', image);
 
         return {
@@ -192,36 +202,57 @@ function saveCartToStorage(cart) {
 function initAddToCartListeners() {
     console.log('🔧 Initialisation écouteurs ajout panier (listes)...');
     
-    const addButtons = document.querySelectorAll('.add-to-cart-btn, .btn-outline, .btn-add-cart, .product-card-actions button'); // Ajout de classes pour autres pages
+      const addButtons = document.querySelectorAll(
+        '.add-to-cart-btn, .btn-outline, .btn-add-cart, ' +
+        '.product-card-actions button, .btn-add-to-cart, ' +
+        '.add-to-cart-btn, .product-actions button, ' +  // ← AJOUT
+        '.price-cart button, .btn-primary'  // ← AJOUT
+    );
+    
+    console.log(`✅ ${addButtons.length} boutons trouvés`);
+    
     addButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
-            // Trouver l'élément produit parent (généralisé pour différents structures)
-            const productElement = button.closest('.product-card, .product-frame, .product-detail-wrapper, .product-info, .product-detail-container, .product-detail-flex');
-            if (!productElement) return;
+            // Trouver l'élément produit parent
+             const productElement = this.closest(
+        '.product-card, .product-frame, ' +
+        '.product-detail-wrapper, .product-info, ' +
+        '.product-detail-container, .product-detail-flex, ' +
+        '.products-grid .product-card, a.product-card'  // ← AJOUT
+    );
             
-            // Récupérer quantité et couleur (généralisé)
-            const quantityInput = productElement.querySelector('.quantity-display, .qty') || document.querySelector('.quantity-display, .qty');
-            const quantity = quantityInput ? parseInt(quantityInput.textContent) : 1;
+            if (!productElement) {
+                console.error('❌ Élément produit parent non trouvé');
+                return;
+            }
             
-            const colorSelector = productElement.querySelector('.color-option.active') || document.querySelector('.color-option.active');
-            const color = colorSelector ? colorSelector.dataset.color : 'Défaut';
+            // Récupérer quantité (défaut: 1 pour les listes)
+            const quantity = 1;
             
+            // Récupérer couleur (défaut pour les listes)
+            const color = 'Défaut';
+            
+            console.log(`🎯 Ajout produit - Quantité: ${quantity}, Couleur: ${color}`);
             addToCartFromHTML(productElement, quantity, color);
         });
     });
 }
 
 /**
- * Initialise les écouteurs pour la page détail (généralisé pour tous les types de détails)
+ * Initialise les écouteurs pour la page détail
  */
 function initDetailPageListeners() {
     console.log('🔧 Initialisation page détail...');
     
-    // Bouton "Ajouter au panier" (généralisé avec plus de classes)
-    const detailAddBtn = document.querySelector('.btn-add, .btn-add-cart, .add-to-cart, .product-actions, .btn-add-to-cart');
+    // Bouton "Ajouter au panier"
+    const detailAddBtn = document.querySelector(
+        '.btn-add, .btn-add-cart, .add-to-cart, ' +
+        '.btn-add-to-cart, .actions .btn-add-to-cart'
+    );
+    
     if (detailAddBtn) {
         console.log('✅ Bouton ajouter trouvé');
         detailAddBtn.addEventListener('click', function(e) {
@@ -229,11 +260,15 @@ function initDetailPageListeners() {
             handleDetailPageAddToCart();
         });
     } else {
-        console.log('ℹ️ Bouton ajouter non trouvé (peut être normal)');
+        console.log('ℹ️ Bouton ajouter non trouvé (page liste)');
     }
     
-    // Bouton "Acheter maintenant" (similaire à ajout pour simplicité)
-    const buyNowBtn = document.querySelector('.btn-buy, .buy-now, .product-actions .btn-buy-it-now, .');
+    // Bouton "Acheter maintenant"
+    const buyNowBtn = document.querySelector(
+        '.btn-buy, .buy-now, .btn-buy-it-now, ' +
+        '.actions .btn-buy-it-now'
+    );
+    
     if (buyNowBtn) {
         console.log('✅ Bouton acheter trouvé');
         buyNowBtn.addEventListener('click', function(e) {
@@ -242,13 +277,13 @@ function initDetailPageListeners() {
         });
     }
     
-    // Gestion des quantités (généralisé)
+    // Gestion des quantités
     initQuantityControls();
     
-    // Gestion des couleurs (généralisé)
+    // Gestion des couleurs
     initColorSelectors();
     
-    // Galerie d'images (généralisé)
+    // Galerie d'images
     initImageGallery();
 }
 
@@ -256,25 +291,64 @@ function initDetailPageListeners() {
  * Gère l'ajout au panier depuis la page détail
  */
 function handleDetailPageAddToCart() {
-    // Sélectionner l'élément produit principal (généralisé pour cams/tels/manettes/disques/ordis)
-    const productElement = document.querySelector('.product-detail-wrapper, .product-info, .product-detail-section, .product-detail-container, .product-detail-flex');
-    if (!productElement) return;
+    console.log('🛒 Ajout depuis page détail...');
     
-    const quantityDisplay = document.querySelector('.quantity-display, .qty');
-    const quantity = quantityDisplay ? parseInt(quantityDisplay.textContent) : 1;
+    // Sélectionner l'élément produit principal
+    const productElement = document.querySelector(
+        '.product-detail-wrapper, .product-info, ' +
+        '.product-detail-section, .product-detail-container, ' +
+        '.product-detail-flex'
+    );
     
-    const selectedColor = document.querySelector('#selected-color') || document.querySelector('.selected-color-text span');
-    const color = selectedColor ? selectedColor.textContent : 'Défaut';
+    if (!productElement) {
+        console.error('❌ Élément produit non trouvé');
+        showNotification('Erreur: produit non trouvé', 'error');
+        return;
+    }
+    
+    // Récupérer la quantité - CORRECTION ICI
+    const quantityInput = document.querySelector('.qty-input, .quantity-display, .qty');
+    let quantity = 1;
+    
+    if (quantityInput) {
+        if (quantityInput.tagName === 'INPUT') {
+            quantity = parseInt(quantityInput.value) || 1;
+        } else {
+            quantity = parseInt(quantityInput.textContent) || 1;
+        }
+    }
+    console.log('📊 Quantité:', quantity);
+    
+    // Récupérer la couleur sélectionnée - CORRECTION ICI
+    let color = 'Défaut';
+    const activeColorBtn = document.querySelector('.color-btn-active');
+    
+    if (activeColorBtn) {
+        // Essayer de récupérer le nom de la couleur depuis un attribut data
+        color = activeColorBtn.dataset.color || 
+                activeColorBtn.getAttribute('title') || 
+                activeColorBtn.style.backgroundColor || 
+                'Couleur sélectionnée';
+    } else {
+        // Essayer l'ancien format
+        const selectedColor = document.querySelector('#selected-color, .selected-color-text span');
+        if (selectedColor) {
+            color = selectedColor.textContent.trim() || 'Défaut';
+        }
+    }
+    console.log('🎨 Couleur:', color);
     
     addToCartFromHTML(productElement, quantity, color);
 }
 
 /**
- * Gère "Acheter maintenant" (ajout au panier + redirection panier)
+ * Gère "Acheter maintenant" (ajout au panier + redirection)
  */
 function handleDetailPageBuyNow() {
     handleDetailPageAddToCart();
-    window.location.href = '/panier.html';
+    setTimeout(() => {
+        window.location.href = '/panier.html';
+    }, 500);
 }
 
 // ========================================
@@ -282,79 +356,141 @@ function handleDetailPageBuyNow() {
 // ========================================
 
 function initQuantityControls() {
-    const quantityDisplay = document.querySelector('.quantity-display, .qty');
-    const quantityBtns = document.querySelectorAll('.quantity-btn, .qty-btn, button[data-action="decrease"], button[data-action="increase"]');
+    // Chercher l'input de quantité
+    const quantityInput = document.querySelector('.qty-input, .quantity-display, .qty');
+    const quantityBtns = document.querySelectorAll(
+        '.quantity-btn, .qty-btn, ' +
+        'button[data-action="decrease"], button[data-action="increase"]'
+    );
     
-    if (quantityDisplay && quantityBtns.length > 0) {
-        const decreaseBtn = Array.from(quantityBtns).find(btn => 
-            btn.textContent.trim() === '-' || 
-            btn.innerHTML.includes('minus') || 
-            btn.classList.contains('decrease') || 
-            btn.classList.contains('minus') || 
-            btn.dataset.action === 'decrease' ||
-            btn.querySelector('.fa-minus, .fa-chevron-left, .fa-minus-circle')
-        );
-        
-        const increaseBtn = Array.from(quantityBtns).find(btn => 
-            btn.textContent.trim() === '+' || 
-            btn.innerHTML.includes('plus') || 
-            btn.classList.contains('increase') || 
-            btn.classList.contains('plus') || 
-            btn.dataset.action === 'increase' ||
-            btn.querySelector('.fa-plus, .fa-chevron-right, .fa-plus-circle')
-        );
-        
-        if (decreaseBtn) {
-            decreaseBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                let quantity = parseInt(quantityDisplay.textContent);
-                if (quantity > 1) {
-                    quantityDisplay.textContent = quantity - 1;
+    if (!quantityInput || quantityBtns.length === 0) {
+        console.log('ℹ️ Contrôles de quantité non trouvés (normal pour page liste)');
+        return;
+    }
+    
+    console.log('✅ Contrôles de quantité initialisés');
+    
+    // Identifier les boutons + et -
+    const decreaseBtn = Array.from(quantityBtns).find(btn => 
+        btn.textContent.trim() === '-' || 
+        btn.innerHTML.includes('minus') || 
+        btn.classList.contains('decrease') || 
+        btn.dataset.action === 'decrease' ||
+        btn.querySelector('.fa-minus')
+    );
+    
+    const increaseBtn = Array.from(quantityBtns).find(btn => 
+        btn.textContent.trim() === '+' || 
+        btn.innerHTML.includes('plus') || 
+        btn.classList.contains('increase') || 
+        btn.dataset.action === 'increase' ||
+        btn.querySelector('.fa-plus')
+    );
+    
+    if (decreaseBtn) {
+        decreaseBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            let currentValue;
+            
+            if (quantityInput.tagName === 'INPUT') {
+                currentValue = parseInt(quantityInput.value) || 1;
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
                 }
-            });
-        }
-        
-        if (increaseBtn) {
-            increaseBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                let quantity = parseInt(quantityDisplay.textContent);
-                if (quantity < 10) {
-                    quantityDisplay.textContent = quantity + 1;
+            } else {
+                currentValue = parseInt(quantityInput.textContent) || 1;
+                if (currentValue > 1) {
+                    quantityInput.textContent = currentValue - 1;
+                }
+            }
+        });
+    }
+    
+    if (increaseBtn) {
+        increaseBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            let currentValue;
+            
+            if (quantityInput.tagName === 'INPUT') {
+                currentValue = parseInt(quantityInput.value) || 1;
+                if (currentValue < 10) {
+                    quantityInput.value = currentValue + 1;
                 } else {
                     showNotification('Quantité maximale: 10 articles', 'warning');
                 }
-            });
-        }
+            } else {
+                currentValue = parseInt(quantityInput.textContent) || 1;
+                if (currentValue < 10) {
+                    quantityInput.textContent = currentValue + 1;
+                } else {
+                    showNotification('Quantité maximale: 10 articles', 'warning');
+                }
+            }
+        });
     }
 }
 
 function initColorSelectors() {
+    // Nouveau format (color-btn)
+    const colorBtns = document.querySelectorAll('.color-btn, .color-btn-active');
+    
+    if (colorBtns.length > 0) {
+        console.log('✅ Sélecteurs de couleur initialisés (nouveau format)');
+        
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Retirer la classe active de tous les boutons
+                colorBtns.forEach(b => {
+                    b.classList.remove('color-btn-active');
+                    b.classList.add('color-btn');
+                });
+                // Ajouter la classe active au bouton cliqué
+                this.classList.remove('color-btn');
+                this.classList.add('color-btn-active');
+            });
+        });
+        return;
+    }
+    
+    // Ancien format (color-option)
     const colorOptions = document.querySelectorAll('.color-option');
     const selectedColorText = document.querySelector('#selected-color');
     
-    colorOptions.forEach(option => {
-        option.addEventListener('click', function() {
-            colorOptions.forEach(opt => opt.classList.remove('active'));
-            this.classList.add('active');
-            if (selectedColorText) {
-                selectedColorText.textContent = this.dataset.color;
-            }
+    if (colorOptions.length > 0) {
+        console.log('✅ Sélecteurs de couleur initialisés (ancien format)');
+        
+        colorOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                colorOptions.forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+                if (selectedColorText) {
+                    selectedColorText.textContent = this.dataset.color;
+                }
+            });
         });
-    });
+    } else {
+        console.log('ℹ️ Sélecteurs de couleur non trouvés (normal pour page liste)');
+    }
 }
 
 function initImageGallery() {
-    const mainImage = document.querySelector('#main-image');
-    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.querySelector('#main-image, .main-image');
+    const thumbnails = document.querySelectorAll('.thumbnail, .thumbnails img');
+    
+    if (!mainImage || thumbnails.length === 0) {
+        console.log('ℹ️ Galerie d\'images non trouvée (normal pour page liste)');
+        return;
+    }
+    
+    console.log('✅ Galerie d\'images initialisée');
     
     thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', function() {
-            thumbnails.forEach(thumb => thumb.classList.remove('active'));
-            this.classList.add('active');
-            if (mainImage) {
-                const newImage = this.querySelector('img').dataset.image || this.querySelector('img').src;
-                mainImage.src = newImage;
-            }
+            thumbnails.forEach(thumb => thumb.classList.remove('active', 'thumbnail-active'));
+            this.classList.add('active', 'thumbnail-active');
+            
+            const newImage = this.dataset.image || this.src;
+            mainImage.src = newImage;
         });
     });
 }
@@ -440,7 +576,16 @@ function generateUniqueId() {
 }
 
 function getBrandFromTitle(title) {
-    const brands = ['Sennheiser', 'Beats by Dre', 'Bose', 'Sony', 'JBL', 'Marshall', 'Anker', 'Jabra', 'AKG', 'Skullcandy', 'Audio-Technica', 'Nikon', 'Itel', 'Razer', 'Microsoft', 'Seagate', 'Western Digital', 'Dell', 'HP', 'Lenovo', 'Asus']; // Ajout de marques pour autres catégories
+    const brands = [
+        'Sennheiser', 'Beats by Dre', 'Bose', 'Sony', 'JBL', 'Marshall', 
+        'Anker', 'Jabra', 'AKG', 'Skullcandy', 'Audio-Technica', 
+        'Nikon', 'Canon', 'Lumix', 'Fujifilm', 'Olympus', 'Leica', 
+        'Casio', 'Pentax', 'Sigma',
+        'Itel', 'Samsung', 'Apple', 'Iphone', 'Google', 'Pixel',
+        'Razer', 'Microsoft', 'Seagate', 'Western Digital', 
+        'Dell', 'HP', 'Lenovo', 'Asus'
+    ];
+    
     for (const brand of brands) {
         if (title.toLowerCase().includes(brand.toLowerCase())) {
             return brand;
@@ -455,9 +600,12 @@ function getBrandFromTitle(title) {
 
 function initCartManager() {
     console.log('🛒 Initialisation du gestionnaire de panier...');
+    console.log('📍 URL actuelle:', window.location.pathname);
+    
     initAddToCartListeners(); // Pour listes
-    initDetailPageListeners(); // Pour détails (appel toujours, sans risque si éléments absents)
+    initDetailPageListeners(); // Pour détails
     updateCartBadge();
+    
     console.log('✅ Gestionnaire de panier initialisé');
 }
 
