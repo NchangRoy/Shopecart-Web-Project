@@ -5,6 +5,7 @@
 }
 
 main{
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -17,9 +18,11 @@ main{
     
 }
 .section_list{
+    
     display:  flex;
     gap:10px;
     font-size: 0.8rem;
+    margin-top: 6rem;
 }
 .section_list img{
     height: 15px;

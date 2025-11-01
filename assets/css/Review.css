@@ -34,6 +34,8 @@ main{
     height: 100%;
     padding: 1rem;
     margin-inline: auto;;
+    margin-top: 40rem;
+    
 }
 .sections{
     display:  flex;
@@ -158,7 +160,17 @@ section{
 .payment{
     background-color: #1e40af;
     color:white;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 10px;
-    box-shadow: 2px 5px 0px #1e40af;
+
+    cursor: pointer;
+}
+.payment:hover{
+    background-color: white;
+    color:#1e40af;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px #1e40af;
+    cursor: pointer;
+    font-weight: bold;
 }
