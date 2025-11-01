@@ -1,43 +1,29 @@
-# Shopecart Web Project
+# TP1 - Site Web Statique from Scratch (HTML & CSS)
 
-## Présentation du Projet
-Ce dépôt contient le projet de programmation web pour l'année 2025, réalisé en groupe de 12 étudiants (équipes E1 à E4 avec rotation des rôles :
-frontend, backend, intégration, tests). L'objectif est de développer un site e-commerce "Shopecart" (vitrine d'électronique et accessoires) à travers 4 TPs progressifs :
+## Objectif
+Construire un site vitrine e-commerce statique avec pages : accueil (landing), liste produits, détails produit, panier (statique), commande/paiement (formulaires), login/register, contact, about us. Respecter l'organisation en dossiers (/assets/css, /assets/images, etc.) et une charte graphique cohérente (mise en page, navigation, footer), selon la fiche TP jointe.
 
-- **TP1** : Site statique from scratch (HTML/CSS).
-- **TP2** : Interactions dynamiques avec JavaScript (panier, formulaires).
-- **TP3** : E-commerce avec CMS (ex. WordPress + WooCommerce).
-- **TP4** : Développement complet avec Laravel (backend full-stack).
+**Note** : Le tableau de bord (dashboard) n'est pas requis pour TP1, car il est hors du scope de ce TP statique. Il sera abordé dans les TPs ultérieurs, notamment TP4 avec Laravel.
 
-Le projet respecte une charte graphique cohérente (bleu dominant, navigation simple, responsive) .
-Chaque TP est évalué sur l'organisation Git (20%), la contribution individuelle (30%), la qualité technique (30%) et la présentation finale (20%).
+## Livrable
+Site statique fonctionnel, testable localement.
 
-## Installation et Usage
-### Prérequis
-- Navigateur web moderne (Chrome, Firefox).
-- Pour TP3 : Serveur local (ex. XAMPP pour PHP/MySQL) et CMS installé (WordPress).
-- Pour TP4 : PHP 8+, Composer, Laravel, MySQL.
-- Git pour cloner le dépôt.
+## Contributions par Équipe
+- Équipe 1 (A, B, C) : Page landing (`index.html`) avec structure (Header, Footer, Navigation) et contenu de la section d'accueil.
+- Équipe 2 (D, E, F) : Pages liste produits (`products.html`) et détails produit (`product-detail.html`) avec grille produits et fiche individuelle (photo, description, prix).
+- Équipe 3 (G, H, I) : Pages login (`login.html`) et register (`register.html`) avec formulaires HTML et stylisation CSS.
+- Équipe 4 (J, K, L) : Pages about us (`about.html`) et contact (`contact.html`) avec structure, contenu textuel et formulaire.
+- Équipe 5 (M) : Intégration finale et setup Git, assurant la cohésion graphique et l'assemblage de toutes les pages avec placeholders pour panier, commande/paiement.
 
-### Étapes d'Installation
-1. Clonez le dépôt : `git clone https://github.com/Delmat237/shopecart-web-project.git`.
-2. Naviguez dans le dossier : `cd shopecart-web-project`.
-3. Changez de branche selon le TP (voir nomenclature des branches ci-dessous) : `git checkout tp1-static`.
-4. Pour les TPs backend :
-   - TP3 : Installez WordPress localement, importez le thème depuis `/tp3/theme/`, et configurez WooCommerce.
-   - TP4 : Exécutez `composer install`, configurez `.env` (base de données), puis `php artisan migrate` et `php artisan serve`.
-
-### Usage
-- Ouvrez les fichiers HTML directement pour TP1/TP2.
-- Pour TP3/TP4, lancez le serveur local et accédez via `localhost`.
-- Testez les fonctionnalités : navigation, ajout au panier, validation commande, etc.
+## Installation Spécifique
+Ouvrez `index.html` dans un navigateur moderne (Chrome, Firefox).
 
 ## Structure du Dépôt
 - `/assets/` : CSS, images, JS communs.
-- `/tp/1-static/` : Site statique (HTML/CSS).
-- `/tp/2-js-dynamics/` : Ajouts JS (panier dynamique).
-- `/tp/3-cms-ecommerce/` : Thème CMS et extensions.
-- `/tp/4-laravel-full/` : Application Laravel complète.
+- `/tp1/` : Site statique (HTML/CSS).
+- `/tp2/` : Ajouts JS (panier dynamique).
+- `/tp3/` : Thème CMS et extensions.
+- `/tp4/` : Application Laravel complète.
 - `/docs/` : Designs Figma (captures), répartition des tâches, et documents du cours.
 
 ## Contributions
@@ -57,3 +43,34 @@ Pour plus de détails sur chaque TP, consultez les READMEs dédiés dans les dos
 
 ## Licence
 MIT - Projet éducatif.
+## Fichiers Clés
+- `index.html` : Page d'accueil.
+- `/assets/css/main.css` : Styles globaux.
+- `/assets/images/` : Répertoire des images produits.
+- `/assets/css/style-login.css`, `/assets/css/style-contact.css` : Styles spécifiques.
+
+## Arborescence Proposée
+```
+shopecart-web-project/
+├── index.html
+├── products.html
+├── product-detail.html
+├── login.html
+├── register.html
+├── about.html
+├── contact.html
+├── assets/
+│   ├── css/
+│   │   ├── main.css
+│   │   ├── style-login.css
+│   │   ├── style-contact.css
+│   │   └── style-product.css
+│   └── images/
+│       ├── product1.jpg
+│       ├── product2.jpg
+│       └── ...
+├── README.md
+└── .gitignore
+```
+
+Voir la répartition des tâches pour plus de détails.

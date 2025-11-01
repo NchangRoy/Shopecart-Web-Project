@@ -1,0 +1,6 @@
+PAT_GitHub.txt
+*.token
+*.secret
+.idea
+.vscode
+.env
