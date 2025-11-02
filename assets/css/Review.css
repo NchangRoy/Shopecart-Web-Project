@@ -24,6 +24,7 @@ body{
     
 }
 main{
+    flex:1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +35,9 @@ main{
     height: 100%;
     padding: 1rem;
     margin-inline: auto;;
-    margin-top: 40rem;
+    margin-top: 80rem;
+    margin-bottom: 25rem;
+
     
 }
 .sections{
@@ -89,8 +92,29 @@ section{
     color:white
 
 }
+.edit a{
+    text-decoration: none;
+    color:white;
+}
+.edit:hover a{
+    text-decoration: none;
+    color:#1e40af;
+}
+
+
+
 .edit:hover{
-    cursor: pointer;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 2px solid #1e40af;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px #1e40af;
+    color:blue;
+    cursor:pointer
 }
 .Order_summary{
     display: flex;
@@ -162,7 +186,7 @@ section{
     color:white;
     padding: 1rem;
     border-radius: 10px;
-
+    margin-bottom: 1rem;
     cursor: pointer;
 }
 .payment:hover{
@@ -173,4 +197,43 @@ section{
     box-shadow: 2px 5px 5px #1e40af;
     cursor: pointer;
     font-weight: bold;
+}
+.payment_details{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem
+}
+
+@media (max-width: 1024px){
+    main{
+        margin-top: 93rem;
+    }
+}
+@media (max-width: 769px){
+    main{
+        margin-top: 115rem;
+    }
+}
+@media (max-width: 480px) {
+    main{
+        margin-top: 135rem;
+        width: 90%;
+    }
+    .sections{
+    display:  flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+}   
+    section{
+        width: 100%;
+    }
+    .Order_summary{
+        width: 100%;
+    }
+
 }

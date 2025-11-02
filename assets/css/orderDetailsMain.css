@@ -12,6 +12,7 @@ main{
     justify-content: flex-start;
     align-items: center;
     margin: 2rem;
+   
     width: 50%;
     font-family: Arial, Helvetica, sans-serif;
     margin-inline: auto;
@@ -50,9 +51,8 @@ h1{
 
 }
 .person_fields{
-    display:  grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 
 }
@@ -64,6 +64,7 @@ h1{
 }
 .description{
     font-size: 0.9rem;
+    font-weight:600;
 }
 .important{
     color:red;
@@ -118,6 +119,21 @@ input{
     justify-content: space-between;
     gap: 2rem;
 }
+.pickUpStore select{
+    background-color: white;
+    color: #1e40af;
+    border:2px solid #1e40af;
+    border-radius: 5px;
+     height: 35px;
+}
+.pickUpStore option{
+    background-color: white;
+    color: #1e40af;
+    border: none;
+   
+}
+
+
 .address{
     display:  flex;
     flex-direction: column;
@@ -137,7 +153,7 @@ input{
 .Payment_Info{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     border-bottom: 2px solid #1e40af ;
     width: 100%;
     padding: 1rem;
@@ -154,6 +170,26 @@ input{
     width: 200px;
 
 }
+.review:hover{
+    background-color: white;
+    padding: 1rem;
+    color:#1e40af;
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px #1e40af;
+    border:none;
+    width: 200px;
+
+}
+
+.review a {
+    text-decoration: none;
+    color:white
+}
+
+.review:hover a{
+    color:#1e40af;
+}
+
 
 .payment_methods{
 display:  flex;
@@ -197,15 +233,15 @@ form{
      display: flex;
     flex-direction: column;
     width: 50%;
-    gap:.5rem;
-    padding: 1rem;
+    gap:1rem;
+    padding-top: 1rem;
     
 }
 #cardType{
     padding: .5rem;
     border-radius: 5px;
-    background-color: #1e40afb9;
-    color:white;
+    background-color: white;
+    border:2px solid #1e40af;
     width: 200px;
     
 }
@@ -213,8 +249,15 @@ form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+
     
   
+}
+.payment_details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem
 }
 .disappear{
     display: none;
