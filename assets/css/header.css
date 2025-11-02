@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
  
 * {
   margin: 0;
@@ -104,6 +104,7 @@ header {
   align-items: center;
   padding: 5px 0;
   white-space: nowrap;
+  user-select: none;
 }
 
 .dropdown-content {
@@ -215,14 +216,29 @@ header {
   border-color: #1e3a8a;
   background-color: rgba(30, 58, 138, 0.05);
 }
-/* Dark Mode Toggle */
 
+/* Styles pour le bouton de connexion */
+#loginButton {
+  background-color: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
+#loginButton:hover {
+  background-color: #1e40af;
+  color: white;
+  border-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Toggle */
 .account-icon label {
   cursor: pointer;
   font-size: .95rem;
   color: #555;
 }
 .account-icon input { display: none; }
+
 .cart-icon {
   position: relative;
   background-color: #1e3a8a;
@@ -278,6 +294,17 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 998;
+}
+
+/* Animation pour la flèche du dropdown */
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.categories-dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
 }
 
 /* ========== VERSION TABLETTE (1024px - 769px) ========== */
@@ -393,6 +420,7 @@ header {
     transition: right 0.3s ease;
     z-index: 999;
     margin: 0;
+    overflow-y: auto;
   }
 
   .nav-links.active {
@@ -411,6 +439,21 @@ header {
     font-size: 16px;
   }
 
+  /* Styles améliorés pour le menu mobile */
+  .categories-dropdown {
+    width: 100%;
+  }
+  
+  .categories-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    padding: 12px 0;
+    margin: 0;
+  }
+
   /* Dropdown mobile */
   .dropdown-content {
     position: static;
@@ -421,6 +464,7 @@ header {
     width: 100%;
     background-color: #f8fafc;
     border-radius: 8px;
+    animation: slideDown 0.3s ease;
   }
 
   .dropdown-content.active {
@@ -430,6 +474,18 @@ header {
   .dropdown-content a {
     padding: 10px 15px;
     font-size: 14px;
+    border: none;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* Search bar mobile - cachée par défaut */
@@ -452,6 +508,8 @@ header {
     width: 100%;
     justify-content: center;
     margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .user-actions.active {
@@ -460,15 +518,30 @@ header {
 
   .account-icon, 
   .cart-icon {
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 10px 15px;
     font-size: 16px;
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
   }
 
   .account-icon span,
   .cart-icon span {
     display: inline-block;
     margin-left: 8px;
+  }
+
+  /* Styles spécifiques pour les boutons utilisateur en mobile */
+  #loginButton {
+    background-color: #1e3a8a;
+    color: white;
+    border-color: #1e3a8a;
+  }
+
+  #loginButton:hover {
+    background-color: #1e40af;
+    color: white;
   }
 
   /* Overlay actif */
@@ -490,6 +563,7 @@ header {
   }
 }
 
+/* ========== VERSION MOBILE TRÈS PETITE (480px et moins) ========== */
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 15px;
@@ -497,6 +571,7 @@ header {
 
   .nav-links {
     width: 85%;
+    padding: 70px 20px 20px;
   }
 
   .logo-text {
@@ -509,10 +584,27 @@ header {
 
   .account-icon,
   .cart-icon {
-    margin: 0 5px;
+    margin: 0 2px;
     padding: 8px 12px;
+    font-size: 14px;
+    min-width: 120px;
+  }
+
+  .user-actions {
+    gap: 8px;
+  }
+
+  .dropdown-content {
+    padding: 8px 0 8px 15px;
+  }
+
+  .dropdown-content a {
+    padding: 8px 12px;
+    font-size: 13px;
   }
 }
+
+/* ========== CORRECTIONS GÉNÉRALES ========== */
 /* Correction pour le menu mobile */
 #menu-toggle {
   display: none;
@@ -549,5 +641,47 @@ header {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 998;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+.categories-label {
+  cursor: pointer;
+}
+
+/* Transition fluide pour les interactions */
+.account-icon,
+.cart-icon,
+.nav-links a,
+.categories-label {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles pour l'accessibilité */
+.account-icon:focus,
+.cart-icon:focus,
+.nav-links a:focus,
+.search-input:focus {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+/* Scrollbar personnalisée pour le menu mobile */
+@media (max-width: 768px) {
+  .nav-links::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .nav-links::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .nav-links::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+  
+  .nav-links::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
   }
 }
