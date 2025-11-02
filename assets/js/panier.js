@@ -395,10 +395,10 @@ function handleCheckout() {
         console.log('💳 Redirection vers la page de paiement...');
         
         // Ici, vous redirigeriez vers la page de paiement
-        // window.location.href = '/checkout.html';
+         window.location.href = '/orderDetails.html';
         
         // Pour la démo, afficher un message
-        showNotification('Redirection vers le paiement...', 'info');
+        // showNotification('Redirection vers le paiement...', 'info');
         
         // Simuler une redirection après 2 secondes
         setTimeout(() => {
