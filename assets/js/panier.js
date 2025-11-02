@@ -332,7 +332,7 @@ function updateSummary() {
     if (discountAmount > 0) {
         document.getElementById('discount-value').textContent = `-${discountAmount.toFixed(2)} XAF`;
     } else {
-        document.getElementById('discount-value').textContent = '$0.00';
+        document.getElementById('discount-value').textContent = '0.00 XAF';
     }
     
     if (shippingCost > 0) {
