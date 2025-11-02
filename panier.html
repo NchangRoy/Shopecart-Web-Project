@@ -74,17 +74,19 @@
         <a href="/login.html" class="account-icon" id="loginButton" style="display: none;">
           <i class="fa-regular fa-user"></i> <span>Se connecter</span>
         </a>
-        
+
         <a href="/panier.html" class="cart-icon">
-          <i class="fas fa-shopping-cart"></i> <span>Panier</span> 
+          <i class="fas fa-shopping-cart"></i> <span>Panier</span>
           <span class="cart-count"></span>
         </a>
-        
-        <!-- Dark Mode Toggle -->
-        <div class="account-icon">
-          <input type="checkbox" id="darkSwitch">
-          <label for="darkSwitch"><i class="fas fa-moon"></i></label>
-        </div>
+
+        <!-- Dark Mode Toggle amélioré -->
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Basculer le mode sombre">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="dark-mode-text">Mode sombre</span>
+        </button>
+      </div>
       </div>
     </nav>
 
