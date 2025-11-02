@@ -164,7 +164,7 @@ function createCartItemElement(item, index) {
         
         <!-- Actions (prix, quantité, suppression) -->
         <div class="item-actions">
-            <p class="item-price">$${item.prix.toFixed(2)}</p>
+            <p class="item-price">${item.prix.toFixed(2)} XAF</p>
             
             <!-- Contrôles de quantité -->
             <div class="quantity-controls">
@@ -327,21 +327,21 @@ function updateSummary() {
     const total = subtotal - discountAmount + shippingCost;
     
     // Mettre à jour l'affichage
-    document.getElementById('subtotal-value').textContent = `$${subtotal.toFixed(2)}`;
+    document.getElementById('subtotal-value').textContent = `${subtotal.toFixed(2)} XAF`;
     
     if (discountAmount > 0) {
-        document.getElementById('discount-value').textContent = `-$${discountAmount.toFixed(2)}`;
+        document.getElementById('discount-value').textContent = `-${discountAmount.toFixed(2)} XAF`;
     } else {
-        document.getElementById('discount-value').textContent = '$0.00';
+        document.getElementById('discount-value').textContent = '0.00 XAF';
     }
     
     if (shippingCost > 0) {
-        document.getElementById('shipping-value').textContent = `$${shippingCost.toFixed(2)}`;
+        document.getElementById('shipping-value').textContent = `${shippingCost.toFixed(2)} XAF`;
     } else {
         document.getElementById('shipping-value').textContent = 'Gratuite';
     }
     
-    document.getElementById('total-value').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('total-value').textContent = `${total.toFixed(2)} XAF`;
     
     // Mettre à jour le compteur d'articles
     const totalItems = cartData.cart_items.reduce((sum, item) => sum + item.quantite, 0);
@@ -395,10 +395,10 @@ function handleCheckout() {
         console.log('💳 Redirection vers la page de paiement...');
         
         // Ici, vous redirigeriez vers la page de paiement
-        // window.location.href = '/checkout.html';
+         window.location.href = '/orderDetails.html';
         
         // Pour la démo, afficher un message
-        showNotification('Redirection vers le paiement...', 'info');
+        // showNotification('Redirection vers le paiement...', 'info');
         
         // Simuler une redirection après 2 secondes
         setTimeout(() => {

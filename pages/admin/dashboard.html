@@ -7,14 +7,14 @@
     <title>Tableau de Bord - Administration</title>
     
     <!-- Fichiers CSS dans l'ordre d'importance -->
-    <link rel="stylesheet" href="../../assets/css/reset.css">
-    <link rel="stylesheet" href="../../assets/css/variables.css">
-    <link rel="stylesheet" href="../../assets/css/layout.css">
-    <link rel="stylesheet" href="../../assets/css/sidebar.css">
-    <link rel="stylesheet" href="../../assets/css/headerA.css">
-    <link rel="stylesheet" href="../../assets/css/components.css">
-    <link rel="stylesheet" href="../../assets/css/dashboard.css">
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/variables.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/headerA.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
 </head>
 <body>
     
@@ -614,28 +614,169 @@
     
     <!-- SCRIPTS JAVASCRIPT -->
     <script>
-        // Gestion du toggle de la sidebar
+        
+            // Configuration et initialisation du graphique
         document.addEventListener('DOMContentLoaded', function() {
-            const sidebarToggle = document.querySelector('.sidebar-toggle');
-            const sidebar = document.querySelector('.sidebar');
-            const sidebarClose = document.querySelector('.sidebar-close');
+            // Sélection du conteneur du graphique
+            const chartContainer = document.querySelector('.chart-placeholder');
             
-            sidebarToggle.addEventListener('click', function() {
-                sidebar.classList.toggle('active');
-            });
+            // Création du canvas pour le graphique
+            const canvas = document.createElement('canvas');
+            canvas.id = 'salesChart';
+            canvas.width = chartContainer.offsetWidth;
+            canvas.height = chartContainer.offsetHeight;
             
-            sidebarClose.addEventListener('click', function() {
-                sidebar.classList.remove('active');
-            });
+            // Remplacement du placeholder par le canvas
+            chartContainer.innerHTML = '';
+            chartContainer.appendChild(canvas);
             
-            // Fermer la sidebar en cliquant à l'extérieur (sur mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideSidebar = sidebar.contains(event.target);
-                const isClickInsideToggle = sidebarToggle.contains(event.target);
-                
-                if (!isClickInsideSidebar && !isClickInsideToggle && window.innerWidth < 768) {
-                    sidebar.classList.remove('active');
+            // Données pour le graphique (exemple avec données pour 12 mois)
+            const months = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+            
+            // Données de ventes pour 2023 et 2024 (exemple)
+            const sales2023 = [120, 150, 180, 200, 250, 300, 350, 320, 280, 260, 300, 350];
+            const sales2024 = [140, 170, 210, 230, 280, 330, 380, 360, 310, 290, 340, 390];
+            
+            // Configuration du graphique
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: months,
+                    datasets: [
+                        {
+                            label: 'Ventes 2023',
+                            data: sales2023,
+                            borderColor: 'var(--color-primary)',
+                            backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Ventes 2024',
+                            data: sales2024,
+                            borderColor: 'var(--color-secondary)',
+                            backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                            borderWidth: 3,
+                            borderDash: [5, 5],
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false // Nous avons notre propre légende
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1,
+                            padding: 12,
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.parsed.y} ventes`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: 'var(--color-text-muted)'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            },
+                            ticks: {
+                                color: 'var(--color-text-muted)',
+                                callback: function(value) {
+                                    return value;
+                                }
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    },
+                    elements: {
+                        point: {
+                            radius: 4,
+                            hoverRadius: 6
+                        }
+                    }
                 }
+            });
+            
+            // Gestion des filtres de période
+            const filterButtons = document.querySelectorAll('.chart-filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Retirer la classe active de tous les boutons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Ajouter la classe active au bouton cliqué
+                    this.classList.add('active');
+                    
+                    // Mettre à jour les données en fonction de la période sélectionnée
+                    updateChartData(this.textContent.trim());
+                });
+            });
+            
+            // Fonction pour mettre à jour les données du graphique selon la période
+            function updateChartData(period) {
+                let newLabels, newData2023, newData2024;
+                
+                switch(period) {
+                    case 'Jour':
+                        // Données pour les 7 derniers jours
+                        newLabels = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'];
+                        newData2023 = [45, 52, 38, 65, 72, 58, 48];
+                        newData2024 = [50, 58, 45, 70, 78, 65, 55];
+                        break;
+                        
+                    case 'Mois':
+                        // Données pour les 12 mois (défaut)
+                        newLabels = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+                        newData2023 = [120, 150, 180, 200, 250, 300, 350, 320, 280, 260, 300, 350];
+                        newData2024 = [140, 170, 210, 230, 280, 330, 380, 360, 310, 290, 340, 390];
+                        break;
+                        
+                    case 'Année':
+                        // Données pour les 5 dernières années
+                        newLabels = ['2020', '2021', '2022', '2023', '2024'];
+                        newData2023 = [2800, 3200, 3500, 3800, 0]; // 2024 n'a pas de données pour 2023
+                        newData2024 = [0, 0, 0, 0, 4200]; // Seulement 2024 a des données pour 2024
+                        break;
+                }
+                
+                // Mise à jour du graphique
+                salesChart.data.labels = newLabels;
+                salesChart.data.datasets[0].data = newData2023;
+                salesChart.data.datasets[1].data = newData2024;
+                salesChart.update();
+            }
+            
+            // Redimensionnement du graphique lors du redimensionnement de la fenêtre
+            window.addEventListener('resize', function() {
+                salesChart.resize();
             });
         });
     </script>

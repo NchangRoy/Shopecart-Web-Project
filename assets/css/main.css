@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
-
 }
 
+/* ========== CSS VARIABLES FOR DARK MODE ========== */
 :root {
+  /* Light mode variables */
   --primary-blue: #1e3a8a;
   --secondary-blue: #1e40af;
   --accent-blue: #3b82f6;
@@ -15,6 +16,51 @@
   --text-light: #6b7280;
   --white: #ffffff;
   --success: #10b981;
+  
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  
+  /* Border colors */
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+  
+  /* Shadow */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Dark mode variables */
+  --primary-blue: #3b82f6;
+  --secondary-blue: #60a5fa;
+  --accent-blue: #93c5fd;
+  --light-blue: #1e3a8a;
+  --text-dark: #f3f4f6;
+  --text-light: #d1d5db;
+  --white: #1f2937;
+  --success: #34d399;
+  
+  /* Background colors */
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #374151;
+  
+  /* Border colors */
+  --border-color: #374151;
+  --border-light: #4b5563;
+  
+  /* Shadow */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Apply theme to body */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header Styles */
@@ -23,12 +69,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: var(--white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   z-index: 1000;
-
+  border-bottom: 10px solid var(--primary-blue);
 }
 
 .logo {
@@ -95,18 +141,19 @@
   width: 100%;
   padding: 10px 15px;
   padding-left: 40px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   border-radius: 25px;
   outline: none;
   font-size: 14px;
   transition: all 0.3s;
-  background-color: #f8fafc;
+  background-color: var(--bg-secondary);
+  color: var(--text-dark);
 }
 
 .search-input:focus {
   border-color: var(--accent-blue);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-  background-color: var(--white);
+  background-color: var(--bg-primary);
 }
 
 .search-bar::before {
@@ -117,7 +164,7 @@
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: #64748b;
+  color: var(--text-light);
   z-index: 1;
 }
 
@@ -190,8 +237,7 @@
   color: var(--white);
   position: relative;
   overflow: hidden;
-    padding-top: 10rem;
-
+  padding-top: 10rem;
 }
 
 .hero::before {
@@ -256,14 +302,14 @@
   display: flex;
   justify-content: space-around;
   padding: 80px 20px;
-  background-color: var(--white);
+  background-color: var(--bg-primary);
   gap: 30px;
 }
 
 .feature-item {
   flex: 1;
   text-align: center;
-  background-color: rgba(0, 119, 255, 0.075);
+  background-color: var(--bg-secondary);
   padding: 40px 30px;
   border-radius: 15px;
   display: flex;
@@ -271,13 +317,13 @@
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.13);
-
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
 }
 
 .feature-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-lg);
 }
 
 .feature-item i {
@@ -304,28 +350,32 @@
   gap: 30px;
   max-width: 1200px;
   margin: 40px auto;
+  background-color: var(--bg-primary);
 }
 
-.spotlight h2{
+.spotlight h2 {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  color: var(--text-dark);
 }
+
 .spotlight-item {
-  background-color: var(--white);
+  background-color: var(--bg-secondary);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow);
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid var(--border-light);
 }
 
 .spotlight-item:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .spotlight-item h3 {
@@ -350,7 +400,7 @@
 
 .progress-bar {
   height: 12px;
-  background: linear-gradient(90deg, var(--accent-blue) 85%, #e5e7eb 15%);
+  background: linear-gradient(90deg, var(--accent-blue) 85%, var(--border-color) 15%);
   border-radius: 6px;
   margin-top: 10px;
   position: relative;
@@ -382,11 +432,11 @@
 }
 
 .product-card {
-  background: white;
+  background: var(--bg-secondary);
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid #f1f5f9;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -394,7 +444,7 @@
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
   border-color: var(--accent-blue);
 }
 
@@ -403,7 +453,7 @@
   margin-bottom: 12px;
   border-radius: 8px;
   overflow: hidden;
-  background: #f8fafc;
+  background: var(--bg-tertiary);
   height: 140px;
   display: flex;
   align-items: center;
@@ -474,7 +524,7 @@
 }
 
 .update-time {
-  color: #9ca3af;
+  color: var(--text-light);
   font-size: 0.875rem;
   text-align: center;
   margin-top: 20px;
@@ -511,8 +561,9 @@
 .explore-text {
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   font-weight: bold;
+  color: var(--text-dark);
 }
 
 /* Styles pour les meilleures offres */
@@ -577,83 +628,25 @@
   border-radius: 25px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .spotlight-content {
-    grid-template-columns: 1fr;
-  }
-
-  .new-arrivals {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .product-image {
-    height: 120px;
-  }
-  
-  .stats {
-    gap: 20px;
-  }
-
-  .deal-images {
-    gap: 10px;
-  }
-  
-  .deal-item {
-    width: 80px;
-    height: 80px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .new-arrivals {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .product-card {
-    padding: 12px;
-  }
-  
-  .stats span {
-    font-size: 1rem;
-    padding: 8px 16px;
-  }
-  
-  .deal-images {
-    gap: 8px;
-  }
-  
-  .deal-item {
-    width: 70px;
-    height: 70px;
-    font-size: 0.9rem;
-  }
-}
-
 /* Explore Section */
 .explore {
-  background: rgba(11, 122, 116, 0.082);
+  background: var(--bg-secondary);
   margin-top: 20px;
-    padding: 80px 20px;
+  padding: 80px 20px;
   text-align: center;
-  color: var(--white);
-  box-shadow: 4 0px 0px 14px rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow);
 }
 
 .explore h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #1e40af;
-
+  color: var(--primary-blue);
 }
 
 .explore p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #1e40af;
+  color: var(--text-dark);
 }
 
 .explore button {
@@ -684,20 +677,20 @@
 }
 
 .testimonials p {
-  background-color: rgba(34, 57, 160, 0.425);
+  background-color: var(--bg-tertiary);
   padding: 20px;
   border-radius: 10px;
   max-width: 300px;
   font-style: italic;
   border-left: 4px solid var(--accent-blue);
-  color:white
+  color: var(--text-dark);
 }
 
 /* Payment Methods */
 .payment-method {
   padding: 60px 20px;
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--bg-primary);
 }
 
 .payment-method h3 {
@@ -706,7 +699,6 @@
   color: var(--text-dark);
 }
 
-/* Correction pour les icônes de paiement */
 .payment-method .payment-icons {
   display: flex;
   justify-content: center;
@@ -715,44 +707,36 @@
 }
 
 .payment-method .payment-icon {
-  background: white;
+  background: var(--bg-secondary);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 80px;
   height: 50px;
   transition: transform 0.3s ease;
+  border: 1px solid var(--border-light);
 }
 
 .payment-method .payment-icon i {
   font-size: 32px;
-  color: #1e3a8a;
+  color: var(--primary-blue);
 }
 
 .payment-method .payment-icon:hover {
   transform: scale(1.1);
 }
 
-/* Correction pour le footer payment icons */
-.footer-bottom .payment-icons {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+/* Footer styles (si vous en avez) */
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-dark);
+  padding: 40px 20px;
+  border-top: 1px solid var(--border-color);
 }
 
-.footer-bottom .payment-icons i {
-  font-size: 24px;
-  color: white;
-}
-
-/* Assurer que Font Awesome est chargé */
-.fa, .fas, .far, .fal, .fad, .fab {
-  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
-  font-weight: 900;
-}
 /* Responsive Design */
 @media (max-width: 1024px) {
   .features {
@@ -762,7 +746,7 @@
   
   .feature-item {
     padding: 30px 20px;
-    border:1px solid #02142b;
+    border: 1px solid var(--border-light);
   }
 }
 

@@ -540,68 +540,628 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Gestion de la sidebar
-            const sidebarToggle = document.querySelector('.sidebar-toggle');
-            const sidebar = document.querySelector('.sidebar');
-            const sidebarClose = document.querySelector('.sidebar-close');
-            
-            sidebarToggle.addEventListener('click', function() {
-                sidebar.classList.toggle('active');
-            });
-            
-            sidebarClose.addEventListener('click', function() {
-                sidebar.classList.remove('active');
-            });
-            
-            // Gestion des cases à cocher
-            const selectAll = document.getElementById('selectAll');
-            const userCheckboxes = document.querySelectorAll('.user-checkbox:not(#selectAll)');
-            const bulkActions = document.getElementById('bulkActions');
-            const selectedCount = document.getElementById('selectedCount');
-            
-            selectAll.addEventListener('change', function() {
-                const isChecked = this.checked;
-                userCheckboxes.forEach(checkbox => {
-                    checkbox.checked = isChecked;
-                });
-                updateBulkActions();
-            });
-            
-            userCheckboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    updateBulkActions();
-                    updateSelectAll();
-                });
-            });
-            
-            function updateBulkActions() {
-                const checkedCount = document.querySelectorAll('.user-checkbox:checked:not(#selectAll)').length;
-                selectedCount.textContent = checkedCount;
-                
-                if (checkedCount > 0) {
-                    bulkActions.classList.remove('hidden');
-                } else {
-                    bulkActions.classList.add('hidden');
-                }
+        // 👥 GESTIONNAIRE D'UTILISATEURS
+class UserManager {
+    constructor() {
+        this.users = this.loadUsersFromStorage();
+        this.currentEditId = null;
+        this.initEventListeners();
+        this.renderUsers();
+    }
+
+    // 📥 Chargement depuis le localStorage
+    loadUsersFromStorage() {
+        const stored = localStorage.getItem('users');
+        return stored ? JSON.parse(stored) : [
+            {
+                id: 1,
+                name: "Marie Johnson",
+                email: "marie.johnson@example.com",
+                role: "admin",
+                status: "active",
+                lastLogin: "Aujourd'hui, 14:30",
+                registrationDate: "15 Jan 2024",
+                avatar: "MJ",
+                avatarColor: "primary"
+            },
+            {
+                id: 2,
+                name: "Pierre Dubois",
+                email: "pierre.dubois@example.com",
+                role: "moderator",
+                status: "active",
+                lastLogin: "Hier, 09:15",
+                registrationDate: "20 Fév 2024",
+                avatar: "PD",
+                avatarColor: "secondary"
+            },
+            {
+                id: 3,
+                name: "Sophie Martin",
+                email: "sophie.martin@example.com",
+                role: "user",
+                status: "inactive",
+                lastLogin: "05 Mar 2024",
+                registrationDate: "10 Mar 2024",
+                avatar: "SM",
+                avatarColor: "accent"
+            },
+            {
+                id: 4,
+                name: "Thomas Leroy",
+                email: "thomas.leroy@example.com",
+                role: "customer",
+                status: "suspended",
+                lastLogin: "28 Fév 2024",
+                registrationDate: "15 Fév 2024",
+                avatar: "TL",
+                avatarColor: "warning"
             }
+        ];
+    }
+
+    // 💾 Sauvegarde dans le localStorage
+    saveUsersToStorage() {
+        localStorage.setItem('users', JSON.stringify(this.users));
+    }
+
+    // 🎯 Initialisation des événements
+    initEventListeners() {
+        // Bouton d'ajout d'utilisateur
+        const addUserBtn = document.getElementById('addUserBtn');
+        if (addUserBtn) {
+            addUserBtn.addEventListener('click', () => this.showUserModal());
+        }
+
+        // Bouton d'export
+        const exportBtn = document.querySelector('.btn-outline');
+        if (exportBtn) {
+            exportBtn.addEventListener('click', () => this.exportUsers());
+        }
+
+        // Filtres
+        this.initFilters();
+
+        // Gestion des cases à cocher
+        this.initCheckboxes();
+
+        // Actions en masse
+        this.initBulkActions();
+    }
+
+    // 🔍 Initialisation des filtres
+    initFilters() {
+        const searchInput = document.querySelector('.search-input');
+        const roleFilter = document.querySelector('.form-select:first-of-type');
+        const statusFilter = document.querySelector('.form-select:last-of-type');
+        const filterBtn = document.querySelector('.btn-secondary');
+
+        if (searchInput) searchInput.addEventListener('input', () => this.applyFilters());
+        if (roleFilter) roleFilter.addEventListener('change', () => this.applyFilters());
+        if (statusFilter) statusFilter.addEventListener('change', () => this.applyFilters());
+        if (filterBtn) filterBtn.addEventListener('click', () => this.applyFilters());
+    }
+
+    // ☑️ Initialisation des cases à cocher
+    initCheckboxes() {
+        const selectAll = document.getElementById('selectAll');
+        const userCheckboxes = document.querySelectorAll('.user-checkbox:not(#selectAll)');
+
+        if (selectAll) {
+            selectAll.addEventListener('change', (e) => {
+                userCheckboxes.forEach(checkbox => {
+                    checkbox.checked = e.target.checked;
+                });
+                this.updateBulkActions();
+            });
+        }
+
+        userCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                this.updateBulkActions();
+                this.updateSelectAll();
+            });
+        });
+    }
+
+    // 🎪 Initialisation des actions en masse
+    initBulkActions() {
+        const bulkDeleteBtn = document.querySelector('.bulk-actions-buttons .btn-danger');
+        const bulkEditBtn = document.querySelector('.bulk-actions-buttons .btn-secondary');
+
+        if (bulkDeleteBtn) {
+            bulkDeleteBtn.addEventListener('click', () => this.deleteSelectedUsers());
+        }
+
+        if (bulkEditBtn) {
+            bulkEditBtn.addEventListener('click', () => this.editSelectedUsers());
+        }
+    }
+
+    // 🎪 Mise à jour des actions en masse
+    updateBulkActions() {
+        const bulkActions = document.getElementById('bulkActions');
+        const selectedCount = document.getElementById('selectedCount');
+        const checkedCount = document.querySelectorAll('.user-checkbox:checked:not(#selectAll)').length;
+
+        if (selectedCount) selectedCount.textContent = checkedCount;
+        
+        if (bulkActions) {
+            if (checkedCount > 0) {
+                bulkActions.classList.remove('hidden');
+            } else {
+                bulkActions.classList.add('hidden');
+            }
+        }
+    }
+
+    // 🔄 Mise à jour de "Tout sélectionner"
+    updateSelectAll() {
+        const selectAll = document.getElementById('selectAll');
+        const checkedCount = document.querySelectorAll('.user-checkbox:checked:not(#selectAll)').length;
+        const totalCount = document.querySelectorAll('.user-checkbox:not(#selectAll)').length;
+
+        if (selectAll) {
+            if (checkedCount === 0) {
+                selectAll.checked = false;
+                selectAll.indeterminate = false;
+            } else if (checkedCount === totalCount) {
+                selectAll.checked = true;
+                selectAll.indeterminate = false;
+            } else {
+                selectAll.checked = false;
+                selectAll.indeterminate = true;
+            }
+        }
+    }
+
+    // ➕ CRÉER un utilisateur
+    createUser(userData) {
+        const newUser = {
+            id: Date.now(), // ID unique
+            ...userData,
+            avatar: this.generateAvatar(userData.name),
+            avatarColor: this.getRandomColor(),
+            lastLogin: "Jamais",
+            registrationDate: new Date().toLocaleDateString('fr-FR', { 
+                day: 'numeric', 
+                month: 'short', 
+                year: 'numeric' 
+            })
+        };
+
+        this.users.unshift(newUser); // Ajouter au début
+        this.saveUsersToStorage();
+        this.renderUsers();
+        this.showNotification('Utilisateur créé avec succès', 'success');
+    }
+
+    // ✏️ MODIFIER un utilisateur
+    updateUser(userId, userData) {
+        const index = this.users.findIndex(u => u.id == userId);
+        if (index !== -1) {
+            this.users[index] = { 
+                ...this.users[index], 
+                ...userData,
+                avatar: this.generateAvatar(userData.name)
+            };
+            this.saveUsersToStorage();
+            this.renderUsers();
+            this.showNotification('Utilisateur modifié avec succès', 'success');
+        }
+    }
+
+    // 🗑️ SUPPRIMER un utilisateur
+    deleteUser(userId) {
+        if (confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')) {
+            this.users = this.users.filter(u => u.id != userId);
+            this.saveUsersToStorage();
+            this.renderUsers();
+            this.showNotification('Utilisateur supprimé avec succès', 'success');
+        }
+    }
+
+    // 🗑️ SUPPRIMER plusieurs utilisateurs
+    deleteSelectedUsers() {
+        const selectedUsers = Array.from(document.querySelectorAll('.user-checkbox:checked:not(#selectAll)'))
+            .map(cb => cb.dataset.id);
+
+        if (selectedUsers.length === 0) {
+            this.showNotification('Aucun utilisateur sélectionné', 'error');
+            return;
+        }
+
+        if (confirm(`Êtes-vous sûr de vouloir supprimer ${selectedUsers.length} utilisateur(s) ?`)) {
+            this.users = this.users.filter(u => !selectedUsers.includes(u.id.toString()));
+            this.saveUsersToStorage();
+            this.renderUsers();
             
-            function updateSelectAll() {
-                const checkedCount = document.querySelectorAll('.user-checkbox:checked:not(#selectAll)').length;
-                const totalCount = userCheckboxes.length;
+            // Réinitialiser les sélections
+            const selectAll = document.getElementById('selectAll');
+            if (selectAll) selectAll.checked = false;
+            this.updateBulkActions();
+            
+            this.showNotification(`${selectedUsers.length} utilisateur(s) supprimé(s) avec succès`, 'success');
+        }
+    }
+
+    // ✏️ MODIFIER plusieurs utilisateurs
+    editSelectedUsers() {
+        const selectedUsers = Array.from(document.querySelectorAll('.user-checkbox:checked:not(#selectAll)'))
+            .map(cb => cb.dataset.id);
+
+        if (selectedUsers.length === 0) {
+            this.showNotification('Aucun utilisateur sélectionné', 'error');
+            return;
+        }
+
+        this.showBulkEditModal(selectedUsers);
+    }
+
+    // 🎨 AFFICHER les utilisateurs
+    renderUsers() {
+        const tbody = document.querySelector('.users-table tbody');
+        if (!tbody) return;
+
+        tbody.innerHTML = this.users.map(user => `
+            <tr>
+                <td>
+                    <input type="checkbox" class="user-checkbox" data-id="${user.id}">
+                </td>
+                <td>
+                    <div class="user-info-cell">
+                        <div class="user-avatar-small ${user.avatarColor}">${user.avatar}</div>
+                        <div class="user-details">
+                            <div class="user-name">${user.name}</div>
+                            <div class="user-email">${user.email}</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <span class="role-badge role-${user.role}">${this.getRoleLabel(user.role)}</span>
+                </td>
+                <td>
+                    <span class="status-badge ${this.getStatusClass(user.status)}">${this.getStatusLabel(user.status)}</span>
+                </td>
+                <td>
+                    <span class="user-date">${user.lastLogin}</span>
+                </td>
+                <td>
+                    <span class="user-date">${user.registrationDate}</span>
+                </td>
+                <td>
+                    <div class="user-actions">
+                        <button class="action-btn action-btn-edit" title="Modifier" onclick="userManager.editUser(${user.id})">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.3333 1.99999C11.5084 1.82488 11.7163 1.686 11.945 1.59124C12.1737 1.49648 12.4189 1.44775 12.6667 1.44775C12.9144 1.44775 13.1596 1.49648 13.3883 1.59124C13.617 1.686 13.8249 1.82488 14 1.99999C14.1751 2.1751 14.314 2.38296 14.4087 2.61167C14.5035 2.84038 14.5522 3.08555 14.5522 3.33332C14.5522 3.58109 14.5035 3.82626 14.4087 4.05497C14.314 4.28368 14.1751 4.49154 14 4.66665L5 13.6667L1.33333 14.6667L2.33333 11L11.3333 1.99999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="action-btn action-btn-delete" title="Supprimer" onclick="userManager.deleteUser(${user.id})">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4H3.33333H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.33333 4V2.66667C5.33333 2.48986 5.40357 2.32029 5.5286 2.19526C5.65362 2.07024 5.82319 2 6 2H10C10.1768 2 10.3464 2.07024 10.4714 2.19526C10.5964 2.32029 10.6667 2.48986 10.6667 2.66667V4M12.6667 4V13.3333C12.6667 13.5101 12.5964 13.6797 12.4714 13.8047C12.3464 13.9298 12.1768 14 12 14H4C3.82319 14 3.65362 13.9298 3.5286 13.8047C3.40357 13.6797 3.33333 13.5101 3.33333 13.3333V4H12.6667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        `).join('');
+
+        // Réinitialiser les écouteurs d'événements
+        this.initCheckboxes();
+        this.updateTableInfo();
+    }
+
+    // ✏️ ÉDITER un utilisateur
+    editUser(userId) {
+        const user = this.users.find(u => u.id == userId);
+        if (user) {
+            this.currentEditId = userId;
+            this.showUserModal(user);
+        }
+    }
+
+    // 🎪 MODAL d'utilisateur
+    showUserModal(userData = null) {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.innerHTML = `
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>${userData ? 'Modifier l\'utilisateur' : 'Nouvel utilisateur'}</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="userForm" class="user-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userName">Nom complet *</label>
+                                <input type="text" id="userName" name="name" value="${userData ? userData.name : ''}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail">Email *</label>
+                                <input type="email" id="userEmail" name="email" value="${userData ? userData.email : ''}" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userRole">Rôle *</label>
+                                <select id="userRole" name="role" required>
+                                    <option value="">Sélectionner un rôle</option>
+                                    <option value="admin" ${userData && userData.role === 'admin' ? 'selected' : ''}>Administrateur</option>
+                                    <option value="moderator" ${userData && userData.role === 'moderator' ? 'selected' : ''}>Livreur</option>
+                                    <option value="user" ${userData && userData.role === 'user' ? 'selected' : ''}>Vendeur</option>
+                                    <option value="customer" ${userData && userData.role === 'customer' ? 'selected' : ''}>Client</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="userStatus">Statut *</label>
+                                <select id="userStatus" name="status" required>
+                                    <option value="">Sélectionner un statut</option>
+                                    <option value="active" ${userData && userData.status === 'active' ? 'selected' : ''}>Actif</option>
+                                    <option value="inactive" ${userData && userData.status === 'inactive' ? 'selected' : ''}>Inactif</option>
+                                    <option value="suspended" ${userData && userData.status === 'suspended' ? 'selected' : ''}>Suspendu</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        ${!userData ? `
+                        <div class="form-group">
+                            <label for="userPassword">Mot de passe *</label>
+                            <input type="password" id="userPassword" name="password" required minlength="6">
+                            <small class="form-help">Minimum 6 caractères</small>
+                        </div>
+                        ` : ''}
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancelBtn">Annuler</button>
+                    <button class="btn btn-primary" id="saveBtn">${userData ? 'Modifier' : 'Créer'}</button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        // Gestion des événements du modal
+        const closeModal = () => document.body.removeChild(modal);
+        
+        modal.querySelector('.modal-close').addEventListener('click', closeModal);
+        modal.querySelector('#cancelBtn').addEventListener('click', closeModal);
+        
+        modal.querySelector('#saveBtn').addEventListener('click', () => {
+            const form = modal.querySelector('#userForm');
+            if (form.checkValidity()) {
+                const formData = new FormData(form);
+                const userData = Object.fromEntries(formData);
                 
-                if (checkedCount === 0) {
-                    selectAll.checked = false;
-                    selectAll.indeterminate = false;
-                } else if (checkedCount === totalCount) {
-                    selectAll.checked = true;
-                    selectAll.indeterminate = false;
+                if (this.currentEditId) {
+                    this.updateUser(this.currentEditId, userData);
+                    this.currentEditId = null;
                 } else {
-                    selectAll.checked = false;
-                    selectAll.indeterminate = true;
+                    this.createUser(userData);
                 }
+                closeModal();
+            } else {
+                form.reportValidity();
             }
         });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    }
+
+    // 🎪 MODAL de modification en masse
+    showBulkEditModal(userIds) {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay';
+        modal.innerHTML = `
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Modifier ${userIds.length} utilisateur(s)</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="bulkUserForm" class="user-form">
+                        <div class="form-group">
+                            <label for="bulkUserRole">Rôle</label>
+                            <select id="bulkUserRole" name="role">
+                                <option value="">Ne pas modifier</option>
+                                <option value="admin">Administrateur</option>
+                                <option value="moderator">Livreur</option>
+                                <option value="user">Vendeur</option>
+                                <option value="customer">Client</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bulkUserStatus">Statut</label>
+                            <select id="bulkUserStatus" name="status">
+                                <option value="">Ne pas modifier</option>
+                                <option value="active">Actif</option>
+                                <option value="inactive">Inactif</option>
+                                <option value="suspended">Suspendu</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancelBtn">Annuler</button>
+                    <button class="btn btn-primary" id="saveBtn">Appliquer</button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        const closeModal = () => document.body.removeChild(modal);
+        
+        modal.querySelector('.modal-close').addEventListener('click', closeModal);
+        modal.querySelector('#cancelBtn').addEventListener('click', closeModal);
+        
+        modal.querySelector('#saveBtn').addEventListener('click', () => {
+            const form = modal.querySelector('#bulkUserForm');
+            const formData = new FormData(form);
+            const bulkData = Object.fromEntries(formData);
+
+            // Appliquer les modifications aux utilisateurs sélectionnés
+            userIds.forEach(userId => {
+                const user = this.users.find(u => u.id == userId);
+                if (user) {
+                    if (bulkData.role) user.role = bulkData.role;
+                    if (bulkData.status) user.status = bulkData.status;
+                }
+            });
+
+            this.saveUsersToStorage();
+            this.renderUsers();
+            this.showNotification(`Modifications appliquées à ${userIds.length} utilisateur(s)`, 'success');
+            closeModal();
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    }
+
+    // 🔍 FILTRER les utilisateurs
+    applyFilters() {
+        const searchTerm = document.querySelector('.search-input')?.value.toLowerCase() || '';
+        const roleFilter = document.querySelector('.form-select:first-of-type')?.value || '';
+        const statusFilter = document.querySelector('.form-select:last-of-type')?.value || '';
+
+        const rows = document.querySelectorAll('.users-table tbody tr');
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+            const userName = row.querySelector('.user-name')?.textContent.toLowerCase() || '';
+            const userEmail = row.querySelector('.user-email')?.textContent.toLowerCase() || '';
+            const userRole = row.querySelector('.role-badge')?.textContent.toLowerCase() || '';
+            const userStatus = row.querySelector('.status-badge')?.textContent.toLowerCase() || '';
+
+            const matchesSearch = userName.includes(searchTerm) || userEmail.includes(searchTerm);
+            const matchesRole = !roleFilter || userRole.includes(roleFilter.toLowerCase());
+            const matchesStatus = !statusFilter || userStatus.includes(statusFilter.toLowerCase());
+
+            if (matchesSearch && matchesRole && matchesStatus) {
+                row.style.display = '';
+                visibleCount++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        this.updateTableInfo(visibleCount);
+    }
+
+    // ℹ️ Mettre à jour les infos du tableau
+    updateTableInfo(visibleCount = null) {
+        const tableInfo = document.querySelector('.table-info');
+        if (tableInfo) {
+            const count = visibleCount !== null ? visibleCount : this.users.length;
+            tableInfo.textContent = `Affichage de 1 à ${Math.min(count, this.users.length)} sur ${this.users.length} utilisateurs`;
+        }
+    }
+
+    // 🎭 Générer avatar
+    generateAvatar(name) {
+        return name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+    }
+
+    // 🎨 Couleur aléatoire pour avatar
+    getRandomColor() {
+        const colors = ['primary', 'secondary', 'accent', 'warning', 'success'];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // 🏷️ Libellés des rôles
+    getRoleLabel(role) {
+        const roles = {
+            'admin': 'Administrateur',
+            'moderator': 'Livreur',
+            'user': 'Vendeur',
+            'customer': 'Client'
+        };
+        return roles[role] || role;
+    }
+
+    // 🏷️ Libellés des statuts
+    getStatusLabel(status) {
+        const statuses = {
+            'active': 'Actif',
+            'inactive': 'Inactif',
+            'suspended': 'Suspendu'
+        };
+        return statuses[status] || status;
+    }
+
+    // 🎨 Classes CSS pour statuts
+    getStatusClass(status) {
+        const classes = {
+            'active': 'success',
+            'inactive': 'warning',
+            'suspended': 'error'
+        };
+        return classes[status] || 'warning';
+    }
+
+    // 📤 EXPORTER les utilisateurs
+    exportUsers() {
+        const dataStr = JSON.stringify(this.users, null, 2);
+        const dataBlob = new Blob([dataStr], { type: 'application/json' });
+        
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(dataBlob);
+        link.download = `utilisateurs_${new Date().toISOString().split('T')[0]}.json`;
+        link.click();
+        
+        this.showNotification('Export des utilisateurs terminé', 'success');
+    }
+
+    // 🔔 NOTIFICATIONS
+    showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <span class="notification-message">${message}</span>
+                <button class="notification-close">&times;</button>
+            </div>
+        `;
+
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-width: 300px;
+        `;
+
+        document.body.appendChild(notification);
+
+        notification.querySelector('.notification-close').addEventListener('click', () => {
+            document.body.removeChild(notification);
+        });
+
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 5000);
+    }
+}
+
+// 🚀 Initialisation
+const userManager = new UserManager();
+
+// 🌐 Rendre disponible globalement
+window.userManager = userManager;
     </script>
 </body>
 </html>

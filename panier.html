@@ -40,11 +40,11 @@
 
       <ul class="nav-links" id="navLinks">
         <li class="categories-dropdown">
-          <!-- Checkbox pour le sous-menu des catégories -->
-          <label for="categories-toggle">
+          <!-- Label pour le sous-menu des catégories -->
+          <label for="categories-toggle" class="categories-label" id="categoriesLabel">
             Catégories <span class="dropdown-arrow">▼</span>
           </label>
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="dropdownContent">
             <a href="/pages/products_ordi.html"><i class="fas fa-laptop"></i> Ordinateurs portables</a>
             <a href="/pages/products_tel.html"><i class="fas fa-mobile-alt"></i> Téléphones</a>
             <a href="/pages/product_casque.html"><i class="fas fa-headphones"></i> Casques & Écouteurs</a>
@@ -62,14 +62,31 @@
         <li><a href="/Blog.html">Blog</a></li>
       </ul>
 
-      <div class="search-bar"  id="searchBar">
+      <div class="search-bar" id="searchBar">
         <input type="text" placeholder="Rechercher un produit..." class="search-input">
       </div>
 
-      <div class="user-actions"  id="userActions">
-        <a href="/account.html" class="account-icon"><i class="fa-regular fa-user"></i> <span>Mon Compte</span></a>
-        <a href="/panier.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span>Panier</span> <span
-            class="cart-count"></span></a>
+      <div class="user-actions" id="userActions">
+        <!-- Bouton conditionnel Mon compte / Se connecter -->
+        <a href="/account.html" class="account-icon" id="accountButton" style="display: none;">
+          <i class="fa-regular fa-user"></i> <span>Mon Compte</span>
+        </a>
+        <a href="/login.html" class="account-icon" id="loginButton" style="display: none;">
+          <i class="fa-regular fa-user"></i> <span>Se connecter</span>
+        </a>
+
+        <a href="/panier.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i> <span>Panier</span>
+          <span class="cart-count"></span>
+        </a>
+
+        <!-- Dark Mode Toggle amélioré -->
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Basculer le mode sombre">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="dark-mode-text">Mode sombre</span>
+        </button>
+      </div>
       </div>
     </nav>
 
@@ -103,7 +120,7 @@
       <i class="fas fa-shopping-cart"></i>
       <h2>Votre panier est vide</h2>
       <p>Découvrez nos produits et ajoutez-en à votre panier !</p>
-      <a href="/index.html" class="btn-continue-shopping">
+      <a href="/pages/product_catalogue.html" class="btn-continue-shopping">
         <i class="fas fa-arrow-left"></i>
         Continuer mes achats
       </a>
@@ -133,7 +150,7 @@
               <i class="fas fa-shopping-bag"></i>
               Sous-total:
             </span>
-            <span class='summary-value' id="subtotal-value">$0.00</span>
+            <span class='summary-value' id="subtotal-value">0.00 XAF</span>
           </div>
           
           <!-- Réduction -->
@@ -142,7 +159,7 @@
               <i class="fas fa-tag"></i>
               Réduction:
             </span>
-            <span class='summary-value discount-value' id="discount-value">-$0.00</span>
+            <span class='summary-value discount-value' id="discount-value">-0.00 XAF</span>
           </div>
 
           <!-- Frais de livraison -->
@@ -160,7 +177,7 @@
               <i class="fas fa-calculator"></i>
               Total:
             </span>
-            <span class='summary-value' id="total-value">$0.00</span>
+            <span class='summary-value' id="total-value">0.00 XAF</span>
           </div>
         </div>
 
@@ -171,7 +188,7 @@
         </button>
 
         <!-- Lien pour continuer les achats -->
-        <a href="/index.html" class="continue-shopping-link">
+        <a href="/pages/product_catalogue.html" class="continue-shopping-link">
           <i class="fas fa-arrow-left"></i>
           Continuer mes achats
         </a>
